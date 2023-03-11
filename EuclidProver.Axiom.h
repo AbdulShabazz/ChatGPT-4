@@ -11,8 +11,10 @@ public:
         splitEquation(axiom_0);
 
         for (const std::string& str : axiom_0) {
-            uint64_t prime = GetNextPrimeUInt64();
-            stringToPrimeMap[str] = prime;
+            if (stringToPrimeMap.find(str) == stringToPrimeMap.end()) {
+                uint64_t prime = GetNextPrimeUInt64();
+                stringToPrimeMap[str] = prime;
+            }
         }
     }
 
