@@ -1,4 +1,45 @@
 
+#include <iostream>
+#include <vector>
+#include <thread>
+
+void parallel_sum(const std::vector<uint64_t>& input, std::vector<uint64_t>& output, int start, int end)
+{
+    if (start == end)
+    {
+        output[start] = input[start];
+        return;
+    }
+
+    int mid = (start + end) / 2;
+    std::vector<uint64_t> left_output(mid - start + 1);
+    std::vector<uint64_t> right_output(end - mid);
+
+    std::thread left_thread(parallel_sum, std::ref(input), std::ref(left_output), start, mid);
+    std::thread right_thread(parallel_sum, std::ref(input), std::ref(right_output), mid + 1, end);
+
+    left_thread.join();
+    right_thread.join();
+
+    std::merge(left_output.begin(), left_output.end(),
+               right_output.begin(), right_output.end(),
+               output.begin() + start);
+
+    for (int i = start; i <= end; i++)
+    {
+        output[start] += output[i];
+    }
+}
+
+uint64_t parallel_array_sum(const std::vector<uint64_t>& input)
+{
+    std::vector<uint64_t> output(input.size());
+    parallel_sum(input, output, 0, input.size() - 1);
+    return output[0];
+}
+
+//
+
 #include <algorithm>
 #include <execution>
 #include <iostream>
