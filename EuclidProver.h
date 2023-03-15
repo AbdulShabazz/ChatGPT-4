@@ -413,19 +413,18 @@ private:
 std::vector<std::vector<char>> Axioms_;
 std::vector<std::vector<char>> Lemmas_;
 
-c
 
 std::unordered_map<std::vector<char>, bool, VectorHash> memoExpand_;
 std::unordered_map<std::vector<char>, bool, VectorHash> memoReduce_;
 
 };
 
-css
 
-
+/* 
 This implementation uses a combination of unification and proof search techniques to prove a target expression from a set of axioms and lemmas. The `Prove` method performs a depth-first search to find a proof of the target expression, while the `ProveViaExpand` and `ProveViaReduce` methods use the Expand and Reduce strategies, respectively, to simplify the target expression and recursively search for a proof. The `PrintPath` method is used to print the proof path to the console. 
 
 Note that the implementation uses a generic `BracketType` template parameter to support different bracket types for expressions. The `BracketTraits` struct provides the corresponding opening and closing brackets for each type. 
 
-Also note that the implementation assumes that variables are single lowercase letters, and that there are no spaces between operators and operands in expressions.
+Also note that the implementation assumes that variables are single lowercase letters, and that there are no spaces between operators and operands in expressions. 
+*/
 
