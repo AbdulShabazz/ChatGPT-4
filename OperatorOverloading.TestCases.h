@@ -1,10 +1,46 @@
-// Loop through chunks in reverse (from most significant to least significant)
-for (uint64_t i = chunk_count; i >= 0; i--)
-{
-	// Step 4: Estimate the quotient using the most significant digits
-	// Clamp the estimate to the maximum value of a single digit (9)
-	// Step 5: Refine the estimated quotient and compute the remainder
-	// Adjust the estimate if necessary
-	// Update the dividend with the remainder
-	// Save the quotient for this chunk
-}
+
+#include <cassert>
+std::__x86i64Int _a_{}; // OK
+std::__x86i64Int a{ 12n }; // OK
+//std::__x86i64Int aa{ 12 }; // Error
+std::__x86i64Int aaa{ "0" };
+std::__x86i64Int aaaa{ "12" }; // OK
+std::__x86i64Int b{ 0n };
+std::__x86i64Int c = std::__x86i64Int{ 12n }; // OK
+//std::__x86i64Int cc = std::__x86i64Int{ 12 }; // Error
+std::__x86i64Int ccc = std::__x86i64Int{ "12" }; // OK
+std::__x86i64Int d = std::__x86i64Int{ 12n };
+std::__x86i64Int e = 12n;
+std::__x86i64Int f(0);
+// a = b = 12n
+assert(a + b == std::__x86i64Int{ "24" });
+assert(c * d == std::__x86i64Int{ "144" });
+assert(a / b == std::__x86i64Int{ "1" });
+assert(a - b == std::__x86i64Int{ "0" });
+assert(a++ == std::__x86i64Int{ "12" });
+assert(a == std::__x86i64Int{ "13" });
+assert(a-- == std::__x86i64Int{ "13" });
+assert(a == std::__x86i64Int{ "12" });
+++a;
+assert(--a == std::__x86i64Int{ "12" });
+assert(a % b == std::__x86i64Int{ "0" });
+a %= b;
+assert(a == std::__x86i64Int{ "0" });
+a = 12n;
+a += b;
+assert(a == std::__x86i64Int{ "24" });
+a -= b;
+assert(a == std::__x86i64Int{ "12" });
+a *= b;
+assert(a == std::__x86i64Int{ "144" });
+a /= b;
+assert(a == 12n);
+assert(a < b == false);
+assert(a > b == false);
+assert(a <= b == true);
+assert(a >= b == true);
+assert(a == b && b == 12n);
+assert(a != b == false);
+assert(a & b == 12n);
+a &= b;
+assert(a == b == 12n);
