@@ -189,7 +189,7 @@ void compute_column_sum(const BigInt& M, const BigInt& N, size_t col, std::vecto
 }
 
 /*
-In this implementation, a fixed-size thread pool of M + N threads is created using std::jthread. 
+A:In this implementation, a fixed-size thread pool of M + N threads is created using std::jthread. 
 A std::latch is used to synchronize the work distribution among threads and a std::barrier is used 
 to ensure all threads have completed their tasks before proceeding to Intermediate Step 2.
 
