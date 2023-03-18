@@ -1,0 +1,32 @@
+Q:Explain when to use C++20 co_routines, versus threads and or thread pools.
+
+A:C++20 co_routines, threads, and thread pools each have their own use cases and advantages, depending on the problem you're trying to solve. Here's an overview of when to use each:
+
+    C++20 co_routines:
+    Co_routines are a new language feature introduced in C++20 that enables asynchronous and non-blocking programming. Co_routines allow functions to be suspended and resumed at specific points, enabling a more efficient way of handling tasks that involve waiting (e.g., I/O operations, network requests).
+
+Use co_routines when:
+
+    You need to perform asynchronous or non-blocking operations, such as file I/O, network communication, or user input handling.
+    You want to create more readable and maintainable code, as co_routines help you write asynchronous code in a synchronous style.
+    You're dealing with a high number of lightweight tasks that need to be scheduled concurrently without the overhead of creating and managing threads.
+
+    Threads:
+    Threads represent an independent flow of execution within a process. They allow you to perform concurrent operations, thus improving the performance of your program.
+
+Use threads when:
+
+    You have computationally-intensive tasks that can be parallelized to improve performance.
+    You need to perform multiple tasks concurrently, and these tasks don't require frequent synchronization.
+    The tasks you're performing have a longer duration, and creating a separate thread for each task would not lead to a significant overhead.
+
+    Thread pools:
+    Thread pools are a collection of worker threads that can be used to execute tasks concurrently. They help manage the overhead of creating and destroying threads by reusing the same threads for different tasks.
+
+Use thread pools when:
+
+    You have a high number of short-lived tasks that need to be executed concurrently. Thread pools can help reduce the overhead of creating and destroying threads by reusing them.
+    You want to limit the number of concurrent threads running in your application to manage resources and avoid contention.
+    You need to balance the load of tasks across multiple threads and minimize the overhead associated with thread management.
+
+In summary, use co_routines when you want to handle asynchronous tasks efficiently and in a more readable way. Threads are suitable for parallelizing computationally-intensive tasks, while thread pools are ideal for managing the execution of a large number of short-lived tasks with limited resources.
