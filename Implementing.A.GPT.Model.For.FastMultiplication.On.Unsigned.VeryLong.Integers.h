@@ -78,9 +78,11 @@ private:
     // Implement normalization layers and other components
 };
 
-    Create a class for the GPT model:
+/*
+Create a class for the GPT model:
 
-cpp
+cpp 
+*/
 
 class GPT {
 public:
