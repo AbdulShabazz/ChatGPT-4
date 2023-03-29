@@ -413,49 +413,157 @@ Usefulness:
 
 In summary, std::future, std::shared_future, and std::promise are powerful synchronization primitives in C++ that facilitate asynchronous programming and enable you to work with values that will be available at some point in the future. They allow you to write concurrent code that is more efficient, scalable, and easier to reason about. By using these primitives, you can better manage the complexities of asynchronous programming and create more performant and responsive applications.
 
-Provide examples for C++20 std::stop_source, std::stop_token, and std::stop_callback. As well as the request_stop and stop_requested interactive-, poll- and dispatch- requests.
+
+Q:Provide examples for C++20 std::stop_source, std::stop_token, and std::stop_callback. As well as the request_stop and stop_requested methods.
+
+A(GPT-3.5):Sure, here are some examples for C++20's std::stop_source, std::stop_token, and std::stop_callback, along with the request_stop and stop_requested methods:
+
+c
+*/
+#include <iostream>
+#include <thread>
+#include <stop_token>
+
+void count(std::stop_token stop_token)
+{
+    int i = 0;
+    while (!stop_token.stop_requested()) {
+        std::cout << i++ << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    std::cout << "Counting stopped." << std::endl;
+}
+
+int main()
+{
+    std::cout << "Press any key to stop counting..." << std::endl;
+    std::stop_source stop_source;
+    std::stop_token stop_token = stop_source.get_token();
+    std::jthread t(count, stop_token);
+    std::cin.get();
+    stop_source.request_stop();
+    return 0;
+}
+/* 
+A:In this example, we create a std::stop_source object called stop_source, which is used to create a std::stop_token object called stop_token. We pass this stop_token object to the count function as a parameter.
+
+The count function counts from 0 to infinity, printing each number to the console and sleeping for 1 second between each number. It checks whether the stop_token has requested a stop by calling the stop_requested method on the stop_token. If a stop has been requested, the function exits.
+
+In the main function, we create a thread using std::jthread and pass it the count function and the stop_token object. We then wait for user input using std::cin.get(), and when input is received, we call the request_stop method on the stop_source object. This requests that the count function stop counting, which causes the thread to exit.
+
+Here is another example that demonstrates the use of std::stop_callback:
+
+c
  */
+#include <iostream>
+#include <stop_token>
 
-/*
-Q:Provide examples for C++20 std::stop_source, std::stop_token, and std::stop_callback. As well as the request_stop and stop_requested interactive-, poll- and dispatch- requests.
+void foo(std::stop_token token, std::stop_callback cb)
+{
+    while (!token.stop_requested()) {
+        std::cout << "Working..." << std::endl;
+    }
+    std::cout << "Stopping..." << std::endl;
+    cb();
+}
 
-C++20 introduces std::stop_source, std::stop_token, and std::stop_callback as cooperative cancellation mechanisms. These new features allow you to request the cancellation of tasks, making it easier to manage long-running or complex tasks that may need to be interrupted.
+int main()
+{
+    std::stop_source source;
+    std::stop_token token = source.get_token();
+    std::jthread t(foo, token, [&] { std::cout << "Cleanup..." << std::endl; });
+    std::this_thread::sleep_for(std::chrono::seconds(2));
+    source.request_stop();
+    return 0;
+}
 
-Here's an example that demonstrates the usage of std::stop_source, std::stop_token, and std::stop_callback, as well as the request_stop and stop_requested methods:
+/* 
+A:In this example, we create a std::stop_callback object called cb that will be called when the foo function stops running. We pass this cb object to the foo function along with the stop_token object.
 
-cpp
+The foo function runs a loop that prints "Working..." to the console until the stop_token object requests a stop. When a stop is requested, the function prints "Stopping..." to the console and calls the cb object to perform any necessary cleanup.
+
+In the main function, we create a thread using std::jthread and pass it the foo function, the stop_token object, and the cb object. We then wait for 2 seconds using std::this_thread::sleep_for and call the request_stop method on the stop_source object to stop the foo function. When the foo function stops, the cb object's cleanup code will be executed and "Cleanup..." will be printed to the console.
+
+Finally, here are some additional examples that demonstrate the use of the request_stop and stop_requested methods:
+
+c
+*/
+#include <iostream>
+#include <thread>
+#include <stop_token>
+
+void count(std::stop_token stop_token)
+{
+    int i = 0;
+    while (!stop_token.stop_requested()) {
+        std::cout << i++ << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    std::cout << "Counting stopped." << std::endl;
+}
+
+int main()
+{
+    std::stop_source stop_source;
+    std::stop_token stop_token = stop_source.get_token();
+
+    // Request stop immediately
+    stop_source.request_stop();
+
+    // Check if stop has been requested
+    if (stop_token.stop_requested()) {
+        std::cout << "Stop has been requested." << std::endl;
+    }
+
+    // Create thread with stop token
+    std::jthread t(count, stop_token);
+
+    return 0;
+}
+/* 
+A:In this example, we create a std::stop_source object called stop_source and a std::stop_token object called stop_token using the get_token method of stop_source. We immediately call the request_stop method on stop_source to request a stop.
+
+We then check whether a stop has been requested by calling the stop_requested method on stop_token. Since we just requested a stop, the method should return true, and "Stop has been requested." is printed to the console.
+
+Finally, we create a thread using std::jthread and pass it the count function and the stop_token object. Since a stop has already been requested, the count function will exit immediately and print "Counting stopped." to the console.
+
+c
 */
 
 #include <iostream>
 #include <thread>
-#include <chrono>
 #include <stop_token>
-#include <functional>
 
-void long_running_task(std::stop_token stoken) {
+void count(std::stop_token stop_token)
+{
     int i = 0;
-
-    while (i < 10) {
-        if (stoken.stop_requested()) {
-            std::cout << "Task cancelled" << std::endl;
-            return;
-        }
-
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
-        std::cout << "Task progress: " << ++i << "/10" << std::endl;
+    while (!stop_token.stop_requested()) {
+        std::cout << i++ << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
     }
-
-    std::cout << "Task completed" << std::endl;
+    std::cout << "Counting stopped." << std::endl;
 }
 
-int main() {
-    std::stop_source ssource;
-    std::thread task(long_running_task, ssource.get_token());
+int main()
+{
+    std::stop_source stop_source;
+    std::stop_token stop_token = stop_source.get_token();
 
-    std::this_thread::sleep_for(std::chrono::milliseconds(500));
-    std::cout << "Requesting task cancellation" << std::endl;
-    ssource.request
+    // Create thread with stop token
+    std::jthread t(count, stop_token);
 
+    // Wait for 5 seconds
+    std::this_thread::sleep_for(std::chrono::seconds(5));
+
+    // Request stop
+    stop_source.request_stop();
+
+    return 0;
+}
 /* 
-Q:Continue.
+A:In this example, we create a std::stop_source object called stop_source and a std::stop_token object called stop_token using the get_token method of stop_source. We then create a thread using std::jthread and pass it the count function and the stop_token object.
+
+We wait for 5 seconds using std::this_thread::sleep_for, and then call the request_stop method on stop_source to request a stop. Since the count function is still running, it will print a few more numbers before stopping and printing "Counting stopped." to the console.
+
+I hope these examples help you understand the use of std::stop_source, std::stop_token, std::stop_callback, request_stop, and stop_requested in C++20.
  */
