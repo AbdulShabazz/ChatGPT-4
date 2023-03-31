@@ -106,4 +106,9 @@ private:
     std::atomic<int> value_;
 };
 
+/*
 In this example, the CustomAtomicInt class contains a private std::atomic<int> member called value_, which stores the integer value. The class provides member functions that correspond to the atomic operations supported by std::atomic<int>. This way, you can use the CustomAtomicInt class to manage an atomic integer while still having control over the class behavior and additional functionality.
+
+The std::memory_order_relaxed argument specifies the memory ordering constraints for this operation. In this case, we use std::memory_order_relaxed because we don't have any specific ordering requirements, and it typically provides better performance. However, if you need stronger ordering guarantees, you can use other memory orders such as std::memory_order_seq_cst, std::memory_order_acquire, or std::memory_order_release.
+
+*/
