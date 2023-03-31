@@ -69,7 +69,7 @@ private:
     Minimize locking: Minimize the scope of locks and avoid holding locks for long durations. This reduces contention and improves performance.
 
 Remember, writing thread-safe code can be challenging, and you should always thoroughly test your code for correctness and performance. In addition, consider using tools like ThreadSanitizer to help detect data races and other concurrency-related issues.
-ahshabazz2017@gmail.com
+
 How can I derive my custom class from std::atomic?
 
 Deriving from std::atomic is not recommended because it is not designed to be used as a base class. std::atomic is a template class that provides atomic operations for simple types, and it lacks a virtual destructor, which could lead to potential resource leaks or undefined behavior.
