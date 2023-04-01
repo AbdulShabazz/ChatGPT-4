@@ -1,0 +1,17 @@
+/*
+Q:If passing a bad parameter or improperly configured objects triggers an exception outside of my module, does this imply the external module was improperly designed to process this type of exception?
+
+Not necessarily. It is possible that the external module was designed to throw an exception if certain conditions are not met, such as passing in bad parameters or improperly configured objects. In such cases, it is the responsibility of the calling code to handle the exception appropriately.
+
+However, if the external module is throwing exceptions unexpectedly or inconsistently, it may indicate a problem with the design or implementation of the module. In this case, it would be worth investigating further to determine if there is a bug or other issue that needs to be addressed.
+
+In any case, it is important to handle exceptions appropriately in your own code, regardless of whether they originate from external modules or not. This means anticipating potential exceptions and implementing robust error handling mechanisms to ensure that your code behaves correctly and gracefully in the face of unexpected events.
+
+Q:So if my module triggers an exception in an external or third party module, I am not obligated to report it? 
+
+As a general rule, if your module is triggering an exception in an external or third-party module, it is a good idea to report the issue to the maintainers of the external module, especially if you suspect there may be a bug or other problem with the module.
+
+Reporting the issue can help the maintainers of the external module identify and address the underlying problem, which can benefit not only your own module, but potentially other users of the external module as well.
+
+However, it is important to keep in mind that reporting an issue to the maintainers of an external module does not necessarily guarantee that the issue will be fixed in a timely manner, or even at all. Ultimately, it is your responsibility to ensure that your module behaves correctly and handles exceptions appropriately, regardless of whether the issue originates from an external module or not.
+*/
