@@ -1,6 +1,11 @@
 
 /* Axioms compile an AxiomStack of related subnets. Axioms are added to a GlobalAxiomStack stack */
 
+/* 
+Loop over all primitives to construct permitted _lhsCallGraphs- and _rhsCallGraphs- for all theorems, axioms, and lemmas, based upon composite primary keys; 
+and then postMessage and notifyAttributeChanged generate permutations of these callGraphs
+ */
+
 /*
 The Proof modules call an axiom in the GlobalAxiomStack, supplying its latest OutPrimarKey, its 
 complementary const PrimaryKey, an indirection, and a initial empty OutProofStack, as input parameters. 
