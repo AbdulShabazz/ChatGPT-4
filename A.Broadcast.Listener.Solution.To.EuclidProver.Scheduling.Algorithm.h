@@ -16,18 +16,19 @@ public:
 
 class Broadcaster {
 public:
-    void addListener(AttributeListener* listener) {
-        listeners.push_back(listener);
+    void addListener(const uint64_t IdxUInt64 = 0, AttributeListener& listener) {
+        listeners[IdxUInt64] = &listener;
     }
 
-    void notifyAttributeChanged(uint64_t key, uint64_t new_value) {
-        for (auto listener : listeners) {
-            listener->onAttributeChanged(key, new_value);
+    void notifyAttributeChanged(const uint64_t key, const uint64_t new_value) {
+        auto it = listeners.find(key);
+        if (it != listeners.end()) {
+            it->second->onAttributeChanged(key, new_value);
         }
     }
 
 private:
-    std::vector<AttributeListener*> listeners;
+	std::unordered_map<const uint64_t,AttributeListener> listeners;
 };
 /* 
     Make your objects inherit from AttributeListener:
@@ -36,17 +37,17 @@ cpp
  */
 class MyObject : public AttributeListener {
 public:
-    MyObject(uint64_t key) : key(key) {}
+    MyObject(const uint64_t key) : key(key) {}
 
-    void onAttributeChanged(uint64_t key, uint64_t new_value) override {
+    void onAttributeChanged(const uint64_t key, uint64_t new_value) override {
         if (this->key == key) {
             attribute = new_value;
         }
     }
 
 private:
-    uint64_t key;
-    uint64_t attribute;
+    const uint64_t key;
+    uint64_t attribute = 1;
     // Other members...
 };
 /* 
@@ -61,7 +62,7 @@ int main() {
     std::vector<MyObject> objects;
     for (uint64_t i = 0; i < 1000; ++i) {
         objects.emplace_back(i);
-        broadcaster.addListener(&objects.back());
+        broadcaster.addListener(i, &objects.back());
     }
 
     // Update an attribute and broadcast the change
