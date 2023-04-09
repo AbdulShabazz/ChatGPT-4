@@ -352,8 +352,6 @@ int main()
 std::future<int> future = std::async(std::launch::async, perform_calculation);
 std::shared_future<int> shared_result = future.share();
 
-arduino
-
 std::thread t1(print_result, shared_result);
 std::thread t2(print_result, shared_result);
 std::thread t3(print_result, shared_result);
