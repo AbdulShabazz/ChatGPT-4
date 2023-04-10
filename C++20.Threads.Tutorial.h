@@ -564,4 +564,22 @@ A:In this example, we create a std::stop_source object called stop_source and a 
 We wait for 5 seconds using std::this_thread::sleep_for, and then call the request_stop method on stop_source to request a stop. Since the count function is still running, it will print a few more numbers before stopping and printing "Counting stopped." to the console.
 
 I hope these examples help you understand the use of std::stop_source, std::stop_token, std::stop_callback, request_stop, and stop_requested in C++20.
- */
+ 
+Q:What are the symptoms of these conditions?
+
+The symptoms of race conditions or shared state issues in parallel or concurrent programming can be varied and hard to predict, as they depend on the specific case and the interactions between threads. Some common symptoms include:
+
+    Inconsistent or unpredictable results: When multiple threads access shared resources without proper synchronization, the output may be different each time the program runs or may not match the expected output.
+
+    Deadlocks: When two or more threads are waiting for each other to release a resource, the program may hang or become unresponsive.
+
+    Starvation: Some threads may not get a chance to execute because other threads continuously acquire a shared resource.
+
+    Heisenbugs: Bugs that are difficult to reproduce or seem to disappear when attempting to debug the program. These bugs may occur only under specific conditions or when certain thread timings are in place.
+
+    Performance issues: Synchronization mechanisms such as locks and mutexes can introduce contention or cause threads to wait, leading to reduced performance or inefficient use of system resources.
+
+    Crashes: Race conditions can lead to memory corruption or other issues that cause the program to crash unexpectedly.
+
+To prevent these issues, it is essential to apply proper synchronization techniques when accessing shared resources in parallel or concurrent programming. Some common techniques include using mutexes, locks, atomic operations, or designing the program to minimize shared state and use thread-local storage or separate data structures per thread when possible.
+*/
