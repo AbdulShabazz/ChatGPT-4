@@ -583,3 +583,37 @@ The symptoms of race conditions or shared state issues in parallel or concurrent
 
 To prevent these issues, it is essential to apply proper synchronization techniques when accessing shared resources in parallel or concurrent programming. Some common techniques include using mutexes, locks, atomic operations, or designing the program to minimize shared state and use thread-local storage or separate data structures per thread when possible.
 */
+
+	std::vector <uint64_t> v{};
+	v.resize(300'000);
+
+	std::mutex mtx;
+	constexpr std::size_t num_threads = std::thread::hardware_concurrency() - 1; // Reserve the main thread
+	const std::size_t chunk_size = v.size() / num_threads;
+	std::vector<std::jthread> threads;
+
+	// Create one jthread per chunk of elements in the vector
+	for (std::size_t i = 0; i < v.size(); i += chunk_size) { // v.resize(300'000); Benchmarks (nanoseconds): 3848300
+		std::size_t chunk_end = i + chunk_size;
+		if (chunk_end > v.size()) {
+			chunk_end = v.size();
+		}
+		threads.emplace_back([i, chunk_end, &v, &mtx](std::stop_token st) noexcept -> void {
+			// Execute the for-each loop on the chunk of elements
+			if (st.stop_requested()) {
+				return;
+			}
+			//std::unique_lock<std::mutex> lock(mtx);
+			std::for_each(std::execution::unseq, v.begin() + i, v.begin() + chunk_end, [](uint64_t& n) {
+				n = 2;
+				//std::this_thread::sleep_for(std::chrono::nanoseconds(1));
+			});
+		});
+	}
+	
+	for (std::jthread& th : threads)
+	{
+		th.join();
+	}
+
+	std::cout << v[0] << std::endl;
