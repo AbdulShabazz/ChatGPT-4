@@ -10,44 +10,12 @@
 #include <thread>
 #include <future>
 #include <mutex>
-
 #include <algorithm>
 #include <cstdint>
 
 int main()
 {
-	const auto start_time_op = std::chrono::high_resolution_clock::now();
-
-    std::function<void(uint64_t&,std::vector<uint64_t>&)> Reduce = [](uint64_t& OutPrimaryKey_UInt64Ref, std::vector<uint64_t>& OutProofStack_UInt64VecRef) noexcept -> void {
-        
-    };
-    
-    std::function<void(uint64_t&,std::vector<uint64_t>&)> Expand = [](uint64_t& OutPrimaryKey_UInt64Ref, std::vector<uint64_t>& OutProofStack_UInt64VecRef) noexcept -> void {
-        
-    };
-    enum class Indirection : uint64_t
-	{
-		_auto,
-		_reduce,
-		_expand
-	};
-    struct AxiomProtoStruct
-    {
-        const uint64_t LHSPrimaryKey_ConstUInt64;
-        const uint64_t RHSPrimaryKey_ConstUInt64;
-        std::vector<uint64_t> ProofStack_VecUInt64;
-        std::unordered_map<uint64_t,bool> ReduceCallGraph_Map;
-        std::unordered_map<uint64_t,bool> ExpanCallGraph_Map;
-        std::unordered_map<uint64_t,bool> CallHistory_Map;
-    };
-    struct ProofStruct : public AxiomProtoStruct
-    {
-        Indirection Indir_EnumClass = Indirection::_auto;
-    };
-    struct AxiomStruct : public AxiomProtoStruct
-    {
-        
-    };
+	const auto start_time_chrono = std::chrono::high_resolution_clock::now();
 
 	/*
 	token: [ 1 2 4 '+' ]
@@ -60,8 +28,9 @@ int main()
 			5 // 4
 		},//;
 	};
-	std::vector<std::vector<uint64_t>> Axioms_UInt64Vec =
-	{		
+	
+	std::vector<std::vector<uint64_t>> Axioms_UInt64Vec = // const (global) task list
+	{
 		{//std::vector<uint64_t> _1p1p1p1e4 =
 			5488, // 1 + 1 + 1 + 1
 			5 // 4
@@ -74,97 +43,207 @@ int main()
 		
 		{//std::vector<uint64_t> _2p2e4 =
 			63, // 2 + 2
-			5 // 4 == 5
+			5 // 4
 		}
 	};
+	
 	std::unordered_map<uint64_t, std::vector<uint64_t>> LHSPrimaryKeyHistory_VecMap;
 	std::unordered_map<uint64_t, std::vector<uint64_t>> RHSPrimaryKeyHistory_VecMap;
-	std::unordered_map<uint64_t, std::unordered_map<uint64_t, bool>> LHSCallHistory_Map;
-	std::unordered_map<uint64_t, std::unordered_map<uint64_t, bool>> RHSCallHistory_Map;
+	
+	std::unordered_map<uint64_t, std::unordered_map<uint64_t, bool>> LHSCallHistory_UInt64Map;
+	std::unordered_map<uint64_t, std::unordered_map<uint64_t, bool>> RHSCallHistory_UInt64Map;
+	
 	std::unordered_map<uint64_t, std::unordered_map<uint64_t, bool>> LHSCallGraph_UInt64Map;
 	std::unordered_map<uint64_t, std::unordered_map<uint64_t, bool>> RHSCallGraph_UInt64Map;
+
+	auto processAxioms = [&]() noexcept -> void
+	{
+		uint64_t i{};
+		for(std::vector<uint64_t>& Axiom_i : Axioms_UInt64Vec) 
+		{
+			std::unordered_map<uint64_t, bool> _cgl; // Build lhs call graph
+			std::unordered_map<uint64_t, bool> _cgr; // Build rhs call graph
+			std::unordered_map<uint64_t, bool> _cg2l; // Build lhs (empty) call history map
+			std::unordered_map<uint64_t, bool> _cg2r; // Build rhs (empty) call history map
+			{
+				LHSCallGraph_UInt64Map.insert(std::make_pair(i, _cgl));
+				RHSCallGraph_UInt64Map.insert(std::make_pair(i, _cgr));
+				LHSCallHistory_UInt64Map.insert(std::make_pair(i, _cg2l));
+				RHSCallHistory_UInt64Map.insert(std::make_pair(i, _cg2r));
+			}
+
+			uint64_t j{};
+			for(std::vector<uint64_t>& Axiom_j : Axioms_UInt64Vec) 
+			{
+				bool ijDoesNotCreateACallLoop_Flag = (i != j); // Avoid Call loops
+				
+				if (ijDoesNotCreateACallLoop_Flag)
+				{
+					const uint64_t Subnet_UInt64_lhs = Axiom_i.at(0) / Axiom_j.at(1);
+					const uint64_t Subnet_UInt64_rhs = Axiom_i.at(1) / Axiom_j.at(0);
+					const bool bSubnetFound_Flag_lhs = (Subnet_UInt64_lhs % 1 == 0); // 2 == 1 + 1 ?
+					const bool bSubnetFound_Flag_rhs = (Subnet_UInt64_rhs % 1 == 0); // 1 + 1 == 2 ?
+
+					if (bSubnetFound_Flag_lhs)
+					{
+						auto it = LHSCallGraph_UInt64Map.find(i);
+						
+						if (it != LHSCallGraph_UInt64Map.end())
+						{
+							it->second.insert(std::make_pair(j, true));
+						}
+					}
+
+					if (bSubnetFound_Flag_rhs)
+					{
+						auto it = RHSCallGraph_UInt64Map.find(j);
+						
+						if (it != RHSCallGraph_UInt64Map.end())
+						{
+							it->second.insert(std::make_pair(i, true));
+						}
+					}
+				}
+				j++;
+			}
+			i++;
+		}
+	};
 	
 	std::mutex mtx;
+	
+	const std::size_t num_threads = std::thread::hardware_concurrency() - 1; // Reserve the main thread
+		
+	std::jthread ProcessAxiomsThread(processAxioms);
+	
+	enum class Indirection_EnumClass : uint64_t
+	{
+		_auto,
+		_reduce,
+		_expand
+	};
+	
+	struct AxiomProto_Struct
+	{
+		uint64_t TaskListIndex_UInt64{};
+		uint64_t LHSPrimaryKey_UInt64{};
+		uint64_t RHSPrimaryKey_UInt64{};
+		
+		std::vector<uint64_t> ProofStack_VecUInt64;
+		
+		std::vector<std::string> LHSAxiom_StdStrVec;
+		std::vector<std::string> RHSAxiom_StdStrVec;
+		
+		std::unordered_map<uint64_t,bool> LHSCallGraph_UInt64Map;
+		std::unordered_map<uint64_t,bool> RHSCallGraph_UInt64Map;
+		std::unordered_map<uint64_t,bool> LHSCallHistory_UInt64Map;
+		std::unordered_map<uint64_t,bool> RHSCallHistory_UInt64Map;
+		
+		bool bParseStrict_Flag = false;
+		
+		uint64_t guid{};
+	};
+	
+	struct Theorem_Struct : public AxiomProto_Struct
+	{
+		std::vector<std::string> ProofString_StdStrVec;
+		Indirection_EnumClass Indir_EnumClass = Indirection_EnumClass::_auto;
+	};
+	
+	struct Axiom_Struct : public AxiomProto_Struct
+	{
+		
+	};
 
-    auto processAxioms = [&]() 
-    {
-        std::atomic<uint64_t> i(0);
-        std::for_each(std::execution::unseq, Axioms_UInt64Vec.begin(), Axioms_UInt64Vec.end(),
-            [&](std::vector<uint64_t>& Axiom_i) 
-            {
-                { // local scope
-                    const uint64_t _lhs = Axiom_i.at(0);
-                    const uint64_t _rhs = Axiom_i.at(1);
-                    if (_lhs < _rhs)
-                    {
-                        const uint64_t lhs = _rhs;
-                        const uint64_t rhs = _lhs;
-                        Axiom_i.emplace<uint64_t>(Axiom_i.begin() + 0, uint64_t{ lhs });
-                        Axiom_i.emplace<uint64_t>(Axiom_i.begin() + 1, uint64_t{ rhs });
-                    }
-                }
+	std::function<void(
+		Theorem_Struct,
+		Axiom_Struct,
+		uint64_t,
+		std::vector<uint64_t>)> 
+	Reduce = [](
+		Theorem_Struct InTheorem, 
+		Axiom_Struct InAxiom, 
+		uint64_t InPrimaryKey_UInt64Ref, 
+		std::vector<uint64_t> OutProofStack_UInt64VecRef) noexcept -> void 
+	{
+		
+	};
 
-                std::unordered_map<uint64_t, bool> _cgl; // Build lhs call graph
-                std::unordered_map<uint64_t, bool> _cgr; // Build rhs call graph
-                std::unordered_map<uint64_t, bool> _cg2l; // Build lhs call history map
-                std::unordered_map<uint64_t, bool> _cg2r; // Build rhs call history map
-                {
-                    std::unique_lock<std::mutex> lock(mtx); // Lock the mutex
-                    LHSCallGraph_UInt64Map.insert(std::make_pair(i.load(), _cgl));
-                    RHSCallGraph_UInt64Map.insert(std::make_pair(i.load(), _cgr));
-                    LHSCallHistory_Map.insert(std::make_pair(i.load(), _cg2l));
-                    RHSCallHistory_Map.insert(std::make_pair(i.load(), _cg2r));
-                }
+	std::function<void(
+		Theorem_Struct,
+		Axiom_Struct,
+		uint64_t,
+		std::vector<uint64_t>)>
+	Expand = [](
+		Theorem_Struct InTheorem, 
+		Axiom_Struct InAxiom, 
+		uint64_t InPrimaryKey_UInt64Ref, 
+		std::vector<uint64_t> OutProofStack_UInt64VecRef) noexcept -> void 
+	{
+		
+	};
+	
+	static uint64_t GUID = 0;
+	
+	Theorem_Struct Theorem;
+	
+	std::vector<Axiom_Struct> Axioms_Vec;
+	Axioms_Vec.resize(Axioms_UInt64Vec.size());
+	
+	uint64_t nIdxUInt64 = 0;
+	
+	ProcessAxiomsThread.join(); // Wait on Axioms thread to finish
+	
+	for(const std::vector<uint64_t>& pKeyUInt64 : Axioms_UInt64Vec)
+	{
+		uint64_t  lhs = pKeyUInt64[0];
+		uint64_t  rhs = pKeyUInt64[1];
+		
+		uint64_t _lhs = pKeyUInt64[0];
+		uint64_t _rhs = pKeyUInt64[1];
+		
+		if (_lhs < _rhs)
+		{
+			 lhs = _rhs;
+			 rhs = _lhs;
+		}
+		
+		if(nIdxUInt64 > 0)
+		{
+			Axiom_Struct elem;
+			
+			elem.guid = GUID++;
+			elem.LHSPrimaryKey_UInt64 = lhs;
+			elem.RHSPrimaryKey_UInt64 = rhs;
+			elem.LHSCallHistory_UInt64Map = LHSCallHistory_UInt64Map[nIdxUInt64];
+			elem.RHSCallHistory_UInt64Map = RHSCallHistory_UInt64Map[nIdxUInt64];
+			elem.LHSCallGraph_UInt64Map = LHSCallGraph_UInt64Map[nIdxUInt64];
+			elem.RHSCallGraph_UInt64Map = RHSCallGraph_UInt64Map[nIdxUInt64];
+			
+			Axioms_Vec.emplace_back(elem);
+		}
+		
+		else 
+		{
+			Theorem_Struct elem;
+			
+			elem.guid = GUID++;
+			elem.LHSPrimaryKey_UInt64 = lhs;
+			elem.RHSPrimaryKey_UInt64 = rhs;
+			elem.LHSCallHistory_UInt64Map = LHSCallHistory_UInt64Map[nIdxUInt64];
+			elem.RHSCallHistory_UInt64Map = RHSCallHistory_UInt64Map[nIdxUInt64];
+			elem.LHSCallGraph_UInt64Map = LHSCallGraph_UInt64Map[nIdxUInt64];
+			elem.RHSCallGraph_UInt64Map = RHSCallGraph_UInt64Map[nIdxUInt64];
+			   
+		}
+			
+		nIdxUInt64++;
+	}
 
-                std::atomic<uint64_t> j(0);
-                std::for_each(std::execution::par, Axioms_UInt64Vec.begin(), Axioms_UInt64Vec.end(),
-                    [&](const std::vector<uint64_t>& Axiom_j) 
-                    {
-                        bool ijDoesNotCreateACallLoop_Flag = (i.load() != j.load()); // Avoid Call loops
-                        if (ijDoesNotCreateACallLoop_Flag)
-                        {
-                            const uint64_t Subnet_UInt64_lhs = Axiom_i.at(0) / Axiom_j.at(1);
-                            const uint64_t Subnet_UInt64_rhs = Axiom_i.at(1) / Axiom_j.at(0);
-                            const bool bSubnetFound_Flag_lhs = (Subnet_UInt64_lhs % 1 == 0); // 2 == 1 + 1 ?
-                            const bool bSubnetFound_Flag_rhs = (Subnet_UInt64_rhs % 1 == 0); // 1 + 1 == 2 ?
-        
-                            if (bSubnetFound_Flag_lhs)
-                            {
-                                std::unique_lock<std::mutex> lock(mtx); // Lock the mutex
-                                auto it = LHSCallGraph_UInt64Map.find(i.load());
-                                if (it != LHSCallGraph_UInt64Map.end())
-                                {
-                                    it->second.insert(std::make_pair(j.load(), true));
-                                }
-                            }
-
-                            if (bSubnetFound_Flag_rhs)
-                            {
-                                std::unique_lock<std::mutex> lock(mtx); // Lock the mutex
-                                auto it = RHSCallGraph_UInt64Map.find(j.load());
-                                if (it != RHSCallGraph_UInt64Map.end())
-                                {
-                                    it->second.insert(std::make_pair(i.load(), true));
-                                }
-                            }
-                        }
-                        j.fetch_add(1);
-                    });
-                i.fetch_add(1);
-            });
-    };
-    
-    std::jthread ProcessAxiomsThread(processAxioms);
-    ProcessAxiomsThread.join(); // Wait on thread to finish
-
-	const auto end_time_op = std::chrono::high_resolution_clock::now();
-	const auto duration_op = std::chrono::duration_cast<std::chrono::nanoseconds>(end_time_op - start_time_op).count();
-	std::cout << "Total Duration (nanoseconds): " << duration_op << std::endl;
+	const auto end_time_chrono = std::chrono::high_resolution_clock::now();
+	const auto duration_chrono = std::chrono::duration_cast<std::chrono::nanoseconds>(end_time_chrono - start_time_chrono).count();
+	std::cout << "Total Duration (nanoseconds): " << duration_chrono << std::endl;
 
 	return 0;
 
 }
-
-
-
-
