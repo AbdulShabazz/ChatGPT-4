@@ -28,7 +28,7 @@ int main()
 			5 // 4
 		},//;
 	};
-	
+
 	std::vector<std::vector<uint64_t>> Axioms_UInt64Vec = // const (global) task list
 	{
 		{//std::vector<uint64_t> _1p1p1p1e4 =
@@ -46,16 +46,17 @@ int main()
 			5 // 4
 		}
 	};
-	
+
 	std::unordered_map<uint64_t, std::vector<uint64_t>> LHSPrimaryKeyHistory_VecMap;
 	std::unordered_map<uint64_t, std::vector<uint64_t>> RHSPrimaryKeyHistory_VecMap;
-	
+
 	std::unordered_map<uint64_t, std::unordered_map<uint64_t, bool>> LHSCallHistory_UInt64Map;
 	std::unordered_map<uint64_t, std::unordered_map<uint64_t, bool>> RHSCallHistory_UInt64Map;
-	
+
 	std::unordered_map<uint64_t, std::unordered_map<uint64_t, bool>> LHSCallGraph_UInt64Map;
 	std::unordered_map<uint64_t, std::unordered_map<uint64_t, bool>> RHSCallGraph_UInt64Map;
 
+	// Compile
 	auto processAxioms = [&]() noexcept -> void
 	{
 		uint64_t i{};
@@ -109,27 +110,24 @@ int main()
 			i++;
 		}
 	};
-	
+
 	std::mutex mtx;
-	
+
 	const std::size_t num_threads = std::thread::hardware_concurrency() - 1; // Reserve the main thread
-		
+
 	std::jthread ProcessAxiomsThread(processAxioms);
-	
+
 	enum class Indirection_EnumClass : uint64_t
 	{
 		_auto,
 		_reduce,
 		_expand
 	};
-	
+
 	struct AxiomProto_Struct
 	{
-		uint64_t TaskListIndex_UInt64{};
 		uint64_t LHSPrimaryKey_UInt64{};
 		uint64_t RHSPrimaryKey_UInt64{};
-		
-		std::vector<uint64_t> ProofStack_VecUInt64;
 		
 		std::vector<std::string> LHSAxiom_StdStrVec;
 		std::vector<std::string> RHSAxiom_StdStrVec;
@@ -143,13 +141,18 @@ int main()
 		
 		uint64_t guid{};
 	};
-	
+
 	struct Theorem_Struct : public AxiomProto_Struct
 	{
+		uint64_t TaskListIndex_UInt64{};
+		
+		std::vector<uint64_t> ProofStack_VecUInt64;
+		
 		std::vector<std::string> ProofString_StdStrVec;
+		
 		Indirection_EnumClass Indir_EnumClass = Indirection_EnumClass::_auto;
 	};
-	
+
 	struct Axiom_Struct : public AxiomProto_Struct
 	{
 		
@@ -157,61 +160,54 @@ int main()
 
 	std::function<void(
 		Theorem_Struct,
-		Axiom_Struct,
-		uint64_t,
-		std::vector<uint64_t>)> 
+		Axiom_Struct)> 
 	Reduce = [](
 		Theorem_Struct InTheorem, 
-		Axiom_Struct InAxiom, 
-		uint64_t InPrimaryKey_UInt64Ref, 
-		std::vector<uint64_t> OutProofStack_UInt64VecRef) noexcept -> void 
+		Axiom_Struct InAxiom) noexcept -> void 
 	{
 		
 	};
 
 	std::function<void(
 		Theorem_Struct,
-		Axiom_Struct,
-		uint64_t,
-		std::vector<uint64_t>)>
+		Axiom_Struct)>
 	Expand = [](
 		Theorem_Struct InTheorem, 
-		Axiom_Struct InAxiom, 
-		uint64_t InPrimaryKey_UInt64Ref, 
-		std::vector<uint64_t> OutProofStack_UInt64VecRef) noexcept -> void 
+		Axiom_Struct InAxiom) noexcept -> void 
 	{
 		
 	};
-	
-	static uint64_t GUID = 0;
-	
+
+	uint64_t GUID = 0;
+
 	Theorem_Struct Theorem;
-	
+
 	std::vector<Axiom_Struct> Axioms_Vec;
 	Axioms_Vec.resize(Axioms_UInt64Vec.size());
-	
+
 	uint64_t nIdxUInt64 = 0;
-	
+
 	ProcessAxiomsThread.join(); // Wait on Axioms thread to finish
-	
+
+	// Build
 	for(const std::vector<uint64_t>& pKeyUInt64 : Axioms_UInt64Vec)
 	{
 		uint64_t  lhs = pKeyUInt64[0];
 		uint64_t  rhs = pKeyUInt64[1];
-		
+
 		uint64_t _lhs = pKeyUInt64[0];
 		uint64_t _rhs = pKeyUInt64[1];
-		
+
 		if (_lhs < _rhs)
 		{
-			 lhs = _rhs;
-			 rhs = _lhs;
+			lhs = _rhs;
+			rhs = _lhs;
 		}
-		
+
 		if(nIdxUInt64 > 0)
 		{
 			Axiom_Struct elem;
-			
+
 			elem.guid = GUID++;
 			elem.LHSPrimaryKey_UInt64 = lhs;
 			elem.RHSPrimaryKey_UInt64 = rhs;
@@ -219,14 +215,14 @@ int main()
 			elem.RHSCallHistory_UInt64Map = RHSCallHistory_UInt64Map[nIdxUInt64];
 			elem.LHSCallGraph_UInt64Map = LHSCallGraph_UInt64Map[nIdxUInt64];
 			elem.RHSCallGraph_UInt64Map = RHSCallGraph_UInt64Map[nIdxUInt64];
-			
-			Axioms_Vec.emplace_back(elem);
+
+			Axioms_Vec.at(nIdxUInt64-1) = elem;
 		}
-		
-		else 
+
+		else
 		{
 			Theorem_Struct elem;
-			
+
 			elem.guid = GUID++;
 			elem.LHSPrimaryKey_UInt64 = lhs;
 			elem.RHSPrimaryKey_UInt64 = rhs;
@@ -234,16 +230,52 @@ int main()
 			elem.RHSCallHistory_UInt64Map = RHSCallHistory_UInt64Map[nIdxUInt64];
 			elem.LHSCallGraph_UInt64Map = LHSCallGraph_UInt64Map[nIdxUInt64];
 			elem.RHSCallGraph_UInt64Map = RHSCallGraph_UInt64Map[nIdxUInt64];
-			   
+
 		}
-			
+
 		nIdxUInt64++;
 	}
-
+	
+	bool ProofFound_Flag{};
+	uint64_t MaxAllowedProofs_UInt64 = 1;
+	
+	switch(Theorem.Indir_EnumClass)
+	{
+		case Indirection_EnumClass::_reduce:
+		{
+			for(Axiom_Struct& Axiom : Axioms_Vec)
+			{
+				Reduce(Theorem, Axiom);
+			}
+			break;   
+		}
+		
+		case Indirection_EnumClass::_expand:
+		{
+			for(Axiom_Struct& Axiom : Axioms_Vec)
+			{
+				Expand(Theorem, Axiom);
+			}
+			break;
+		}
+		
+		case Indirection_EnumClass::_auto:
+		default:
+		{
+			for(Axiom_Struct& Axiom : Axioms_Vec)
+			{
+				Reduce(Theorem, Axiom);
+				Expand(Theorem, Axiom);
+			}
+			break;
+		}
+	}
+	
 	const auto end_time_chrono = std::chrono::high_resolution_clock::now();
 	const auto duration_chrono = std::chrono::duration_cast<std::chrono::nanoseconds>(end_time_chrono - start_time_chrono).count();
-	std::cout << "Total Duration (nanoseconds): " << duration_chrono << std::endl;
+	std::cout << "Total Duration (nanoseconds): " << duration_chrono << ", Axioms_Vec[0].guid: " << Axioms_Vec[0].guid << std::endl;
 
 	return 0;
 
 }
+
