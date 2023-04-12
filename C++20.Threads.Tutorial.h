@@ -452,7 +452,7 @@ In the main function, we create a thread using std::jthread and pass it the coun
 Here is another example that demonstrates the use of std::stop_callback:
 
 c
- */
+*/
 #include <iostream>
 #include <stop_token>
 
