@@ -422,7 +422,7 @@ c
 #include <thread>
 #include <stop_token>
 
-void count(std::stop_token stop_token)
+void count(std::stop_token stop_token) // or void count(std::stop_token& stop_token)
 {
     int i = 0;
     while (!stop_token.stop_requested()) {
@@ -437,7 +437,7 @@ int main()
     std::cout << "Press any key to stop counting..." << std::endl;
     std::stop_source stop_source;
     std::stop_token stop_token = stop_source.get_token();
-    std::jthread t(count, stop_token);
+    std::jthread t(count, stop_token); // or std::thread t(count, std::ref(stop_token));
     std::cin.get();
     stop_source.request_stop();
     return 0;
