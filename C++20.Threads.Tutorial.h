@@ -617,3 +617,85 @@ To prevent these issues, it is essential to apply proper synchronization techniq
 	}
 
 	std::cout << v[0] << std::endl;
+
+/*
+Q:Explain the compare_exchange_weak / compare_exchange_strong atomic operations.
+
+A:compare_exchange_weak and compare_exchange_strong are atomic operations provided by the C++ standard library for performing a compare-and-swap operation on an std::atomic variable. These functions are designed to help in lock-free programming by allowing you to atomically update a variable's value based on its current value, preventing race conditions.
+
+Both functions have the same purpose: to atomically compare the value of an atomic variable with an expected value and, if they match, update the variable to a new value. The main difference between them lies in their behavior in case of failure (when the expected value does not match the current value).
+
+Here's a brief explanation of each operation:
+
+    compare_exchange_weak: This operation may fail even when the expected value matches the current value. This is called a "spurious failure". Due to this behavior, when using compare_exchange_weak, you typically need to use it in a loop to ensure that the operation eventually succeeds. The advantage of compare_exchange_weak is that it can be more efficient on some architectures because it can avoid certain synchronization and memory ordering overhead.
+
+    compare_exchange_strong: This operation guarantees that if the expected value matches the current value, the exchange will succeed. This means that compare_exchange_strong does not suffer from spurious failures. This operation can be less efficient on some architectures compared to compare_exchange_weak due to stricter synchronization and memory ordering requirements.
+
+The function signatures for these operations are:
+
+cpp
+*/
+bool compare_exchange_weak(T& expected, T desired, std::memory_order success, std::memory_order failure) noexcept;
+bool compare_exchange_strong(T& expected, T desired, std::memory_order success, std::memory_order failure) noexcept;
+/*
+    expected: The expected current value of the atomic variable.
+    desired: The new value to set the atomic variable to if the comparison succeeds.
+    success: The memory order used when the comparison succeeds (optional, default is std::memory_order_seq_cst).
+    failure: The memory order used when the comparison fails (optional, default is std::memory_order_seq_cst).
+
+Both functions return a bool indicating whether the operation succeeded (true) or failed (false). If the operation fails, the expected reference parameter is updated with the current value of the atomic variable.
+
+In general, you should use compare_exchange_weak when you can tolerate spurious failures and are looking for better performance on some architectures, and use compare_exchange_strong when you need a more reliable operation that guarantees success when the values match.
+
+Q:Are there increment, add , sub, decrement  std::atomic operations?
+
+A:Yes, std::atomic provides several operations for arithmetic manipulation of atomic variables. Here are some of the commonly used arithmetic operations:
+
+    fetch_add: Atomically adds a given value to the atomic variable and returns the value it held previously.
+
+    cpp
+*/
+T fetch_add(T arg, std::memory_order order = std::memory_order_seq_cst) noexcept;
+/*
+fetch_sub: Atomically subtracts a given value from the atomic variable and returns the value it held previously.
+
+cpp
+*/
+T fetch_sub(T arg, std::memory_order order = std::memory_order_seq_cst) noexcept;
+/*
+Increment and decrement: While there are no dedicated increment and decrement functions, you can use fetch_add and fetch_sub with an argument of 1 to achieve the same effect.
+
+For example, to increment an atomic variable:
+
+cpp
+*/
+std::atomic<int> counter{0};
+counter.fetch_add(1, std::memory_order_relaxed);
+/*
+And to decrement an atomic variable:
+
+cpp
+*/
+    std::atomic<int> counter{0};
+    counter.fetch_sub(1, std::memory_order_relaxed);
+/*
+These atomic operations can be used to safely manipulate the value of an atomic variable without the need for locks or other synchronization mechanisms. Note that the optional std::memory_order argument can be used to specify the desired memory ordering semantics for the operation. The default is std::memory_order_seq_cst, which provides sequential consistency, but you can choose other memory orders to fine-tune the performance and consistency guarantees for your specific use case.
+
+Q:What are the available memory ordering semantics and when are they useful.
+
+A:Memory ordering semantics define the order in which memory operations are performed by the compiler and hardware. They are used to ensure proper synchronization between threads in concurrent programming. The C++ standard provides several memory ordering options for atomic operations:
+
+    std::memory_order_relaxed: No ordering constraints are imposed on memory operations. This is the weakest ordering, providing minimal guarantees about the order of memory operations. It is useful when atomic operations are independent and no synchronization is required between threads.
+
+    std::memory_order_consume: Enforces a one-way dependency between memory operations: data-dependent operations can't be reordered before the atomic operation. It's useful in situations where a store operation produces a value that other threads must read and use to access some dependent memory location.
+
+    std::memory_order_acquire: Ensures that no reads or writes in the current thread can be reordered before the atomic operation. It's typically used to synchronize data structures that are shared between threads when the current thread needs to acquire some resource or access shared data.
+
+    std::memory_order_release: Ensures that no reads or writes in the current thread can be reordered after the atomic operation. It's typically used to synchronize data structures shared between threads when the current thread is releasing some resource or updating shared data.
+
+    std::memory_order_acq_rel: Combines the effects of both std::memory_order_acquire and std::memory_order_release, ensuring that no reads or writes can be reordered before or after the atomic operation. This memory order is useful when atomic operations need to both acquire and release a resource or shared data.
+
+    std::memory_order_seq_cst: Provides the strongest ordering guarantees, ensuring that all memory operations are sequentially consistent. It guarantees a single total order of all atomic operations across all threads. This memory order provides the most intuitive behavior for concurrent programming but may have a performance impact compared to weaker memory orders.
+
+When choosing a memory order, it's important to balance performance and correctness. Weaker memory orders (e.g., std::memory_order_relaxed) can provide better performance but may not guarantee the desired synchronization behavior. Stronger memory orders (e.g., std::memory_order_seq_cst) ensure correct synchronization but may have a performance impact. In general, it's best to use the weakest memory order that still meets the synchronization requirements of your specific use case.
+*/
