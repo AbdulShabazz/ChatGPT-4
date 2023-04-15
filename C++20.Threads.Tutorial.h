@@ -698,4 +698,6 @@ A:Memory ordering semantics define the order in which memory operations are perf
     std::memory_order_seq_cst: Provides the strongest ordering guarantees, ensuring that all memory operations are sequentially consistent. It guarantees a single total order of all atomic operations across all threads. This memory order provides the most intuitive behavior for concurrent programming but may have a performance impact compared to weaker memory orders.
 
 When choosing a memory order, it's important to balance performance and correctness. Weaker memory orders (e.g., std::memory_order_relaxed) can provide better performance but may not guarantee the desired synchronization behavior. Stronger memory orders (e.g., std::memory_order_seq_cst) ensure correct synchronization but may have a performance impact. In general, it's best to use the weakest memory order that still meets the synchronization requirements of your specific use case.
+
+Note: Scalability < std::jthread < std::thread < Performance
 */
