@@ -191,7 +191,7 @@ int main()
             
             if(Theorem.SubkeyFOUND_LHS(lhs))
             {
-                Axiom.LHS
+				
             }
             
             if(Theorem.SubkeyFOUND_RHS(lhs))
