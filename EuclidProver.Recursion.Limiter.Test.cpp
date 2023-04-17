@@ -43,13 +43,26 @@ public:
                 return true;
             }
 
-            if (*recursion_count + depth <= recursion_limit)
+            if (*recursion_count + depth < recursion_limit)
             {
                 *recursion_count += depth;
-                return true;
+                 return true;
             }
 
             return false;
+        }
+
+        bool release()
+        {
+            bool retval{};
+            
+            if (recursion_count)
+            {
+                *recursion_count -= depth;
+                 retval = true;
+            }
+            
+            return retval;
         }
 
     private:
@@ -69,7 +82,7 @@ private:
 
 int main()
 {
-    RecursionLimiter::set_recursion_limit(32768); // 15-bits of depth on x86i64 platforms
+    RecursionLimiter::set_recursion_limit(32535);
 
     uint64_t calllim{};
     
@@ -84,8 +97,22 @@ int main()
         fn();
     };
     
-    fn();
+    //fn();
+    
+    while(1)
+    {
+        RecursionLimiter::Invoke limiter(1);
+        if (limiter.acquired())
+        {
+            std::cout << "1 stack call made. Call limit: " << calllim++ << std::endl;
+            limiter.release();
+        }
+        
+        else
+        {
+            std::cout << "reservation failed. " << std::endl;   
+        }
+    }
     
     return 0;
 }
-
