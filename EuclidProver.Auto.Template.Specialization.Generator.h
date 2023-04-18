@@ -20,8 +20,8 @@ int main ()
             {
                 for(int m = 0; m < 3; m++)
                 {
-                    std::cout << "__forceinline template <>	// Template specialization of the primary template function" << std::endl;
-                    std::cout << "void Auto <" << std::endl;
+                    std::cout << "template <>	// Template specialization of the primary template function" << std::endl;
+                    std::cout << "__forceinline void Auto <" << std::endl;
                     std::cout << l1[i] << "," << std::endl;
                     std::cout << l2[j] << "," << std::endl;
                     std::cout << "RouteSource_EnumClass :: " << l3[k] << "," << std::endl;
