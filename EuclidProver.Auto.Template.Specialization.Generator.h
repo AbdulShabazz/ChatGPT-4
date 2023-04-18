@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <thread>
 #include <atomic>
@@ -30,197 +29,199 @@ int main ()
                     std::cout << "\tTheorem_Struct InTheorem," << std::endl;
                     std::cout << "\tconst Axiom_Struct & InAxiom)" << std::endl;
                     std::cout << "{\n" << std::endl;
-                    std::cout << "	switch (InTheorem.Indir_EnumClass) \
+                    std::cout << "\
+	Theorem_Struct TheoremProto_0000 = InTheorem; \n\
+	Theorem_Struct TheoremProto_0001 = InTheorem; \n\
+	Theorem_Struct TheoremProto_0002 = InTheorem; \n\
+	Theorem_Struct TheoremProto_0003 = InTheorem; \n\
+	Theorem_Struct TheoremProto_0004 = InTheorem; \n\
+	Theorem_Struct TheoremProto_0005 = InTheorem; \n\
+        \n\
+    switch (InTheorem.Indir_EnumClass) \n\
 	{ \n\
 		case Indirection_EnumClass::_reduce: \n\
-		{ \n\
 			std::for_each(std::execution::par_unseq, \n\
-			Axioms_Vec.begin(), \n\
-			Axioms_Vec.end(), \n\
-			[&](const Axiom_Struct& Axiom) \n\
-			{ \n\
-                RecursionLimiter::Invoke limiter(6); \n\
-                if (limiter.acquired()) \n\
-    			{	\n\
-    				Auto< \n\
-    				    TheoremProto_0000.LHSPrimaryKey_UInt64 == TheoremProto_0000.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0000.TotalProofsFound_UInt64 >= TheoremProto_0000.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _lhs, \n\
-    				    Indirection_EnumClass :: _reduce >(TheoremProto_0000, Axiom); \n\
-    				    \n\
-    				Auto< \n\
-    				    TheoremProto_0000.LHSPrimaryKey_UInt64 == TheoremProto_0000.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0000.TotalProofsFound_UInt64 >= TheoremProto_0000.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _rhs, \n\
-    				    Indirection_EnumClass :: _reduce >(TheoremProto_0000, Axiom); \n\
-    				Auto< \n\
-    				    TheoremProto_0001.LHSPrimaryKey_UInt64 == TheoremProto_0001.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0001.TotalProofsFound_UInt64 >= TheoremProto_0001.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _lhs, \n\
-    				    Indirection_EnumClass :: _reduce >(TheoremProto_0001, Axiom); \n\
-    				    \n\
-    				Auto< \n\
-    				    TheoremProto_0001.LHSPrimaryKey_UInt64 == TheoremProto_0001.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0001.TotalProofsFound_UInt64 >= TheoremProto_0001.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _rhs, \n\
-    				    Indirection_EnumClass :: _reduce >(TheoremProto_0001, Axiom); \n\
-    				    \n\
-    				Auto< \n\
-    				    TheoremProto_0002.LHSPrimaryKey_UInt64 == TheoremProto_0002.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0002.TotalProofsFound_UInt64 >= TheoremProto_0002.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _lhs, \n\
-    				    Indirection_EnumClass :: _reduce >(TheoremProto_0002, Axiom); \n\
-    				    \n\
-    				Auto< \n\
-    				    TheoremProto_0002.LHSPrimaryKey_UInt64 == TheoremProto_0002.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0002.TotalProofsFound_UInt64 >= TheoremProto_0002.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _rhs, \n\
-    				    Indirection_EnumClass :: _reduce >(TheoremProto_0002, Axiom); \n\
-    				\n\
-    				limiter.release(); \n\
-    			} \n\
-    			\n\
-			}); \n\
-			break; \n\
-		} \n\
+    			Axioms_Vec.begin(), \n\
+    			Axioms_Vec.end(), \n\
+    			[&](const Axiom_Struct& Axiom) \n\
+    			{ \n\
+                    RecursionLimiter::Invoke limiter(6); \n\
+                    if (limiter.acquired()) \n\
+        			{	\n\
+        				Auto< \n\
+        				    TheoremProto_0000.LHSPrimaryKey_UInt64 == TheoremProto_0000.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0000.TotalProofsFound_UInt64 >= TheoremProto_0000.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _lhs, \n\
+        				    Indirection_EnumClass :: _reduce >(TheoremProto_0000, Axiom); \n\
+        				    \n\
+        				Auto< \n\
+        				    TheoremProto_0000.LHSPrimaryKey_UInt64 == TheoremProto_0000.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0000.TotalProofsFound_UInt64 >= TheoremProto_0000.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _rhs, \n\
+        				    Indirection_EnumClass :: _reduce >(TheoremProto_0000, Axiom); \n\
+        				Auto< \n\
+        				    TheoremProto_0001.LHSPrimaryKey_UInt64 == TheoremProto_0001.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0001.TotalProofsFound_UInt64 >= TheoremProto_0001.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _lhs, \n\
+        				    Indirection_EnumClass :: _reduce >(TheoremProto_0001, Axiom); \n\
+        				    \n\
+        				Auto< \n\
+        				    TheoremProto_0001.LHSPrimaryKey_UInt64 == TheoremProto_0001.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0001.TotalProofsFound_UInt64 >= TheoremProto_0001.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _rhs, \n\
+        				    Indirection_EnumClass :: _reduce >(TheoremProto_0001, Axiom); \n\
+        				    \n\
+        				Auto< \n\
+        				    TheoremProto_0002.LHSPrimaryKey_UInt64 == TheoremProto_0002.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0002.TotalProofsFound_UInt64 >= TheoremProto_0002.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _lhs, \n\
+        				    Indirection_EnumClass :: _reduce >(TheoremProto_0002, Axiom); \n\
+        				    \n\
+        				Auto< \n\
+        				    TheoremProto_0002.LHSPrimaryKey_UInt64 == TheoremProto_0002.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0002.TotalProofsFound_UInt64 >= TheoremProto_0002.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _rhs, \n\
+        				    Indirection_EnumClass :: _reduce >(TheoremProto_0002, Axiom); \n\
+        				\n\
+        				limiter.release(); \n\
+        			} \n\
+        			\n\
+    			}); \n\
+    		break; \n\
         \n\
 		case Indirection_EnumClass::_expand: \n\
-		{ \n\
 			std::for_each(std::execution::par_unseq, \n\
-			Axioms_Vec.begin(), \n\
-			Axioms_Vec.end(), \n\
-			[&](const Axiom_Struct& Axiom) \n\
-			{ \n\
-                RecursionLimiter::Invoke limiter(6); \n\
-                if (limiter.acquired()) \n\
-    			{	\n\	
-    				Auto< \n\
-    				    TheoremProto_0003.LHSPrimaryKey_UInt64 == TheoremProto_0003.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0003.TotalProofsFound_UInt64 >= TheoremProto_0003.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _lhs, \n\
-    				    Indirection_EnumClass :: _expand >(TheoremProto_0003, Axiom); \n\
-    				    \n\
-    				Auto< \n\
-    				    TheoremProto_0003.LHSPrimaryKey_UInt64 == TheoremProto_0003.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0003.TotalProofsFound_UInt64 >= TheoremProto_0003.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _rhs, \n\
-    				    Indirection_EnumClass :: _expand >(TheoremProto_0003, Axiom); \n\
-    				Auto< \n\
-    				    TheoremProto_0004.LHSPrimaryKey_UInt64 == TheoremProto_0004.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0004.TotalProofsFound_UInt64 >= TheoremProto_0004.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _lhs, \n\
-    				    Indirection_EnumClass :: _expand >(TheoremProto_0004, Axiom); \n\
-    				    \n\
-    				Auto< \n\
-    				    TheoremProto_0004.LHSPrimaryKey_UInt64 == TheoremProto_0004.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0004.TotalProofsFound_UInt64 >= TheoremProto_0004.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _rhs, \n\
-    				    Indirection_EnumClass :: _expand >(TheoremProto_0004, Axiom); \n\
-    				    \n\
-    				Auto< \n\
-    				    TheoremProto_0005.LHSPrimaryKey_UInt64 == TheoremProto_0005.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0005.TotalProofsFound_UInt64 >= TheoremProto_0005.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _lhs, \n\
-    				    Indirection_EnumClass :: _expand >(TheoremProto_0005, Axiom); \n\
-    				    \n\
-    				Auto< \n\
-    				    TheoremProto_0005.LHSPrimaryKey_UInt64 == TheoremProto_0005.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0005.TotalProofsFound_UInt64 >= TheoremProto_0005.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _rhs, \n\
-    				    Indirection_EnumClass :: _expand >(TheoremProto_0005, Axiom); \n\
+    			Axioms_Vec.begin(), \n\
+    			Axioms_Vec.end(), \n\
+    			[&](const Axiom_Struct& Axiom) \n\
+    			{ \n\
+                    RecursionLimiter::Invoke limiter(6); \n\
+                    if (limiter.acquired()) \n\
+        			{	\n\	
+        				Auto< \n\
+        				    TheoremProto_0003.LHSPrimaryKey_UInt64 == TheoremProto_0003.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0003.TotalProofsFound_UInt64 >= TheoremProto_0003.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _lhs, \n\
+        				    Indirection_EnumClass :: _expand >(TheoremProto_0003, Axiom); \n\
+        				    \n\
+        				Auto< \n\
+        				    TheoremProto_0003.LHSPrimaryKey_UInt64 == TheoremProto_0003.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0003.TotalProofsFound_UInt64 >= TheoremProto_0003.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _rhs, \n\
+        				    Indirection_EnumClass :: _expand >(TheoremProto_0003, Axiom); \n\
+        				Auto< \n\
+        				    TheoremProto_0004.LHSPrimaryKey_UInt64 == TheoremProto_0004.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0004.TotalProofsFound_UInt64 >= TheoremProto_0004.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _lhs, \n\
+        				    Indirection_EnumClass :: _expand >(TheoremProto_0004, Axiom); \n\
+        				    \n\
+        				Auto< \n\
+        				    TheoremProto_0004.LHSPrimaryKey_UInt64 == TheoremProto_0004.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0004.TotalProofsFound_UInt64 >= TheoremProto_0004.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _rhs, \n\
+        				    Indirection_EnumClass :: _expand >(TheoremProto_0004, Axiom); \n\
+        				    \n\
+        				Auto< \n\
+        				    TheoremProto_0005.LHSPrimaryKey_UInt64 == TheoremProto_0005.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0005.TotalProofsFound_UInt64 >= TheoremProto_0005.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _lhs, \n\
+        				    Indirection_EnumClass :: _expand >(TheoremProto_0005, Axiom); \n\
+        				    \n\
+        				Auto< \n\
+        				    TheoremProto_0005.LHSPrimaryKey_UInt64 == TheoremProto_0005.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0005.TotalProofsFound_UInt64 >= TheoremProto_0005.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _rhs, \n\
+        				    Indirection_EnumClass :: _expand >(TheoremProto_0005, Axiom); \n\
+        				\n\
+        				limiter.release(); \n\
+        			} \n\
     				\n\
-    				limiter.release(); \n\
-    			} \n\
-				\n\
-			}); \n\
+    			}); \n\
 			break; \n\
-		} \n\
         \n\
 		case Indirection_EnumClass::_auto: \n\
 		default: \n\
-		{ \n\
 			std::for_each(std::execution::par_unseq, \n\
-			Axioms_Vec.begin(), \n\
-			Axioms_Vec.end(), \n\
-			[&](const Axiom_Struct& Axiom) \n\
-			{ \n\	
-    				Auto< \n\
-    				    TheoremProto_0000.LHSPrimaryKey_UInt64 == TheoremProto_0000.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0000.TotalProofsFound_UInt64 >= TheoremProto_0000.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _lhs, \n\
-    				    Indirection_EnumClass :: _reduce >(TheoremProto_0000, Axiom); \n\
-    				    \n\
-    				Auto< \n\
-    				    TheoremProto_0000.LHSPrimaryKey_UInt64 == TheoremProto_0000.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0000.TotalProofsFound_UInt64 >= TheoremProto_0000.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _rhs, \n\
-    				    Indirection_EnumClass :: _reduce >(TheoremProto_0000, Axiom); \n\
-    				Auto< \n\
-    				    TheoremProto_0001.LHSPrimaryKey_UInt64 == TheoremProto_0001.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0001.TotalProofsFound_UInt64 >= TheoremProto_0001.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _lhs, \n\
-    				    Indirection_EnumClass :: _reduce >(TheoremProto_0001, Axiom); \n\
-    				    \n\
-    				Auto< \n\
-    				    TheoremProto_0001.LHSPrimaryKey_UInt64 == TheoremProto_0001.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0001.TotalProofsFound_UInt64 >= TheoremProto_0001.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _rhs, \n\
-    				    Indirection_EnumClass :: _reduce >(TheoremProto_0001, Axiom); \n\
-    				    \n\
-    				Auto< \n\
-    				    TheoremProto_0002.LHSPrimaryKey_UInt64 == TheoremProto_0002.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0002.TotalProofsFound_UInt64 >= TheoremProto_0002.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _lhs, \n\
-    				    Indirection_EnumClass :: _reduce >(TheoremProto_0002, Axiom); \n\
-    				    \n\
-    				Auto< \n\
-    				    TheoremProto_0002.LHSPrimaryKey_UInt64 == TheoremProto_0002.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0002.TotalProofsFound_UInt64 >= TheoremProto_0002.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _rhs, \n\
-    				    Indirection_EnumClass :: _reduce >(TheoremProto_0002, Axiom); \n\
-    				    \n\
-    				\n\
-    				Auto< \n\
-    				    TheoremProto_0003.LHSPrimaryKey_UInt64 == TheoremProto_0003.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0003.TotalProofsFound_UInt64 >= TheoremProto_0003.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _lhs, \n\
-    				    Indirection_EnumClass :: _expand >(TheoremProto_0003, Axiom); \n\
-    				    \n\
-    				Auto< \n\
-    				    TheoremProto_0003.LHSPrimaryKey_UInt64 == TheoremProto_0003.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0003.TotalProofsFound_UInt64 >= TheoremProto_0003.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _rhs, \n\
-    				    Indirection_EnumClass :: _expand >(TheoremProto_0003, Axiom); \n\
-    				Auto< \n\
-    				    TheoremProto_0004.LHSPrimaryKey_UInt64 == TheoremProto_0004.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0004.TotalProofsFound_UInt64 >= TheoremProto_0004.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _lhs, \n\
-    				    Indirection_EnumClass :: _expand >(TheoremProto_0004, Axiom); \n\
-    				    \n\
-    				Auto< \n\
-    				    TheoremProto_0004.LHSPrimaryKey_UInt64 == TheoremProto_0004.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0004.TotalProofsFound_UInt64 >= TheoremProto_0004.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _rhs, \n\
-    				    Indirection_EnumClass :: _expand >(TheoremProto_0004, Axiom); \n\
-    				    \n\
-    				Auto< \n\
-    				    TheoremProto_0005.LHSPrimaryKey_UInt64 == TheoremProto_0005.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0005.TotalProofsFound_UInt64 >= TheoremProto_0005.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _lhs, \n\
-    				    Indirection_EnumClass :: _expand >(TheoremProto_0005, Axiom); \n\
-    				    \n\
-    				Auto< \n\
-    				    TheoremProto_0005.LHSPrimaryKey_UInt64 == TheoremProto_0005.RHSPrimaryKey_UInt64, \n\
-    				    TheoremProto_0005.TotalProofsFound_UInt64 >= TheoremProto_0005.MaxAllowedProofs_UInt64, \n\
-    				    RouteSource_EnumClass :: _rhs, \n\
-    				    Indirection_EnumClass :: _expand >(TheoremProto_0005, Axiom); \n\
-    				    \n\
-    				\n\
-    				limiter.release(); \n\
-			    \n\
-			}); \n\
+    			Axioms_Vec.begin(), \n\
+    			Axioms_Vec.end(), \n\
+    			[&](const Axiom_Struct& Axiom) \n\
+    			{ \n\	
+        				Auto< \n\
+        				    TheoremProto_0000.LHSPrimaryKey_UInt64 == TheoremProto_0000.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0000.TotalProofsFound_UInt64 >= TheoremProto_0000.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _lhs, \n\
+        				    Indirection_EnumClass :: _reduce >(TheoremProto_0000, Axiom); \n\
+        				    \n\
+        				Auto< \n\
+        				    TheoremProto_0000.LHSPrimaryKey_UInt64 == TheoremProto_0000.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0000.TotalProofsFound_UInt64 >= TheoremProto_0000.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _rhs, \n\
+        				    Indirection_EnumClass :: _reduce >(TheoremProto_0000, Axiom); \n\
+        				Auto< \n\
+        				    TheoremProto_0001.LHSPrimaryKey_UInt64 == TheoremProto_0001.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0001.TotalProofsFound_UInt64 >= TheoremProto_0001.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _lhs, \n\
+        				    Indirection_EnumClass :: _reduce >(TheoremProto_0001, Axiom); \n\
+        				    \n\
+        				Auto< \n\
+        				    TheoremProto_0001.LHSPrimaryKey_UInt64 == TheoremProto_0001.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0001.TotalProofsFound_UInt64 >= TheoremProto_0001.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _rhs, \n\
+        				    Indirection_EnumClass :: _reduce >(TheoremProto_0001, Axiom); \n\
+        				    \n\
+        				Auto< \n\
+        				    TheoremProto_0002.LHSPrimaryKey_UInt64 == TheoremProto_0002.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0002.TotalProofsFound_UInt64 >= TheoremProto_0002.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _lhs, \n\
+        				    Indirection_EnumClass :: _reduce >(TheoremProto_0002, Axiom); \n\
+        				    \n\
+        				Auto< \n\
+        				    TheoremProto_0002.LHSPrimaryKey_UInt64 == TheoremProto_0002.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0002.TotalProofsFound_UInt64 >= TheoremProto_0002.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _rhs, \n\
+        				    Indirection_EnumClass :: _reduce >(TheoremProto_0002, Axiom); \n\
+        				    \n\
+        				\n\
+        				Auto< \n\
+        				    TheoremProto_0003.LHSPrimaryKey_UInt64 == TheoremProto_0003.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0003.TotalProofsFound_UInt64 >= TheoremProto_0003.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _lhs, \n\
+        				    Indirection_EnumClass :: _expand >(TheoremProto_0003, Axiom); \n\
+        				    \n\
+        				Auto< \n\
+        				    TheoremProto_0003.LHSPrimaryKey_UInt64 == TheoremProto_0003.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0003.TotalProofsFound_UInt64 >= TheoremProto_0003.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _rhs, \n\
+        				    Indirection_EnumClass :: _expand >(TheoremProto_0003, Axiom); \n\
+        				Auto< \n\
+        				    TheoremProto_0004.LHSPrimaryKey_UInt64 == TheoremProto_0004.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0004.TotalProofsFound_UInt64 >= TheoremProto_0004.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _lhs, \n\
+        				    Indirection_EnumClass :: _expand >(TheoremProto_0004, Axiom); \n\
+        				    \n\
+        				Auto< \n\
+        				    TheoremProto_0004.LHSPrimaryKey_UInt64 == TheoremProto_0004.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0004.TotalProofsFound_UInt64 >= TheoremProto_0004.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _rhs, \n\
+        				    Indirection_EnumClass :: _expand >(TheoremProto_0004, Axiom); \n\
+        				    \n\
+        				Auto< \n\
+        				    TheoremProto_0005.LHSPrimaryKey_UInt64 == TheoremProto_0005.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0005.TotalProofsFound_UInt64 >= TheoremProto_0005.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _lhs, \n\
+        				    Indirection_EnumClass :: _expand >(TheoremProto_0005, Axiom); \n\
+        				    \n\
+        				Auto< \n\
+        				    TheoremProto_0005.LHSPrimaryKey_UInt64 == TheoremProto_0005.RHSPrimaryKey_UInt64, \n\
+        				    TheoremProto_0005.TotalProofsFound_UInt64 >= TheoremProto_0005.MaxAllowedProofs_UInt64, \n\
+        				    RouteSource_EnumClass :: _rhs, \n\
+        				    Indirection_EnumClass :: _expand >(TheoremProto_0005, Axiom); \n\
+        				    \n\
+        				\n\
+        				limiter.release(); \n\
+    			    \n\
+    			}); \n\
 			break; \n\
-		} \n\
 	}\n";
                     std::cout << "}\n" << std::endl;
                 }
