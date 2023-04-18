@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <thread>
 #include <atomic>
@@ -29,577 +30,203 @@ int main ()
                     std::cout << "\tTheorem_Struct InTheorem," << std::endl;
                     std::cout << "\tconst Axiom_Struct & InAxiom)" << std::endl;
                     std::cout << "{\n" << std::endl;
+                    std::cout << "	switch (InTheorem.Indir_EnumClass) \
+	{ \n\
+		case Indirection_EnumClass::_reduce: \n\
+		{ \n\
+			std::for_each(std::execution::par_unseq, \n\
+			Axioms_Vec.begin(), \n\
+			Axioms_Vec.end(), \n\
+			[&](const Axiom_Struct& Axiom) \n\
+			{ \n\
+                RecursionLimiter::Invoke limiter(6); \n\
+                if (limiter.acquired()) \n\
+    			{	\n\
+    				Auto< \n\
+    				    TheoremProto_0000.LHSPrimaryKey_UInt64 == TheoremProto_0000.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0000.TotalProofsFound_UInt64 >= TheoremProto_0000.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _lhs, \n\
+    				    Indirection_EnumClass :: _reduce >(TheoremProto_0000, Axiom); \n\
+    				    \n\
+    				Auto< \n\
+    				    TheoremProto_0000.LHSPrimaryKey_UInt64 == TheoremProto_0000.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0000.TotalProofsFound_UInt64 >= TheoremProto_0000.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _rhs, \n\
+    				    Indirection_EnumClass :: _reduce >(TheoremProto_0000, Axiom); \n\
+    				Auto< \n\
+    				    TheoremProto_0001.LHSPrimaryKey_UInt64 == TheoremProto_0001.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0001.TotalProofsFound_UInt64 >= TheoremProto_0001.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _lhs, \n\
+    				    Indirection_EnumClass :: _reduce >(TheoremProto_0001, Axiom); \n\
+    				    \n\
+    				Auto< \n\
+    				    TheoremProto_0001.LHSPrimaryKey_UInt64 == TheoremProto_0001.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0001.TotalProofsFound_UInt64 >= TheoremProto_0001.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _rhs, \n\
+    				    Indirection_EnumClass :: _reduce >(TheoremProto_0001, Axiom); \n\
+    				    \n\
+    				Auto< \n\
+    				    TheoremProto_0002.LHSPrimaryKey_UInt64 == TheoremProto_0002.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0002.TotalProofsFound_UInt64 >= TheoremProto_0002.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _lhs, \n\
+    				    Indirection_EnumClass :: _reduce >(TheoremProto_0002, Axiom); \n\
+    				    \n\
+    				Auto< \n\
+    				    TheoremProto_0002.LHSPrimaryKey_UInt64 == TheoremProto_0002.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0002.TotalProofsFound_UInt64 >= TheoremProto_0002.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _rhs, \n\
+    				    Indirection_EnumClass :: _reduce >(TheoremProto_0002, Axiom); \n\
+    				\n\
+    				limiter.release(); \n\
+    			} \n\
+    			\n\
+			}); \n\
+			break; \n\
+		} \n\
+        \n\
+		case Indirection_EnumClass::_expand: \n\
+		{ \n\
+			std::for_each(std::execution::par_unseq, \n\
+			Axioms_Vec.begin(), \n\
+			Axioms_Vec.end(), \n\
+			[&](const Axiom_Struct& Axiom) \n\
+			{ \n\
+                RecursionLimiter::Invoke limiter(6); \n\
+                if (limiter.acquired()) \n\
+    			{	\n\	
+    				Auto< \n\
+    				    TheoremProto_0003.LHSPrimaryKey_UInt64 == TheoremProto_0003.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0003.TotalProofsFound_UInt64 >= TheoremProto_0003.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _lhs, \n\
+    				    Indirection_EnumClass :: _expand >(TheoremProto_0003, Axiom); \n\
+    				    \n\
+    				Auto< \n\
+    				    TheoremProto_0003.LHSPrimaryKey_UInt64 == TheoremProto_0003.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0003.TotalProofsFound_UInt64 >= TheoremProto_0003.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _rhs, \n\
+    				    Indirection_EnumClass :: _expand >(TheoremProto_0003, Axiom); \n\
+    				Auto< \n\
+    				    TheoremProto_0004.LHSPrimaryKey_UInt64 == TheoremProto_0004.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0004.TotalProofsFound_UInt64 >= TheoremProto_0004.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _lhs, \n\
+    				    Indirection_EnumClass :: _expand >(TheoremProto_0004, Axiom); \n\
+    				    \n\
+    				Auto< \n\
+    				    TheoremProto_0004.LHSPrimaryKey_UInt64 == TheoremProto_0004.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0004.TotalProofsFound_UInt64 >= TheoremProto_0004.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _rhs, \n\
+    				    Indirection_EnumClass :: _expand >(TheoremProto_0004, Axiom); \n\
+    				    \n\
+    				Auto< \n\
+    				    TheoremProto_0005.LHSPrimaryKey_UInt64 == TheoremProto_0005.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0005.TotalProofsFound_UInt64 >= TheoremProto_0005.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _lhs, \n\
+    				    Indirection_EnumClass :: _expand >(TheoremProto_0005, Axiom); \n\
+    				    \n\
+    				Auto< \n\
+    				    TheoremProto_0005.LHSPrimaryKey_UInt64 == TheoremProto_0005.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0005.TotalProofsFound_UInt64 >= TheoremProto_0005.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _rhs, \n\
+    				    Indirection_EnumClass :: _expand >(TheoremProto_0005, Axiom); \n\
+    				\n\
+    				limiter.release(); \n\
+    			} \n\
+				\n\
+			}); \n\
+			break; \n\
+		} \n\
+        \n\
+		case Indirection_EnumClass::_auto: \n\
+		default: \n\
+		{ \n\
+			std::for_each(std::execution::par_unseq, \n\
+			Axioms_Vec.begin(), \n\
+			Axioms_Vec.end(), \n\
+			[&](const Axiom_Struct& Axiom) \n\
+			{ \n\	
+    				Auto< \n\
+    				    TheoremProto_0000.LHSPrimaryKey_UInt64 == TheoremProto_0000.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0000.TotalProofsFound_UInt64 >= TheoremProto_0000.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _lhs, \n\
+    				    Indirection_EnumClass :: _reduce >(TheoremProto_0000, Axiom); \n\
+    				    \n\
+    				Auto< \n\
+    				    TheoremProto_0000.LHSPrimaryKey_UInt64 == TheoremProto_0000.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0000.TotalProofsFound_UInt64 >= TheoremProto_0000.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _rhs, \n\
+    				    Indirection_EnumClass :: _reduce >(TheoremProto_0000, Axiom); \n\
+    				Auto< \n\
+    				    TheoremProto_0001.LHSPrimaryKey_UInt64 == TheoremProto_0001.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0001.TotalProofsFound_UInt64 >= TheoremProto_0001.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _lhs, \n\
+    				    Indirection_EnumClass :: _reduce >(TheoremProto_0001, Axiom); \n\
+    				    \n\
+    				Auto< \n\
+    				    TheoremProto_0001.LHSPrimaryKey_UInt64 == TheoremProto_0001.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0001.TotalProofsFound_UInt64 >= TheoremProto_0001.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _rhs, \n\
+    				    Indirection_EnumClass :: _reduce >(TheoremProto_0001, Axiom); \n\
+    				    \n\
+    				Auto< \n\
+    				    TheoremProto_0002.LHSPrimaryKey_UInt64 == TheoremProto_0002.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0002.TotalProofsFound_UInt64 >= TheoremProto_0002.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _lhs, \n\
+    				    Indirection_EnumClass :: _reduce >(TheoremProto_0002, Axiom); \n\
+    				    \n\
+    				Auto< \n\
+    				    TheoremProto_0002.LHSPrimaryKey_UInt64 == TheoremProto_0002.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0002.TotalProofsFound_UInt64 >= TheoremProto_0002.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _rhs, \n\
+    				    Indirection_EnumClass :: _reduce >(TheoremProto_0002, Axiom); \n\
+    				    \n\
+    				\n\
+    				Auto< \n\
+    				    TheoremProto_0003.LHSPrimaryKey_UInt64 == TheoremProto_0003.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0003.TotalProofsFound_UInt64 >= TheoremProto_0003.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _lhs, \n\
+    				    Indirection_EnumClass :: _expand >(TheoremProto_0003, Axiom); \n\
+    				    \n\
+    				Auto< \n\
+    				    TheoremProto_0003.LHSPrimaryKey_UInt64 == TheoremProto_0003.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0003.TotalProofsFound_UInt64 >= TheoremProto_0003.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _rhs, \n\
+    				    Indirection_EnumClass :: _expand >(TheoremProto_0003, Axiom); \n\
+    				Auto< \n\
+    				    TheoremProto_0004.LHSPrimaryKey_UInt64 == TheoremProto_0004.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0004.TotalProofsFound_UInt64 >= TheoremProto_0004.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _lhs, \n\
+    				    Indirection_EnumClass :: _expand >(TheoremProto_0004, Axiom); \n\
+    				    \n\
+    				Auto< \n\
+    				    TheoremProto_0004.LHSPrimaryKey_UInt64 == TheoremProto_0004.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0004.TotalProofsFound_UInt64 >= TheoremProto_0004.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _rhs, \n\
+    				    Indirection_EnumClass :: _expand >(TheoremProto_0004, Axiom); \n\
+    				    \n\
+    				Auto< \n\
+    				    TheoremProto_0005.LHSPrimaryKey_UInt64 == TheoremProto_0005.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0005.TotalProofsFound_UInt64 >= TheoremProto_0005.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _lhs, \n\
+    				    Indirection_EnumClass :: _expand >(TheoremProto_0005, Axiom); \n\
+    				    \n\
+    				Auto< \n\
+    				    TheoremProto_0005.LHSPrimaryKey_UInt64 == TheoremProto_0005.RHSPrimaryKey_UInt64, \n\
+    				    TheoremProto_0005.TotalProofsFound_UInt64 >= TheoremProto_0005.MaxAllowedProofs_UInt64, \n\
+    				    RouteSource_EnumClass :: _rhs, \n\
+    				    Indirection_EnumClass :: _expand >(TheoremProto_0005, Axiom); \n\
+    				    \n\
+    				\n\
+    				limiter.release(); \n\
+			    \n\
+			}); \n\
+			break; \n\
+		} \n\
+	}\n";
                     std::cout << "}\n" << std::endl;
                 }
             }
         }
     }
+
     return EXIT_SUCCESS;
 }
-
-/*
-template < 
-bool ProofFound_ParameterFlag,
-bool MaxAllowedProofsFound_ParameterFlag,
-RouteSource_EnumClass R, 
-Indirection_EnumClass B > // Declaration of the primary template function
-void Auto ();
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-false,
-RouteSource_EnumClass :: _root,
-Indirection_EnumClass :: _auto > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-false,
-RouteSource_EnumClass :: _root,
-Indirection_EnumClass :: _reduce > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-false,
-RouteSource_EnumClass :: _root,
-Indirection_EnumClass :: _expand > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-false,
-RouteSource_EnumClass :: _lhs,
-Indirection_EnumClass :: _auto > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-false,
-RouteSource_EnumClass :: _lhs,
-Indirection_EnumClass :: _reduce > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-false,
-RouteSource_EnumClass :: _lhs,
-Indirection_EnumClass :: _expand > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-false,
-RouteSource_EnumClass :: _rhs,
-Indirection_EnumClass :: _auto > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-false,
-RouteSource_EnumClass :: _rhs,
-Indirection_EnumClass :: _reduce > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-false,
-RouteSource_EnumClass :: _rhs,
-Indirection_EnumClass :: _expand > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-true,
-RouteSource_EnumClass :: _root,
-Indirection_EnumClass :: _auto > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-true,
-RouteSource_EnumClass :: _root,
-Indirection_EnumClass :: _reduce > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-true,
-RouteSource_EnumClass :: _root,
-Indirection_EnumClass :: _expand > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-true,
-RouteSource_EnumClass :: _lhs,
-Indirection_EnumClass :: _auto > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-true,
-RouteSource_EnumClass :: _lhs,
-Indirection_EnumClass :: _reduce > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-true,
-RouteSource_EnumClass :: _lhs,
-Indirection_EnumClass :: _expand > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-true,
-RouteSource_EnumClass :: _rhs,
-Indirection_EnumClass :: _auto > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-true,
-RouteSource_EnumClass :: _rhs,
-Indirection_EnumClass :: _reduce > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-true,
-RouteSource_EnumClass :: _rhs,
-Indirection_EnumClass :: _expand > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-false,
-RouteSource_EnumClass :: _root,
-Indirection_EnumClass :: _auto > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-false,
-RouteSource_EnumClass :: _root,
-Indirection_EnumClass :: _reduce > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-false,
-RouteSource_EnumClass :: _root,
-Indirection_EnumClass :: _expand > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-false,
-RouteSource_EnumClass :: _lhs,
-Indirection_EnumClass :: _auto > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-false,
-RouteSource_EnumClass :: _lhs,
-Indirection_EnumClass :: _reduce > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-false,
-RouteSource_EnumClass :: _lhs,
-Indirection_EnumClass :: _expand > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-false,
-RouteSource_EnumClass :: _rhs,
-Indirection_EnumClass :: _auto > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-false,
-RouteSource_EnumClass :: _rhs,
-Indirection_EnumClass :: _reduce > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-false,
-RouteSource_EnumClass :: _rhs,
-Indirection_EnumClass :: _expand > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-true,
-RouteSource_EnumClass :: _root,
-Indirection_EnumClass :: _auto > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-true,
-RouteSource_EnumClass :: _root,
-Indirection_EnumClass :: _reduce > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-true,
-RouteSource_EnumClass :: _root,
-Indirection_EnumClass :: _expand > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-true,
-RouteSource_EnumClass :: _lhs,
-Indirection_EnumClass :: _auto > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-true,
-RouteSource_EnumClass :: _lhs,
-Indirection_EnumClass :: _reduce > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-true,
-RouteSource_EnumClass :: _lhs,
-Indirection_EnumClass :: _expand > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-true,
-RouteSource_EnumClass :: _rhs,
-Indirection_EnumClass :: _auto > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-true,
-RouteSource_EnumClass :: _rhs,
-Indirection_EnumClass :: _reduce > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-true,
-true,
-RouteSource_EnumClass :: _rhs,
-Indirection_EnumClass :: _expand > (
-	Theorem_Struct InTheorem,
-	const Axiom_Struct & InAxiom)
-{
-
-}
-
-/*
-__attribute__ ((always_inline)) template <>	// Template specialization of the primary template function
-void Auto <
-false,
-false,
-RouteSource_EnumClass :: _auto,
-Indirection_EnumClass :: _expand > (
-    Theorem_Struct InTheorem,
-    const Axiom_Struct & InAxiom)
-{
-	if (InTheorem.RHSReduceCallGraph_UInt64Map.count(InAxiom.guid) == 0) return;
-
-	if (InTheorem.RHSReduceCallHistory_UInt64Map.count(InAxiom.guid) > 0) return;
-
-	InTheorem.RHSReduceCallHistory_UInt64Map.insert(InAxiom.guid);
-
-	Theorem_Struct TheoremProto_0000 = InTheorem;
-	Theorem_Struct TheoremProto_0001 = InTheorem;
-	Theorem_Struct TheoremProto_0002 = InTheorem;
-
-	TheoremProto_0000.UpdatePrimaryKey_LHS(InAxiom.RHSPrimaryKey_UInt64, InAxiom.LHSPrimaryKey_UInt64);
-
-	TheoremProto_0001.UpdatePrimaryKey_RHS(InAxiom.RHSPrimaryKey_UInt64, InAxiom.LHSPrimaryKey_UInt64);
-
-	TheoremProto_0002.UpdatePrimaryKey_LHS(InAxiom.RHSPrimaryKey_UInt64, InAxiom.LHSPrimaryKey_UInt64);
-	TheoremProto_0002.UpdatePrimaryKey_RHS(InAxiom.RHSPrimaryKey_UInt64, InAxiom.LHSPrimaryKey_UInt64);
-
-	TheoremProto_0000.ProofStack_VecUInt64.push_back(InAxiom.guid);
-	TheoremProto_0001.ProofStack_VecUInt64.push_back(InAxiom.guid);
-	TheoremProto_0002.ProofStack_VecUInt64.push_back(InAxiom.guid);
-
-	if (TheoremProto_0000.LHSPrimaryKey_UInt64 == TheoremProto_0000.RHSPrimaryKey_UInt64)
-	{
-		TotalProofsFound_UInt64++;
-		ProofFound_Flag = true;
-		if (TotalProofsFound_UInt64 >= MaxAllowedProofs_UInt64) return;
-	}
-
-	if (TheoremProto_0001.LHSPrimaryKey_UInt64 == TheoremProto_0001.RHSPrimaryKey_UInt64)
-	{
-		TotalProofsFound_UInt64++;
-		ProofFound_Flag = true;
-		if (TotalProofsFound_UInt64 >= MaxAllowedProofs_UInt64) return;
-	}
-
-	if (TheoremProto_0002.LHSPrimaryKey_UInt64 == TheoremProto_0002.RHSPrimaryKey_UInt64)
-	{
-		TotalProofsFound_UInt64++;
-		ProofFound_Flag = true;
-		if (TotalProofsFound_UInt64 >= MaxAllowedProofs_UInt64) return;
-	}
-
-	switch (InTheorem.Indir_EnumClass)
-	{
-		case Indirection_EnumClass::_reduce:
-		{
-			std::for_each(std::execution::par_unseq, 
-			Axioms_Vec.begin(), 
-			Axioms_Vec.end(), 
-			[&](const Axiom_Struct& Axiom)
-			{
-				while (recursive_calls_available.load(std::memory_order_relaxed) < 3)
-					std::this_thread::yield();
-					
-				recursive_calls_available.fetch_sub(3, std::memory_order_relaxed);
-					
-				Reduce(TheoremProto_0000, Axiom);
-				Reduce(TheoremProto_0001, Axiom);
-				Reduce(TheoremProto_0002, Axiom);
-					
-				recursive_calls_available.fetch_add(3, std::memory_order_relaxed);
-			});
-			break;
-		}
-
-		case Indirection_EnumClass::_expand:
-		{
-			std::for_each(std::execution::par_unseq, 
-			Axioms_Vec.begin(), 
-			Axioms_Vec.end(), 
-			[&](const Axiom_Struct& Axiom)
-			{
-				while (recursive_calls_available.load(std::memory_order_relaxed) < 3)
-					std::this_thread::yield();
-					
-				recursive_calls_available.fetch_sub(3, std::memory_order_relaxed);
-					
-				Expand(TheoremProto_0000, Axiom);
-				Expand(TheoremProto_0001, Axiom);
-				Expand(TheoremProto_0002, Axiom);
-					
-				recursive_calls_available.fetch_add(3, std::memory_order_relaxed);
-			});
-			break;
-		}
-
-		case Indirection_EnumClass::_auto:
-		default:
-		{
-			std::for_each(std::execution::par_unseq, 
-			Axioms_Vec.begin(), 
-			Axioms_Vec.end(), 
-			[&](const Axiom_Struct& Axiom)
-			{
-				while (recursive_calls_available.load(std::memory_order_relaxed) < 6)
-					std::this_thread::yield();
-					
-				recursive_calls_available.fetch_sub(6, std::memory_order_relaxed);
-				
-				Reduce(TheoremProto_0000, Axiom);
-				Reduce(TheoremProto_0001, Axiom);
-				Reduce(TheoremProto_0002, Axiom);
-				
-				Expand(TheoremProto_0000, Axiom);
-				Expand(TheoremProto_0001, Axiom);
-				Expand(TheoremProto_0002, Axiom);
-					
-				recursive_calls_available.fetch_add(6, std::memory_order_relaxed);
-			});
-			break;
-		}
-	}
-};
-*/
-
-
