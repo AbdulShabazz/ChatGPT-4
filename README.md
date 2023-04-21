@@ -1,2 +1,2 @@
-# ChatGPT-3
- ChatGPT-3 logs
+# ChatGPT
+ ChatGPT logs
