@@ -7,7 +7,14 @@
 #include <array>
 #include <chrono>
 
-enum class RouteSource_EnumClass : int
+enum class MaxCPUCores : int
+{
+    _1,
+    _Max,
+    _GPU_Enabled
+};
+
+enum class RouteGoal_EnumClass : int
 {
     _lhs,
     _rhs,
@@ -32,11 +39,11 @@ struct AxiomProto_Struct
     std::unordered_map<uint64_t, bool> LHSCallHistory;
     std::unordered_map<uint64_t, bool> RHSCallHistory;
 
-    std::unordered_map<RouteSource_EnumClass,
+    std::unordered_map<RouteGoal_EnumClass,
         std::unordered_map<uint64_t, bool>>
         LHSCallGraph_UInt64Map;
 
-    std::unordered_map<RouteSource_EnumClass,
+    std::unordered_map<RouteGoal_EnumClass,
         std::unordered_map<uint64_t, bool>>
         RHSCallGraph_UInt64Map;
 
@@ -135,8 +142,12 @@ int main ()
     */
 
     Theorem_Struct Theorem;
+
+    const uint64_t N = 2; // Update as needed;
+
+    std::array < Axiom_Struct, N > Axioms_Vec;
     
-    std::unordered_map <uint64_t,bool> Axioms_LibraryMap;
+    std::unordered_map <uint64_t,Axiom_Struct> Axioms_LibraryMap;
     
     std::vector<std::array<uint64_t, 2>> Axioms_UInt64Vec = // const (global) task list
     {
@@ -190,30 +201,32 @@ int main ()
 
         if (Theorem.SubnetFound_LHS(lhs))
         {
-            Axiom.RHSCallGraph_UInt64Map[RouteSource_EnumClass::_lhs][Theorem.guid] = true;
-        }
-
-        if (Theorem.SubnetFound_RHS(lhs))
-        {
-            Axiom.RHSCallGraph_UInt64Map[RouteSource_EnumClass::_rhs][Theorem.guid] = true;
+            Theorem.LHSCallGraph_UInt64Map[RouteGoal_EnumClass::_rhs][Axiom.guid] = true;
         }
 
         if (Theorem.SubnetFound_LHS(rhs))
         {
-            Axiom.LHSCallGraph_UInt64Map[RouteSource_EnumClass::_lhs][Theorem.guid] = true;
+            Theorem.LHSCallGraph_UInt64Map[RouteGoal_EnumClass::_lhs][Axiom.guid] = true;
+        }
+
+        if (Theorem.SubnetFound_RHS(lhs))
+        {
+            Theorem.RHSCallGraph_UInt64Map[RouteGoal_EnumClass::_rhs][Axiom.guid] = true;
         }
 
         if (Theorem.SubnetFound_RHS(rhs))
         {
-            Axiom.LHSCallGraph_UInt64Map[RouteSource_EnumClass::_rhs][Theorem.guid] = true;
+            Theorem.RHSCallGraph_UInt64Map[RouteGoal_EnumClass::_lhs][Axiom.guid] = true;
         }
 
         Axioms_LibraryMap[Axiom.guid - 1] = Axiom;
+        
+        Axioms_Vec[Axiom.guid - 1] = Axiom;
     }
 
-    for (const Axiom_Struct& Axiom_i : Axioms_Vec)
+    for (Axiom_Struct& Axiom_i : Axioms_Vec)
     {
-        for (Axiom_Struct& Axiom_j : Axioms_Vec)
+        for (const Axiom_Struct& Axiom_j : Axioms_Vec)
         {
             /*
             Authorize qualifying axiom subnets by adding
@@ -224,32 +237,37 @@ int main ()
             {
                 if (Axiom_i.SubnetFound_LHS(Axiom_j.LHSPrimaryKey_UInt64))
                 {
-                    Axiom_j.RHSCallGraph_UInt64Map[RouteSource_EnumClass::_lhs][Axiom_i.guid] = true;
+                    Axiom_i.LHSCallGraph_UInt64Map[RouteGoal_EnumClass::_rhs][Axiom_j.guid] = true;
                 }
 
                 if (Axiom_i.SubnetFound_LHS(Axiom_j.RHSPrimaryKey_UInt64))
                 {
-                    Axiom_j.LHSCallGraph_UInt64Map[RouteSource_EnumClass::_lhs][Axiom_i.guid] = true;
+                    Axiom_i.LHSCallGraph_UInt64Map[RouteGoal_EnumClass::_lhs][Axiom_j.guid] = true;
                 }
 
                 if (Axiom_i.SubnetFound_RHS(Axiom_j.LHSPrimaryKey_UInt64))
                 {
-                    Axiom_j.RHSCallGraph_UInt64Map[RouteSource_EnumClass::_rhs][Axiom_i.guid] = true;
+                    Axiom_i.RHSCallGraph_UInt64Map[RouteGoal_EnumClass::_rhs][Axiom_j.guid] = true;
                 }
 
                 if (Axiom_i.SubnetFound_RHS(Axiom_j.RHSPrimaryKey_UInt64))
                 {
-                    Axiom_j.LHSCallGraph_UInt64Map[RouteSource_EnumClass::_rhs][Axiom_i.guid] = true;
+                    Axiom_i.LHSCallGraph_UInt64Map[RouteGoal_EnumClass::_rhs][Axiom_j.guid] = true;
                 }
             }
         }
     }
     
-    NextRound_Struct Round;;
+    for (Axiom_Struct& Axiom_i : Axioms_Vec)
+    {
+        Axioms_LibraryMap[Axiom_i.guid] = Axiom_i;
+    }
     
-    std::vector<Theorem_Struct> InOut;
+    NextRound_Struct Round;
     
-    std::array<InOut,2> Tasks_Thread;
+    //std::vector<Theorem_Struct> InOut;
+    
+    std::array < std::vector < Theorem_Struct >,2 > Tasks_Thread;
     
     Tasks_Thread[0].push_back(Theorem);
     
@@ -270,10 +288,10 @@ int main ()
     
     //while(Tasks_Thread[i].size())
     //{
-        const uint8_t j = Round.NextRound_UInt8();
-        const uint8_t i = Round.CurrentRound_UInt8();
+        const uint8_t Read = Round.NextRound_UInt8();
+        const uint8_t Write = Round.CurrentRound_UInt8();
         
-        for(Theorem_Struct InTheorem : Tasks_Thread[i])
+        for(Theorem_Struct InTheorem : Tasks_Thread[Read])
         {
             if(InTheorem.LHSPrimaryKey_UInt64 == InTheorem.RHSPrimaryKey_UInt64)
             {
@@ -290,16 +308,18 @@ int main ()
                     break;
             }
             
-            switch(InTheorem.Indirection_EnumClass)
+            switch(InTheorem.Indir_EnumClass)
             {
                 case Indirection_EnumClass::_reduce:
                 if(
-                    InTheorem.LHSCallGraph_UInt64Map.find(RouteSource_EnumClass::_lhs) != 
+                    InTheorem.LHSCallGraph_UInt64Map.find(RouteGoal_EnumClass::_rhs) != 
                     InTheorem.LHSCallGraph_UInt64Map.begin()
                    )
                {
-                    for(const idx_UInt64& : InTheorem.LHSCallGraph_UInt64Map [ RouteSource_EnumClass :: _lhs ] )
+                    for(const auto& idx_pair : InTheorem.LHSCallGraph_UInt64Map [ RouteGoal_EnumClass :: _rhs ] )
                     {
+                        const uint64_t& idx_UInt64 = idx_pair.first;
+                        
                         if(InTheorem.LHSCallHistory.find(idx_UInt64) != 
                         InTheorem.LHSCallHistory.begin())
                             continue;
@@ -314,10 +334,10 @@ int main ()
                         Theorem_Struct th_0001 = InTheorem;
                         Theorem_Struct th_0002 = InTheorem;
                         
-                        th_0000.UpdatePrimaryKey_LHS(Axiom.RHSPrimaryKey_UInt64);
-                        th_0001.UpdatePrimaryKey_RHS(Axiom.RHSPrimaryKey_UInt64);
-                        th_0002.UpdatePrimaryKey_LHS(Axiom.RHSPrimaryKey_UInt64);
-                        th_0002.UpdatePrimaryKey_RHS(Axiom.RHSPrimaryKey_UInt64);
+                        th_0000.UpdatePrimaryKey_LHS(Axiom.LHSPrimaryKey_UInt64, Axiom.RHSPrimaryKey_UInt64);
+                        th_0001.UpdatePrimaryKey_RHS(Axiom.LHSPrimaryKey_UInt64, Axiom.RHSPrimaryKey_UInt64);
+                        th_0002.UpdatePrimaryKey_LHS(Axiom.LHSPrimaryKey_UInt64, Axiom.RHSPrimaryKey_UInt64);
+                        th_0002.UpdatePrimaryKey_RHS(Axiom.LHSPrimaryKey_UInt64, Axiom.RHSPrimaryKey_UInt64);
                         
                         th_0000.LHSCallGraph_UInt64Map = 
                         th_0001.LHSCallGraph_UInt64Map = 
@@ -329,18 +349,20 @@ int main ()
                         th_0002.RHSCallGraph_UInt64Map = 
                             Axiom.RHSCallGraph_UInt64Map;
                         
-                        Tasks_Thread[j].push_back(th_0000);
-                        Tasks_Thread[j].push_back(th_0001);
-                        Tasks_Thread[j].push_back(th_0002);
+                        Tasks_Thread[Write].push_back(th_0000);
+                        Tasks_Thread[Write].push_back(th_0001);
+                        Tasks_Thread[Write].push_back(th_0002);
                     }
                }
                 if(
-                    InTheorem.LHSCallGraph_UInt64Map.find(RouteSource_EnumClass::_rhs) != 
-                    InTheorem.LHSCallGraph_UInt64Map.begin()
+                    InTheorem.RHSCallGraph_UInt64Map.find(RouteGoal_EnumClass::_rhs) != 
+                    InTheorem.RHSCallGraph_UInt64Map.begin()
                    )
                {
-                    for(const idx_UInt64& : InTheorem.LHSCallGraph_UInt64Map [ RouteSource_EnumClass :: _rhs ] )
+                    for(const auto& idx_pair : InTheorem.LHSCallGraph_UInt64Map [ RouteGoal_EnumClass :: _rhs ] )
                     {
+                        const uint64_t& idx_UInt64 = idx_pair.first;
+                        
                         if(InTheorem.RHSCallHistory.find(idx_UInt64) != 
                         InTheorem.LHSCallHistory.begin())
                             continue;
@@ -355,10 +377,10 @@ int main ()
                         Theorem_Struct th_0001 = InTheorem;
                         Theorem_Struct th_0002 = InTheorem;
                         
-                        th_0000.UpdatePrimaryKey_LHS(Axiom.RHSPrimaryKey_UInt64);
-                        th_0001.UpdatePrimaryKey_RHS(Axiom.RHSPrimaryKey_UInt64);
-                        th_0002.UpdatePrimaryKey_LHS(Axiom.RHSPrimaryKey_UInt64);
-                        th_0002.UpdatePrimaryKey_RHS(Axiom.RHSPrimaryKey_UInt64);
+                        th_0000.UpdatePrimaryKey_LHS(Axiom.LHSPrimaryKey_UInt64, Axiom.RHSPrimaryKey_UInt64);
+                        th_0001.UpdatePrimaryKey_RHS(Axiom.LHSPrimaryKey_UInt64, Axiom.RHSPrimaryKey_UInt64);
+                        th_0002.UpdatePrimaryKey_LHS(Axiom.LHSPrimaryKey_UInt64, Axiom.RHSPrimaryKey_UInt64);
+                        th_0002.UpdatePrimaryKey_RHS(Axiom.LHSPrimaryKey_UInt64, Axiom.RHSPrimaryKey_UInt64);
                         
                         th_0000.LHSCallGraph_UInt64Map = 
                         th_0001.LHSCallGraph_UInt64Map = 
@@ -370,103 +392,23 @@ int main ()
                         th_0002.RHSCallGraph_UInt64Map = 
                             Axiom.RHSCallGraph_UInt64Map;
                         
-                        Tasks_Thread[j].push_back(th_0000);
-                        Tasks_Thread[j].push_back(th_0001);
-                        Tasks_Thread[j].push_back(th_0002);
-                    }
-               }
-                if(
-                    InTheorem.RHSCallGraph_UInt64Map.find(RouteSource_EnumClass::_lhs) != 
-                    InTheorem.RHSCallGraph_UInt64Map.begin()
-                   )
-               {
-                    for(const idx_UInt64& : InTheorem.RHSCallGraph_UInt64Map [ RouteSource_EnumClass :: _lhs ] )
-                    {
-                        if(InTheorem.LHSCallHistory.find(idx_UInt64) != 
-                        InTheorem.LHSCallHistory.begin())
-                            continue;
-                            
-                        InTheorem.LHSCallHistory[ idx_UInt64 ] = true;
-                        
-                        const Axiom_Struct& Axiom = Axioms_LibraryMap [ idx_UInt64 ];
-                        
-                        InTheorem.ProofStack_VecUInt64.push_back(Axiom.guid);
-                        
-                        Theorem_Struct th_0000 = InTheorem;
-                        Theorem_Struct th_0001 = InTheorem;
-                        Theorem_Struct th_0002 = InTheorem;
-                        
-                        th_0000.UpdatePrimaryKey_LHS(Axiom.RHSPrimaryKey_UInt64);
-                        th_0001.UpdatePrimaryKey_RHS(Axiom.RHSPrimaryKey_UInt64);
-                        th_0002.UpdatePrimaryKey_LHS(Axiom.RHSPrimaryKey_UInt64);
-                        th_0002.UpdatePrimaryKey_RHS(Axiom.RHSPrimaryKey_UInt64);
-                        
-                        th_0000.LHSCallGraph_UInt64Map = 
-                        th_0001.LHSCallGraph_UInt64Map = 
-                        th_0002.LHSCallGraph_UInt64Map = 
-                            Axiom.LHSCallGraph_UInt64Map;
-                        
-                        th_0000.RHSCallGraph_UInt64Map = 
-                        th_0001.RHSCallGraph_UInt64Map = 
-                        th_0002.RHSCallGraph_UInt64Map = 
-                            Axiom.RHSCallGraph_UInt64Map;
-                        
-                        Tasks_Thread[j].push_back(th_0000);
-                        Tasks_Thread[j].push_back(th_0001);
-                        Tasks_Thread[j].push_back(th_0002);
-                    }
-               }
-                if(
-                    InTheorem.RHSCallGraph_UInt64Map.find(RouteSource_EnumClass::_rhs) != 
-                    InTheorem.RHSCallGraph_UInt64Map.begin()
-                   )
-               {
-                    for(const idx_UInt64& : InTheorem.RHSCallGraph_UInt64Map [ RouteSource_EnumClass :: _rhs ] )
-                    {
-                        if(InTheorem.RHSCallHistory.find(idx_UInt64) != 
-                        InTheorem.LHSCallHistory.begin())
-                            continue;
-                            
-                        InTheorem.RHSCallHistory[ idx_UInt64 ] = true;
-                        
-                        const Axiom_Struct& Axiom = Axioms_LibraryMap [ idx_UInt64 ];
-                        
-                        InTheorem.ProofStack_VecUInt64.push_back(Axiom.guid);
-                        
-                        Theorem_Struct th_0000 = InTheorem;
-                        Theorem_Struct th_0001 = InTheorem;
-                        Theorem_Struct th_0002 = InTheorem;
-                        
-                        th_0000.UpdatePrimaryKey_LHS(Axiom.RHSPrimaryKey_UInt64);
-                        th_0001.UpdatePrimaryKey_RHS(Axiom.RHSPrimaryKey_UInt64);
-                        th_0002.UpdatePrimaryKey_LHS(Axiom.RHSPrimaryKey_UInt64);
-                        th_0002.UpdatePrimaryKey_RHS(Axiom.RHSPrimaryKey_UInt64);
-                        
-                        th_0000.LHSCallGraph_UInt64Map = 
-                        th_0001.LHSCallGraph_UInt64Map = 
-                        th_0002.LHSCallGraph_UInt64Map = 
-                            Axiom.LHSCallGraph_UInt64Map;
-                        
-                        th_0000.RHSCallGraph_UInt64Map = 
-                        th_0001.RHSCallGraph_UInt64Map = 
-                        th_0002.RHSCallGraph_UInt64Map = 
-                            Axiom.RHSCallGraph_UInt64Map;
-                        
-                        Tasks_Thread[j].push_back(th_0000);
-                        Tasks_Thread[j].push_back(th_0001);
-                        Tasks_Thread[j].push_back(th_0002);
+                        Tasks_Thread[Write].push_back(th_0000);
+                        Tasks_Thread[Write].push_back(th_0001);
+                        Tasks_Thread[Write].push_back(th_0002);
                     }
                }
                 break;
                 
                 case Indirection_EnumClass::_expand:
                 if(
-                    InTheorem.LHSCallGraph_UInt64Map.find(RouteSource_EnumClass::_lhs) != 
+                    InTheorem.LHSCallGraph_UInt64Map.find(RouteGoal_EnumClass::_lhs) != 
                     InTheorem.LHSCallGraph_UInt64Map.begin()
                    )
                {
-                    for(const idx_UInt64& : InTheorem.LHSCallGraph_UInt64Map [ RouteSource_EnumClass :: _lhs ] )
+                    for(const auto& idx_pair : InTheorem.LHSCallGraph_UInt64Map [ RouteGoal_EnumClass :: _lhs ] )
                     {
+                        const uint64_t& idx_UInt64 = idx_pair.first;
+                        
                         if(InTheorem.LHSCallHistory.find(idx_UInt64) != 
                         InTheorem.LHSCallHistory.begin())
                             continue;
@@ -481,10 +423,10 @@ int main ()
                         Theorem_Struct th_0001 = InTheorem;
                         Theorem_Struct th_0002 = InTheorem;
                         
-                        th_0000.UpdatePrimaryKey_LHS(Axiom.LHSPrimaryKey_UInt64);
-                        th_0001.UpdatePrimaryKey_RHS(Axiom.LHSPrimaryKey_UInt64);
-                        th_0002.UpdatePrimaryKey_LHS(Axiom.LHSPrimaryKey_UInt64);
-                        th_0002.UpdatePrimaryKey_RHS(Axiom.LHSPrimaryKey_UInt64);
+                        th_0000.UpdatePrimaryKey_LHS(Axiom.RHSPrimaryKey_UInt64, Axiom.LHSPrimaryKey_UInt64);
+                        th_0001.UpdatePrimaryKey_RHS(Axiom.RHSPrimaryKey_UInt64, Axiom.LHSPrimaryKey_UInt64);
+                        th_0002.UpdatePrimaryKey_LHS(Axiom.RHSPrimaryKey_UInt64, Axiom.LHSPrimaryKey_UInt64);
+                        th_0002.UpdatePrimaryKey_RHS(Axiom.RHSPrimaryKey_UInt64, Axiom.LHSPrimaryKey_UInt64);
                         
                         th_0000.LHSCallGraph_UInt64Map = 
                         th_0001.LHSCallGraph_UInt64Map = 
@@ -496,18 +438,20 @@ int main ()
                         th_0002.RHSCallGraph_UInt64Map = 
                             Axiom.RHSCallGraph_UInt64Map;
                         
-                        Tasks_Thread[j].push_back(th_0000);
-                        Tasks_Thread[j].push_back(th_0001);
-                        Tasks_Thread[j].push_back(th_0002);
+                        Tasks_Thread[Write].push_back(th_0000);
+                        Tasks_Thread[Write].push_back(th_0001);
+                        Tasks_Thread[Write].push_back(th_0002);
                     }
                }
                 if(
-                    InTheorem.LHSCallGraph_UInt64Map.find(RouteSource_EnumClass::_rhs) != 
-                    InTheorem.LHSCallGraph_UInt64Map.begin()
+                    InTheorem.RHSCallGraph_UInt64Map.find(RouteGoal_EnumClass::_lhs) != 
+                    InTheorem.RHSCallGraph_UInt64Map.begin()
                    )
                {
-                    for(const idx_UInt64& : InTheorem.LHSCallGraph_UInt64Map [ RouteSource_EnumClass :: _rhs ] )
+                    for(const auto& idx_pair : InTheorem.LHSCallGraph_UInt64Map [ RouteGoal_EnumClass :: _lhs ] )
                     {
+                        const uint64_t& idx_UInt64 = idx_pair.first;
+                        
                         if(InTheorem.RHSCallHistory.find(idx_UInt64) != 
                         InTheorem.LHSCallHistory.begin())
                             continue;
@@ -522,10 +466,10 @@ int main ()
                         Theorem_Struct th_0001 = InTheorem;
                         Theorem_Struct th_0002 = InTheorem;
                         
-                        th_0000.UpdatePrimaryKey_LHS(Axiom.LHSPrimaryKey_UInt64);
-                        th_0001.UpdatePrimaryKey_RHS(Axiom.LHSPrimaryKey_UInt64);
-                        th_0002.UpdatePrimaryKey_LHS(Axiom.LHSPrimaryKey_UInt64);
-                        th_0002.UpdatePrimaryKey_RHS(Axiom.LHSPrimaryKey_UInt64);
+                        th_0000.UpdatePrimaryKey_LHS(Axiom.RHSPrimaryKey_UInt64, Axiom.LHSPrimaryKey_UInt64);
+                        th_0001.UpdatePrimaryKey_RHS(Axiom.RHSPrimaryKey_UInt64, Axiom.LHSPrimaryKey_UInt64);
+                        th_0002.UpdatePrimaryKey_LHS(Axiom.RHSPrimaryKey_UInt64, Axiom.LHSPrimaryKey_UInt64);
+                        th_0002.UpdatePrimaryKey_RHS(Axiom.RHSPrimaryKey_UInt64, Axiom.LHSPrimaryKey_UInt64);
                         
                         th_0000.LHSCallGraph_UInt64Map = 
                         th_0001.LHSCallGraph_UInt64Map = 
@@ -537,102 +481,191 @@ int main ()
                         th_0002.RHSCallGraph_UInt64Map = 
                             Axiom.RHSCallGraph_UInt64Map;
                         
-                        Tasks_Thread[j].push_back(th_0000);
-                        Tasks_Thread[j].push_back(th_0001);
-                        Tasks_Thread[j].push_back(th_0002);
-                    }
-               }
-                if(
-                    InTheorem.RHSCallGraph_UInt64Map.find(RouteSource_EnumClass::_lhs) != 
-                    InTheorem.RHSCallGraph_UInt64Map.begin()
-                   )
-               {
-                    for(const idx_UInt64& : InTheorem.RHSCallGraph_UInt64Map [ RouteSource_EnumClass :: _lhs ] )
-                    {
-                        if(InTheorem.LHSCallHistory.find(idx_UInt64) != 
-                        InTheorem.LHSCallHistory.begin())
-                            continue;
-                            
-                        InTheorem.LHSCallHistory[ idx_UInt64 ] = true;
-                        
-                        const Axiom_Struct& Axiom = Axioms_LibraryMap [ idx_UInt64 ];
-                        
-                        InTheorem.ProofStack_VecUInt64.push_back(Axiom.guid);
-                        
-                        Theorem_Struct th_0000 = InTheorem;
-                        Theorem_Struct th_0001 = InTheorem;
-                        Theorem_Struct th_0002 = InTheorem;
-                        
-                        th_0000.UpdatePrimaryKey_LHS(Axiom.LHSPrimaryKey_UInt64);
-                        th_0001.UpdatePrimaryKey_RHS(Axiom.LHSPrimaryKey_UInt64);
-                        th_0002.UpdatePrimaryKey_LHS(Axiom.LHSPrimaryKey_UInt64);
-                        th_0002.UpdatePrimaryKey_RHS(Axiom.LHSPrimaryKey_UInt64);
-                        
-                        th_0000.LHSCallGraph_UInt64Map = 
-                        th_0001.LHSCallGraph_UInt64Map = 
-                        th_0002.LHSCallGraph_UInt64Map = 
-                            Axiom.LHSCallGraph_UInt64Map;
-                        
-                        th_0000.RHSCallGraph_UInt64Map = 
-                        th_0001.RHSCallGraph_UInt64Map = 
-                        th_0002.RHSCallGraph_UInt64Map = 
-                            Axiom.RHSCallGraph_UInt64Map;
-                        
-                        Tasks_Thread[j].push_back(th_0000);
-                        Tasks_Thread[j].push_back(th_0001);
-                        Tasks_Thread[j].push_back(th_0002);
-                    }
-               }
-                if(
-                    InTheorem.RHSCallGraph_UInt64Map.find(RouteSource_EnumClass::_rhs) != 
-                    InTheorem.RHSCallGraph_UInt64Map.begin()
-                   )
-               {
-                    for(const idx_UInt64& : InTheorem.RHSCallGraph_UInt64Map [ RouteSource_EnumClass :: _rhs ] )
-                    {
-                        if(InTheorem.RHSCallHistory.find(idx_UInt64) != 
-                        InTheorem.LHSCallHistory.begin())
-                            continue;
-                            
-                        InTheorem.RHSCallHistory[ idx_UInt64 ] = true;
-                        
-                        const Axiom_Struct& Axiom = Axioms_LibraryMap [ idx_UInt64 ];
-                        
-                        InTheorem.ProofStack_VecUInt64.push_back(Axiom.guid);
-                        
-                        Theorem_Struct th_0000 = InTheorem;
-                        Theorem_Struct th_0001 = InTheorem;
-                        Theorem_Struct th_0002 = InTheorem;
-                        
-                        th_0000.UpdatePrimaryKey_LHS(Axiom.LHSPrimaryKey_UInt64);
-                        th_0001.UpdatePrimaryKey_RHS(Axiom.LHSPrimaryKey_UInt64);
-                        th_0002.UpdatePrimaryKey_LHS(Axiom.LHSPrimaryKey_UInt64);
-                        th_0002.UpdatePrimaryKey_RHS(Axiom.LHSPrimaryKey_UInt64);
-                        
-                        th_0000.LHSCallGraph_UInt64Map = 
-                        th_0001.LHSCallGraph_UInt64Map = 
-                        th_0002.LHSCallGraph_UInt64Map = 
-                            Axiom.LHSCallGraph_UInt64Map;
-                        
-                        th_0000.RHSCallGraph_UInt64Map = 
-                        th_0001.RHSCallGraph_UInt64Map = 
-                        th_0002.RHSCallGraph_UInt64Map = 
-                            Axiom.RHSCallGraph_UInt64Map;
-                        
-                        Tasks_Thread[j].push_back(th_0000);
-                        Tasks_Thread[j].push_back(th_0001);
-                        Tasks_Thread[j].push_back(th_0002);
+                        Tasks_Thread[Write].push_back(th_0000);
+                        Tasks_Thread[Write].push_back(th_0001);
+                        Tasks_Thread[Write].push_back(th_0002);
                     }
                }
                 break;
                 
                 case Indirection_EnumClass::_auto:
                 default:
-                
+                if(
+                    InTheorem.LHSCallGraph_UInt64Map.find(RouteGoal_EnumClass::_rhs) != 
+                    InTheorem.LHSCallGraph_UInt64Map.begin()
+                   )
+               {
+                    for(const auto& idx_pair : InTheorem.LHSCallGraph_UInt64Map [ RouteGoal_EnumClass :: _rhs ] )
+                    {
+                        const uint64_t& idx_UInt64 = idx_pair.first;
+                        
+                        if(InTheorem.LHSCallHistory.find(idx_UInt64) != 
+                        InTheorem.LHSCallHistory.begin())
+                            continue;
+                            
+                        InTheorem.LHSCallHistory[ idx_UInt64 ] = true;
+                        
+                        const Axiom_Struct& Axiom = Axioms_LibraryMap [ idx_UInt64 ];
+                        
+                        InTheorem.ProofStack_VecUInt64.push_back(Axiom.guid);
+                        
+                        Theorem_Struct th_0000 = InTheorem;
+                        Theorem_Struct th_0001 = InTheorem;
+                        Theorem_Struct th_0002 = InTheorem;
+                        
+                        th_0000.UpdatePrimaryKey_LHS(Axiom.LHSPrimaryKey_UInt64, Axiom.RHSPrimaryKey_UInt64);
+                        th_0001.UpdatePrimaryKey_RHS(Axiom.LHSPrimaryKey_UInt64, Axiom.RHSPrimaryKey_UInt64);
+                        th_0002.UpdatePrimaryKey_LHS(Axiom.LHSPrimaryKey_UInt64, Axiom.RHSPrimaryKey_UInt64);
+                        th_0002.UpdatePrimaryKey_RHS(Axiom.LHSPrimaryKey_UInt64, Axiom.RHSPrimaryKey_UInt64);
+                        
+                        th_0000.LHSCallGraph_UInt64Map = 
+                        th_0001.LHSCallGraph_UInt64Map = 
+                        th_0002.LHSCallGraph_UInt64Map = 
+                            Axiom.LHSCallGraph_UInt64Map;
+                        
+                        th_0000.RHSCallGraph_UInt64Map = 
+                        th_0001.RHSCallGraph_UInt64Map = 
+                        th_0002.RHSCallGraph_UInt64Map = 
+                            Axiom.RHSCallGraph_UInt64Map;
+                        
+                        Tasks_Thread[Write].push_back(th_0000);
+                        Tasks_Thread[Write].push_back(th_0001);
+                        Tasks_Thread[Write].push_back(th_0002);
+                    }
+               }
+                if(
+                    InTheorem.RHSCallGraph_UInt64Map.find(RouteGoal_EnumClass::_rhs) != 
+                    InTheorem.RHSCallGraph_UInt64Map.begin()
+                   )
+               {
+                    for(const auto& idx_pair : InTheorem.RHSCallGraph_UInt64Map [ RouteGoal_EnumClass :: _rhs ] )
+                    {
+                        const uint64_t& idx_UInt64 = idx_pair.first;
+                        
+                        if(InTheorem.RHSCallHistory.find(idx_UInt64) != 
+                        InTheorem.LHSCallHistory.begin())
+                            continue;
+                            
+                        InTheorem.RHSCallHistory[ idx_UInt64 ] = true;
+                        
+                        const Axiom_Struct& Axiom = Axioms_LibraryMap [ idx_UInt64 ];
+                        
+                        InTheorem.ProofStack_VecUInt64.push_back(Axiom.guid);
+                        
+                        Theorem_Struct th_0000 = InTheorem;
+                        Theorem_Struct th_0001 = InTheorem;
+                        Theorem_Struct th_0002 = InTheorem;
+                        
+                        th_0000.UpdatePrimaryKey_LHS(Axiom.LHSPrimaryKey_UInt64, Axiom.RHSPrimaryKey_UInt64);
+                        th_0001.UpdatePrimaryKey_RHS(Axiom.LHSPrimaryKey_UInt64, Axiom.RHSPrimaryKey_UInt64);
+                        th_0002.UpdatePrimaryKey_LHS(Axiom.LHSPrimaryKey_UInt64, Axiom.RHSPrimaryKey_UInt64);
+                        th_0002.UpdatePrimaryKey_RHS(Axiom.LHSPrimaryKey_UInt64, Axiom.RHSPrimaryKey_UInt64);
+                        
+                        th_0000.LHSCallGraph_UInt64Map = 
+                        th_0001.LHSCallGraph_UInt64Map = 
+                        th_0002.LHSCallGraph_UInt64Map = 
+                            Axiom.LHSCallGraph_UInt64Map;
+                        
+                        th_0000.RHSCallGraph_UInt64Map = 
+                        th_0001.RHSCallGraph_UInt64Map = 
+                        th_0002.RHSCallGraph_UInt64Map = 
+                            Axiom.RHSCallGraph_UInt64Map;
+                        
+                        Tasks_Thread[Write].push_back(th_0000);
+                        Tasks_Thread[Write].push_back(th_0001);
+                        Tasks_Thread[Write].push_back(th_0002);
+                    }
+               }
+                if(
+                    InTheorem.LHSCallGraph_UInt64Map.find(RouteGoal_EnumClass::_lhs) != 
+                    InTheorem.LHSCallGraph_UInt64Map.begin()
+                   )
+               {
+                    for(const auto& idx_pair : InTheorem.LHSCallGraph_UInt64Map [ RouteGoal_EnumClass :: _lhs ] )
+                    {
+                        const uint64_t& idx_UInt64 = idx_pair.first;
+                        
+                        if(InTheorem.LHSCallHistory.find(idx_UInt64) != 
+                        InTheorem.LHSCallHistory.begin())
+                            continue;
+                            
+                        InTheorem.LHSCallHistory[ idx_UInt64 ] = true;
+                        
+                        const Axiom_Struct& Axiom = Axioms_LibraryMap [ idx_UInt64 ];
+                        
+                        InTheorem.ProofStack_VecUInt64.push_back(Axiom.guid);
+                        
+                        Theorem_Struct th_0000 = InTheorem;
+                        Theorem_Struct th_0001 = InTheorem;
+                        Theorem_Struct th_0002 = InTheorem;
+                        
+                        th_0000.UpdatePrimaryKey_LHS(Axiom.RHSPrimaryKey_UInt64, Axiom.LHSPrimaryKey_UInt64);
+                        th_0001.UpdatePrimaryKey_RHS(Axiom.RHSPrimaryKey_UInt64, Axiom.LHSPrimaryKey_UInt64);
+                        th_0002.UpdatePrimaryKey_LHS(Axiom.RHSPrimaryKey_UInt64, Axiom.LHSPrimaryKey_UInt64);
+                        th_0002.UpdatePrimaryKey_RHS(Axiom.RHSPrimaryKey_UInt64, Axiom.LHSPrimaryKey_UInt64);
+                        
+                        th_0000.LHSCallGraph_UInt64Map = 
+                        th_0001.LHSCallGraph_UInt64Map = 
+                        th_0002.LHSCallGraph_UInt64Map = 
+                            Axiom.LHSCallGraph_UInt64Map;
+                        
+                        th_0000.RHSCallGraph_UInt64Map = 
+                        th_0001.RHSCallGraph_UInt64Map = 
+                        th_0002.RHSCallGraph_UInt64Map = 
+                            Axiom.RHSCallGraph_UInt64Map;
+                        
+                        Tasks_Thread[Write].push_back(th_0000);
+                        Tasks_Thread[Write].push_back(th_0001);
+                        Tasks_Thread[Write].push_back(th_0002);
+                    }
+               }
+                if(
+                    InTheorem.RHSCallGraph_UInt64Map.find(RouteGoal_EnumClass::_lhs) != 
+                    InTheorem.RHSCallGraph_UInt64Map.begin()
+                   )
+               {
+                    for(const auto& idx_pair : InTheorem.RHSCallGraph_UInt64Map [ RouteGoal_EnumClass :: _lhs ] )
+                    {
+                        const uint64_t& idx_UInt64 = idx_pair.first;
+                        
+                        if(InTheorem.RHSCallHistory.find(idx_UInt64) != 
+                        InTheorem.LHSCallHistory.begin())
+                            continue;
+                            
+                        InTheorem.RHSCallHistory[ idx_UInt64 ] = true;
+                        
+                        const Axiom_Struct& Axiom = Axioms_LibraryMap [ idx_UInt64 ];
+                        
+                        InTheorem.ProofStack_VecUInt64.push_back(Axiom.guid);
+                        
+                        Theorem_Struct th_0000 = InTheorem;
+                        Theorem_Struct th_0001 = InTheorem;
+                        Theorem_Struct th_0002 = InTheorem;
+                        
+                        th_0000.UpdatePrimaryKey_LHS(Axiom.RHSPrimaryKey_UInt64, Axiom.LHSPrimaryKey_UInt64);
+                        th_0001.UpdatePrimaryKey_RHS(Axiom.RHSPrimaryKey_UInt64, Axiom.LHSPrimaryKey_UInt64);
+                        th_0002.UpdatePrimaryKey_LHS(Axiom.RHSPrimaryKey_UInt64, Axiom.LHSPrimaryKey_UInt64);
+                        th_0002.UpdatePrimaryKey_RHS(Axiom.RHSPrimaryKey_UInt64, Axiom.LHSPrimaryKey_UInt64);
+                        
+                        th_0000.LHSCallGraph_UInt64Map = 
+                        th_0001.LHSCallGraph_UInt64Map = 
+                        th_0002.LHSCallGraph_UInt64Map = 
+                            Axiom.LHSCallGraph_UInt64Map;
+                        
+                        th_0000.RHSCallGraph_UInt64Map = 
+                        th_0001.RHSCallGraph_UInt64Map = 
+                        th_0002.RHSCallGraph_UInt64Map = 
+                            Axiom.RHSCallGraph_UInt64Map;
+                        
+                        Tasks_Thread[Write].push_back(th_0000);
+                        Tasks_Thread[Write].push_back(th_0001);
+                        Tasks_Thread[Write].push_back(th_0002);
+                    }
+               }
                 break;
             } // switch(InTheorem.Indirection_EnumClass)
         } // for(_ : Tasks_Thread[i])
-        Tasks_Thread[i] = {};
+        Tasks_Thread[Read] = {};
     //}
     
     return EXIT_SUCCESS;
