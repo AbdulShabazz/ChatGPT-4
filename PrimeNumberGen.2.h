@@ -1,5 +1,3 @@
-
-
 std::vector<uint64_t> PrimeComposite_UInt64Vec { 2, 3, 5 };
 
 /**
