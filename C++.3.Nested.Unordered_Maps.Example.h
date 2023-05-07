@@ -38,3 +38,41 @@ int main()
 
 	return EXIT_SUCCESS;
 }
+
+#include <cstdlib>
+#include <string>
+#include <unordered_map>
+#include <vector>
+#include <iostream>
+
+int main()
+{
+	const uint64_t guid_UInt64 {};
+	
+	std::vector Theorem_UInt64Vec = {2};
+	std::vector Axiom_i = {4};
+	
+	std::unordered_map<
+	std::string,
+	std::unordered_map<
+	uint64_t,
+	std::unordered_map<
+	uint64_t, bool>>>
+	
+	InAxiomCallGraph_Map;
+	
+	InAxiomCallGraph_Map.emplace
+	(
+		"lhs_reduce",
+		std::unordered_map<
+		uint64_t,
+		std::unordered_map<
+		uint64_t, bool>>
+		{ {Theorem_UInt64Vec[guid_UInt64], { {Axiom_i[guid_UInt64], true} } }}
+	);
+	
+	std::cout << "InAxiomCallGraph_Map[\"lhs_reduce\"][Theorem_UInt64Vec[guid_UInt64]][Axiom_i[guid_UInt64]] = " << std::boolalpha << InAxiomCallGraph_Map["lhs_reduce"][Theorem_UInt64Vec[guid_UInt64]][Axiom_i[guid_UInt64]] << std::endl;
+	std::cout << "InAxiomCallGraph_Map[\"lhs_expand\"][Theorem_UInt64Vec[guid_UInt64]][Axiom_i[guid_UInt64]] = " << std::boolalpha << InAxiomCallGraph_Map["lhs_expand"][Theorem_UInt64Vec[guid_UInt64]][Axiom_i[guid_UInt64]] << std::endl;
+	
+	return EXIT_SUCCESS;
+}
