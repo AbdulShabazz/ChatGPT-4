@@ -10,7 +10,7 @@ int main()
     const int I = v.size();
     for ( int i = 0 ; i < I; ++i)
     {
-        v.insert(v.begin() + 1, 1, 1);
+        v.insert(v.begin() + 1, 1, 1); // (pos, count, value) //
     }
     for (const auto& val : v)
     {
