@@ -167,3 +167,20 @@ Total Duration (nanoseconds): 82018
 ReWrite...
 Q.E.D.
 */
+
+#include <thread>
+#include <future>
+#include <EuclidProver.h>
+int main() {
+	int x = 10;
+	EuclidProver Euclid;
+	auto myLambda = [&x]() {
+		x = 20;
+	};
+
+	auto future = std::async(&EuclidProver::Invoke, &Euclid, std::thread(myLambda));
+	std::cout << x << std::endl; // Prints 10
+	int result = future.get(); // Prints 20
+	return 0;
+}
+
