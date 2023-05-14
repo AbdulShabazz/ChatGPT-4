@@ -122,3 +122,48 @@ Total Duration (nanoseconds): 59071
 ReWrite...
 Q.E.D.
 */
+
+
+#include <cstdlib>
+#include <iostream>
+#include <chrono>
+#include <thread>
+#include <future>
+
+int main()
+{
+	bool bStatusReadyFlag {};
+	const std::string QED {"Q.E.D."};
+	
+	auto cb = [](const bool& _bStatusReadyFlag, const std::string& _qed) -> void 
+	{
+		if (_bStatusReadyFlag)
+			std::cout << _qed << std::endl;
+	};
+	
+	auto ReWrite = [](bool& _bStatusReadyFlag, const std::string& _qed, auto&& _cb) -> void
+	{
+		std::cout << "ReWrite..." << std::endl;
+		_bStatusReadyFlag = true;
+		if (_cb)
+			_cb (_bStatusReadyFlag, _qed);
+	};
+	
+	auto start_time_chrono = std::chrono::high_resolution_clock::now();
+	
+	auto future = std::async(ReWrite, std::ref(bStatusReadyFlag), std::cref(QED), std::move(cb));
+	
+	auto end_time_chrono = std::chrono::high_resolution_clock::now();
+	auto duration_chrono = std::chrono::duration_cast<std::chrono::nanoseconds>(end_time_chrono - start_time_chrono).count();
+	std::cout << "Total Duration (nanoseconds): " << duration_chrono << std::endl;
+	
+	future.get(); // emulates thread::join()
+	
+	return EXIT_SUCCESS;
+}
+
+/*
+Total Duration (nanoseconds): 82018
+ReWrite...
+Q.E.D.
+*/
