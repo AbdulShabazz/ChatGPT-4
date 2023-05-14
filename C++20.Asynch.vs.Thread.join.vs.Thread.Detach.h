@@ -123,7 +123,6 @@ ReWrite...
 Q.E.D.
 */
 
-
 #include <cstdlib>
 #include <iostream>
 #include <chrono>
