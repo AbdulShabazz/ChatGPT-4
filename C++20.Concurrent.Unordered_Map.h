@@ -44,6 +44,8 @@ public:
     }
 };
 
+/*
+// Usage example
 int main() {
     ConcurrentUnorderedMap<int,int> map(10);
 
@@ -64,8 +66,6 @@ int main() {
 }
 
 // Usage example
-//#include <tbb/concurrent_unordered_map.h>
-//#include <tbb/parallel_for_each.h>
 #include <vector>
 #include <unordered_map>
 #include <algorithm>
@@ -90,4 +90,4 @@ int main() {
 
     return 0;
 }
-
+*/
