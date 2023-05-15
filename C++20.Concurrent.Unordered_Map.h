@@ -25,7 +25,7 @@ private:
 public:
     ConcurrentUnorderedMap(const KEY num_buckets = 0) : num_buckets(num_buckets), buckets(num_buckets) {}
 
-    void insert(KEY key, Value value) {
+    void insert(const KEY& key, const VALUE& value) {
         Bucket& bucket = get_bucket(key);
         std::lock_guard<std::mutex> lock(bucket.mtx);
         bucket.map[key] = value;
@@ -75,8 +75,8 @@ int main() {
     ConcurrentUnorderedMap<int, std::vector<int>> map{};
 
     // Insert elements in parallel
-    std::vector<int> keys = {1, 2, 3, 4, 5};
-    std::for_each(std::execution::par_unseq, keys.begin(), keys.end(), [&map](int key) {
+    const std::vector<int> keys = {1, 2, 3, 4, 5};
+    std::for_each(std::execution::par_unseq, keys.begin(), keys.end(), [&map](const int& key) {
         map[key] = {key*1, key*2, key*3};
     });
 
