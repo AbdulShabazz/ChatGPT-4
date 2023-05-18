@@ -1,4 +1,6 @@
-Of course, I'd be happy to help you solve a Rubik's Cube! Below is a simplified, step-by-step method of solving it:
+Q:Assistant, can you help me solve a rubic cube?
+
+ChatGPT-4:Of course, I'd be happy to help you solve a Rubik's Cube! Below is a simplified, step-by-step method of solving it:
 
 1. **Solving the White Cross**: You first solve the edges of one face, usually the white. For each white edge piece, perform a series of moves to bring each piece to the white face while matching the adjacent colors.
 
