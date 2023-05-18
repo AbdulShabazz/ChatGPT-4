@@ -30,15 +30,16 @@ cpp
 #include <condition_variable>
 
 class ThreadPool {
+public:
+    explicit ThreadPool(size_t);
+    template<class F, class... Args> void enqueue(F&& f, Args&&... args);
+    ~ThreadPool();
+private:
     std::vector<std::thread> workers;
     std::queue<std::function<void()>> tasks;
     std::mutex queue_mutex;
     std::condition_variable condition;
     bool stop;
-public:
-    ThreadPool(size_t);
-    template<class F, class... Args> void enqueue(F&& f, Args&&... args);
-    ~ThreadPool();
 };
 
 /*
@@ -107,10 +108,12 @@ with `lhsMutex` and `rhsMutex`.
 
 For example:
 *cpp
-std::lock_guard<std::shared_mutex> lock(lhsMutex);
-LHSRouteHistoryMap.emplace(Theorem_0000[LHS], Theorem_0000);
-*
-
+*/
+{
+	std::lock_guard<std::shared_mutex> lock(lhsMutex);
+	LHSRouteHistoryMap.emplace(Theorem_0000[LHS], Theorem_0000);
+}
+/*
 Please remember to replace the code within the thread pool tasks with your actual code, 
 and replace all direct access to the map with the thread-safe version using the mutexes.
 */
