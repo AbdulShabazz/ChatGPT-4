@@ -1,0 +1,24 @@
+Of course, I'd be happy to help you solve a Rubik's Cube! Below is a simplified, step-by-step method of solving it:
+
+1. **Solving the White Cross**: You first solve the edges of one face, usually the white. For each white edge piece, perform a series of moves to bring each piece to the white face while matching the adjacent colors.
+
+2. **Solving the White Corners**: Next, solve for the white corners. Position the cube so the white center is on top. If a white corner piece is in the bottom layer, turn the bottom until the corner is directly under where it needs to go, and use a set of movements to bring it up to the white face.
+
+3. **Solving the Middle Layer**: Now, flip the cube so the white face is on the bottom. For any edge in the top face that doesn't have yellow on it, rotate the top until the front color of that edge matches the center of the side face. Use either the Left or Right algorithm to insert them into place:
+   
+   - For edges in the top layer that need to go to the right place in the middle layer, use the following algorithm: U R Ui Ri Ui Fi U F
+   - For edges that need to go to the left, use this algorithm: Ui Li U L U F Ui Fi
+
+4. **Solving the Yellow Cross**: Make sure the white face is still on the bottom. Use the following algorithm until the yellow edges are complete (not necessarily aligned with the side colors): F R U Ri Ui Fi. You might need to perform it multiple times.
+
+5. **Solving the Yellow Edges**: You want to make the yellow face have all edges matching the side centers. Rotate the U face until at least two edges match. Use the following algorithm to shuffle the yellow edges around: R U Ri U R U U Ri. Repeat as needed until all the yellow edges match the side center colors.
+
+6. **Positioning Yellow Corners**: Now you need to get each yellow corner piece in the right place, if not oriented correctly. If only one corner is in the right place, hold it in the front right and use the following algorithm: U R Ui Li U Ri Ui L. If no corners are in the right place, just perform the algorithm from any position.
+
+7. **Orienting the Yellow Corners**: Finally, turn the U face until a yellow corner piece is in the right position but not oriented correctly (yellow not on top), then use this algorithm to orient all the corners: Ri Di R D. Keep using this until the corner is solved then turn the U face (not the whole cube) to bring another unsolved corner in the front right. Repeat until all corners are solved.
+
+Congratulations, you've solved a Rubik's Cube!
+
+Remember: Ui or U' means to rotate the Upper layer in a counter-clockwise direction, while Ri or R' is rotating the right layer counter-clockwise, Fi or F' means to rotate the front layer counter-clockwise, Di or D' means to rotate the bottom layer counter-clockwise. The absence of 'i' or ' implies clockwise rotation.
+
+These instructions assume you are familiar with the basic notation and mechanics of the cube, so let me know if you need more basic instructions or clarifications!
