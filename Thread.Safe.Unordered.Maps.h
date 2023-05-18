@@ -82,8 +82,8 @@ void ThreadPool::enqueue(F&& f, Args&&... args) {
     }
     condition.notify_one();
 }
-/*
 
+/*
 Finally, here's how to offload the if-blocks to the thread pool:
 
 cpp
