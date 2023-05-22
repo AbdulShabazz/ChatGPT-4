@@ -11,3 +11,5 @@ size_t hashVector(const std::vector<T>& vec) {
     }
     return hash;
 }
+
+/*The hash combination formula used is a good generic combination which is known to work well in many situations. It's borrowed from Boost library.*/
