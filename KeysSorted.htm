@@ -7,19 +7,22 @@
 			try{
 				// Get input from textarea#Input
 				let input = document.getElementById('Input').value;
+				// Get input from textarea#Input
+				let input2 = document.getElementById('Output').value;
 				// Parse it to a JavaScript object
 				let data = JSON.parse(input);
+				let data2 = JSON.parse(input2);
 
 				let colors = data.colors;
-				let sortedColors = {};
+				let mods = data2["workbench.colorCustomizations"];
 
 				// Sort object keys
-				Object.keys(colors).sort().forEach(function(key) {
-				sortedColors[key] = colors[key];
+				Object.keys(mods).forEach(function(key) {
+					colors[key] = mods[key];
 				});
 
 				// Replace old colors with sortedColors
-				data.colors = sortedColors;
+				data.colors = colors;
 
 				// Set sorted JSON string as output
 				document.getElementById('Output').value = JSON.stringify(data, null, 2);
