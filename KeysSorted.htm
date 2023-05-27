@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JSON Key Sorter</title>
+	<script>
+		function sortKeys() {
+			try{
+				// Get input from textarea#Input
+				let input = document.getElementById('Input').value;
+				// Parse it to a JavaScript object
+				let data = JSON.parse(input);
+
+				let colors = data.colors;
+				let sortedColors = {};
+
+				// Sort object keys
+				Object.keys(colors).sort().forEach(function(key) {
+				sortedColors[key] = colors[key];
+				});
+
+				// Replace old colors with sortedColors
+				data.colors = sortedColors;
+
+				// Set sorted JSON string as output
+				document.getElementById('Output').value = JSON.stringify(data, null, 2);
+			} catch(e) {
+				document.getElementById('Output').value = e;
+			}
+		}
+	</script>
+</head>
+<body>
+	<div><button onclick="sortKeys()">Sort Keys</button></div>
+	<textarea id="Input" rows="26" cols="500" placeholder="Input"></textarea>
+	<textarea id="Output" rows="26" cols="500" placeholder="Output"></textarea>
+</body>
+</html>
