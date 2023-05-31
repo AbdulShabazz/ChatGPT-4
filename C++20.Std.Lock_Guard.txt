@@ -1,0 +1,20 @@
+Q:std::unique_lock-, std::lock_guard-, std::shared_lock- which offers the best performance?
+
+ChatGPT-4: The performance of `std::unique_lock`, `std::lock_guard`, and `std::shared_lock` 
+is not typically a differentiating factor as they are more about providing different levels of control 
+and functionality over mutex locking. However, there can be some differences in overhead due to the flexibility they provide:
+
+1. `std::lock_guard`: This is the simplest of the three. It locks a mutex upon construction and unlocks it 
+upon destruction. It does not provide any control over when locking or unlocking happens, so it has the least overhead. 
+If you just need to lock a mutex for the duration of a scope, `std::lock_guard` is usually the best choice.
+
+2. `std::unique_lock`: This is more flexible than `std::lock_guard`. It allows deferred locking, timed locking, 
+recursive locking, and transferring lock ownership. This extra functionality means it may have a bit more overhead 
+than `std::lock_guard`. If you need any of its extra features, then `std::unique_lock` is the best choice.
+
+3. `std::shared_lock`: This is used with `std::shared_mutex` to allow multiple threads to hold a lock at the same time. 
+It is more flexible than `std::lock_guard` but less flexible than `std::unique_lock`. Its overhead is typically similar 
+to `std::unique_lock`. If you are using a `std::shared_mutex` and need to hold a shared lock, then `std::shared_lock` is the best choice.
+
+In general, the choice between these should be based on the functionality you need rather than performance. 
+If you are experiencing performance issues, it is likely due to the design of your threading and locking rather than the choice of lock type.
