@@ -38,11 +38,11 @@ int main ()
     {
         for(int i = 0; i < 5000'000; ++i)
         {
-            hmap_default.emplace(std::string{i},i);
+            hmap_default.emplace(std::to_string(i),i);
         }
         for(int i = 0; i < 5000'000; ++i)
         {
-            hmap_default.find(std::string{i});
+            hmap_default.find(std::to_string(i));
         }
         std::cout << "Default implementation: 500\'000 insertions.";
     });
@@ -51,11 +51,11 @@ int main ()
     {
         for(int i = 0; i < 5000'000; ++i)
         {
-            hmap_custom.emplace(std::string{i},i);
+            hmap_custom.emplace(std::to_string(i),i);
         }
         for(int i = 0; i < 5000'000; ++i)
         {
-            hmap_custom.find(std::string{i});
+            hmap_custom.find(std::to_string(i));
         }
         std::cout << "Custom implementation: 500\'000 insertions.";
     });
