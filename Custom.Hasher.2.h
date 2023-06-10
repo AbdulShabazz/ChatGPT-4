@@ -46,3 +46,28 @@ struct CustomHash {
 		return hash;
 	}
 };
+
+//
+
+unsigned long xor_djb2_hash(const std::string& str) {
+    unsigned long hash = 5381;
+    
+    for (char c : str) {
+        hash = (hash << 5 + 1) + static_cast<unsigned char>(c);
+    }
+    
+    return hash;
+}
+
+//
+
+unsigned long xor_djb2_hash(const std::string& str) {
+    unsigned long hash = 5381;
+    
+    for (char c : str) {
+        hash = (hash << 5 + 1) ^ static_cast<unsigned char>(c);
+    }
+    
+    return hash;
+}
+
