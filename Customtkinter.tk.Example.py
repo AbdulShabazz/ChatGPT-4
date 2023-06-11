@@ -1,3 +1,5 @@
+#python.exe pip -m install customtkinter
+
 import customtkinter as tk
 
 class App(tk.CTk):
