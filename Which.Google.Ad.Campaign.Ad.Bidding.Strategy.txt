@@ -1,0 +1,14 @@
+Which google ad campaign ad bidding strategy is most cost effective to target: Conversions, Conversion value, Clicks, Impression share?
+ChatGPT
+
+Choosing the most cost-effective bidding strategy on Google Ads depends on the specific goals of your campaign. The bidding strategy that will be the most cost-effective for you can vary greatly based on your business type, industry, competition, budget, and marketing objectives. Here is a brief overview of each type of bidding strategy you mentioned:
+
+    Target Conversions (Target CPA): This bidding strategy is used when you want to optimize for conversions. Google automatically sets bids to help get as many conversions as possible at the target cost-per-action (CPA) you set. If getting more conversions at a specific cost is your goal, this strategy can be very cost-effective.
+
+    Target Conversion Value (Target ROAS): This bidding strategy is used when you want to optimize for the value of the conversions and not just the number of conversions. Google automatically sets bids to maximize conversion value while trying to achieve an average return on ad spend (ROAS) equal to your target. If maximizing the return on your ad spend is your goal, this strategy can be very cost-effective.
+
+    Maximize Clicks: This is an automatic bidding strategy that's the simplest way to bid for clicks. The strategy helps to get the most clicks within your budget. If driving traffic to your site is your goal, this strategy can be very cost-effective.
+
+    Target Impression Share: This is a smart bidding strategy that automates bidding across multiple campaigns, ad groups, and keywords to achieve a certain percentage of impressions. This strategy is used when you want to increase your visibility and brand awareness. If improving your brand's visibility is your goal, this strategy can be very cost-effective.
+
+Ultimately, the most cost-effective bidding strategy will depend on what you're hoping to achieve with your campaign. It's often recommended to experiment with different strategies to see what works best for your specific situation. Also, Google Ads' performance planner can help you forecast how your campaigns might perform with different bidding strategies. You can also make use of Google's Optimization Score to receive recommendations on which bidding strategies might improve the performance of your campaigns.
