@@ -65,4 +65,8 @@ int main()
 }
 /*
 In this version, I removed the template parameters ProofFound_TemplateParameterFlag and TotalProofsFoundGEMaxAllowedProofs_TemplateParameterFlag from the Auto function, and instead added them as regular function arguments. I then used if constexpr inside the function to call the appropriate specialization based on the conditions. This allows the code to compile and run correctly.
+
+SFINAE
+
+Specification Failed Initialization Is Not An Error
 */
