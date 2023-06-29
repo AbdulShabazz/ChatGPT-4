@@ -14,6 +14,22 @@ void add(auto& coll, const auto& value) {
 	}
 }
 
+/*
+// Version 2
+template <typename col>
+concept has_push_back = requires(col c) {
+	c.push_back(0);
+};
+
+void add(has_push_back auto& coll, const auto& value) {
+	coll.push_back(value);
+}
+
+void add(auto& coll, const auto& value) {
+	coll.insert(value);
+}
+*/
+
 /* Example use */
 int main() {
 	std::vector<int> v;
