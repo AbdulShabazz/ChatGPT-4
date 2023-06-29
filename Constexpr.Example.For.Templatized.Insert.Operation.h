@@ -1,3 +1,9 @@
+// headers
+#include <set>
+#include <vector>
+#include <cstdint>
+//#include <type_traits>
+
 /* compile-time if (constexpr) example for a templatized insert operation */
 void add(auto& coll, const auto& value) {
 	//if constexpr (std::is_same_v<decltype(coll), std::vector<int>>) {
@@ -14,4 +20,6 @@ int main() {
 	std::set<int> s;
 	add(v, 42);
 	add(s, 42);
+
+	return EXIT_SUCCESS;
 }
