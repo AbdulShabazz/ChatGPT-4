@@ -68,5 +68,5 @@ In this version, I removed the template parameters ProofFound_TemplateParameterF
 
 SFINAE
 
-Specification Failed Initialization Is Not An Error
+(Substitution Failure Is Not An Error)
 */
