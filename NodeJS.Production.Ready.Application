@@ -33,5 +33,5 @@ Remember, making an application production-ready is not a one-time event but an 
 User:
 
 const bodyParser = require('body-parser');
-app.use(bodyParser.json({ limit: '1kb' }));
-app.use(bodyParser.urlencoded({ extended: true, limit: '1kb' }));
+app.use(bodyParser.json({ limit: '32kb' }));
+app.use(bodyParser.urlencoded({ extended: true, limit: '32kb' }));
