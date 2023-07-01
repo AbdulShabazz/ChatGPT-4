@@ -29,3 +29,9 @@ Making your NodeJS application production-ready involves various aspects, includ
     Monitoring: Use tools like PM2, New Relic, and Datadog to monitor your application, analyze performance metrics, and get alerted when things go wrong.
 
 Remember, making an application production-ready is not a one-time event but an ongoing process of monitoring, tweaking, and improving.
+
+User:
+
+const bodyParser = require('body-parser');
+app.use(bodyParser.json({ limit: '1kb' }));
+app.use(bodyParser.urlencoded({ extended: true, limit: '1kb' }));
