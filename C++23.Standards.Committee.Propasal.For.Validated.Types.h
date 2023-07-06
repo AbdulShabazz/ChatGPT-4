@@ -18,7 +18,7 @@ HTML elements such as inputs and textareas have a `pattern` attribute that allow
 ```
 
 This is a simple and effective way to ensure that user input is valid before instantiation at a memory address. 
-This validation essential in order to ensure data integrity, validation must be performed on the getter side as well. 
+This validation is essential in order to ensure data integrity, validation must be performed on the getter side as well. 
 This can be done by writing validation logic manually for each variable, but this can lead to code duplication and an increased risk of bugs.
 
 This proposal suggests the addition of "validated types" to the C++ language. This feature would allow developers to define a data type along with a validation function or Validator that validates the value upon initialization, thereby ensuring data integrity and reducing the risk of bugs.
@@ -108,7 +108,7 @@ int main() {
 
 **Implementation and Test Plan**
 
-A reference implementation will be provided upon acceptance of this proposal, along with a comprehensive suite of tests to ensure the feature behaves as expected and interacts correctly with existing features.
+A reference implementation will be provided upon consideration and or acceptance of this proposal, along with a comprehensive suite of tests to ensure the feature behaves as expected and interacts correctly with existing features.
 
 **Acknowledgments**
 
