@@ -1,5 +1,6 @@
 
 **Document number**: PXXXXR0  
+**Title**: Proposal to introduce a Hardware Security Namespace to the C++ Standard Library
 **Date**: 2023-07-07  
 **Project**: Programming Language C++  
 **Reply to**: ahshabazz
