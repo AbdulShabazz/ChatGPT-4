@@ -7,7 +7,7 @@
 
 **Project:** Programming Language C++
 
-**Reply to:** ahshabazz@yahoo.com
+**Reply to:** ahshabazz
 
 **Introduction**
 
