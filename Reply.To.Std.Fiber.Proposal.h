@@ -50,7 +50,7 @@ int main() {
 }
 
 
-In this API call example, ```struct Data { int id; std::vector<int> numbers }; std::fiber<Data> _fiber_;```, we're creating a std::fiber<> wrapper for a Data struct. Each fiber can independently processes its own Data struct.
+In this next API call example, ```struct Data { int id; std::vector<int> numbers }; std::fiber<Data> _fiber_;```, we're creating a std::fiber<> wrapper for a Data struct. Each fiber can independently processes its own Data struct.
 
 Since std::fiber<Data> employs RCU or COW semantics, it can safely read from Data.id, Data.numbers, etc. without causing any data races. Also, if a fiber needs to modify its Data member, it will only copy the parts of the data that it's going to modify (lazy copying), which helps to optimize memory usage.
 
