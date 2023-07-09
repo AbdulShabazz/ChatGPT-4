@@ -77,7 +77,7 @@ concept StringLike = requires(T a) {
 template<StringLike T = std::string>
 std::function<std::string(const T&)> ArbitratorFunc = [](const T& key) -> std::string {
     std::stringstream ss(key);
-	std::string item;
+	T item;
 	int sum = 0;
     bool unsupported_string_flag = false;
 	
