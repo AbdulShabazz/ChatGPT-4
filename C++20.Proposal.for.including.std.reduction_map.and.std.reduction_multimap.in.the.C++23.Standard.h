@@ -50,7 +50,7 @@ Imagine we're developing a language model that has to understand and answer ques
 In this case, we could define our `std::reduction_map` with `std::string` as the key and an object representing the mathematical concept as the value. The ArbitratorFunc would be a function that can parse and simplify mathematical expressions. Therefore, all the different forms that represent the same concept would be mapped to the same object:
 
 ```
-std::reduction_map<std::string, Euclid_Prover, MathExpressionSimplifier> math_concepts;
+std::reduction_map<std::string, ArbitratorFunc, MathExpressionSimplifier> math_concepts;
 math_concepts["1"] = "One";
 math_concepts["1 + 0"]; // returns "One"; //
 math_concepts["0 + 1"]; // returns "One"; //
