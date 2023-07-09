@@ -79,6 +79,7 @@ std::function<std::string(const T&)> ArbitratorFunc = [](const T& key) -> std::s
     std::stringstream ss(key);
 	std::string item;
 	int sum = 0;
+    bool unsupported_string_flag = false;
 	
 	// Split string by ' ' //
 	while (std::getline(ss, item, ' ')) {
