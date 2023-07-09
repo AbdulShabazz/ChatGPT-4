@@ -1,4 +1,4 @@
-# Proposal for including std::reduction_map and std::reduction_multimap in the C++23 Standard
+# Proposal for including std::reduction_map and std::reduction_multimap in the C++26 Standard
 
 ## Abstract
 We propose the addition of two new containers to the C++ Standard Template Library (STL): `std::reduction_map` and `std::reduction_multimap`. These containers are similar to `std::map` and `std::multimap`, but they include an additional component known as an `arbitrator function` that can transform different keys into a single, 'base' or 'canonical' form. This proposal aims to provide a general-purpose solution to map multiple keys to a single value or multiple values based on the principle of semantic equivalence.
