@@ -72,11 +72,11 @@ std::function<std::string(const std::string&)> ArbitratorFunc = [](const std::st
 	std::string item;
 	std::vector<int> elements;
 	int sum = 0;
-	
+            
 	// Split string by ' ' //
 	while (std::getline(ss, item, ' ')) {
 		// Convert each item to its integer value to add to the sum //
-		if (std::isdigit(item[0])) {
+		if (item == "1" || item == "0" ) {
 			sum += std::stoi(item);
 		} else if (item == "zero") {
 			sum += 0;
@@ -85,11 +85,16 @@ std::function<std::string(const std::string&)> ArbitratorFunc = [](const std::st
 		} else if (item == "plus" or item == "+") {
 			continue;
 		} else {
-			throw std::invalid_argument("Unsupported string value");
+			unsupported_string_flag = true;
+			break;
 		}
 	}
-
-	return std::to_string(sum);
+	
+	if (!unsupported_string_flag) {
+		return std::to_string(sum);
+	} else {
+		return key;
+	}
 };
 
 ```
