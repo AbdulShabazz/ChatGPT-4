@@ -78,7 +78,6 @@ template<StringLike T = std::string>
 std::function<std::string(const T&)> ArbitratorFunc = [](const T& key) -> std::string {
     std::stringstream ss(key);
 	std::string item;
-	std::vector<int> elements;
 	int sum = 0;
 	
 	// Split string by ' ' //
