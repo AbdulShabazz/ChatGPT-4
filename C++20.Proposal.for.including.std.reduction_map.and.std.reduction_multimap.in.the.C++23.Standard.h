@@ -66,13 +66,21 @@ An example of an arbitrator function for this could be one such as the following
 #include <vector>
 #include <sstream>
 #include <cctype>
+#include <functional>
+#include <concepts>
 
-std::function<std::string(const std::string&)> ArbitratorFunc = [](const std::string& key) -> std::string {
-	std::stringstream ss(key);
+template<typename T>
+concept StringLike = requires(T a) {
+	{ a } -> std::convertible_to<std::string>;
+};
+
+template<StringLike T = std::string>
+std::function<std::string(const T&)> ArbitratorFunc = [](const T& key) -> std::string {
+    std::stringstream ss(key);
 	std::string item;
 	std::vector<int> elements;
 	int sum = 0;
-            
+	
 	// Split string by ' ' //
 	while (std::getline(ss, item, ' ')) {
 		// Convert each item to its integer value to add to the sum //
