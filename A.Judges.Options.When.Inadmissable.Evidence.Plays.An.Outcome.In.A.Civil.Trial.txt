@@ -1,0 +1,15 @@
+Model: GPT-4 (Mobile, V2)
+
+User:
+
+What happens if a judge in a civil liability case suspects the juror came to a judgment in favor of the defendant based on evidence presented by the defense lawyer which the judge deemed "inadmissible" to the jury, and to disregard because the evidence was not properly revealed during the discovery phase of the trial?
+
+ChatGPT:
+
+If a judge suspects that the jury has been influenced by inadmissible evidence that was improperly introduced, they have several options available.
+
+First, the judge can instruct the jury to disregard the piece of evidence. The court operates under the assumption that the jury will follow this instruction. If the judge believes that this admonishment is not enough due to the substantial impact of the inadmissible evidence, they can declare a mistrial, meaning the trial is essentially canceled and has to be restarted with a new jury.
+
+Alternatively, if the verdict has already been reached, the judge or the aggrieved party can appeal the decision or ask for a new trial on the basis of the jury being influenced by inadmissible evidence. An appellate court would then review the case to determine if the use of inadmissible evidence unfairly affected the outcome of the trial.
+
+However, the judge's belief that a juror considered inadmissible evidence would need to be based on concrete facts or juror misconduct, not just a suspicion or assumption. Any such claim would need to be substantiated, as the integrity of the judicial process relies heavily on the presumption that juries can follow instructions and decide cases based on the evidence properly presented to them.
