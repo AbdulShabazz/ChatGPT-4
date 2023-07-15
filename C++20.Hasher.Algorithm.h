@@ -10,3 +10,8 @@ constexpr std::size_t hash_str(std::string_view str) {
 	return d >> 8;
 
 }
+
+/**
+ * For keys that are known at compile time; the hash value can be computed by a constexpr function, its keys verified against collisions with assert(...) .
+*/
+
