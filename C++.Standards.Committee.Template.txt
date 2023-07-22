@@ -1,0 +1,28 @@
+
+**Title**: 
+
+**Document Number**: Nxxxx
+
+**Date**: 
+
+**Revises**: 
+
+**Reply to**: 
+
+1. Introduction:
+
+2. Motivation:
+
+3. Proposed solution:
+
+4. Example usage:
+
+5. Impact on the standard:
+
+6. Compatibility:
+
+7. Implementation & Technical Considerations:
+
+8. Conclusion:
+
+9. Acknowledgements:
