@@ -14,7 +14,21 @@ This proposal aims to introduce a new feature to the `std::chrono` library in th
 
 2. **Motivation**:
 
-Many applications need to react to certain events or conditions, which often occur asynchronously. For instance, we may want to schedule a task to run after a certain duration or when a certain condition becomes true. Currently, C++ developers often have to rely on OS-specific functionality or third-party libraries to implement such behavior. A standard language-level `signal` API would provide a platform-independent and more efficient way to achieve this.
+Many applications need to react to certain events or conditions, which often occur asynchronously. For instance, we may want to schedule a task to run after a certain duration or when a certain condition becomes true. Currently, C++ developers often have to rely on OS-specific functionality or third-party libraries to implement such behavior. 
+
+Operating systems often provide a way for processes to communicate with each other and with the kernel via a mechanism known as signals. Signals are a form of software interrupt that provide a way to handle asynchronous events.
+
+Here's a quick rundown on how signaling is handled on various popular operating systems:
+
+    Unix/Linux: These operating systems provide a rich set of functionalities for signal handling. Signals such as SIGINT, SIGALRM, SIGTERM are used to notify processes of various events. The signal() or sigaction() system calls are used to register a signal handler function that will be called when the process receives that signal. The kill() system call is used to send a signal to a process. POSIX timers (timer_create, timer_settime, etc.) can also be used for time-based signals.
+
+    Windows: Windows uses a different mechanism called "Event Objects" for interprocess communication, and "Structured Exception Handling" for dealing with errors and exceptions. Windows also provides a SetWaitableTimer function to create a waitable timer object which can be used to schedule events.
+
+    Mac OS: Being a Unix-based system, Mac OS also supports the Unix signal handling model.
+
+A standard language-level `signal` API would provide a platform-independent and more efficient way to achieve this.
+
+Given the differences between these models, standardizing them into a single signal API in C++ could be of great benefit to C++ developers.
 
 3. **Proposed solution**:
 
