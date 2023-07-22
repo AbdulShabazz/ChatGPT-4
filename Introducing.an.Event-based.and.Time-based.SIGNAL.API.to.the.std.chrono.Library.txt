@@ -1,0 +1,90 @@
+**Title**: Introducing an Event-based and Time-based `signal` API to the `std::chrono` Library
+
+**Document Number**: Nxxxx
+
+**Date**: 2023-07-22
+
+**Revises**: N/A
+
+**Reply to**: ahshabazz
+
+1. **Introduction**:
+
+This proposal aims to introduce a new feature to the `std::chrono` library in the form of a `signal` API, which allows users to set up and handle time-based and event-based signals.
+
+2. **Motivation**:
+
+Many applications need to react to certain events or conditions, which often occur asynchronously. For instance, we may want to schedule a task to run after a certain duration or when a certain condition becomes true. Currently, C++ developers often have to rely on OS-specific functionality or third-party libraries to implement such behavior. A standard language-level `signal` API would provide a platform-independent and more efficient way to achieve this.
+
+3. **Proposed solution**:
+
+We propose to introduce two new classes, `event` and `signal`, to the `std::chrono` namespace. The `event` class represents something that will definitely happen in the future, while the `signal` class represents a condition that might become true in the future.
+
+4. **Example usage**:
+
+```
+std::chrono::event e(std::chrono::seconds(5));
+e.then([] { std::cout << "5 seconds have passed\n"; });
+
+std::chrono::signal s;
+s.on_set([] { std::cout << "The signal was set\n"; });
+std::thread([&s] {
+    std::this_thread::sleep_for(std::chrono::seconds(2));
+    s.set();
+}).detach();
+```
+
+5. **Impact on the standard**:
+
+This proposal extends the `std::chrono` library and does not affect the existing parts of the C++ standard library. It does not propose any language changes.
+
+6. **Compatibility**:
+
+The proposed API is purely an extension and does not break any existing code. 
+
+7. **Implementation & Technical Considerations**:
+
+The actual implementation of this API would be highly system-dependent. The API would need to be designed in such a way that it can be efficiently implemented on a wide range of systems. Error handling, thread safety, signal or event cancellation are also aspects that need careful consideration.
+
+Here is a possible example of a namespace declaration for the proposed API:
+
+```
+namespace std::chrono {
+    // An event represents something that might happen in the future. //
+    class event {
+    public:
+        // Construct an event that becomes ready after a certain duration //
+        event(duration d);
+
+        // Construct an event that becomes ready at a certain time point //
+        event(time_point tp);
+
+        // Register a callback to be called when the event becomes ready //
+        template <typename Callback>
+        void then(Callback cb);
+    };
+
+    // A signal represents a condition that might become true in the future. //
+    class signal {
+    public:
+        // Set the signal (i.e., make the condition true). //
+        void set();
+
+        // Reset the signal (i.e., make the condition false). //
+        void reset();
+
+        // Register a callback to be called when the signal is set. //
+        template <typename Callback>
+        void on_set(Callback cb);
+    };
+}
+
+```
+
+8. **Conclusion**:
+
+This proposal introduces a new, high-level, event-driven programming model to C++. By accepting this proposal, we would be providing C++ developers with a powerful and standard tool to handle time-based and event-based signals in a portable and efficient way.
+
+9. **Acknowledgements**:
+
+I'd like to thank all those who have contributed their thoughts and feedback to this proposal.
