@@ -30,6 +30,12 @@ A standard language-level `signal` API would provide a platform-independent and 
 
 Given the differences between these models, standardizing them into a single signal API in C++ could be of great benefit to C++ developers.
 
+Here's how this could potentially be beneficial:
+
+    Portability: As mentioned above, currently the solutions are often OS-specific. A standard API would mean the same code could run on different platforms without changes.
+    Ease of use: If the API is well-designed, it would abstract away the complexities and make it easier for developers to use.
+    Performance: Being part of the standard library, this API could potentially be optimized by the compiler or take advantage of low-level system features in a way third-party libraries can't.
+
 3. **Proposed solution**:
 
 We propose to introduce two new classes, `event` and `signal`, to the `std::chrono` namespace. The `event` class represents something that will definitely happen in the future, while the `signal` class represents a condition that might become true in the future.
