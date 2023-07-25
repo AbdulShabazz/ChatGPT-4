@@ -1,0 +1,89 @@
+**Title**: Proposal for the Support of `constexpr if` Outside Function and Method Scopes
+
+**Document Number**: N/A
+
+**Date**: 2023-07-25
+
+**Revises**: N/A
+
+**Reply to**: ahshabazz
+
+1. **Introduction**:
+This proposal seeks to introduce the support for `constexpr if` outside the scope of functions or methods, allowing for more flexible compile-time code generation.
+
+2. **Motivation**:
+Currently, `constexpr if` can only be used within the scope of functions or methods. This limits the ability to perform compile-time code generation to only inside functions or methods. By expanding this capability, we could further the power of compile-time programming and reduce the reliance on macros for certain use cases.
+
+3. **Proposed solution**:
+Extend the scope of `constexpr if` to class level and namespace level, allowing `constexpr if` to control the generation of different class, function, or variable definitions based on compile-time conditions.
+
+4. **Example usage**:
+```cpp
+if constexpr (std::is_integral_v<T>) {
+    class IntegerClass {
+        // ...
+    };
+} else {
+    class NonIntegerClass {
+        // ...
+    };
+}
+```
+
+To create different classes based on compile-time conditions in C20++ requires the use of macros, which is not straightforward, because macros work with text substitution and they don't have access to type traits or templates in the way that `constexpr if` does. You would have to know the type at the time you're writing the code, and it wouldn't be dynamic based on the type passed in.
+
+That said, you could create two different macros for two different scenarios, like so:
+
+```cpp
+// IntegerClass.h
+#define INTEGER_CLASS(name) \
+class name \
+{ \
+public: \
+    name() {}; \
+    ~name() {}; \
+\
+private: \
+    int member; \
+};
+
+// NonIntegerClass.h
+#define NON_INTEGER_CLASS(name) \
+class name \
+{ \
+public: \
+    name() {}; \
+    ~name() {}; \
+\
+private: \
+    double member; \
+};
+```
+
+Then in your code, you would use the appropriate macro depending on whether the type you're working with is integral or not:
+
+```cpp
+// main.cpp
+#include "IntegerClass.h"
+#include "NonIntegerClass.h"
+
+INTEGER_CLASS(MyIntClass)
+NON_INTEGER_CLASS(MyNonIntClass)
+```
+
+However, please note this solution is not equivalent to the compile-time decision making with `constexpr if` as you need to manually choose the right macro based on the type. Macros also come with their own set of issues, such as difficulty debugging and potential for name collisions. The power of `constexpr if` is that the decision can be made at compile time based on the properties of the type itself.
+
+5. **Impact on the standard**:
+This proposal does not require any changes to the core language syntax. However, it does represent a semantic extension of `constexpr if`, and the relevant portions of the standard would need to be updated to reflect this.
+
+6. **Compatibility**:
+The proposal should not break existing code, as it merely extends the places where `constexpr if` can be used. Code that does not use this feature will be unaffected.
+
+7. **Implementation & Technical Considerations**:
+The main challenge would likely be in the implementation within compilers. Extra care must be taken to ensure the generated code is as expected, especially with respect to visibility and linkage of generated entities. 
+
+8. **Conclusion**:
+The extension of `constexpr if` outside of function or method scopes would offer more flexibility for compile-time code generation, potentially reducing the need for macros in some scenarios, leading to safer and more idiomatic C++ code.
+
+9. **Acknowledgements**:
+I would like to thank the entire C++ community for their invaluable contributions and for fostering an environment of constant growth and improvement in the language.
