@@ -1,0 +1,18 @@
+GPT-4
+
+User:
+
+The Writers Guild (WGA) and the Screen Actors Guild (SAG) are now striking up a Hollywood work-stoppage over the controversial increasing use of AI in the industry. Among other things, such as revamped syndication rights, they want a larger portion of streaming revenue because of the decreased length of time studios dedicate to a release staying in theaters. They wish to altogether stop or severely hinder the pervasiveness of AI in the industry. How realistic are there demands?
+
+ChatGPT:
+
+
+The demands of the Writers Guild of America (WGA) and Screen Actors Guild (SAG) represent the evolving complexities of labor relations within the entertainment industry. Here is an analysis of the main points you mentioned:
+
+    Revamped Syndication Rights and Larger Share of Streaming Revenues: As of my last training cutoff in September 2021, there had been ongoing negotiations around the share of streaming revenues that are allotted to the actors and writers. Given the shift in the industry from traditional broadcast and theatrical models towards online streaming, it is realistic that guilds would want a larger portion of the streaming revenue. However, reaching an agreement with studios and platforms will likely require intense negotiations. The likelihood of success here really depends on the negotiating power of the unions and the willingness of studios and platforms to renegotiate current agreements.
+
+    Decreased Time of Releases in Theaters: With the rise of streaming services and the impact of events like the COVID-19 pandemic, the window between theatrical releases and streaming has significantly decreased, or in some cases, disappeared entirely. This shift has resulted in significant changes in revenue distribution. It's understandable that guilds would want to renegotiate terms based on these new paradigms. However, the balance between theatrical and streaming release is an evolving issue that is likely to be highly contentious.
+
+    Limiting the use of AI in the industry: AI has been increasingly used in various aspects of the film industry, including scripting, casting, and even in the production of entire films. The guilds' concern here likely stems from fears that AI could reduce the need for human actors and writers. However, the demand to "stop or severely hinder" the use of AI might be unrealistic. Technology evolves and becomes integrated into industries in ways that are difficult to halt completely. What might be more pragmatic would be for the guilds to advocate for regulations on how AI is used in the industry, ensuring it doesn't undermine their members' work or their employment opportunities.
+
+Overall, while their demands reflect the legitimate concerns of a workforce adapting to rapidly changing industry conditions, achieving all their objectives may be challenging. The eventual outcome will depend on the specifics of the negotiations, the willingness of both sides to compromise, the legal landscape, public sentiment, and other unforeseen factors.
