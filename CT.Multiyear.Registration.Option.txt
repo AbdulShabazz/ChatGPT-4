@@ -1,0 +1,9 @@
+GPT-4
+
+User:
+
+Does connecticut have multiyear vehicle registration?
+
+ChatGPT:
+
+As of my last update in September 2021, Connecticut allows for a two-year vehicle registration for most passenger vehicles. However, the specifics of who qualifies and for what types of vehicles might change over time. For the most current and detailed information on vehicle registration in Connecticut, you should check the official website of the Connecticut Department of Motor Vehicles (DMV) or contact them directly.
