@@ -1,0 +1,13 @@
+GPT-4
+
+User:
+
+A lot of contemporary music lyrics are composed around vowels which more closely resemble musical tones ( as opposed to the consonant sound which makes up words ) . If you were given a contemporary music track with only human vocalizations (ie. the vowels) could you formalize them into a coherent lyrical pattern?
+
+ChatGPT:
+
+Absolutely! If you provide a description of the vocalizations or even better, the sequence of vowels as they appear in the track, I can attempt to construct a lyrical pattern around them. The goal would be to make the lyrics sound natural while incorporating the given vowel sounds.
+
+The challenge is, of course, in ensuring that the resulting lyrics make sense and resonate with the music's vibe. However, with the given vowels as a guideline, it provides a creative constraint that can lead to some interesting lyrical choices.
+
+If you have a specific sequence or track in mind, please provide details, and I'll give it a try!
