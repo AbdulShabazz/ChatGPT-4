@@ -1,0 +1,23 @@
+GPT-4
+
+User:
+
+how can i add humor to the following statement: "Thanks for remembering to change the lightbulb. I thought you forgot about me."
+
+ChatGPT:
+
+"Thanks for changing the lightbulb. Was starting to think I'd have to learn Morse code with the flickering one!"
+
+User:
+
+Can you provide 5 more humorous examples?
+
+ChatGPT:
+
+Of course!
+
+    "Thanks for changing the lightbulb. I was just about to break out the candles and start a seance."
+    "Appreciate the lightbulb change. Was almost sure I'd have to evolve night vision!"
+    "Thanks for the lightbulb swap. Thought I was about to join the moth club, being drawn to the dim light!"
+    "Good thing you changed the lightbulb. Was considering turning it into a disco with the way it was flickering!"
+    "Lightbulb changed, finally! I was two days away from adopting a firefly as my backup plan."
