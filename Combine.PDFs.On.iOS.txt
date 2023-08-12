@@ -1,0 +1,26 @@
+GPT-4
+
+User:
+
+how do i combine PDF files on iOS?
+
+ChatGPT:
+
+You can combine PDF files on your iOS device using the "Files" app which comes preinstalled on your device or with the help of third-party applications. Here's how you can do it using the "Files" app:
+
+    Open the "Files" app on your device.
+    Navigate to the folder where your PDF files are stored.
+    Tap "Select" in the top-right corner of the screen.
+    Select the PDF files you want to combine.
+    Once selected, tap the "More" button (represented by three dots) in the bottom-right corner of the screen.
+    Tap on "Create PDF".
+
+If this option is not available or you're looking for more advanced features, you may need a third-party app. Here's an example using Adobe Acrobat:
+
+    Download and open the Adobe Acrobat Reader app.
+    Tap on the tool icon at the bottom, then select "Combine Files".
+    Tap on the plus (+) icon and select the PDF files you want to combine.
+    After selecting, tap on "Combine" in the top-right corner.
+    Save the combined PDF.
+
+Please note that some features in third-party applications may require a purchase or subscription.
