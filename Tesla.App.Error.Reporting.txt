@@ -1,0 +1,21 @@
+GPT-4
+
+User:
+
+how to provide tesla error codes to a tesla service center through the tesla app?
+
+ChatGPT:
+
+As of my knowledge cutoff in September 2021, Tesla does not provide a direct feature in their mobile app to send error codes to a Tesla service center. The car itself typically sends diagnostic information directly to Tesla, which allows them to know what's going on with the vehicle.
+
+However, you can still provide these error codes during your communication with the service center. Here's a typical way to do so:
+
+    Open the Tesla App.
+    Tap 'Service'.
+    Tap 'Schedule Service'.
+    Select the appropriate category for your issue.
+    In the description field, provide as much detail as possible, including the error codes you've seen.
+
+Make sure to describe the issue and any circumstances under which it occurred. This will assist the technicians in diagnosing the problem.
+
+Please note that the specifics might vary based on changes made to the app after my last training data in September 2021. Always refer to the most recent user manual or Tesla's customer support for the most accurate information.
