@@ -1,0 +1,25 @@
+GPT-4
+
+User:
+
+Why did GM recall and decommission the EV1?
+
+ChatGPT:
+
+General Motors (GM) recalled and decommissioned its EV1 electric car for a combination of reasons:
+
+    Business Case: One of the most cited reasons is the economic feasibility. At the time, GM claimed it could not sell enough EV1s to make the car profitable due to the limited market for electric vehicles in the late 1990s and early 2000s.
+
+    Battery Technology: The batteries available during the time of the EV1 were lead-acid, which were not as advanced as today's lithium-ion batteries. They were less energy-dense, had a limited range, and required more maintenance. Although GM introduced a version of the EV1 with nickel-metal hydride batteries, which extended its range, it was still a challenge compared to gasoline-powered vehicles.
+
+    Infrastructure: In the late 1990s, the charging infrastructure for electric vehicles was sparse. This made owning and operating an EV more challenging for potential customers and made the EV1 less attractive to the broader market.
+
+    Regulatory Pressure: The California Air Resources Board (CARB) introduced the Zero-Emission Vehicle (ZEV) mandate in the 1990s, which required automakers to sell a certain percentage of zero-emissions vehicles. However, after legal and lobbying efforts by the automobile industry, CARB relaxed the ZEV mandate, reducing the immediate need for carmakers to produce electric vehicles.
+
+    Focus on Hydrogen Fuel Cells: GM, like some other automakers, began to shift its focus to hydrogen fuel cells as an alternative to battery-electric vehicles. They believed, at the time, that hydrogen might be a more viable long-term solution to gasoline.
+
+    End of Lease: The EV1s were not sold to customers but were only available for lease. When the leases ended, GM chose not to renew them and, instead, recalled most of the vehicles. They claimed it was due to concerns over parts availability and servicing for the long term.
+
+    Public Relations and Perception: The decision to recall and destroy the EV1s, rather than renewing leases or selling the cars to the public, created a public relations issue for GM. Many EV1 enthusiasts and environmental advocates viewed the move as GM turning its back on green technology.
+
+The documentary "Who Killed the Electric Car?" delves into the story of the EV1 and the factors that led to its demise. While the film has its perspective and narrative, it provides an in-depth look at the EV1's history and the factors surrounding its decommissioning.
