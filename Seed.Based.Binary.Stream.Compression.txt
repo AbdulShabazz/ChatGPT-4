@@ -285,3 +285,9 @@ So, the compression ratio RR for the algorithm, given a fixed SS, is:
 R(N)=1+SNR(N)=N1+S​
 
 This is the algebraic expression for the compression ratio in terms of NN with a fixed seed size SS.
+
+User:
+
+Given the following compression ratio R in bits:
+
+R = 1 - {{ 1 + S } * B / N }, where S is the seed size in bits plus 1 output bit from a truth table lookup, B is the blocks size in bits, and N is the length of the stream in bits.
