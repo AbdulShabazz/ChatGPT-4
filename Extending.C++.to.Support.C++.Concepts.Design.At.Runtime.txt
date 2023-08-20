@@ -1,0 +1,91 @@
+GPT-4
+
+User:
+
+What language level extensions are required for C++ to support the introduction of concepts into the language by the programmer if they did not exist in the standard?
+
+ChatGPT:
+
+Introducing a feature like concepts into C++ without direct language support is a challenging endeavor. The C++ language, prior to the introduction of "concepts" in C++20, didn't offer any built-in mechanisms for directly expressing constraints on template parameters in the same way that concepts do. However, if you were to try and emulate this feature in older C++ versions, here's a rough outline of what you might need:
+
+    Type Traits and Static Assertions:
+        Before C++20, one of the common ways to enforce constraints on template types was by using type traits and static assertions.
+
+        cpp
+
+    template<typename T>
+    void function(T t) {
+        static_assert(std::is_integral<T>::value, "T must be an integral type");
+        // function implementation
+    }
+
+SFINAE (Substitution Failure Is Not An Error):
+
+    This is a principle in C++ template metaprogramming where a failed substitution of a template parameter is not considered an error.
+    With SFINAE, you can "disable" specific template overloads or specializations when certain conditions are not met.
+
+    cpp
+
+    template<
+        typename T,
+        typename = std::enable_if_t<std::is_integral<T>::value>
+    >
+    void function(T t) {
+        // function implementation
+    }
+
+Expression SFINAE:
+
+    This allows you to check for the validity of certain expressions, ensuring they compile. This can be used to enforce more intricate constraints.
+
+    cpp
+
+        template<typename T>
+        auto function(T t) -> decltype(t + t, void()) {
+            // function implementation
+        }
+
+    Tag Dispatching:
+        Another approach involves overloading functions based on type traits, allowing you to "dispatch" to the right function based on type properties.
+
+    Clear Documentation:
+        Without native concept support, clearly documenting constraints on template parameters becomes even more crucial. Users of the template need to know what types are supported.
+
+    Possible Language Extensions:
+        To truly introduce a concept-like feature, you'd likely need deep compiler integration, and you would have to define new syntax and semantics that integrate seamlessly with the rest of the language.
+        Such a task would be non-trivial and might require a lot of effort, akin to building a new compiler or forking an existing one.
+
+In summary, while there are ways to enforce constraints on templates in pre-C++20 using techniques like SFINAE, static_assert, and others, they are not as elegant, straightforward, or powerful as the concepts feature introduced in C++20. If you desire concept-like functionality, it's recommended to use a C++20 or newer compliant compiler.
+
+User:
+
+I want a framework which supports the addition of concepts by the developer to allow them to develop other useful features like concepts which are not currently in the standard.
+
+ChatGPT:
+
+If you're looking for a framework to extend the C++ language to introduce new language-level features like "concepts" or other similar innovations, then you're venturing into the realm of language tooling, compilers, and language front-ends. This is no small task. Nevertheless, here's a general approach and some tools that might be helpful:
+
+    Clang & LLVM:
+        Clang is a compiler front-end for the C, C++, and Objective-C programming languages, using LLVM as its back-end. Because of its modular design, it's often used in research and experimental projects to introduce new language features or extend existing ones.
+        You could fork Clang and start experimenting with adding your own language features.
+
+    GCC Plugins:
+        The GCC compiler has a plugin framework that allows developers to add functionality to the compiler. This could be used to experiment with new language features, although it might not be as flexible as modifying a compiler's front-end directly.
+
+    Metaprogramming Libraries:
+        Libraries like Boost.Hana allow for advanced metaprogramming in C++. While they don't let you introduce new language-level features, they might allow for powerful abstractions that can emulate some of the behavior you're looking for.
+
+    External Tools:
+        You could build an external tool that preprocesses your code, adding in your new features, and then outputs standard C++ code. This tool would act as a middleman between your code with its custom features and the standard C++ compiler.
+        This approach has the advantage of being compiler-agnostic but comes with the challenge of building a robust preprocessor tool.
+
+    Documentation & Conventions:
+        Regardless of the approach, if you introduce new features or concepts, ensure they are well-documented so other developers can understand and use them.
+
+    Consider the Community:
+        Before venturing deep into creating a new language extension, it might be worth discussing your ideas with the C++ community. They could provide valuable feedback, and there might be interest in collaborating.
+
+    Stay Updated:
+        The C++ language is continuously evolving, with new features proposed and discussed in the C++ standards committee. Your desired feature might already be under discussion or development for future standards.
+
+In summary, while introducing new language-level features is a massive undertaking that typically requires a deep understanding of compilers and language design, there are tools and frameworks out there that can help. Remember, though, that making changes at the language level can have a broad range of implications, so thorough testing and validation will be crucial.
