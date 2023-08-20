@@ -1,0 +1,9 @@
+GPT-4
+
+User:
+
+Does Ableton Live provide a piano-roll recorder to input note data?
+
+ChatGPT:
+
+Yes, Ableton Live provides a feature known as the "MIDI Editor," which functions similarly to what is commonly referred to as a "piano roll" in other digital audio workstations (DAWs). This editor allows users to input, edit, and arrange MIDI note data on a grid that represents both pitch (vertical axis) and time (horizontal axis). Notes can be drawn in, moved, resized, and deleted. The MIDI Editor also offers other features like velocity editing and automation of various parameters.
