@@ -1,0 +1,29 @@
+GPT-4
+
+User:
+
+What does the visual studio C++ /Gm switch pertain to?
+
+ChatGPT:
+
+In Microsoft Visual Studio, the /Gm switch pertains to the C++ compiler's "minimal rebuild" feature. When you use the /Gm switch, the compiler tries to minimize the number of source files it recompiles after a change is made to a header file.
+
+Here's a breakdown of the feature:
+
+    Purpose: The idea behind minimal rebuild is to speed up the incremental build process. Normally, if you modify a widely-used header file, every source file (*.cpp) that includes that header, either directly or indirectly, will be recompiled. This can lead to long build times for large projects. With minimal rebuild enabled, the compiler is more intelligent about which files actually need to be recompiled, based on the specific changes to the header file.
+
+    How It Works: The compiler achieves this by generating dependency information and storing it in intermediary files during the initial build. Later, when changes are detected, it consults this dependency data to determine which files must be recompiled.
+
+    Limitations and Concerns:
+        As of my last update in September 2021, Microsoft was no longer recommending the use of /Gm for new projects. This is because it can sometimes cause build inconsistencies, especially when combined with certain other compiler options.
+        It might not provide a significant build performance increase for projects that are already optimized for incremental builds.
+        In some scenarios, it can increase the build time, especially for clean builds, because of the extra dependency tracking it performs.
+
+To enable or disable this option in the Visual Studio IDE:
+
+    Open your project in Visual Studio.
+    Right-click on the project in Solution Explorer and select "Properties".
+    Navigate to Configuration Properties > C/C++ > General.
+    Change the "Enable Minimal Rebuild" option to "Yes" (/Gm) or "No" (no /Gm).
+
+Always remember to thoroughly test your build after changing compiler switches to ensure consistency and correctness.
