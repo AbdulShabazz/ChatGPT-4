@@ -43,3 +43,18 @@ No, I cannot provide precise probabilities of occurrence for each issue on the T
 However, various automotive reviewers and agencies sometimes publish reliability reports and customer satisfaction surveys that provide insight into the frequency of certain problems. For instance, sources like Consumer Reports or J.D. Power might provide information on vehicle reliability based on owner feedback, but these also won't typically break down probabilities for specific issues.
 
 If you're interested in specific probabilities, you would need to refer to the latest published reports or surveys related to the Tesla Model 3.
+
+Other item(Bard) likely to fail within 3 years:
+
+    Superbottle (USD 2000.00)
+    PTC Heater (USD 1000.00)
+    Drive Unit (USD 15000.00)
+    Battery (USD 10000.00)
+    MCU (USD 1000.00)
+    Door Handles (USD 300.00)
+    Lead Battery non-lithium replacement (USD 1000.00)
+    Main Central Display (USD 3000.00)
+    Rear Window (USD 600.00)
+    Side repeater camera (USD 1000.00)
+    Control Arm (USD 1000.00)
+
