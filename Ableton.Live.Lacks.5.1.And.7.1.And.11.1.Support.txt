@@ -1,0 +1,13 @@
+GPT-4
+
+User:
+
+Does Ableton Live Suite support 5.1, 7.1, 11.1 sound formats?
+
+ChatGPT:
+
+As of my last update in September 2021, Ableton Live Suite does not natively support 5.1, 7.1, or 11.1 surround sound formats. Ableton Live is primarily designed for stereo production. However, there are some workarounds and third-party tools that can be used to create and manipulate multi-channel audio within Ableton, but it's not straightforward and may require external routing or additional software.
+
+For true surround sound or advanced multi-channel support, other digital audio workstations (DAWs) like Steinberg Nuendo or Avid Pro Tools might be more suitable.
+
+It's worth checking Ableton's official website or user forums for any recent updates or changes regarding this feature.
