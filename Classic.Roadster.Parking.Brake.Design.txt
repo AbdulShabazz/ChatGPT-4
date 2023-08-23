@@ -1,0 +1,9 @@
+GPT-4
+
+User:
+
+Is the parking brake pall for the classic Tesla roadster electronic or spring-based?
+
+ChatGPT:
+
+The classic Tesla Roadster, which was Tesla's first production vehicle, was based on the Lotus Elise chassis. The parking brake system for the Lotus Elise and, by extension, the classic Tesla Roadster, is mechanical and uses a hand-operated lever that actuates a cable system to apply brake shoes/pads. This is spring-based, not electronic. In contrast, newer Tesla models utilize an electronic parking brake system, which is actuated with the push of a button.
