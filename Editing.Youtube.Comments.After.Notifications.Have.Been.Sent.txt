@@ -1,0 +1,35 @@
+GPT-4
+
+User:
+
+If a youtube channel owner is notified of a comment a make to their channel, what happens when I revise or edit the comment?
+
+ChatGPT:
+
+When you leave a comment on a YouTube video, the channel owner can receive a notification (depending on their notification settings). If you decide to revise or edit your comment:
+
+    Notification: The original notification the channel owner received won't update or change based on your edit. They will see the original comment in their notification, not the edited version.
+
+    Comment Section: On the video's comment section, however, the edited comment will replace the original comment. If the channel owner goes back to check the comment on their video, they will see the revised version.
+
+    No New Notification: As of my last update in September 2021, YouTube does not send a new notification to the channel owner when a comment is edited. So, they won't get an alert about the revised content unless they manually go back and check.
+
+Remember, it's always important to think before posting online. Edits can be made, but initial reactions and perceptions might already be formed based on the original comment.
+
+User:
+
+And what happens when a comment is deleted?
+
+ChatGPT:
+
+If you delete a comment you made on a YouTube video, here's what happens:
+
+    Notification: If the channel owner or other users received a notification of your original comment (either through YouTube or via email), that notification doesn't get retracted or updated. So, they would have seen the original content of the comment.
+
+    Comment Section: In the video's comment section, your comment will be removed completely. If anyone tries to find it, they won't be able to see it anymore.
+
+    Replies: If there were replies to your comment, those will also be removed from the public view in the comment section. However, individual notifications related to those replies (to other users) would not be retracted.
+
+    No Notification on Deletion: As of my last update in September 2021, YouTube does not notify the channel owner or other users when a comment is deleted.
+
+Always be mindful and considerate when commenting on any platform. Once something is posted online, even if deleted, someone might have already seen or acted upon it.
