@@ -1,0 +1,9 @@
+GPT-4
+
+User:
+
+How many tablespoons per ounce?
+
+ChatGPT:
+
+There are 2 tablespoons in 1 fluid ounce.
