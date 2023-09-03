@@ -1,0 +1,21 @@
+Bard:
+
+The three major sources for sound in speech synthesis are:
+
+* **Source excitation:** This is the source of energy that produces the sound waves. It can be either the vocal cords (in human speech) or a digital signal (in synthetic speech).
+* **Resonators:** These are the cavities in the vocal tract that shape the sound waves. They include the pharynx, oral cavity, and nasal cavity.
+* **Filters:** These are the mechanisms that control the frequency and amplitude of the sound waves. They include the vocal cords, tongue, and lips.
+
+The specific combination of source excitation, resonators, and filters determines the unique sound of each speech sound.
+
+In addition to these three major sources, there are also other factors that can affect the sound of speech, such as the rate of speech, the stress of the utterance, and the speaker's individual vocal tract.
+
+Here is a more detailed explanation of each of the three major sources:
+
+* **Source excitation:** The source excitation is the source of energy that produces the sound waves. In human speech, the source excitation is the vibration of the vocal cords. The vocal cords are two folds of tissue located in the larynx. When air from the lungs passes between the vocal cords, they vibrate. The rate of vibration determines the fundamental frequency of the sound waves.
+* **Resonators:** The resonators are the cavities in the vocal tract that shape the sound waves. The vocal tract is the tube that extends from the larynx to the lips. The shape of the vocal tract can be changed by moving the tongue, lips, and other articulators. This changes the resonance frequencies of the vocal tract, which in turn changes the timbre of the sound waves.
+* **Filters:** The filters are the mechanisms that control the frequency and amplitude of the sound waves. The vocal cords act as a filter, as do the tongue, lips, and other articulators. The filters can also be controlled by the muscles of the vocal tract. This allows the speaker to produce a wide variety of sounds, such as vowels, consonants, and tones.
+
+The combination of source excitation, resonators, and filters determines the unique sound of each speech sound. For example, the vowel "a" is produced by a low-pitched source excitation and a wide open vocal tract. The consonant "p" is produced by a high-pitched source excitation and a closed vocal tract.
+
+The specific combination of source excitation, resonators, and filters can be very complex. This is why it is so difficult to create realistic synthetic speech. However, advances in speech synthesis technology have made it possible to create speech that is very close to human speech.
