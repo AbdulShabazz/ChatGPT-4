@@ -1,0 +1,21 @@
+GPT-4
+
+User:
+
+How do you remove Tesla glovebox pin?
+
+ChatGPT:
+
+If you've set a PIN for your Tesla glovebox and want to remove or change it, follow these steps:
+
+    Accessing the Setting: From the main screen in your Tesla, tap on the car icon at the bottom to access the 'Controls' menu.
+
+    Glovebox PIN Setting: Navigate to the safety and security settings. Here, you should see the option for the Glovebox PIN.
+
+    Enter Current PIN: To make changes, you'll likely be prompted to enter the current PIN.
+
+    Change or Remove: Once you've entered the correct PIN, you should have the option to either change or remove it. If you want to remove the PIN completely, there's usually an option to turn off the Glovebox PIN feature.
+
+    Confirm Changes: Make sure to save or confirm any changes you make.
+
+Always refer to the user manual or official Tesla documentation to ensure that you're following the most recent procedure, as software updates may bring changes to the interface or process. If you're having trouble or forget your PIN, contact Tesla support or visit a Tesla service center.
