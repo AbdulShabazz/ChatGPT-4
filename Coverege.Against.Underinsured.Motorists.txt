@@ -1,0 +1,23 @@
+GPT-4
+
+User:
+
+If as an underinsured I'm in a car accident and the at-fault driver has full coverage, is my vehicle still covered for repairs?
+
+ChatGPT:
+
+If you are involved in a car accident and the other driver is at fault, the liability portion of that driver's insurance should cover the damage to your vehicle, up to their policy limits. However, several factors come into play:
+
+    At-fault State: In states that use an at-fault system (also known as a tort system), the driver who is determined to be at fault for the accident is responsible for damages.
+
+    Policy Limits: The at-fault driver's insurance will pay for damages up to the limit of their policy. If the cost to repair your vehicle exceeds their policy limit, they (or you) might be responsible for the difference.
+
+    Uninsured/Underinsured Motorist Coverage: If you have uninsured/underinsured motorist coverage as part of your insurance, this can help cover the difference if the at-fault driver's insurance doesn't fully cover the repairs, or if they're uninsured.
+
+    Collision Coverage: If for some reason the at-fault driver's insurance doesn't pay, and you have collision coverage, your insurance can cover the repair costs, but you'd typically have to pay your deductible first.
+
+    Delays & Disputes: Sometimes, determining who is at fault can take time, or there may be disputes about the extent of damages. During such times, if you have collision coverage, you might opt to get your vehicle repaired under your policy (after paying the deductible) and then let the insurance companies sort out the details. If the other driver is determined to be at fault, your insurance company will typically try to recover the costs (including your deductible) from the at-fault driver's insurance.
+
+    Deductible: Even if the at-fault driver's insurance covers your damages, you may initially have to pay your deductible if you go through your own insurance. Once your insurance company recovers the costs from the at-fault driver's insurance, they should reimburse you for the deductible.
+
+In summary, if the at-fault driver has full coverage and is deemed responsible, their insurance should cover the repairs to your vehicle, at least up to their policy limits. If the damages exceed those limits, or if there are complications, having your own underinsured motorist and collision coverage can be beneficial. Always consult with your insurance agent or a legal expert for guidance tailored to your specific situation.
