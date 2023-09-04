@@ -1,0 +1,23 @@
+GPT-4
+
+User:
+
+Does the iPhone 14 bluetooth use more energy than the built in speakers?
+
+ChatGPT:
+
+As of my last update in September 2021, the iPhone 14 had not been released, so I cannot provide specific details about its Bluetooth energy consumption versus its built-in speakers. However, I can provide a general understanding based on previous iPhones and similar devices.
+
+    Bluetooth Energy Consumption: Modern Bluetooth, especially Bluetooth Low Energy (BLE), is designed to be power-efficient. When you're streaming audio to a Bluetooth device, like headphones or a speaker, your iPhone is using energy to maintain the connection and transmit data.
+
+    Built-in Speaker Energy Consumption: Playing audio through the iPhone's built-in speakers also requires energy. The louder the volume, the more power is generally consumed.
+
+Comparatively:
+
+    Listening at a low volume through the built-in speakers might consume less power than maintaining a Bluetooth connection to a device and streaming audio.
+
+    Listening at maximum volume through the built-in speakers could consume more power than a Bluetooth connection, especially if it's a connection using Bluetooth Low Energy.
+
+Remember that several factors can influence energy consumption, including the specific Bluetooth protocol in use, the efficiency of the external Bluetooth device, the volume level for built-in speakers, and any other background processes running on the iPhone.
+
+To get the most accurate answer for the iPhone 14, you would need to refer to Apple's documentation or testing from independent reviewers after its release.
