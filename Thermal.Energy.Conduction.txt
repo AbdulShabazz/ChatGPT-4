@@ -1,0 +1,9 @@
+GPT-4
+
+User:
+
+What is the process of thermal energy traveling through a material called?
+
+ChatGPT:
+
+The process of thermal energy traveling through a material is called conduction.
