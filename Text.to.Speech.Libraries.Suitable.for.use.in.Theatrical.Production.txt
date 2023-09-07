@@ -1,0 +1,20 @@
+Bard:
+
+There are many excellent TTS libraries available, but some of the best for theatrical production include:
+
+* **Lovo.ai** is a cloud-based TTS platform that offers a wide range of natural-sounding voices, including many that are suitable for theatrical productions. It also has a number of features that make it well-suited for this purpose, such as the ability to control the pitch, speed, and volume of the speech, as well as the ability to add pauses and other effects.
+[Image of Lovo.ai text-to-speech library logo]
+* **Murf** is another cloud-based TTS platform that offers a variety of features and voices, including some that are specifically designed for theatrical productions. It also has a number of tools that can be used to edit and improve the quality of the speech, such as a built-in grammar checker and a voice synthesizer.
+[Image of Murf text-to-speech library logo]
+* **Synthesia** is a desktop-based TTS software that offers a high degree of customization, making it a good choice for creating customized voices for specific characters or roles. It also has a number of features that can be used to improve the quality of the speech, such as a built-in voice editor and a lip-syncing feature.
+[Image of Synthesia text-to-speech library logo]
+* **Google Cloud Text-to-Speech** is a cloud-based TTS API that offers a wide range of voices and features, making it a good choice for a variety of applications, including theatrical productions. It also offers a number of pricing options, making it a cost-effective solution for many projects.
+[Image of Google Cloud Text-to-Speech library logo]
+* **Polly** is another cloud-based TTS API that offers a wide range of voices and features. It is similar to Google Cloud Text-to-Speech, but it offers a few different pricing options.
+[Image of Polly text-to-speech library logo]
+
+The best TTS library for your theatrical production will depend on your specific needs and requirements. However, all of the libraries listed above are excellent options and can produce high-quality speech that is suitable for use in a theatrical setting.
+
+In addition to the libraries mentioned above, there are many other TTS libraries available. It is important to do your research and choose a library that is right for you. Some factors to consider include the quality of the voices, the features offered, the pricing, and the ease of use.
+
+I hope this helps!
