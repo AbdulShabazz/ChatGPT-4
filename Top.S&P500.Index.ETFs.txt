@@ -1,0 +1,21 @@
+GPT-4
+
+User:
+
+What are the top 5 ETFs based on the S & P 500 index between 2010 and 2021?
+
+ChatGPT:
+
+As of my last training cut-off in September 2021, the S&P 500 index is one of the most widely followed equity indices in the world, and many ETFs track its performance. The top S&P 500 ETFs are generally ranked by their assets under management (AUM), as this gives a sense of their popularity and liquidity. Here are five of the most popular S&P 500 ETFs based on AUM and recognition between 2010 and 2021:
+
+    SPDR S&P 500 ETF Trust (SPY): Launched in 1993, SPY is the oldest and one of the largest S&P 500 ETFs in terms of AUM. It's often used as a benchmark for other ETFs and is widely recognized in the industry.
+
+    iShares Core S&P 500 ETF (IVV): Another highly popular ETF, IVV tends to have a lower expense ratio than SPY and has been a favorite among both institutional and retail investors.
+
+    Vanguard S&P 500 ETF (VOO): Launched in 2010, VOO quickly grew in popularity due to its low expense ratio and Vanguard's reputation for cost-efficiency.
+
+    Invesco S&P 500 Equal Weight ETF (RSP): Unlike the other ETFs mentioned which are cap-weighted, RSP assigns an equal weight to every company in the S&P 500, offering a different exposure and performance profile.
+
+    Schwab S&P 500 Index Fund (SWPPX): This is not an ETF, but rather an index mutual fund. However, its low expense ratio and wide recognition make it a notable mention for investors looking for S&P 500 exposure.
+
+It's essential to do your own research and consult with a financial advisor when considering any investment. The landscape of popular financial products can change over time, and newer ETFs or other financial instruments might have emerged after 2021.
