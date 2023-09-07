@@ -1,0 +1,139 @@
+GPT-4
+
+User:
+
+Write a basic windows ui in c++20 to display an .svg image without the use of a third party library.
+
+ChatGPT:
+
+Creating a Windows UI application that can display SVG images without third-party libraries is a complex task. SVG files can be quite intricate, and Windows does not provide a native SVG renderer. However, Windows 10+ does provide a basic SVG control in the UWP framework.
+
+Given the constraints, the easiest way might be to leverage the WebView2 (or similar) control, which is essentially a stripped-down browser view. You can display SVG content in this control just as a browser would render SVG. WebView2 is Microsoft's recommended way to embed web content in native apps, but it's essentially based on Microsoft Edge (Chromium).
+
+Here's a very simplified outline of what you'd have to do:
+
+    Setup a basic Win32 Window.
+
+    Initialize WebView2 control in the window.
+
+    Load SVG content into WebView2.
+
+Below is a skeleton of the setup. Note that this assumes you've installed and set up the WebView2 SDK:
+
+```cpp
+
+#include <windows.h>
+#include <wil/com.h>
+#include <webview2.h>
+
+wil::com_ptr<IWebView2Environment> webViewEnvironment;
+wil::com_ptr<IWebView2WebView> webView;
+
+LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) {
+    switch (uMsg) {
+    case WM_DESTROY:
+        PostQuitMessage(0);
+        return 0;
+    }
+
+    return DefWindowProc(hwnd, uMsg, wParam, lParam);
+}
+
+int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR, int nCmdShow) {
+    const wchar_t CLASS_NAME[] = L"Sample Window Class";
+    WNDCLASS wc = {};
+
+    wc.lpfnWndProc = WindowProc;
+    wc.hInstance = hInstance;
+    wc.lpszClassName = CLASS_NAME;
+
+    RegisterClass(&wc);
+
+    HWND hwnd = CreateWindowEx(
+        0,
+        CLASS_NAME,
+        L"SVG Viewer",
+        WS_OVERLAPPEDWINDOW,
+        CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
+        NULL,
+        NULL,
+        hInstance,
+        NULL
+    );
+
+    if (hwnd == NULL) {
+        return 0;
+    }
+
+    ShowWindow(hwnd, nCmdShow);
+
+    // Initialize WebView2 for this window...
+    CreateCoreWebView2EnvironmentWithOptions(nullptr, nullptr, nullptr,
+        Callback<IWebView2CreateCoreWebView2EnvironmentCompletedHandler>(
+            [hwnd](HRESULT result, IWebView2Environment* env) -> HRESULT {
+                env->CreateCoreWebView2Controller(hwnd, Callback<IWebView2CreateCoreWebView2ControllerCompletedHandler>(
+                    [hwnd](HRESULT result, IWebView2Controller* controller) -> HRESULT {
+                        if (controller != nullptr) {
+                            wil::com_ptr<IWebView2Controller> webController = controller;
+                            webController->get_CoreWebView2(&webView);
+                            
+                            // Load SVG here. For simplicity, we're using inline SVG string.
+                            webView->Navigate(L"data:image/svg+xml;utf8,<svg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='50' r='40'/></svg>");
+                        }
+                        return S_OK;
+                    }).Get());
+                return S_OK;
+            }).Get());
+
+    MSG msg = {};
+    while (GetMessage(&msg, NULL, 0, 0)) {
+        TranslateMessage(&msg);
+        DispatchMessage(&msg);
+    }
+
+    return 0;
+}
+```
+Remember that this is a simplified example and does not handle all the necessary error-checking and other intricacies. Also, while WebView2 isn't exactly a third-party library, it's not bundled with C++ or the Windows SDK by default; you'll need to set it up.
+
+If you truly wish to parse and render SVGs natively without any web-based or third-party tools, you would need to write or integrate an SVG parser and renderer, which would be a huge undertaking.
+
+User:
+
+Is there a third party library that you would recommend?
+
+ChatGPT:
+
+Yes, if you're open to using third-party libraries, several excellent options are tailored for SVG rendering in C++ applications:
+
+    NanoSVG:
+        Description: A small and simple SVG parse library written in C. It's great for lightweight applications that need basic SVG rendering without all the bells and whistles.
+        Link: https://github.com/memononen/nanosvg
+
+    libsvgtiny:
+        Description: A lightweight library for rendering SVGs. It's a part of the NetSurf project and can render a subset of SVGs.
+        Link: Part of the NetSurf project. You might have to dig into their repositories to extract just the libsvgtiny.
+
+    Qt SVG:
+        Description: If you're using the Qt framework for your application, it comes with a module for SVG rendering. Qt is a full-fledged UI framework, so it might be overkill if you just need SVG rendering.
+        Link: https://doc.qt.io/qt-5/qtsvg-index.html
+
+    Cairo:
+        Description: A 2D graphics library that supports SVG among many other formats. It's a bit lower-level, so it might have a steeper learning curve than some of the other options.
+        Link: https://www.cairographics.org/
+
+    Resvg:
+        Description: A Rust library, but it has C-API bindings. It aims to be a high-quality SVG rendering library.
+        Link: https://github.com/RazrFalcon/resvg
+
+Of these, the choice largely depends on your specific needs:
+
+    For lightweight applications or if you need only basic SVG rendering, NanoSVG or libsvgtiny could be perfect.
+
+    If you're already working with or are familiar with the Qt framework, Qt SVG would integrate seamlessly.
+
+    For high-quality rendering and more extensive SVG support, Resvg might be the way to go, though integrating a Rust library might have its challenges.
+
+    Cairo is robust and offers a lot of functionalities beyond SVG rendering. It might be a good choice if you need more than just SVG support.
+
+Always remember to check the licenses of third-party libraries to ensure they are compatible with your project's licensing and distribution needs.
