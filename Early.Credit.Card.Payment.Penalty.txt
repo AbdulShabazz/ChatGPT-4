@@ -1,0 +1,11 @@
+GPT-4
+
+User:
+
+How soon can you apply a payment before a credit card due date and it not be considered an early payment?
+
+ChatGPT:
+
+If you want to make sure a payment is not considered "early," it typically depends on your credit card issuer's policies and the billing cycle. In general, if you pay after the statement closing date (the date your statement is generated) but before the due date, it's not considered an early payment; it's just considered an on-time payment. If you pay before the statement closing date, then it would be an early payment as it would be applied to the current billing cycle, not the next one.
+
+However, there's rarely a downside to paying early, as long as you're sure of the amount you owe. The important thing is to ensure that the minimum payment (or the full balance, if you aim to avoid interest) is paid by the due date. If you have specific concerns, it's always a good idea to check with your credit card issuer directly.
