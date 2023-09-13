@@ -1,0 +1,41 @@
+GPT-4
+
+User:
+
+My insurance recommends $100K of coverage and $300K per accident as minimum coverage however what is your personal recommendation?
+
+ChatGPT:
+
+I'm not a licensed insurance agent, but some general considerations you might take into account when determining auto insurance coverage are:
+
+    State Minimum Requirements: Every state has its minimum liability insurance requirements. It's essential to at least meet these.
+
+    Assets: The more assets you have, the more insurance you might want. This can help protect those assets from being vulnerable in a lawsuit following an accident.
+
+    Vehicle Value: If you drive a new or valuable car, you may want more than just liability coverage. Comprehensive and collision coverages can help protect the value of your vehicle.
+
+    Risk Tolerance: Some people are comfortable taking on more risk and having lower coverage, whereas others prefer the peace of mind of higher coverage limits.
+
+    Financial Situation: If you'd have difficulty paying out of pocket for damages that exceed your insurance limits, then higher coverage might make sense.
+
+    Usage: If you drive frequently or in high-risk areas (e.g., densely populated areas), more coverage might be sensible.
+
+    Potential Medical Costs: Medical bills can be very expensive. If you were to cause an accident with multiple injuries, the costs could quickly exceed a lower coverage limit.
+
+$100K of coverage and $300K per accident is often referred to as 100/300 coverage. It's a common recommendation, but whether it's right for you depends on your unique circumstances. It may be worth consulting with an insurance professional or financial advisor to make a decision tailored to your situation.
+
+User:
+
+What is the average cost of two car accident in the united states including medical bills?
+
+ChatGPT:
+
+As of my last training cut-off in September 2021, determining an "average" cost for a two-car accident in the U.S. can be challenging because costs can vary significantly based on the severity of the accident, the extent of the injuries, the value of the vehicles involved, and other variables. However, a few general figures might help provide a sense of scale:
+
+    Property Damage: The average claim for property damage, which generally refers to car repairs, was a little over $3,000.
+
+    Bodily Injury: The average claim for bodily injury, which can encompass medical expenses, pain and suffering, lost wages, etc., was about $15,000.
+
+These are very generalized averages. Many minor fender-benders might have costs significantly below these averages, while severe accidents involving significant medical treatments or totaled vehicles can cost much more. Also, these figures don't account for other potential costs like rental cars, long-term medical care, or the legal costs that might arise from a lawsuit.
+
+Given the wide variation in accident costs, it's essential to carry adequate car insurance to protect against potential financial liabilities.
