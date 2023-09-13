@@ -1,0 +1,19 @@
+GPT-4
+
+User:
+
+What is the 'Mirror front Camera' iPhone camera app setting for?
+
+ChatGPT:
+
+As of my last update in September 2021, Apple introduced a feature for the iPhone where users can enable or disable the "Mirror Front Camera" setting. When this setting is enabled, photos taken with the front-facing camera (commonly used for selfies) will produce images that mirror what you see in the camera preview. In other words, the final photo will look just like what you see on the screen when you're composing the shot.
+
+Traditionally, when you take a selfie, the final image is flipped horizontally compared to what you see in the preview. This can be jarring for some users, especially if they have text or logos in their selfies which appear reversed in the saved photo. The "Mirror Front Camera" setting addresses this issue by providing an option to save the image as it appears on screen.
+
+To enable or disable this feature on an iPhone (based on iOS 14 settings):
+
+    Go to the Settings app.
+    Scroll down and tap on "Camera".
+    Under the "Composition" section, you'll find the "Mirror Front Camera" option. Toggle it on or off based on your preference.
+
+Keep in mind that the location or naming of this feature might change in future iOS updates. Always refer to the most recent official Apple documentation or user guide for up-to-date information.
