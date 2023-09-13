@@ -1,0 +1,13 @@
+GPT-4
+
+User:
+
+Are there U.S. territories where windscreen mounted dashcams are prohibited?
+
+ChatGPT:
+
+As of my last update in September 2021, there isn't a blanket prohibition on windscreen-mounted dashcams across any U.S. state or territory. However, many states have laws regarding objects obstructing the driver's view or being affixed to the windshield. These laws could potentially be applicable to dashcams.
+
+For example, some states specify that devices must not be placed within the area cleaned by windshield wipers or must be located in the bottom-most or top-most part of the windshield. Others might allow for devices, like toll transponders or GPS devices, to be mounted in specific areas of the windshield.
+
+It's always a good idea to check the specific vehicle and traffic laws of the state or territory in question. If you are considering installing a windscreen-mounted dashcam, you should consult the specific regulations in your jurisdiction to ensure you're in compliance. If in doubt, a local attorney or law enforcement agency can often provide guidance.
