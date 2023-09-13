@@ -1,0 +1,9 @@
+GPT-4
+
+User:
+
+What was the budget on the film Prometheus?
+
+ChatGPT:
+
+The film "Prometheus," directed by Ridley Scott and released in 2012, had an estimated budget of around $120-130 million.
