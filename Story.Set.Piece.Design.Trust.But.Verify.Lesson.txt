@@ -1,0 +1,37 @@
+GPT-4
+
+User:
+
+Create a summary sequence outline to insert in a story whose turning point allows the protagonist to realize the moral: trust but verify!
+
+ChatGPT:
+
+Summary Sequence Outline:
+
+    Introduction:
+        Introduce protagonist, Alex, who is enthusiastic, naive, and has a habit of taking people's words at face value.
+        Alex is presented with a business opportunity by a charismatic stranger, Jordan.
+
+    Rising Action:
+        Alex is excited about the potential of the business deal and pours significant time, energy, and resources into it.
+        Friends and family caution Alex, suggesting he looks deeper into Jordan and the deal.
+        Alex, blinded by trust and optimism, dismisses their concerns.
+
+    Catalyst:
+        A close friend, Taylor, shares a personal story about a time they were betrayed because they failed to verify someone’s trustworthiness.
+        Taylor offers to help Alex do some deeper digging on Jordan and the business deal.
+
+    Climax:
+        Together, Alex and Taylor uncover that Jordan has a history of scamming others with similar "opportunities."
+        They also find out that Jordan is planning to disappear once he receives a significant investment from Alex.
+
+    Turning Point:
+        Alex confronts Jordan, who tries to manipulate and gaslight him. However, with the evidence stacked against Jordan, he eventually flees.
+        Alex realizes the immense danger he was in and the potential loss he could have suffered.
+
+    Resolution:
+        Alex is grateful to Taylor and becomes more cautious in his future ventures.
+        He spreads the moral "trust but verify" to others, hoping they can avoid the pitfalls he almost fell into.
+        Alex starts a community initiative to educate others about the importance of verification in business and personal matters.
+
+By the end of the sequence, the moral "trust but verify" is deeply ingrained in the reader's mind, emphasizing the importance of balancing trust with due diligence.
