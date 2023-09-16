@@ -1,0 +1,19 @@
+Bard:
+
+The highest spec desktop available for six thousand dollars will vary depending on the specific components that you choose, but here is a sample build:
+
+* **CPU:** Intel Core i9-13900K
+* **Motherboard:** ASUS ROG Strix Z790-E Gaming WiFi
+* **GPU:** NVIDIA GeForce RTX 4090 Founders Edition
+* **RAM:** 64GB (4x16GB) Corsair Vengeance LPX DDR5-5600
+* **Storage:** 2TB Samsung 980 Pro M.2-2280 NVMe SSD + 4TB Seagate Barracuda HDD
+* **Case:** Lian Li O11 Dynamic XL ROG Certified
+* **Power Supply:** Corsair RMx 850W 80+ Gold Certified Fully Modular ATX Power Supply
+
+This build will give you the best possible performance for gaming, video editing, and other demanding tasks. It also has plenty of storage space for your files and games.
+
+If you want to save some money, you could downgrade some of the components, such as the CPU to an Intel Core i7-13700K or the GPU to an NVIDIA GeForce RTX 4080. You could also reduce the amount of RAM to 32GB or the storage space to 1TB SSD + 2TB HDD.
+
+However, if you have the budget, the build above is the highest spec desktop that you can get for six thousand dollars. It will be able to handle any task that you throw at it with ease.
+
+Please note that this is just a sample build. There are many other ways to build a high-end desktop for six thousand dollars. It is important to do your research and choose the components that are right for you.
