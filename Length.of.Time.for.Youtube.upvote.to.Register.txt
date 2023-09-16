@@ -1,0 +1,9 @@
+Bard:
+
+Typically, it takes less than a second for a YouTube comment, upvote, or downvote to be registered and viewable by the channel author. However, there may be a slight delay in some cases, such as if there is a high volume of traffic on YouTube's servers.
+
+In my experience, I have noticed that comments are typically registered and viewable the fastest, followed by upvotes, and then downvotes. This is likely because comments are smaller in size than upvotes and downvotes, and therefore require less time to be processed.
+
+If you remove a comment, upvote, or downvote within a few seconds of making it, it is likely that it will not be registered and viewable by the channel author. However, if you wait longer than a few seconds to remove it, then it is more likely that it will have already been registered and will be viewable by the channel author.
+
+Please note that this is just a general guideline. The actual amount of time it takes for a comment, upvote, or downvote to be registered and viewable by the channel author may vary depending on a number of factors, such as the current load on YouTube's servers.
