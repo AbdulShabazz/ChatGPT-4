@@ -1,0 +1,26 @@
+Bard:
+
+To disable iPhone vibrate during notifications, you can either disable vibration for all alerts or disable vibration for specific apps.
+
+To disable vibration for all alerts:
+
+1. Go to **Settings** > **Accessibility** > **Touch**.
+2. Toggle off **Vibration**.
+
+To disable vibration for specific apps:
+
+1. Go to **Settings** > **Sounds & Haptics**.
+2. Scroll down and tap the app for which you want to disable vibration.
+3. Under **Vibration**, toggle off **Vibrate**.
+
+Note: Disabling vibration for all alerts will also disable vibration for earthquake, tsunami, and other emergency alerts.
+
+To enable vibration again, simply follow the same steps and toggle on **Vibration** or **Vibrate**, depending on which setting you disabled.
+
+Here are some additional tips for managing vibration on your iPhone:
+
+* You can use **Silent Mode** to mute all sounds and vibrations on your iPhone. To do this, flip the switch on the side of your iPhone until you see the orange indicator.
+* You can also use **Focus Modes** to customize how your iPhone responds to notifications. For example, you can create a Focus Mode for work that disables all notifications except for work-related ones. To create a Focus Mode, go to **Settings** > **Focus**.
+* If you have an Apple Watch, you can use it to receive notifications without having your iPhone vibrate. To do this, go to the **Watch** app on your iPhone and tap **My Watch** > **Notifications**. Then, toggle on **Mirror iPhone from Apple Watch**.
+
+I hope this helps!
