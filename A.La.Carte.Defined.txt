@@ -1,0 +1,9 @@
+GPT-4
+
+User:
+
+If `A la carte` pertains to purchasing an entire bundle; what is the (french?) word for the ability to select items from the bundle?
+
+ChatGPT:
+
+The term "à la carte" actually refers to ordering individual dishes from a menu in a restaurant, rather than ordering a pre-set meal or bundle. In this context, "à la carte" means you're selecting specific items rather than getting a whole set or bundle. So, the term you're looking for is already "à la carte." If you order a pre-set meal, that might be referred to as a "set menu" or "prix fixe" in French.
