@@ -1,0 +1,15 @@
+Bard:
+
+The highest possible iPhone brightness settings which prevents burn-in will vary depending on the model of iPhone you have and the environment you are using it in. However, a good rule of thumb is to keep your brightness at or below 50% brightness. This will help to reduce the wear and tear on your display and extend the life of your device.
+
+If you are using your iPhone in a bright environment, such as outdoors on a sunny day, you may need to increase the brightness to see the screen. However, try to avoid keeping the brightness at the highest setting for long periods of time.
+
+Here are some additional tips to help prevent burn-in on your iPhone:
+
+* Use dark mode whenever possible. Dark mode reduces the amount of light emitted from the display, which can help to prevent burn-in.
+* Avoid displaying static images on the screen for long periods of time. If you need to display a static image, such as a map or navigation app, try to reduce the brightness of the display and take breaks periodically.
+* Enable auto-brightness. Auto-brightness will automatically adjust the brightness of the display based on the ambient light conditions. This can help to prevent you from setting the brightness too high, especially in bright environments.
+
+If you are concerned about burn-in, you can also use a third-party app to monitor the brightness of your display and warn you if it is too high.
+
+It is important to note that burn-in is a permanent condition and cannot be repaired. However, by following these tips, you can help to prevent burn-in from happening on your iPhone.
