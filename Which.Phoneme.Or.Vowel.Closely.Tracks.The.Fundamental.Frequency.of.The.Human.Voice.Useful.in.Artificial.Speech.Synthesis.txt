@@ -1,0 +1,21 @@
+Bard:
+
+The vowel that closely tracks the fundamental frequency of the human voice, useful in artificial speech synthesis, is the vowel **schwa**.
+
+The schwa is a neutral vowel sound that is represented by the symbol /ə/ in IPA. It is the most common vowel sound in English, and it is often used in unstressed syllables. The schwa is produced with the tongue in a mid-central position, and the lips are relaxed.
+
+The schwa is a good choice for artificial speech synthesis because it is a neutral vowel sound that does not have a strong formant structure. This means that the schwa can be easily modified to match the fundamental frequency of the speaker's voice.
+
+For example, if the speaker is using a high fundamental frequency, the schwa can be produced with a higher formant structure. Conversely, if the speaker is using a low fundamental frequency, the schwa can be produced with a lower formant structure.
+
+This ability to closely track the fundamental frequency of the speaker's voice makes the schwa a very useful vowel sound for artificial speech synthesis.
+
+Here are some examples of how the schwa is used in English words:
+
+* the schwa is the vowel sound in the unstressed syllable of the word "about"
+* the schwa is the vowel sound in the unstressed syllable of the word "computer"
+* the schwa is the vowel sound in the unstressed syllable of the word "the"
+
+In artificial speech synthesis, the schwa is often used to synthesize vowels in unstressed syllables. This is because the schwa is a neutral vowel sound that does not have a strong formant structure, making it easy to modify to match the fundamental frequency of the speaker's voice.
+
+The schwa can also be used to synthesize vowels in stressed syllables, but it is important to note that the formant structure of the schwa will need to be modified to match the formant structure of the vowel sound that is being synthesized.
