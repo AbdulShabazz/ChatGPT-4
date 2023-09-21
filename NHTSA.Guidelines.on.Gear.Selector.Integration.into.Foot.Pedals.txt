@@ -1,0 +1,31 @@
+Bard:
+
+The National Highway Traffic Safety Administration (NHTSA) has established limitations on how much gear selector functionality can be integrated into the foot pedals. These limitations are designed to prevent accidental shifting and to ensure that the driver has clear and consistent control over the vehicle's gear selection.
+
+The NHTSA's limitations on gear selector functionality are as follows:
+
+* **Cars:** Cars can only have the following gear selector functionality integrated into the foot pedals:
+    * Park (P)
+    * Reverse (R)
+    * Neutral (N)
+    * Drive (D)
+* **Trucks and SUVs:** Trucks and SUVs can have the following gear selector functionality integrated into the foot pedals:
+    * Park (P)
+    * Reverse (R)
+    * Neutral (N)
+    * Drive (D)
+    * Low (L)
+
+Additionally, the NHTSA requires that all vehicles with integrated gear selector functionality in the foot pedals have a separate manual gear selector that can be used to override the integrated gear selector. This manual gear selector must be located within the driver's reach and must be clearly labeled.
+
+The NHTSA's limitations on gear selector functionality are designed to improve safety and to prevent accidents. By limiting the amount of gear selector functionality that can be integrated into the foot pedals, the NHTSA helps to ensure that drivers have clear and consistent control over the vehicle's gear selection.
+
+Here is a table summarizing the NHTSA limitations on gear selector functionality:
+
+| Vehicle Type | NHTSA Gear Selector Limitations |
+|---|---|
+| Car | P, R, N, D |
+| Truck | P, R, N, D, L |
+| SUV | P, R, N, D, L |
+
+Please note that these limitations are subject to change, so it is always best to consult with the NHTSA for the most up-to-date information.
