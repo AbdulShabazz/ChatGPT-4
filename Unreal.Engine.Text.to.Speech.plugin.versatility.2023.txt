@@ -1,0 +1,20 @@
+Bard:
+
+The text-to-speech plugin for Unreal Engine is a relatively new product, but it is already quite advanced. It supports a variety of features, including:
+
+* **Multiple voices and languages:** The plugin supports over 100 different voices in over 20 languages. This allows you to create games and other interactive experiences that are accessible to a wide audience.
+* **SSML support:** The plugin supports the Speech Synthesis Markup Language (SSML), which allows you to control the intonation, pitch, and tempo of the generated speech. This can be useful for creating more expressive and engaging audio experiences.
+* **Runtime text-to-speech:** The plugin can be used to generate speech at runtime, which allows you to create more dynamic and interactive experiences. For example, you could use the plugin to generate dialogue for NPCs based on the player's actions.
+
+In addition to these features, the plugin is also relatively easy to use. It comes with a variety of documentation and tutorials, and it can be integrated into your Unreal Engine project with just a few steps.
+
+Overall, the text-to-speech plugin for Unreal Engine is a powerful and versatile tool that can be used to create a variety of different audio experiences. It is still under development, but it is already quite advanced and easy to use.
+
+Here are some examples of how the text-to-speech plugin can be used in Unreal Engine:
+
+* To create dialogue for NPCs in games.
+* To generate audio feedback for players in educational games and simulations.
+* To create accessible games and experiences for people with disabilities.
+* To generate audio for trailers, cinematics, and other marketing materials.
+
+The possibilities are endless!
