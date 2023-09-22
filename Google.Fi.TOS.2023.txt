@@ -1,0 +1,21 @@
+Bard:
+
+Google Fi downlink and uplink speeds vary depending on your location and the network you are connected to. However, Google Fi uses a combination of T-Mobile, US Cellular, and Google Cloud Platform to provide its service, so you can generally expect to get good speeds nationwide.
+
+According to Google Fi's mobile broadband consumer disclosure, typical download speeds range from 30-75 Mbps and typical upload speeds range from 4-20 Mbps. However, some users have reported speeds of up to 1 Gbps in certain areas.
+
+Google Fi does not have any hard bandwidth limitations, but your data speeds may be throttled to 256 kbps if you exceed your data limit. Your data limit depends on the type of plan you have:
+
+* Flexible plan: 15 GB of full-speed data per line
+* Simply Unlimited plan: 35 GB of full-speed data per line
+* Unlimited Plus plan: 50 GB of full-speed data per line
+
+Once you reach your data limit, you can still use data, but it will be slower. You can also purchase additional full-speed data at $10 per GB.
+
+Here are some additional things to keep in mind about Google Fi data speeds:
+
+* Google Fi prioritizes its own network traffic over traffic from other networks. This means that you may experience faster speeds when connected to Google's network.
+* Google Fi does not subject its users to data traffic deprioritization during times of high network usage. This means that your data speeds should not be slowed down, even when there are a lot of people using the network.
+* Google Fi uses a variety of factors to determine your data speeds, including your location, the network you are connected to, and the type of device you are using.
+
+If you have any questions about Google Fi data speeds, you can contact Google Fi customer support for more information.
