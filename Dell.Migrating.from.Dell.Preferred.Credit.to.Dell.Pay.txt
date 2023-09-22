@@ -1,0 +1,12 @@
+Bard:
+
+Dell is migrating from the Dell Preferred Credit program to Dell Pay for a number of reasons, including:
+
+* **To offer a more streamlined and seamless payment experience.** Dell Pay is a digital wallet that allows customers to store their payment information and shipping addresses in one place. This makes it easier and faster for customers to checkout when shopping on Dell.com.
+* **To provide customers with more payment options.** Dell Pay supports a variety of payment methods, including credit and debit cards, PayPal, and Amazon Pay. This gives customers more flexibility to choose the payment method that is most convenient for them.
+* **To reduce fraud and improve security.** Dell Pay uses advanced security features to protect customer payment information. This includes tokenization, encryption, and fraud detection.
+* **To lay the foundation for future innovation.** Dell Pay is a platform that can be used to offer new and innovative payment solutions in the future. For example, Dell could use Dell Pay to enable customers to make payments with their mobile phones or other wearable devices.
+
+In addition to these reasons, Dell may also be migrating to Dell Pay in order to reduce costs and improve efficiency. Dell Pay is a more modern and efficient payment platform than the Dell Preferred Credit program.
+
+Overall, the migration to Dell Pay is a positive development for both Dell and its customers. Dell Pay offers a more streamlined, convenient, and secure payment experience.
