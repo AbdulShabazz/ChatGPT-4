@@ -1,0 +1,25 @@
+Bard:
+
+The best ranked open source text to speech (TTS) engines or libraries available are:
+
+* **MARYTTS:** MARYTTS is a multilingual text-to-speech synthesis system written in Java. It is known for its high-quality speech synthesis and its wide range of features, including support for multiple languages, voices, and speech styles.
+* **Coqui TTS:** Coqui TTS is a Python package for text-to-speech synthesis. It is known for its fast and lightweight implementation, as well as its support for multiple voice models.
+* **Mycroft's Mimic:** Mimic is a text-to-speech library developed by the Mycroft team. It is known for its small size and its ability to run on low-powered devices.
+* **Flite:** Flite is a lightweight text-to-speech synthesis engine developed by Carnegie Mellon University. It is known for its fast performance and its support for multiple languages and voices.
+* **eSpeak:** eSpeak is a compact text-to-speech synthesizer that is available for Windows, macOS, and Linux. It is known for its small size and its ability to produce high-quality speech output.
+
+These TTS engines and libraries are all open source, meaning that they are freely available to use and modify. They are also all well-maintained and have active communities of users and developers.
+
+**Why are these TTS engines and libraries so popular?**
+
+There are a number of reasons why these TTS engines and libraries are so popular. First, they are all open source, which means that they are freely available to use and modify. This makes them ideal for a wide range of applications, including commercial and non-commercial projects.
+
+Second, these TTS engines and libraries are all well-maintained and have active communities of users and developers. This means that there is a lot of support available for them, and that they are constantly being improved.
+
+Finally, these TTS engines and libraries all produce high-quality speech output. This makes them suitable for a wide range of applications, including audiobooks, e-readers, and educational software.
+
+**Which TTS engine or library is right for you?**
+
+The best TTS engine or library for you will depend on your specific needs. If you are looking for a high-quality TTS engine that supports a wide range of features, then MARYTTS is a good choice. If you are looking for a lightweight and fast TTS engine, then Coqui TTS or Mycroft's Mimic is a good option. If you are looking for a TTS engine that is easy to use and deploy, then Flite or eSpeak is a good choice.
+
+I hope this information is helpful. Please let me know if you have any other questions.
