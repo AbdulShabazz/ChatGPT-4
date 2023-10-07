@@ -1,0 +1,17 @@
+### `ensurepip`
+
+Python comes with an {mod}`ensurepip` module[^python], which can install pip in
+a Python environment.
+
+```{pip-cli}
+$ python -m ensurepip --upgrade
+```
+
+### `upgrade pip`
+
+Python comes with an {mod}`ensurepip` module[^python], which can install pip in
+a Python environment.
+
+```{pip-cli}
+$ python -m pip install --upgrade pip
+```
