@@ -1,0 +1,15 @@
+Bard:
+
+Yes, there has been some research on constructing TTS models based on using syllables as phones rather than those derived from the IPA spelling system.
+
+One example is the paper "A syllable-based statistical text to speech system" (2013) by Ergun and Akar. In this paper, the authors propose a syllable-based TTS system for Turkish, which is a language with a complex syllable structure. The system uses a variable number of states to model each syllable, which allows it to capture the co-articulation effects that are common in Turkish speech. The authors evaluated the system on a set of human-labeled speech data and found that it performed comparably to a phoneme-based TTS system in terms of both intelligibility and naturalness.
+
+Another example is the paper "End-to-end Tibetan Speech Synthesis Based on Phones and Semi-syllables" (2019) by Wang et al. In this paper, the authors compare the performance of two end-to-end TTS models for Tibetan, one based on phones and the other based on semi-syllables. They found that the phone-based model outperformed the semi-syllable-based model in terms of naturalness. However, the semi-syllable-based model was more robust to noise and had a lower word error rate.
+
+Overall, the research on syllable-based TTS is still in its early stages. However, the results from the studies mentioned above suggest that syllable-based TTS models can achieve comparable or even better performance than phoneme-based TTS models, especially for languages with complex syllable structures.
+
+One potential advantage of syllable-based TTS models is that they may be easier to train, since the number of syllables in a language is typically much smaller than the number of phones. This may be especially beneficial for languages with limited resources, such as low-resource languages or languages with limited amounts of labeled speech data.
+
+Another potential advantage of syllable-based TTS models is that they may be more robust to noise and other distortions. This is because syllables are larger units of speech than phones, and therefore they are less likely to be affected by individual errors in the speech signal.
+
+Overall, syllable-based TTS is a promising area of research with the potential to improve the quality and robustness of TTS systems for a variety of languages.
