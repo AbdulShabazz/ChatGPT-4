@@ -1,0 +1,13 @@
+Bard:
+
+The artificial speech synthesis library OpenAI uses for ChatGPT is called **Whisper**. Whisper is an open-source speech recognition system that can transcribe audio in over 200 languages. It is also capable of generating realistic synthetic voices from just a few seconds of real speech.
+
+OpenAI uses Whisper to power the voice chat feature in ChatGPT. This feature allows users to have a more interactive experience with the model by speaking to it and listening to its responses.
+
+Whisper is a powerful tool that can be used for a variety of applications, including:
+
+* Transcribing audio for podcasts, videos, and other media
+* Generating realistic synthetic voices for audiobooks, video games, and other creative content
+* Creating voice assistants and chatbots that can interact with users in a more natural way
+
+OpenAI is committed to developing and using artificial intelligence technology in a responsible and ethical way. The company is working to ensure that Whisper is used for good and that it does not pose any risks to society.
