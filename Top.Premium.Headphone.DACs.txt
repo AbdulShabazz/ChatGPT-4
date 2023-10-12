@@ -97,3 +97,15 @@ However, for clarity:
 
 In summary, the Topping D90 MQA does not “read” these file formats directly. Instead, it converts the digital audio signals sent from source devices that read and output these formats. As long as your iPhone or associated playback software supports .AAC, .FLAC, or any other audio format, the Topping D90 MQA should be able to handle the digital-to-analog conversion without issues. Ensure you use appropriate cables and possibly adapters to connect the iPhone to the DAC.
 
+User:
+
+What is the manufacturer url?
+
+ChatGPT:
+
+The official website for Topping, the manufacturer of the Topping D90 MQA, is:
+
+http://www.tpdz.net/
+
+You can visit this URL to explore their range of products, get detailed specifications, and find other relevant information directly from the manufacturer. Remember to ensure that any purchases or information requests are made through official or trusted channels to maintain safety and authenticity.
+
