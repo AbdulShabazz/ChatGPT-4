@@ -1,0 +1,32 @@
+Bard:
+
+To install PyTorch from the Windows command line, you can use the following steps:
+
+1. **Install Python.** PyTorch requires Python 3.7 or higher. You can download Python from the official website: https://www.python.org/downloads/
+2. **Install pip.** Pip is a package manager for Python. If you don't already have pip installed, you can install it using the following command:
+
+```
+python -m pip install --upgrade pip
+```
+
+3. **Install PyTorch.** To install PyTorch, run the following command:
+
+```
+pip install torch torchvision torchaudio
+```
+
+If you have a CUDA-enabled GPU and want to use it with PyTorch, you can specify the CUDA version in the command above. For example, to install PyTorch with CUDA 11.8, you would run the following command:
+
+```
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+```
+
+4. **Verify the installation.** To verify that PyTorch is installed correctly, run the following command:
+
+```
+python -c "import torch; print(torch.__version__)"
+```
+
+This should print the version of PyTorch that is installed on your system.
+
+If you are having trouble installing PyTorch, you can refer to the official PyTorch installation guide for more information: https://pytorch.org/get-started/locally/
