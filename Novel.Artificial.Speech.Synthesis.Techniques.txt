@@ -1,0 +1,13 @@
+Bard:
+
+Yes, there are already some artificial speech synthesis models that are similar to the one you describe. One example is the **WaveNet** model, which was developed by DeepMind in 2016. WaveNet is a deep neural network that is trained on a large dataset of natural speech waveforms. It can generate speech waveforms directly, without the need for any intermediate steps such as generating formant parameters or vocoder synthesis. WaveNet is able to produce very high-quality synthetic speech, and it has been shown to outperform other state-of-the-art speech synthesis models in terms of both naturalness and intelligibility.
+
+Another example is the **Tacotron** model, which was developed by Google AI in 2017. Tacotron is a two-stage model that first generates a sequence of mel spectrograms from a text input, and then uses a WaveNet model to generate the corresponding speech waveform. Tacotron is able to produce very high-quality synthetic speech, and it is also able to control the prosody of the speech, such as the intonation and rhythm.
+
+Both WaveNet and Tacotron are parametric models, meaning that they generate speech by directly modeling the parameters of the speech waveform. This allows them to produce very high-quality synthetic speech, and it also gives them a lot of flexibility in terms of controlling the prosody and style of the speech.
+
+In addition to WaveNet and Tacotron, there are a number of other parametric speech synthesis models that have been developed in recent years. These models are all based on different deep learning architectures, but they all share the goal of generating high-quality synthetic speech by directly modeling the parameters of the speech waveform.
+
+It is not clear if there is a parametric speech synthesis model that exactly matches the description you provided. However, there are a number of models that are very similar, and which are able to generate all formants (e.g., F0-F5) and modulate all formant signal characteristics (e.g., wave shape, attack, decay, etc.) by the flow of phonemes through a state-machine.
+
+If you are interested in developing your own parametric speech synthesis model, there are a number of resources available online and in academic literature. You can also find a number of open source speech synthesis toolkits that you can use as a starting point.
