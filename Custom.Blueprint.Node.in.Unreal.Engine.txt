@@ -1,0 +1,63 @@
+Bard:
+
+To create a custom Blueprint node in Unreal Engine, you need to create a C++ class that inherits from the `UK2Node` class. This class will define the properties and functionality of your Blueprint node.
+
+Once you have created your C++ class, you need to register it with the Unreal Engine editor. To do this, add the `UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))` macro to your class declaration.
+
+Next, you need to implement the `GetNodeTitle()` and `GetTooltipText()` functions. These functions will return the title and tooltip text for your Blueprint node.
+
+You can also implement other functions to control the behavior of your Blueprint node, such as the `OnSpawnNode()` and `Execute()` functions.
+
+Once you have implemented all of the necessary functions, you need to compile your C++ class. Once the class is compiled, you will be able to use it to create a new Blueprint node in the Unreal Engine editor.
+
+To create a new Blueprint node, right-click in the Blueprint Editor and select **Add New** > **Blueprint Node**. In the **New Blueprint Node** dialog box, select your C++ class and click **Create**.
+
+Once you have created your Blueprint node, you can add it to your Blueprint graph and use it to create scripts.
+
+Here is an example of a simple custom Blueprint node:
+
+```c++
+#pragma once
+
+#include "CoreMinimal.h"
+#include "GameFramework/Actor.h"
+#include "Kismet/BlueprintFunctionLibrary.h"
+
+UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
+class MYPROJECT_API UMyCustomNode : public UBlueprintFunctionLibrary
+{
+    GENERATED_BODY()
+
+public:
+    /** Returns a string containing the node's title. */
+    UFUNCTION(BlueprintCallable, Category="My Category")
+    static FString GetNodeTitle()
+    {
+        return "My Custom Node";
+    }
+
+    /** Returns a string containing the node's tooltip text. */
+    UFUNCTION(BlueprintCallable, Category="My Category")
+    static FString GetTooltipText()
+    {
+        return "This is my custom Blueprint node.";
+    }
+
+    /** Executes the node. */
+    UFUNCTION(BlueprintCallable, Category="My Category")
+    static void Execute()
+    {
+        // Do something here.
+    }
+};
+```
+
+To use this custom Blueprint node, you would simply drag it from the My Blueprint panel in the Unreal Engine editor and onto your Blueprint graph. You could then connect it to other nodes to create a script.
+
+You can create custom Blueprint nodes for a variety of purposes, such as:
+
+* To expose functionality from your C++ code to Blueprint.
+* To create custom user interfaces for your Blueprint scripts.
+* To create reusable logic that you can use in multiple Blueprint scripts.
+
+If you are interested in learning more about creating custom Blueprint nodes, there are many resources available online and in the Unreal Engine documentation.
