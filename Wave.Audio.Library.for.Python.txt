@@ -42,3 +42,38 @@ with wave.open("sinewaves.wav", "wb") as f:
 This will create a .WAV file called `sinewaves.wav` that contains the two stereo sinewave sources. The file will have a sampling rate of 768kHz and a bit depth of 16 bits.
 
 Note that this is just a simple example. There are many other ways to encode the sinewave sources into a .WAV file. For example, you could use a different DSP library or a different quantization method. You could also add additional features to the .WAV file, such as a header with metadata.
+
+To install the wave library for Python with pip for Windows, follow these steps:
+
+1. Open a command prompt window.
+2. Type the following command:
+
+```
+pip install wave
+```
+
+3. Press Enter.
+
+Pip will download and install the wave library. Once the installation is complete, you can import the wave library in your Python scripts.
+
+For example, the following code imports the wave library and reads a .WAV file:
+
+```python
+import wave
+
+# Open the .WAV file
+with wave.open("sinewaves.wav", "rb") as f:
+    # Get the sampling rate and bit depth
+    sampling_rate = f.getsampwidth()
+    bit_depth = f.getframerate()
+
+    # Read the data from the file
+    data = f.readframes(f.getnframes())
+
+# Close the file
+f.close()
+
+# Do something with the data
+```
+
+If you are using an older version of Python on Windows, you may need to install pip manually. You can download the pip installer from the Python website. Once you have installed pip, you can follow the steps above to install the wave library.
