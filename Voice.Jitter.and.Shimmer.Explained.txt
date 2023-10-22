@@ -25,3 +25,38 @@ Here are some examples of voice shimmer:
 * A voice with a lot of shimmer may be a sign of a vocal pathology, such as vocal fold nodules or laryngitis.
 
 If you are concerned about your voice shimmer, you should see a speech-language pathologist or other voice specialist. They can assess your voice and make recommendations for treatment or further evaluation.
+
+Voice jitter is a measure of the cycle-to-cycle variability in the fundamental frequency of vocal fold vibration. It is perceived as roughness, breathiness, or hoarseness in a speaker's voice. All natural speech contains some level of jitter and shimmer, but measuring them is a common way to detect voice pathologies.
+
+Jitter is caused by irregular vocal fold vibration, which can be due to a number of factors, including:
+
+* Vocal fold nodules or polyps
+* Laryngitis
+* Vocal fold paralysis
+* Vocal fold cancer
+* Neurological disorders, such as Parkinson's disease and multiple sclerosis
+
+Jitter can also be affected by environmental factors, such as noise and air pollution.
+
+Jitter is measured using a variety of acoustic analysis tools. The most common measure of jitter is the average percentage deviation of the fundamental frequency of consecutive vocal fold cycles. This measure is expressed as a percentage of the average fundamental frequency.
+
+Normal jitter values vary depending on the individual's age, sex, and voice type. However, jitter values above 1% are generally considered to be abnormal.
+
+Jitter measurement can be used to diagnose voice pathologies, monitor the effectiveness of voice therapy, and assess the risk of developing vocal problems.
+
+Here are some examples of voice jitter:
+
+* A healthy voice will have some jitter, but it will be very subtle.
+* A voice with a lot of jitter will sound rough, breathy, or hoarse.
+* A voice with a lot of jitter may be a sign of a vocal pathology, such as vocal fold nodules or laryngitis.
+
+If you are concerned about your voice jitter, you should see a speech-language pathologist or other voice specialist. They can assess your voice and make recommendations for treatment or further evaluation.
+
+Here are some tips for reducing voice jitter:
+
+* Drink plenty of fluids to keep your vocal cords hydrated.
+* Avoid smoking and excessive alcohol consumption.
+* Get enough sleep.
+* Avoid shouting or straining your voice.
+* Use a microphone when speaking in public.
+* See a speech-language pathologist if you are experiencing chronic voice problems.
