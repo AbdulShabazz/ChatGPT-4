@@ -1,0 +1,27 @@
+Bard:
+
+Voice shimmer is a measure of the cycle-to-cycle variability in the amplitude of vocal fold vibration. It is perceived as roughness, breathiness, or hoarseness in a speaker's voice. All natural speech contains some level of jitter and shimmer, but measuring them is a common way to detect voice pathologies.
+
+Shimmer is caused by irregular vocal fold vibration, which can be due to a number of factors, including:
+
+* Vocal fold nodules or polyps
+* Laryngitis
+* Vocal fold paralysis
+* Vocal fold cancer
+* Neurological disorders, such as Parkinson's disease and multiple sclerosis
+
+Shimmer can also be affected by environmental factors, such as noise and air pollution.
+
+Shimmer is measured using a variety of acoustic analysis tools. The most common measure of shimmer is the average percentage deviation of the amplitude of consecutive vocal fold cycles. This measure is expressed as a percentage of the average amplitude.
+
+Normal shimmer values vary depending on the individual's age, sex, and voice type. However, shimmer values above 3% are generally considered to be abnormal.
+
+Shimmer measurement can be used to diagnose voice pathologies, monitor the effectiveness of voice therapy, and assess the risk of developing vocal problems.
+
+Here are some examples of voice shimmer:
+
+* A healthy voice will have some shimmer, but it will be very subtle.
+* A voice with a lot of shimmer will sound rough, breathy, or hoarse.
+* A voice with a lot of shimmer may be a sign of a vocal pathology, such as vocal fold nodules or laryngitis.
+
+If you are concerned about your voice shimmer, you should see a speech-language pathologist or other voice specialist. They can assess your voice and make recommendations for treatment or further evaluation.
