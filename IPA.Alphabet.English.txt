@@ -1,0 +1,19 @@
+Bard:
+
+You can view the English IPA alphabet online at the following URLs:
+
+* International Phonetic Alphabet (IPA): https://en.wikipedia.org/wiki/International_Phonetic_Alphabet
+* English pronunciation: https://www.englishclub.com/pronunciation/
+* IPA chart for English consonants and vowels: https://americanipachart.com/
+* IPA keyboard: https://www.lexilogos.com/keyboard/ipa.htm
+
+The first two URLs provide a complete overview of the IPA, including the symbols for all languages, as well as a more detailed overview of English pronunciation. The third URL provides a table of all the IPA symbols used in English, with examples. The fourth URL provides an online keyboard that you can use to type IPA symbols.
+
+Here are some additional URLs that may be helpful:
+
+* IPA symbols for English consonants: https://home.cc.umanitoba.ca/~krussll/phonetics/transcription/english-symbols/consonants.html
+* IPA symbols for English vowels: https://home.cc.umanitoba.ca/~krussll/phonetics/transcription/english-symbols/vowels.html
+* IPA chart for English dialects: https://en.wikipedia.org/wiki/International_Phonetic_Alphabet_chart_for_English_dialects
+* IPA transcriptions of English words: https://englishphonetics.net/english-pronunciation-tools/toPhonetics-american-and-british-english.html
+
+I hope this helps!
