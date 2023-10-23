@@ -1,0 +1,39 @@
+Bard:
+
+Yes, you can specify the color of a custom Unreal Engine Blueprint. There are two ways to do this:
+
+1. **Using a Material Parameter Collection:**
+
+    1. Create a new Material Parameter Collection.
+    2. Add a new Color parameter to the Material Parameter Collection.
+    3. Assign a name to the Color parameter.
+    4. Set the default value of the Color parameter to your desired color.
+    5. Save the Material Parameter Collection.
+
+    6. Open your Blueprint in the Blueprint Editor.
+    7. Create a new Material Instance of the Material that you want to use to color your Blueprint.
+    8. Set the Color parameter of the Material Instance to the Material Parameter Collection that you created in step 1.
+    9. Assign the Material Instance to the Static Mesh Component of your Blueprint.
+
+2. **Using a Dynamic Material Instance:**
+
+    1. Create a new Dynamic Material Instance of the Material that you want to use to color your Blueprint.
+    2. Create a new Color variable in your Blueprint.
+    3. Set the default value of the Color variable to your desired color.
+    4. In the Event Graph of your Blueprint, create a new node for the **Set Material Parameter Value** function.
+    5. Connect the **Material Instance** input of the **Set Material Parameter Value** node to the Dynamic Material Instance that you created in step 1.
+    6. Connect the **Parameter Name** input of the **Set Material Parameter Value** node to the **Color** parameter.
+    7. Connect the **Parameter Value** input of the **Set Material Parameter Value** node to the **Color** variable.
+    8. Connect the **Execute** output of the **Set Material Parameter Value** node to an Event that will trigger the color change.
+
+For example, you could connect the **Execute** output of the **Set Material Parameter Value** node to a **Begin Play** Event to change the color of your Blueprint when the game starts.
+
+Once you have followed either of these steps, the color of your Blueprint will be specified by the Color parameter that you set. You can then change the color of your Blueprint by changing the value of the Color parameter.
+
+Here are some additional tips for specifying the color of a custom Unreal Engine Blueprint:
+
+* You can use a Linear Color variable to store the color of your Blueprint. This will give you more control over the color of your Blueprint, as you can specify the red, green, blue, and alpha values of the color individually.
+* You can use a Color Picker node to create a user interface element that allows the player to change the color of your Blueprint at runtime.
+* You can use a **Timeline** to create a dynamic color change effect. For example, you could use a **Timeline** to gradually change the color of your Blueprint from red to green over the course of 10 seconds.
+
+I hope this helps!
