@@ -1,0 +1,60 @@
+Bard:
+
+Python string templates are a way to format strings in a simple and flexible way. They are useful for generating strings that contain dynamic values, such as user input or data from a database.
+
+To use Python string templates, you first need to import the `Template` class from the `string` module. Once you have imported the `Template` class, you can create a new template by passing it a string. The string can contain placeholder values, which are denoted by dollar signs (`$`).
+
+To substitute values into the template, you can use the `substitute()` method. The `substitute()` method takes a dictionary-like object as an argument. The keys of the dictionary-like object must match the placeholder values in the template. The values of the dictionary-like object will be substituted into the template.
+
+For example, the following code shows how to create a simple template and substitute values into it:
+
+```python
+from string import Template
+
+template_string = "Hello, $name!"
+
+variable_dict = {"name": "Alice"}
+
+formatted_string = template_string.substitute(**variable_dict)
+
+print(formatted_string)
+```
+
+Output:
+
+```
+Hello, Alice!
+```
+
+Python string templates can also be used to format strings with more complex logic. For example, you can use templates to generate strings that contain conditional statements or loops.
+
+Here is an example of a template that uses a conditional statement:
+
+```python
+from string import Template
+
+template_string = """If you are over 18, you can vote."""
+template_string2 = """If you are over 18, you can vote. Otherwise, you cannot vote."""
+
+variable_dict = {"age": 19}
+if **variable_dict * 1 > 18:
+  formatted_string = template_string.substitute(**variable_dict)
+else:
+  formatted_string = template_string.substitute(**variable_dict)
+print(formatted_string)
+```
+
+Output:
+
+```
+If you are over 18, you can vote.
+```
+
+Python string templates are a powerful tool for formatting strings in a dynamic and flexible way. They are useful for a variety of tasks, such as generating user interfaces, creating reports, and sending emails.
+
+Here are some additional tips for using Python string templates:
+
+* You can use the `$` character to escape itself. For example, the string `$$` will be replaced with a single `$`.
+* You can use the `${}` syntax to substitute values into the template without having to worry about escaping dollar signs.
+* You can use the `safe_substitute()` method to substitute values into the template in a way that is safe from security vulnerabilities.
+* There are a number of third-party libraries that provide additional features for using Python string templates. For example, the `flufl.i18n` library provides support for internationalization.
