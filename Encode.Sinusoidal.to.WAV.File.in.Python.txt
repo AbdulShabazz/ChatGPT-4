@@ -35,13 +35,14 @@ sine_wave_2 = generate_sine_wave(880, 0.25, 1)
 
 # Add the two sine waves together.
 combined_sine_wave = sine_wave_1 + sine_wave_2
+# combined_sine_wave = np.interleave((sine_wave_1, sine_wave_2))
 
 # Write the combined sine wave to an audio file.
 with wave.open("combined_sine_wave.wav", "wb") as wf:
   wf.setnchannels(1)
   wf.setsampwidth(2)
   wf.setframerate(44100)
-  wf.writeframes(combined_sine_wave.astype(np.int16))
+  wf.writeframes(combined_sine_wave.astype(np.int32).tobytes())
 ```
 
 This code will generate a WAV file containing the combined sine wave. You can then play this file back using any audio player.
