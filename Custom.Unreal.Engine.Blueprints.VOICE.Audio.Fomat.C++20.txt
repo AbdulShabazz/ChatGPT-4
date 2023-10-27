@@ -41,6 +41,9 @@ struct FWavParams {
 
     UPROPERTY()
     int Amplitude;
+
+    UPROPERTY()
+    int BitDepthPerSample;
 };
 
 USTRUCT()
