@@ -31,19 +31,19 @@ struct FWavParams {
     GENERATED_BODY()
 
     UPROPERTY()
-    int SampleRate;
+    int SampleRate{};
 
     UPROPERTY()
-    int Frequency;
+    int Frequency{};
 
     UPROPERTY()
-    int Duration;
+    int Duration{};
 
     UPROPERTY()
-    int Amplitude;
+    long long unsigned int Amplitude_UnsignedInt64{};
 
     UPROPERTY()
-    int BitDepthPerSample;
+    int BitDepthPerSample{};
 };
 
 USTRUCT()
@@ -55,6 +55,18 @@ struct FVoiceFile {
 
     UPROPERTY()
     TArray<int16> AudioData;
+
+	UFUNCTION(BlueprintPure, Category = "SpeechSynthesis")
+	long long unsigned int SetAmplitude(const float Amplitude_ConstFloat32, const int BitDepthPerSample_ConstInt32)
+	{
+		return FMath::Clamp(Amplitude_ConstFloat32, 0.0f, 12.0f) / 12 * (FMath::Pow(2, BitDepthPerSample_ConstInt32) - 1);
+	}
+
+	UFUNCTION(BlueprintPure, Category = "SpeechSynthesis")
+	int Compile()
+	{
+		return 1;
+	}
 };
 ```
 
@@ -67,7 +79,9 @@ FVoiceFile VoiceFile;
 VoiceFile.WavParams.SampleRate = 44100;
 VoiceFile.WavParams.Frequency = 440;
 VoiceFile.WavParams.Duration = 5;
-VoiceFile.WavParams.Amplitude = 16000;
+VoiceFile.WavParams.Amplitude_UnsignedInt64 = VoiceFile::SetAmplitude(6); // ClampRange(0.0, 12.0): 3.0 (30 dB SPL whisper); 6.0 (60 dB SPL conversational volume level) // default: 6.0 (16000 @ 16-bit depth per sample);
+VoiceFile.WavParams.BitDepthPerSample = 32;
+VoiceFile.Compile();
 
 // Populate VoiceFile.AudioData from the WAV file or generated audio data
 ```
