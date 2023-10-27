@@ -14,8 +14,9 @@ import numpy as np
 import wave
 
 # Generate the sinewave signals
+duration = 1
 fs = 768000  # Sampling rate
-t = np.arange(0, 1, 1 / fs)  # Time vector
+t = np.arange(0, 1, int(fs * duration) )  # Time vector
 
 bps = np.int16 # bit-depth per sample
 dynamic_range = 2 ** bps (-32535,32535) @ 16-bit
