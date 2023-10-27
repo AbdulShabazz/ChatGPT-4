@@ -13,6 +13,8 @@ Here is an example of how to combine two sine waves of different amplitude and f
 import numpy as np
 import wave
 
+pcm_hz = 44100
+
 def generate_sine_wave(frequency, amplitude, duration):
   """Generates a sine wave of the specified frequency, amplitude, and duration.
 
@@ -25,24 +27,32 @@ def generate_sine_wave(frequency, amplitude, duration):
     A NumPy array containing the sine wave data.
   """
 
-  t = np.linspace(0, duration, duration * 44100)
+  t = np.linspace(0, duration, int(duration * pcm_hz))
   sine_wave = amplitude * np.sin(2 * np.pi * frequency * t)
   return sine_wave
 
+duration_seconds = 1
+
+bps = np.int16 # bit-depth per sample
+dynamic_range = 2 ** bps (-32535,32535) @ 16-bit
+
+amplitude_x1 = int(0.6 * dynanic_rang)
+amplitude_x2 = int(0.6 * dynamic_range)
+
 # Generate two sine waves of different frequency and amplitude.
-sine_wave_1 = generate_sine_wave(440, 0.5, 1)
-sine_wave_2 = generate_sine_wave(880, 0.25, 1)
+sine_wave_1 = generate_sine_wave(440, amplitude_x1, duration_seconds)
+sine_wave_2 = generate_sine_wave(880,amplitude_x2, duration_seconds)
 
 # Add the two sine waves together.
-combined_sine_wave = sine_wave_1 + sine_wave_2
-# combined_sine_wave = np.interleave((sine_wave_1, sine_wave_2))
+#combined_sine_wave = sine_wave_1 + sine_wave_2
+combined_sine_wave = np.interleave((sine_wave_1, sine_wave_2))
 
 # Write the combined sine wave to an audio file.
 with wave.open("combined_sine_wave.wav", "wb") as wf:
-  wf.setnchannels(1)
+  wf.setnchannels(2)
   wf.setsampwidth(2)
-  wf.setframerate(44100)
-  wf.writeframes(combined_sine_wave.astype(np.int32).tobytes())
+  wf.setframerate(pcm_hz)
+  wf.writeframes(combined_sine_wave.astype(bps).tobytes())
 ```
 
 This code will generate a WAV file containing the combined sine wave. You can then play this file back using any audio player.
