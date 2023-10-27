@@ -17,19 +17,25 @@ import wave
 fs = 768000  # Sampling rate
 t = np.arange(0, 1, 1 / fs)  # Time vector
 
+bps = np.int16 # bit-depth per sample
+dynamic_range = 2 ** bps (-32535,32535) @ 16-bit
+
+amplitude_x1 = int(0.6 * dynanic_rang)
+amplitude_x2 = int(0.6 * dynamic_range)
+
 # 20Hz sinewave
 f1 = 20
-x1 = np.sin(2 * np.pi * f1 * t)
+x1 = amplitude_x1 * np.sin(2 * np.pi * f1 * t)
 
 # 1kHz sinewave
 f2 = 1000
-x2 = np.sin(2 * np.pi * f2 * t)
+x2 = amplitude_x2 * np.sin(2 * np.pi * f2 * t)
 
 # Interleave the channels
 interleaved = np.vstack((x1, x2)).T
 
 # Quantize the samples
-quantized = interleaved.astype(np.int16)
+quantized = interleaved.astype(bps)
 
 # Write the data to a .WAV file
 with wave.open("sinewaves.wav", "wb") as f:
