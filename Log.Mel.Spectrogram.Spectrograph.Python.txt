@@ -2,7 +2,10 @@ Bard:
 
 The file that contains the log mel spectrograph as part of OpenAI's Whisper speech-to-text library on GitHub is `whisper/audio/log_mel_spectrogram.py`. This file contains the implementation of the `log_mel_spectrogram()` function, which takes an audio waveform as input and returns a log mel spectrogram as output.
 
-Log mel spectrograms are a common way to represent audio signals for speech recognition tasks. They are created by first computing a mel spectrogram, which is a spectrogram that has been converted to a logarithmic scale and warped to match the human auditory system. The log mel spectrogram is then computed by taking the logarithm of the mel spectrogram.
+Log mel spectrograms are a common way to represent audio signals for speech recognition tasks. 
+Because humans are more sensitive to lower frequencies, the mel scale expands the lower frequencies and compresses the higher frequencies:
+
+They are created by first computing a mel spectrogram, which is a spectrogram that has been converted to a logarithmic scale and warped to match the human auditory system. The log mel spectrogram is then computed by taking the logarithm of the mel spectrogram.
 
 To use the `log_mel_spectrogram()` function, you can simply pass it an audio waveform as input. The function will then return a log mel spectrogram as output. For example, the following code shows how to compute a log mel spectrogram from a WAV file:
 
