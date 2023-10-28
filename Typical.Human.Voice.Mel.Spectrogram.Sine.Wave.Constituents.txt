@@ -1,0 +1,27 @@
+Bard:
+
+The exact percentage of voice constituents that are sinusoidal, square, triangular, etc. can vary depending on the individual speaker, but a typical breakdown is as follows:
+
+* Sinusoidal: 50-60%
+* Square: 10-20%
+* Triangular: 5-10%
+* Other: 10-20%
+
+The sinusoidal components of the voice are the most important for speech recognition, as they carry the most information about the speaker's identity and the words they are saying. The square and triangular components are also important, but they are less important for speech recognition than the sinusoidal components.
+
+The "other" category includes a variety of other components, such as noise and transients. These components are less important for speech recognition, but they can still have a significant impact on the sound of the voice.
+
+The following table shows a more detailed breakdown of the voice constituents:
+
+| Constituent | Percentage |
+|---|---|---|
+| Sinusoidal | 50-60% |
+| Square | 10-20% |
+| Triangular | 5-10% |
+| Formant | 5-10% |
+| Noise | 5-10% |
+| Transients | 5-10% |
+
+It is important to note that these percentages are just estimates, and the actual breakdown can vary depending on the individual speaker and the type of speech they are producing. For example, the voice of a singer may have a higher percentage of sinusoidal components than the voice of a speaker, and the voice of a speaker producing a high-pitched sound may have a higher percentage of square components than the voice of a speaker producing a low-pitched sound.
+
+I hope this helps!
