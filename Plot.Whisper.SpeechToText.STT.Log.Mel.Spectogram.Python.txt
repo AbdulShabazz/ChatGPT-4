@@ -1,4 +1,4 @@
-User:
+Prompt:
 
 Please provide a python script which displays the log-mel spectrogram of a .WAV file provided to log_mel_spectrogram API of the OpenAI Whisper repository.
 
