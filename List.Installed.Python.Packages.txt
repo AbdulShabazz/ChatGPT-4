@@ -8,7 +8,7 @@ Verifying the list of installed Python packages on your system is an essential s
 
 ### Method 1: Using `pip list` Command
 
-1. **Execution Command**: `pip list`
+1. **Execution Command**: `$ py -m pip list`
 2. **Description**: Lists installed packages including their versions.
 3. **Requirements**: Python and pip must be installed.
 4. **Output Format**: Columnar data format, with two columns – "Package" and "Version".
@@ -23,7 +23,7 @@ Verifying the list of installed Python packages on your system is an essential s
 - **Limited Information**: Only package name and version are listed.
 - **Environment Specific**: Displays packages for the currently active Python environment only.
 
-### Method 2: Using `pip freeze` Command
+### Method 2: Using `$ py -m pip freeze` Command
 
 1. **Execution Command**: `pip freeze`
 2. **Description**: Provides a list of installed packages in a format suitable for a `requirements.txt` file.
@@ -36,7 +36,7 @@ Verifying the list of installed Python packages on your system is an essential s
   
 #### Disadvantages:
 
-- **Limited Information**: Similar to `pip list`, limited to package name and version.
+- **Limited Information**: Similar to `$ py -m pip list`, limited to package name and version.
 - **Environment Specific**: Displays packages for the currently active Python environment only.
 
 ### Method 3: Using Python Script
