@@ -1,0 +1,17 @@
+
+
+Open Git Bash.
+
+Set a Git username:
+
+```bash
+$ git config --global user.name "Mona Lisa"
+```
+
+Confirm that you have set the Git username correctly:
+
+```bash
+$ git config --global user.name
+> Mona Lisa
+```
+
