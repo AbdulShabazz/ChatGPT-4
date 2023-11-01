@@ -1,0 +1,43 @@
+The issue of "git command prompt not found" in GitHub Desktop on Windows could be due to a variety of factors such as incorrect PATH configuration, incomplete or corrupted Git installation, or other software conflicts. To rectify the situation, you may proceed as follows:
+
+### Preliminary Diagnostics
+
+1. **Operating System Compatibility**: Ensure that the operating system is Windows 7 or later.
+2. **System Architecture**: Verify if the system is 32-bit or 64-bit, as installation steps may differ based on the architecture.
+3. **Current Installation**: Open "Add or Remove Programs" in Windows and check if Git is listed among the installed programs.
+
+### Solutions
+
+#### Option 1: Verify PATH Environment Variable
+
+1. **Access Environment Variables**: Open System Properties -> Advanced -> Environment Variables.
+2. **Check PATH**: Examine the `PATH` variable under "System variables" to see if it includes the path to the Git binary.
+    - **Expected Path**: Typically `C:\Program Files\Git\cmd` or `C:\Program Files (x86)\Git\cmd`.
+
+#### Option 2: Reinstall Git
+
+1. **Uninstall Current Version**: If Git is installed, uninstall it via "Add or Remove Programs".
+2. **Download Latest Version**: Navigate to [Git Downloads](https://git-scm.com/downloads) and download the appropriate version for your system architecture.
+3. **Installation Configuration**: During installation, ensure that the option to add Git to PATH is selected.
+4. **Verification**: Upon installation, open Command Prompt and execute `git --version` to ensure it is properly installed.
+
+#### Option 3: Utilize GitHub Desktop's Bundled Git
+
+1. **Open GitHub Desktop**: Launch the GitHub Desktop application.
+2. **Navigate to Settings**: Open `File -> Options -> Advanced`.
+3. **Git Executable**: Under the "Git" section, make sure the option for using the system Git is unchecked. This will utilize the Git executable bundled with GitHub Desktop.
+
+#### Option 4: Manual PATH Update
+
+1. **Locate Git Executable**: Find the location where Git is installed. The Git executable (`git.exe`) is usually found in `C:\Program Files\Git\cmd` or `C:\Program Files (x86)\Git\cmd`.
+2. **Update PATH**: Append the Git executable path to the System Environment Variable `PATH`.
+3. **Restart System**: Reboot the system to reflect the PATH changes.
+
+### Verification Steps
+
+1. **Command Prompt**: Open a new Command Prompt window and run `git --version`.
+   - **Expected Output**: Git version should be displayed.
+2. **GitHub Desktop**: Try to execute the previously failing operation within GitHub Desktop.
+   - **Expected Behavior**: The operation should succeed without the "git command prompt not found" error.
+
+By following these procedures, you should be able to effectively resolve the "git command prompt not found" issue in GitHub Desktop on a Windows system.
