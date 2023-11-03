@@ -1,0 +1,14 @@
+Bard:
+
+iOS 17 introduced a new feature called Clean Up Automatically, which automatically deletes 2FA verification codes after they have been used. This can be a helpful feature for keeping your Messages inbox clean and organized, but it is not necessary for everyone. If you prefer to keep your verification codes for a longer period of time, you can disable this feature.
+
+To disable iOS auto deletion of 2FA codes, follow these steps:
+
+1. Open the Settings app on your iPhone or iPad.
+2. Tap Passwords.
+3. Tap Password Options.
+4. Scroll down to the Verification Codes section and toggle off the Clean Up Automatically switch.
+
+Once you have disabled Clean Up Automatically, your 2FA verification codes will no longer be automatically deleted after use. You can then manually delete them when you are ready.
+
+Note that this feature is only available on iOS 17 and later. If you are using an older version of iOS, you will not be able to disable auto deletion of 2FA codes.
