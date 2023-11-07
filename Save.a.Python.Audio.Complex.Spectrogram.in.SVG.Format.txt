@@ -1,0 +1,61 @@
+Yes, it is possible to plot and save a spectrogram as an `.SVG` (Scalable Vector Graphics) file using Matplotlib in Python. SVG is a vector image format which provides high-quality visuals that can be scaled without losing resolution, making it suitable for closer inspection.
+
+Here’s how you can modify the previous example to save the plots as SVG files:
+
+```python
+import torchaudio
+import matplotlib.pyplot as plt
+import torch
+
+# Load the Audio File
+audio_file_path = 'path_to_file.wav'
+waveform, sample_rate = torchaudio.load(audio_file_path)
+
+# Compute the Complex Spectrogram
+n_fft = 2048
+hop_length = 512
+spectrogram_transform = torchaudio.transforms.Spectrogram(
+    n_fft=n_fft,
+    hop_length=hop_length,
+    power=None
+)
+complex_spectrogram = spectrogram_transform(waveform)
+
+# Split the complex spectrogram into magnitude and phase
+magnitude = torch.abs(complex_spectrogram)
+phase = torch.angle(complex_spectrogram)
+
+# Convert magnitude to log scale for better visualization
+magnitude_log = torch.log1p(magnitude)
+
+# Define a function to save the spectrogram as SVG
+def save_spectrogram_as_svg(data, title, filename):
+    fig, ax = plt.subplots(figsize=(14, 8))
+    ax.imshow(data.numpy(), origin='lower', aspect='auto', cmap='viridis')
+    ax.set_title(title)
+    ax.set_xlabel('Time Frame')
+    ax.set_ylabel('Frequency Bin')
+    plt.tight_layout()
+    plt.savefig(filename, format='svg')
+    plt.close(fig)
+
+# Save Magnitude Spectrogram as SVG
+save_spectrogram_as_svg(
+    data=magnitude_log[0],  # Taking the first channel if stereo
+    title='Magnitude Spectrogram',
+    filename='magnitude_spectrogram.svg'
+)
+
+# Save Phase Spectrogram as SVG
+save_spectrogram_as_svg(
+    data=phase[0],  # Taking the first channel if stereo
+    title='Phase Spectrogram',
+    filename='phase_spectrogram.svg'
+)
+```
+
+Replace `'path_to_file.wav'` with the actual path to your `.wav` file. After running the script, you will get two `.svg` files, `magnitude_spectrogram.svg` and `phase_spectrogram.svg`, in the current working directory.
+
+In the script, I have defined a function `save_spectrogram_as_svg` that takes the spectrogram data, a title for the plot, and a filename to save the SVG file. This function generates the plot and saves it to the specified SVG file without displaying it in an interactive window, which is useful when you only want to generate and save the file.
+
+SVG files can be opened and inspected in any web browser, or with vector graphics software like Adobe Illustrator or Inkscape, where you can zoom in as much as needed without any pixelation, making it ideal for detailed analysis.
