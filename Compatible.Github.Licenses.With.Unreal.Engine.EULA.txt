@@ -1,0 +1,49 @@
+ChatGPT-4:
+
+The Unreal Engine (UE) is owned by Epic Games, and it uses its own license for contributions to the engine's codebase, often referred to as the Unreal Engine End User License Agreement (EULA). When considering GitHub licenses that are compatible with the Unreal Engine's code contribution license, the primary factors include the permissiveness of the license, the ability to keep certain parts of the code proprietary, and compliance with the terms of the UE EULA.
+
+Here are key points regarding compatibility between GitHub licenses and the Unreal Engine EULA:
+
+- **Permissive Licenses**: These licenses are typically compatible with the Unreal Engine's code contribution license because they allow proprietary use and do not impose copyleft restrictions. An example is the MIT License, which permits reuse within proprietary software as long as the original license and copyright notice are included with the code.
+
+- **Copyleft Licenses**: Strong copyleft licenses like the GNU General Public License (GPL) are often incompatible with the Unreal Engine's code contribution license because they require derivative works to also be distributed under the GPL, which would conflict with the UE EULA's requirements for proprietary use.
+
+- **Lesser General Public Licenses (LGPL)**: These are more permissive than the GPL and can sometimes be compatible with the UE code contribution terms if the LGPL components are dynamically linked rather than statically linked, but this depends on the specifics of how the code is used and distributed.
+
+- **Proprietary Licenses**: These are likely compatible, but any proprietary code contributed to the Unreal Engine must comply with the terms of the UE EULA, which typically means it cannot impose additional restrictions on the UE source code.
+
+Here is a list of common GitHub licenses with an evaluation of their compatibility with the Unreal Engine code contribution license:
+
+- **MIT License**:
+  - Permissive license with minimal restrictions.
+  - Allows proprietary use.
+  - Requires inclusion of the copyright notice and license with the software.
+
+- **Apache License 2.0**:
+  - Permissive license with some requirements concerning patents and trademarks.
+  - Compatible with proprietary software, provided the conditions of the license are met.
+  - Requires preservation of copyright notice, disclaimer, and attribution of the original source.
+
+- **BSD Licenses** (2-Clause and 3-Clause):
+  - Similar to the MIT License in permissiveness.
+  - Allows for integration into proprietary software.
+  - Requires notices to be kept with redistributions of the code.
+
+- **GNU General Public License (GPL) v2/v3**:
+  - Strong copyleft licenses requiring derivative works to be licensed under the GPL.
+  - Generally incompatible with the proprietary nature of the UE code contribution license.
+
+- **GNU Lesser General Public License (LGPL) v2.1/v3**:
+  - More permissive than the GPL, potentially compatible if the LGPL software is dynamically linked.
+  - Careful consideration of the UE EULA is required to ensure compliance.
+
+- **Mozilla Public License 2.0**:
+  - Weak copyleft license that allows proprietary use of the covered code.
+  - Requires source code disclosure of the modified files under the MPL and of the original source.
+
+- **Creative Commons Licenses**:
+  - Vary in terms of permissiveness.
+  - Creative Commons Zero (CC0) is akin to public domain and should be compatible.
+  - Others, like CC BY-SA, include share-alike terms that may conflict with the UE EULA.
+
+For an exact match of compatibility, it is crucial to review the specific terms and conditions of the Unreal Engine EULA and the desired GitHub license. Furthermore, it is often advisable to consult with a legal expert to interpret how the terms of the licenses may interact with one another.
