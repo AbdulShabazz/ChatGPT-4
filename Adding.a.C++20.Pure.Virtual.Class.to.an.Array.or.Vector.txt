@@ -1,0 +1,68 @@
+ChatGPT-4:
+
+Adding a C++20 pure virtual class to a `std::vector` requires a bit of understanding of how pure virtual classes (often referred to as abstract classes) and `std::vector` work in C++. Let's break down the process:
+
+### Understanding Pure Virtual Classes in C++
+
+1. **Pure Virtual Class Definition**: A pure virtual class (or abstract class) is a class that cannot be instantiated on its own. It is typically used as a base class for other classes.
+   - **Example Declaration**:
+     ```cpp
+     class AbstractClass {
+     public:
+         virtual void pureVirtualFunction() = 0;
+         // Other members...
+     };
+     ```
+
+### Understanding `std::vector`
+
+1. **Vector Characteristics**:
+   - Designed to hold objects of a single type.
+   - Requires the objects to be copyable or movable unless pointers are used.
+
+### Adding Pure Virtual Classes to `std::vector`
+
+1. **Direct Storage Is Impossible**: You cannot directly store instances of an abstract class in a `std::vector` since abstract classes cannot be instantiated.
+
+2. **Using Pointers**:
+   - **Method**: Store pointers to the abstract class in the vector. These can be raw pointers, but smart pointers are preferred for memory management.
+   - **Smart Pointer Advantage**: `std::unique_ptr` or `std::shared_ptr` handle memory allocation and deallocation automatically.
+
+3. **Example Using Smart Pointers**:
+   ```cpp
+   #include <memory>
+   #include <vector>
+
+   class AbstractClass {
+   public:
+       virtual void pureVirtualFunction() = 0;
+       virtual ~AbstractClass() = default; // Virtual destructor for proper cleanup
+   };
+
+   class ConcreteClass : public AbstractClass {
+   public:
+       void pureVirtualFunction() override {
+           // Implementation...
+       }
+   };
+
+   int main() {
+       std::vector<std::unique_ptr<AbstractClass>> myVector;
+
+       myVector.push_back(std::make_unique<ConcreteClass>());
+       // Add more derived objects...
+
+       return 0;
+   }
+   ```
+
+### Considerations
+
+1. **Memory Management**: When using pointers, especially raw pointers, be careful with memory management to avoid leaks.
+2. **Object Slicing**: Directly storing derived objects in a vector can lead to object slicing if not using pointers.
+3. **Polymorphic Behavior**: Pointers allow the vector to hold different derived types, enabling polymorphism.
+
+### Conclusion
+
+- To add a pure virtual class to a `std::vector`, use pointers (preferably smart pointers) to store instances of derived classes.
+- Direct storage of abstract class instances in a vector is not possible due to the nature of abstract classes.
