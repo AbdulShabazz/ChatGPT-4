@@ -1,0 +1,26 @@
+ChatGPT-4:
+
+In Unreal Engine, `TArray::Push()` and `TArray::Add()` are methods used to insert elements into a `TArray`, which is a dynamic array structure. Let's compare these two methods:
+
+1. **Functionality and Use-Case**:
+   - `TArray::Add()`: This method adds an element to the end of the array. It is the most commonly used method for appending new elements to a `TArray`. The method can optionally return the index at which the element was added.
+   - `TArray::Push()`: Introduced in later versions of Unreal Engine, `Push()` is essentially an alias for `Add()`. It adds an element to the end of the array, just like `Add()`. The primary purpose of introducing `Push()` was to provide syntax that is more familiar to developers coming from other programming languages, especially those used to stack operations (push/pop).
+
+2. **Return Type**:
+   - `TArray::Add()`: Returns the index of the newly added element.
+   - `TArray::Push()`: Does not return any value (void). 
+
+3. **Performance**:
+   - Both methods have similar performance characteristics. They both may cause the array to reallocate memory if the array's capacity is exceeded with the addition of the new element.
+
+4. **Version Compatibility**:
+   - `TArray::Add()`: Available in all versions of Unreal Engine that support `TArray`.
+   - `TArray::Push()`: Only available in newer versions of Unreal Engine. Developers working on projects that need to maintain backward compatibility with older versions of Unreal Engine might prefer to use `Add()`.
+
+5. **Semantic Meaning**:
+   - The choice between `Add()` and `Push()` can be a matter of semantic preference. In contexts where an array is being treated more like a stack, `Push()` might be more semantically appropriate.
+
+6. **Coding Style and Readability**:
+   - The choice might also be influenced by coding style preferences. Some developers might prefer `Push()` for its familiarity and readability, especially in stack-like operations.
+
+In summary, `TArray::Push()` and `TArray::Add()` perform the same operation of appending an element to the end of a `TArray`. The differences lie in their return types, version compatibility, and the semantic or stylistic preferences of the programmer.
