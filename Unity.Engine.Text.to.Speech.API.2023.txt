@@ -1,0 +1,21 @@
+Bard:
+
+Unity's text-to-speech (TTS) tool is implemented using a combination of pre-recorded audio files and real-time synthesis. The pre-recorded audio files are used for common words and phrases, while the real-time synthesis is used for more complex text. This approach allows Unity to achieve a balance between quality and performance.
+
+The real-time synthesis engine is provided by a third-party vendor, such as ReadSpeaker or iSpeech. These vendors offer a variety of voices and languages, and they provide Unity with an API for controlling the synthesis process.
+
+To use the TTS tool, a developer simply needs to call the API with the text they want to synthesize. Unity will then handle the rest, including fetching the appropriate audio files or performing the real-time synthesis.
+
+Here is a more detailed explanation of how the TTS tool works:
+
+1. **The developer writes a script that calls the TTS API.** The script should specify the text to be synthesized, as well as any desired options, such as the voice and language.
+
+2. **Unity sends the text to the TTS engine.** The TTS engine analyzes the text and breaks it down into individual words and phrases.
+
+3. **The TTS engine checks for pre-recorded audio files.** If a pre-recorded audio file exists for a particular word or phrase, the TTS engine plays it back.
+
+4. **If no pre-recorded audio file exists, the TTS engine performs real-time synthesis.** The TTS engine uses a variety of techniques to synthesize the speech, including concatenative synthesis, statistical parametric synthesis, and deep learning.
+
+5. **The synthesized speech is played back through the Unity audio system.** The developer can control the volume and other properties of the synthesized speech.
+
+The TTS tool is a powerful tool that can be used to add a lot of polish to a Unity game. It can be used to narrate tutorials, provide feedback to players, and even create interactive characters.
