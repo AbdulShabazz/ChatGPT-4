@@ -1,0 +1,35 @@
+WAV (Waveform Audio File Format) files store audio data in a digital format. The key aspects of this data, such as amplitude, frequency, and phase, are encoded as follows:
+
+1. **Amplitude:**
+   - Amplitude in a WAV file is represented by the vertical position of the waveform at any given point.
+   - It is encoded as sample values in the file, where each sample is a numerical value.
+   - The range of these values depends on the bit depth (e.g., 16-bit, 24-bit).
+   - Higher bit depth allows for more precise amplitude representation, resulting in better dynamic range and less quantization noise.
+
+2. **Frequency:**
+   - Frequency is not directly stored but is implied by the rate at which samples change.
+   - The sampling rate (e.g., 44.1 kHz, 48 kHz) determines the range of frequencies that can be accurately represented.
+   - According to the Nyquist theorem, the maximum frequency that can be accurately represented is less than half of the sampling rate.
+   - Higher sampling rates allow for a wider range of frequencies to be recorded.
+
+3. **Phase:**
+   - Phase information is inherent in the way the waveform is sampled.
+   - It is represented by the relative timing of the waveform's features (peaks, troughs, zero crossings) compared to a reference.
+   - Phase relationships are critical in stereo or multi-channel WAV files, where the timing difference between channels can create a sense of spatial location and depth.
+
+4. **Data Storage and Format:**
+   - WAV files typically start with a header that includes metadata such as the number of channels, sample rate, bit depth, and file length.
+   - Following the header, the audio data is stored in a linear PCM (Pulse-Code Modulation) format.
+   - PCM data is usually uncompressed, leading to larger file sizes compared to compressed formats like MP3 or AAC.
+   - The data is stored in a series of samples, with each sample representing the amplitude at a specific point in time.
+
+5. **Technical Specifications:**
+   - **Bit Depth:** Common values are 16-bit, 24-bit, and 32-bit. Higher bit depths offer greater dynamic range.
+   - **Sampling Rate:** Standard rates include 44.1 kHz (CD quality), 48 kHz, 96 kHz, and 192 kHz. Higher rates provide better representation of high frequencies.
+   - **Channels:** Mono (single channel), Stereo (two channels), and multi-channel formats are supported.
+
+6. **Waveform Representation:**
+   - The waveform in a WAV file is a digital representation of the sound pressure variations over time.
+   - This representation is achieved by sampling the analog audio signal at discrete intervals (defined by the sampling rate) and quantizing the amplitude (defined by the bit depth).
+
+In summary, WAV files encode amplitude as sample values, imply frequency through the sampling rate, and encode phase through the timing of the waveform's features. The linear PCM format used in WAV files provides a high-fidelity, uncompressed representation of audio.
