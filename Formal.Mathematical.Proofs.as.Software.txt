@@ -1,0 +1,9 @@
+Bard:
+
+Imagine writing software as a collection of instructions that can capture the flow, calculations, and logic of mathematical equations. Think of mathematical proofs as sets of equations where you can plug in any number and get a correct answer, just like you would if you solved the equation directly.
+
+In this way, finding a mathematical proof for an unsolved problem could be like writing a software program that follows specific rules and adheres to the well-defined structure of the problem. This program should also be consistent with existing mathematical knowledge and lead to the same answers as established proofs.
+
+Type-safe programming languages like Java or C++ can be helpful for this because they can prevent errors and ensure that the program operates correctly. However, other languages and approaches might also be useful.
+
+Importantly, this theory can be tested by looking for situations where the software program fails to produce correct results or doesn't follow the established rules of mathematics. These instances would then disprove the theory and indicate that it needs further refinement.
