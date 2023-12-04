@@ -1,0 +1,33 @@
+Bard:
+
+The Pass Labs HPA-1 offers a variety of connectivity options, making it versatile for different audio setups. Here's a breakdown:
+
+**Inputs:**
+
+* **Balanced XLR:** This input provides the highest quality connection for balanced sources like DACs or preamplifiers.
+* **Unbalanced RCA:** This is a standard option for connecting unbalanced sources like CD players or phono preamps.
+
+**Outputs:**
+
+* **Headphone jack (6.35mm):** This is the main output for connecting your headphones. The HPA-1 can drive a wide range of headphones, from low-impedance IEMs to high-impedance planar magnetics.
+* **Line-level RCA:** This allows you to use the HPA-1 as a preamplifier and connect it to a power amplifier or powered speakers. This is useful if you want to use the HPA-1's high-quality amplification for your entire sound system.
+
+**Additional features:**
+
+* **Gain switch:** This allows you to adjust the gain of the amplifier to match the sensitivity of your headphones.
+* **Input impedance switch:** You can choose between high and low impedance settings to optimize the sound for different headphones.
+* **DC trigger input:** This allows you to remotely turn the HPA-1 on and off using compatible equipment.
+
+Here's a table summarizing the connectivity options:
+
+| Feature | Description |
+|---|---|
+| Balanced XLR input | High-quality balanced connection for DACs or preamplifiers |
+| Unbalanced RCA input | Standard connection for CD players or phono preamps |
+| Headphone jack (6.35mm) | Main output for connecting headphones |
+| Line-level RCA output | Use HPA-1 as a preamp for power amplifiers or speakers |
+| Gain switch | Adjust gain for different headphone sensitivities |
+| Input impedance switch | Optimize sound for different headphone types |
+| DC trigger input | Remotely turn HPA-1 on/off with compatible equipment |
+
+I hope this clarifies the connectivity options of the Pass Labs HPA-1. If you have any further questions, feel free to ask!
