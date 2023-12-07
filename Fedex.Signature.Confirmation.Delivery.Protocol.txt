@@ -1,0 +1,19 @@
+Bard:
+
+FedEx typically makes **three attempts** to deliver a package requiring signature confirmation. If no one is available to sign for the package after three attempts, it will be returned to the sender.
+
+Here's a breakdown of the delivery process:
+
+1. **First attempt:** The driver will attempt to deliver the package during their regular delivery route. If they are unable to obtain a signature, they will leave a door tag with instructions on how to arrange a re-delivery or pick up the package from a nearby FedEx location.
+2. **Second attempt:** The driver may make a second attempt to deliver the package on the next business day.
+3. **Third attempt:** If the driver is still unable to obtain a signature after the second attempt, they will make a final attempt on the third business day.
+
+After the third unsuccessful attempt, the package will be held at a FedEx location for five business days. You can then pick it up during their regular business hours. If the package is not picked up within five days, it will be returned to the sender.
+
+Here are some additional points to keep in mind:
+
+* You can track the status of your package online or through the FedEx mobile app.
+* You can use FedEx Delivery Manager to customize your delivery options, such as requesting to hold your package at a nearby location or signing for the package electronically.
+* You can also authorize FedEx to leave the package without a signature if you are not able to be home. However, this option is only available for certain types of packages and may not be available in all areas.
+
+For more information on FedEx signature requirements and delivery options, you can visit their website: [https://www.fedex.com/en-us/delivery-options/signature-services.html](https://www.fedex.com/en-us/delivery-options/signature-services.html)
