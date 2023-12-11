@@ -1,0 +1,43 @@
+Bard:
+
+Adding an exception to a `.gitignore` file for a subfolder in an otherwise excluded directory can be done by following these steps:
+
+**1. Identify the directory and subfolder:**
+
+- **Directory:** This is the directory you want to exclude from being tracked by Git.
+- **Subfolder:** This is the subfolder within the excluded directory that you want Git to track.
+
+**2. Open your `.gitignore` file:**
+
+- You can find the `.gitignore` file in the root directory of your Git repository.
+- If the file doesn't exist, you can create a new one.
+
+**3. Add the exception rule:**
+
+- Use the `!` prefix to negate the exclusion rule for the subfolder.
+- The format for the exception rule is: `!<directory>/<subfolder>`.
+
+**Here's an example:**
+
+```
+# Exclude everything in the "build" directory
+build/*
+
+# But include the "logs" subfolder within the "build" directory
+!build/logs
+```
+
+In this example, the `build/*` line excludes all files and subfolders within the `build` directory. However, the `!build/logs` line negates the exclusion rule for the `logs` subfolder, allowing Git to track the files within it.
+
+**Here are some additional points to remember:**
+
+- You can use wildcards to match multiple subfolders. For example, the rule `!build/*/*.log` will include all files with the `.log` extension within any subfolder of the `build` directory.
+- The order of the rules in your `.gitignore` file is important. Later rules can override earlier rules. Therefore, make sure your exception rule comes after the rule that excludes the directory.
+- You can add multiple exception rules for different subfolders.
+
+Here are some helpful resources that you may find useful:
+
+* **gitignore documentation:** [https://www.toptal.com/developers/gitignore](https://www.toptal.com/developers/gitignore)
+* **Stack Overflow question on adding exceptions to .gitignore:** [https://stackoverflow.com/questions/3667986/git-ignore-exception-not-working-as-desired](https://stackoverflow.com/questions/3667986/git-ignore-exception-not-working-as-desired)
+
+I hope this helps! Let me know if you have any other questions.
