@@ -1,0 +1,33 @@
+Bard:
+
+A purchase pre-authorization is like a temporary reservation of funds on a customer's credit card to ensure they have enough money to cover a future transaction. It works in several stages:
+
+**1. Initiation:**
+
+* The merchant contacts the customer's bank or credit card network with the estimated amount of the transaction.
+* The bank or network verifies the customer's account details and credit limit without actually debiting the funds.
+
+**2. Hold:**
+
+* If the account is valid and has sufficient funds, the bank or network places a temporary hold on the requested amount. This means the funds become unavailable for other spending until the pre-authorization is resolved.
+* The hold typically lasts for a specific period, depending on the merchant and the issuing bank. It's usually around 5 days but can be up to 31 days in some cases.
+
+**3. Resolution:**
+
+* The pre-authorization can be resolved in two ways:
+    * **Settlement:** If the actual transaction goes through within the hold period, the final amount is charged to the customer's account, and the hold is released.
+    * **Release:** If the transaction doesn't occur or is canceled within the hold period, the pre-authorization is automatically released, and the funds become available again.
+
+**Benefits of pre-authorization:**
+
+* **Guarantees payment:** For merchants, it ensures the customer has sufficient funds before they start providing the service or product. This minimizes the risk of chargebacks.
+* **Reduces fraud:** It helps prevent fraud by verifying the card's validity and preventing unauthorized use.
+* **Improves customer experience:** It avoids the awkwardness of a declined transaction later.
+
+**Things to keep in mind:**
+
+* Pre-authorization isn't a guarantee of final payment. The actual transaction can still be declined if it exceeds the authorized amount or violates the merchant's terms.
+* Some pre-authorizations may appear as pending charges on your credit card statement, but they shouldn't be debited unless the transaction is completed.
+* If a pre-authorization isn't released automatically, contact your bank or the merchant to resolve it.
+
+I hope this explanation clarifies how purchase pre-authorization works! If you have any further questions, feel free to ask.
