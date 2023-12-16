@@ -1,0 +1,61 @@
+Bard:
+
+Here is a ranked list of some premium DACs, amps, and audio cables that are compatible with the HIFIMAN HE1000SE headphone, with prices:
+
+**DACs:**
+
+1. **Burson Audio Conductor 3X GT** ($3,299)
+2. **Chord Electronics Hugo 2 DAC** ($2,299)
+3. **RME ADI-2 DAC** ($1,299)
+4. **Schiit Audio Bifrost ($829.99)
+5. **Schiit Audio Jotunheim R (w/DAC)** ($599)
+6. **AudioQuest DragonFly Cobalt DAC** ($299)
+
+**Amps:**
+
+1. **Burson Audio Soloist Voyager ($4,199.99)
+2. **Burson Audio Soloist 3X GT** ($2,799)
+3. **Chord Electronics Hugo TT2 w/ DAC** ($6,999)
+4. **Schiit Audio Jotunheim R** ($599)
+5. **iFi Audio Pro iCAN** ($1,499)
+6. **JDS Labs Element III** ($399)
+
+**Pre Amps**
+1. HIFIMAN Prelude ($2,499.99)
+(frequency response from 20 hz to 50 khz)
+SNR -113 dB @ 1 khz; THD 0.009%, low gain @ 1 khz; Max Output 10 W @ 32 Ohm, 6 W @ 64 Ohm, 2.5 W @ 150 Ohm, 1 W @ 300 Ohm, 560 mW @ 600 Ohm; Max Input 50 W; WT 6.5 kg (14 lbs); Audio In: RCA, XLR 4-Pin (Balanced); Audio Out: (Pre Amp) XLR 3-Pin (single-ended), XLR 4-Pin, 4.4 mm Stereo, 6.35 mm Stereo (single-ended)
+
+Other
+
+**DACs**
+1. HIFIMAN SERENADE ($999.99)
+(frequency response from 20 hz to 20 khz)
+Audio In: USB type-A 24-bit/384 khz PCM playback, Coax / Optical 24-bit/192 khz PCM playback, LAN PCM44.1-PCM768 or DSD64-DSD512; Max Output: 3 W @ 32 Ohm; Audio Out: 4-Pin XLR, 6.35 mm Stereo, 4.4 mm Stereo; Fixed Pre Amp Audio Out: RCA, 3-Pin XLR single-ended, WT: 3.5 kg (7 lbs)
+
+**Amp + DAC**
+1. HIFIMAN EF400 DAC ($399.99)
+(frequency response from 20 hz to 20 khz)
+Audio In: USB type-C, USB type-B, RCA (single-ended); Audio Out: XLR 3-Pin (single-ended), (rear) XLR 3-pin (balanced), 6.35 mm (single-ended), XLR 4-pin, 4.4 mm Stereo; 24-bit/192 khz PCM playback; Max Output: 4.4 W @ 32 Ohm; 
+
+Schiit Audio Bifrost
+(frequency response from 20 hz to 20 khz) 
+Input Receiver: SPDIF: AK4113 or USB: Schiit Unison USB @ 192 khz 24-bit PCM playback ; Outputs: RCA (single-ended) and XLR (balanced); Output Impedance: 75 ohms for both.
+
+Apple Lightning to USB Cable ($19.99)
+
+
+Notes: 
+
+The Jotunheim 2 is a desktop DAC/amp combo unit that is designed to power high-end headphones. It has a frequency response of 10Hz to 90kHz, which is wider than the audible frequency range and well beyond the frequency response of the HE1000SE. The Jotunheim 2 also has a powerful output of 4.75W per channel at 32 ohms, which is more than enough power to drive the HE1000SE to high levels.
+
+Other premium DAC/amp combo units that are compatible with the HE1000SE include the following:
+
+Burson Audio Conductor 3X GT
+iFi audio Pro iCAN Signature
+Chord Electronics Mojo 2
+Linear Tube Audio MicroZotl 2
+HeadAmp GS-X Mini
+
+Moonriver Moon River 2 TI DAC 199.99
+
+
