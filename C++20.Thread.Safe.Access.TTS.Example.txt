@@ -1,0 +1,83 @@
+Bard:
+
+## C++20 Example: Thread-safe Access to Static Member with Mutex
+
+This example demonstrates accessing a static `std::deque` named `phones_strDeque` in the `FPhone` class safely from multiple threads using a mutex.
+
+**Note:** This is a basic example and can be further customized based on your specific needs.
+
+```cpp
+#include <deque>
+#include <mutex>
+#include <thread>
+
+class FPhone {
+public:
+  static std::deque<std::string> phones_strDeque;
+  static std::mutex phonesMutex;
+
+  // Thread-safe accessor function
+  static std::deque<std::string> getPhonesCopy() {
+    std::lock_guard<std::mutex> lock(phonesMutex);
+    return phones_strDeque;
+  }
+
+  // Add a phone (assuming thread-safe addition logic)
+  void addPhone(const std::string& phone) {
+    std::lock_guard<std::mutex> lock(phonesMutex);
+    phones_strDeque.push_back(phone);
+  }
+
+private:
+  // Other member functions and data (if any)
+};
+
+// Static member initialization outside the class definition
+std::deque<std::string> FPhone::phones_strDeque;
+std::mutex FPhone::phonesMutex;
+
+void threadFunction(FPhone& phone) {
+  const auto phonesCopy = phone.getPhonesCopy();
+  // Do something with the copied phone list (e.g., printing, searching)
+
+  // Add a new phone (assuming thread-safe add logic)
+  phone.addPhone("New Phone");
+}
+
+int main() {
+  FPhone phone;
+
+  // Add some initial phones
+  phone.addPhone("Phone 1");
+  phone.addPhone("Phone 2");
+
+  // Create and run multiple threads accessing the phone list
+  std::vector<std::thread> threads;
+  for (int i = 0; i < 5; ++i) {
+    threads.emplace_back(threadFunction, std::ref(phone));
+  }
+
+  for (auto& thread : threads) {
+    thread.join();
+  }
+
+  // Access the shared phone list after all threads have finished
+  const auto finalPhones = FPhone::getPhonesCopy();
+
+  // ...
+
+  return 0;
+}
+```
+
+**Explanation:**
+
+1. The `FPhone` class defines the `phones_strDeque` and `phonesMutex` as static members.
+2. The `getPhonesCopy` function provides thread-safe access to the `phones_strDeque` by acquiring a lock on the `phonesMutex` before returning a copy.
+3. The `addPhone` function also uses a lock to safely modify the `phones_strDeque`.
+4. The `threadFunction` demonstrates how multiple threads can access the `FPhone` object and call the `getPhonesCopy` and `addPhone` functions safely.
+5. The `main` function shows how to create and run multiple threads, add initial phones, and access the final list after all threads have finished.
+
+This example illustrates how to use a mutex to synchronize access to a shared resource from multiple threads in C++20. Remember to adapt and extend this code based on your specific needs and desired functionalities.
+
+I hope this helps! Feel free to ask if you have any further questions or need additional clarification.
