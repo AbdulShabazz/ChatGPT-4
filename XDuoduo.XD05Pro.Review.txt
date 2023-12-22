@@ -1,0 +1,66 @@
+Bard:
+
+Xduoduo XD05 Pro ($999.99)
+
+PARAMETERS 
+
+Output Power
+2000mW@320 ohm
+930mW@3000 ohm
+510mW@6000 ohm
+
+Audio Out
+6.35 mm (unbalanced)
+4.4 mm (balanced/amp)
+
+Audio In
+3.5 mm (unbalanced)
+4.4 mm (balanced)
+
+Sample Rate
+PCM32-bit@768KHz
+DSD512
+MQA 8x
+
+Other: Builtin DAC (upgradable)
+
+Power in
+9V- or 5V- at 2A
+
+Frequency Response 
+20 Hz to 20 KHz
+
+Applicable OS: Windows, Linux. Mac OS, IOS. Android system
+Battery: 3.87V/13600mAh
+Battery Life: USB IN ≥11H |SPDIF IN≥11H | AUX IN≥20H (ECO Mode)
+Charging Time: ≤6 hours (fast charging) | ≤10 hours (slow charging)
+Size: 18.5x9.5x3.3 (cm)
+Weight: 0.78kg
+Unbalanced Output Parameters::
+Output Power: 2000mW (320, THD+N<1%)
+240mW (3000, THD+N<1%)
+Balanced Output Parameters:
+Output Power: 2000mW (320, THD+N<1%)
+930mW (3000, THD+N<1%)
+Output Impedance: ≤0.20
+Peak Voltage: 23.8Vp-p (TUBRO)
+Frequency Response: 20Hz-20KHZ (#0.5dB)
+Crosstalk: ≥72dB
+THD+N: 0.0007%
+S/N: 2120dB
+Output Impedance: ≤0.40
+Peak Voltage: 47.2Vp-p (TUBRO)
+Frequency Response: 20Hz-20KHz (#0.5dB)
+Crosstalk: ≥105dB
+THD+N: 0.0007%
+S/N: ≥120dB
+AUX OUT Parameters:
+BAL-LO Parameters
+Output level: 2.0V
+Output level: 4.0V
+THD+N: 0.0008%
+THD+N: 0.0005%
+S/N: ≥120dB
+S/N: ≥128dB
+Crosstalk: 296dB
+Crosstalk: ≥100dB
