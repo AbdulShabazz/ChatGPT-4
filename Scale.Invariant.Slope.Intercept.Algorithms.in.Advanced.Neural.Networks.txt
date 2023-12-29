@@ -1,3 +1,5 @@
+Q: most artificial neural networks map sets of input coordinates to sets of output coordinates via the slope-intercept algorithm: y = m * x + b, where 'm' is the x/y slope and 'b' is a scalar offset. However geometric algebra supports a scale invariant slope-intercept algorithm of the form: v = a + b * x + c * y + d * xy, where 'x' and 'y' are coordinates in 2D space; however the algorithm can easily be scaled to any dimension, to capture the behavior of quaternions, spinors, etc. Has this revised scale-invariant slope-intercept model ever been proposed in the field of artificial neural networks ?
+
 Bard:
 
  **While the specific model you described (v = a + b*x + c*y + d*xy) hasn't been explicitly proposed in the context of artificial neural networks, several concepts and approaches within the field align with the principles of geometric algebra and scale invariance:**
