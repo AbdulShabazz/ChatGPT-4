@@ -37,3 +37,63 @@ Developing an offline artificial text-to-speech (TTS) library plugin for Unreal 
    - Plan for future updates, especially in response to Unreal Engine updates or advancements in TTS technology.
 
 This project, given its complexity and specialized nature, will likely require iterative development and extensive testing, particularly to achieve the level of quality necessary for theatrical production. Additionally, staying abreast of the latest advancements in TTS technology and Unreal Engine developments will be crucial for the long-term success and relevance of your plugin.
+
+Q: I desire to create a text-to-speech (TTS) synthesis model which activates and deactivates each formant layer based on programmable constraints such as the time-, duration-, frequency-, prosody-, amplitude-, etc. of the signal and or zero or more formants.
+
+ChatGPT-4:
+
+Creating a Text-to-Speech (TTS) synthesis model that dynamically activates and deactivates formant layers based on various programmable constraints is an intricate and advanced task. To achieve this, you'll need to integrate knowledge from speech synthesis, signal processing, and software engineering. Here's a detailed breakdown of the components and considerations for your project:
+
+1. **Formant Synthesis Overview**:
+   - Formants: Critical frequency bands in human speech.
+   - Synthesis: Modelling these bands to generate speech.
+
+2. **Signal Characteristics**:
+   - Time: Timestamps at which formants are active/inactive.
+   - Duration: Length for which each formant is sustained.
+   - Frequency: Specific frequencies corresponding to each formant.
+   - Prosody: Rhythm, stress, and intonation patterns.
+   - Amplitude: Volume level for each formant.
+
+3. **Programmable Constraints**:
+   - Creating rules/algorithms to control formant activation.
+   - Incorporating user-defined parameters (e.g., time, frequency).
+
+4. **Technical Aspects**:
+   - Signal Processing: Manipulating digital signals to model speech.
+   - Acoustic Models: Simulating the human vocal tract.
+   - DSP Algorithms: Implementing digital signal processing techniques.
+   - Machine Learning: Possibly using ML models to enhance naturalness.
+
+5. **Software Integration**:
+   - Unreal Engine 3D: Integrating with your target platform.
+   - Plugin Development: Custom plugin for Unreal Engine.
+   - API Design: Ensuring smooth interaction between components.
+
+6. **Development Phases**:
+   - Research and Feasibility Study: Understand limitations and possibilities.
+   - Prototype Development: Initial model with basic functionalities.
+   - Testing and Refinement: Iterative process to improve quality.
+   - Final Implementation: Integration with Unreal Engine.
+
+7. **Challenges and Considerations**:
+   - Realism: Achieving natural-sounding speech.
+   - Computational Efficiency: Optimizing for performance.
+   - User Control: Balancing complexity and usability.
+   - Platform Compatibility: Ensuring smooth operation within Unreal Engine.
+
+8. **Future Extensions**:
+   - Voice Remapping: Adding functionality for voice transformation.
+   - AI Enhancements: Utilizing AI to improve speech synthesis.
+   - Expanding Parameters: Including more control variables.
+
+9. **Resources and Tools**:
+   - Speech Synthesis Libraries: Existing frameworks as starting points.
+   - Unreal Engine Documentation: For plugin development guidelines.
+   - DSP Toolkits: Libraries for signal processing.
+
+10. **Community and Support**:
+    - Forums: Engage with speech synthesis and Unreal Engine communities.
+    - Expert Consultation: Collaborate with professionals in the field.
+
+Each of these points can be expanded into more detailed subtopics. The complexity of such a project demands a thorough understanding of both the theoretical aspects of speech synthesis and the practical implications of software development, especially within a complex environment like Unreal Engine.
