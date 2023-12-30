@@ -1,0 +1,41 @@
+Bard:
+
+ **While iOS doesn't have a built-in feature for temporary blocking, here are several effective ways to block a number not in your contacts:**
+
+**1. Silence Unknown Callers:**
+
+- This feature sends calls from numbers not in your contacts directly to voicemail, ensuring you're not disturbed by them.
+- To enable it:
+    - Go to **Settings > Phone**.
+    - Toggle on **Silence Unknown Callers**.
+
+**2. Use Do Not Disturb (DND):**
+
+- Customize DND to silence all calls except those from specific contacts or groups.
+- To configure it:
+    - Go to **Settings > Focus > Do Not Disturb**.
+    - Under **Allow Calls From**, select **All Contacts** or specific groups.
+    - To temporarily activate DND, swipe down from the top right corner of your screen and tap on the crescent moon icon.
+
+**3. Block the Number Directly:**
+
+- If you want to block the number permanently, you can do so through the Phone app:
+    - Open the **Phone app**.
+    - Tap **Recents** or **Voicemail**.
+    - Find the number you want to block.
+    - Tap the **Info icon** (i) next to the number.
+    - Scroll down and tap **Block this Caller**.
+    - Confirm by tapping **Block Contact**.
+    - To unblock later, go to **Settings > Phone > Blocked Contacts** and tap **Edit**.
+
+**4. Use Third-Party Call Blocking Apps:**
+
+- Consider apps like RoboKiller, Nomorobo, or Truecaller for more advanced blocking features, including temporary blocks:
+    - These apps often offer scheduling options for temporary blocks.
+    - They may also provide additional spam protection and caller ID features.
+
+**Remember:**
+
+- Silence Unknown Callers might not silence calls from numbers that Siri recently suggested or those you've called yourself.
+- If you need temporary blocks frequently, third-party apps offer more flexibility.
+- Choose the method that best suits your needs and preferences.
