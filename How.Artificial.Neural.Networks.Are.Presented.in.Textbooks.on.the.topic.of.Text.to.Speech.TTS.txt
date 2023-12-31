@@ -1,0 +1,16 @@
+Bard:
+
+You're right, there are a couple of possible reasons why a textbook on artificial TTS synthesis might present function declarations and usage instructions without providing the implementation details:
+
+**1. Focus on the core concepts:** Textbooks often aim to teach the fundamental principles of a subject without getting bogged down in the nitty-gritty of specific implementations. By providing function declarations and usage instructions, the author can introduce the key functionalities of the TTS system without delving into the complex algorithms and data structures involved in the actual implementation. This can be particularly helpful for beginners who are still grasping the overall concepts of TTS.
+
+**2. Abstraction and modularity:** In software development, it's common practice to separate the interface of a function (what it does and how to use it) from its implementation (how it actually works). This allows for cleaner code, easier maintenance, and better modularity. The textbook might be following this approach by presenting the functions as abstract building blocks of the TTS system, without exposing the specific implementation details.
+
+**3. Neural network implementations:** It's true that many modern TTS systems utilize artificial neural networks for speech synthesis. These networks can be quite complex and involve intricate training procedures. Including the full implementation details of such networks might be beyond the scope of a textbook or simply too technical for the target audience.
+
+Ultimately, the specific reason why the textbook omits the function bodies depends on the author's intent and the target audience. However, the reasons mentioned above are some of the most common explanations.
+
+If you're interested in learning more about the specific implementations of the functions, you might be able to find additional resources online or in other textbooks that delve deeper into the technical aspects of TTS. You could also try contacting the author of the textbook directly to see if they can provide more information.
+
+I hope this explanation helps!
+
