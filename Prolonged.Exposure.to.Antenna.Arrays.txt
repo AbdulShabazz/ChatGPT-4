@@ -1,0 +1,28 @@
+Bard:
+
+In most cases, it is **not biologically dangerous** to lay on or across a typical satellite dish or antenna array. However, there are a few key factors to consider:
+
+**Type of Antenna:**
+
+* **Satellite dishes:** These typically receive signals and emit very low levels of non-ionizing radiation, much like cell phones or Wi-Fi routers. This level is generally considered safe for humans.
+* **Antenna arrays:** These can be more diverse, and some may transmit stronger signals. 
+
+**Frequency and Power:**
+
+* The level of potential biological risk is dependent on the frequency and power output of the antenna. Lower frequency and lower power transmissions are generally less concerning.
+* **High-powered transmitting antennas** (used for things like radio or radar) emit stronger signals that can be harmful if you spend extended periods in close proximity, especially directly in front of the antenna.
+
+**Additional Concerns:**
+
+* **Physical injury:** Regardless of radiation concerns, laying on a satellite dish or antenna array could result in scratches, falls, or other physical injuries.
+* **Electrical hazards:** Some antennas may have exposed electrical components that pose a shock hazard.
+
+**Here are some general recommendations:**
+
+* **Avoid laying directly on or near high-powered transmitting antennas.** Maintain a safe distance as recommended by the manufacturer or regulatory guidelines.
+* **Use caution when around any unknown antenna.** If you're unsure about the type or power output, it's best to avoid contact.
+* **Prioritize safety over comfort.** It's not worth risking your health for a nap on an antenna.
+
+Overall, while the risk from most satellite dishes and antenna arrays is minimal, it's always better to be cautious and avoid prolonged exposure, especially to high-powered transmitting antennas. If you have any concerns, consult with a professional or refer to the manufacturer's information for specific safety guidelines.
+
+I hope this information helps!
