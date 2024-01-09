@@ -1,0 +1,21 @@
+Microsoft Copilot 
+
+A simple normal distribution is a common choice for modeling the emission probabilities of a Hidden Markov Model (HMM), i.e. the probability of observing a certain feature given a hidden state. However, this choice has some limitations, such as:
+
+- It assumes that the features are continuous and unimodal, which may not be true for some types of data, such as speech or text.
+- It assumes that the features are independent of each other, which may not capture the correlations or dependencies among them.
+- It may not be flexible enough to fit the complex shapes of the data distribution, especially if the number of hidden states is small or the data is noisy.
+
+Some possible ways to overcome these limitations are:
+
+- Using a mixture of normal distributions instead of a single normal distribution, which can model multimodal and non-linear data better.
+- Using a multivariate normal distribution instead of a univariate normal distribution, which can account for the covariance among the features.
+- Using a non-parametric or semi-parametric distribution, such as a kernel density estimator or a Dirichlet process, which can adapt to the data without imposing a fixed parametric form.
+
+For more details, you can refer to these sources: [Lecture 9: Hidden Markov Models](^1^), [Introduction to Hidden Markov Models](^2^), [Hidden Markov model - Wikipedia](^3^), [Hidden Markov Model: Simple Definition & Overview](^4^).
+
+Source: Conversation with Bing, 1/9/2024
+(1) Lecture 9: Hidden Markov Models - McGill University. https://www.cs.mcgill.ca/~dprecup/courses/ML/Lectures/ml-lecture-hmm.pdf.
+(2) Introduction to Hidden Markov Models - Scholars at Harvard. https://scholar.harvard.edu/files/adegirmenci/files/hmm_adegirmenci_2014.pdf.
+(3) Hidden Markov model - Wikipedia. https://en.wikipedia.org/wiki/Hidden_Markov_model.
+(4) Hidden Markov Model: Simple Definition & Overview. https://www.statisticshowto.com/hidden-markov-model/.
