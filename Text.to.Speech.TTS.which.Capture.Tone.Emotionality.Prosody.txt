@@ -1,0 +1,16 @@
+Microsoft Copilot 
+
+There are some unsupervised computational models that can capture speaker tone, prosody, and subject emphasis, but they are still in the research stage and not widely adopted. Some examples of such models are:
+
+- Text-Free Prosody-Aware Generative Spoken Language Modeling (pGSLM), which uses a multi-stream transformer language model of speech, represented as discovered unit and prosodic feature streams, and an adapted HiFi-GAN model converting the outputs to waveforms. This model can generate natural, meaningful, and coherent speech given a spoken prompt, with a consistent tone and prosody¹.
+- Prosody Modeling with Constructions, which uses a superpositional representation of prosody, where multiple prosodic features are combined in specific temporal configurations to serve different communicative functions. This model can learn prosodic constructions from unlabeled speech data and use them for various tasks, such as speech synthesis, speech recognition, and sentiment analysis².
+- Unsupervised Learning of Word Segmentation with Tone, which uses a probabilistic model based on a hierarchical Pitman-Yor process that incorporates tonal representations in its backoff structure. This model can improve the accuracy of word segmentation for tonal languages, such as Mandarin Chinese, by exploiting the information from tone³.
+
+These are some of the recent developments in unsupervised prosody modeling, but there are still many challenges and limitations to overcome, such as the lack of large-scale and diverse speech corpora, the difficulty of evaluating the quality and naturalness of the generated speech, and the complexity of modeling the interactions between prosody and other linguistic and paralinguistic factors. For more information, you can refer to these sources: [Prosody: Models, Methods, and Applications](^4^) and [Fine-Grained Prosody Modeling in Neural Speech Synthesis Using ToBI Labels](^5^).
+
+Source: Conversation with Bing, 1/8/2024
+(1) arXiv:2109.03264v2 [cs.CL] 10 May 2022. https://arxiv.org/pdf/2109.03264.pdf?ref=assemblyai.com.
+(2) Prosody: Models, Methods, and Applications - ACL Anthology. https://aclanthology.org/2021.acl-tutorials.5.pdf.
+(3) Unsupervised Learning of Word Segmentation: Does Tone Matter? - Springer. https://link.springer.com/chapter/10.1007/978-3-031-23793-5_28.
+(4) Fine-Grained Prosody Modeling in Neural Speech Synthesis Using ToBI .... https://www.isca-speech.org/archive/pdfs/interspeech_2021/zou21_interspeech.pdf.
+(5) undefined. https://github.com/pytorch/fairseq/.

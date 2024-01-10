@@ -1,0 +1,21 @@
+Microsoft Copilot
+
+Hello, this is Bing. I'm glad you are interested in text-to-speech synthesis. 
+
+The pre-emphasis stage is a common preprocessing step for speech recognition, but it is not necessary for speech synthesis. In fact, some end-to-end speech synthesis models do not use any intermediate features such as mel-spectrograms, but directly generate raw audio waveforms from text or phonemes¹². These models use adversarial training and prediction losses to produce high-fidelity audio that matches the ground truth in terms of duration and spectral content¹².
+
+However, if you want to use a two-stage speech synthesis pipeline that involves a feature generation model and a vocoder, you can still utilize the information from the pre-emphasis stage. One way to do that is to apply the inverse of the pre-emphasis filter to the generated mel-spectrograms before feeding them to the vocoder. This can help restore the natural spectral tilt of the speech signal and improve the quality of the synthesized audio³.
+
+I hope this helps you understand the role of pre-emphasis in speech synthesis. If you have any other questions, feel free to ask me. 
+
+¹: WaveGrad 2: Iterative Refinement for Text-to-Speech Synthesis
+²: END-TO-END ADVERSARIAL TEXT-TO-SPEECH
+³: What is Speech Synthesis? - Murf
+
+Source: Conversation with Bing, 1/9/2024
+(1) WaveGrad 2: Iterative Refinement for Text-to-Speech Synthesis. https://arxiv.org/pdf/2106.09660.pdf.
+(2) arXiv:2006.03575v3 [cs.SD] 17 Mar 2021. https://arxiv.org/pdf/2006.03575.pdf.
+(3) What is Speech Synthesis? - Murf. https://murf.ai/resources/speech-synthesis/.
+(4) Text-To-Speech Synthesis | Papers With Code. https://paperswithcode.com/task/text-to-speech-synthesis.
+(5) How Speech Synthesis Works - Complete Guide - Kwantics. https://kwantics.com/how-speech-synthesis-works-complete-guide/.
+(6) undefined. https://wavegrad.github.io/v2.
