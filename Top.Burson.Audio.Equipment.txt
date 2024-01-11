@@ -44,7 +44,7 @@ Power Input
   24V 5A DC input
 
 Buson Audio Soloist Performance 3x ($4,499.99)
-(Frequency Response: DC - 300 kHz 
+(Frequency Response: DC (0) - 300 kHz 
 
 Burson Audio Soloist Voyager ($4,199.99)
 (Frequency Response: 5 Hz - 300 kHz (-3 dB))
