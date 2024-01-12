@@ -29,6 +29,7 @@ Additional Features
   Head+Sub Mode
   Adjustable speaker volume
 Input Connections
+  1x USB C (PCM 32Bit/768kHz)
   1x Balanced XLR input (4-pin)
   1x Single-ended RCA input
   1x 3.5mm microphone input
