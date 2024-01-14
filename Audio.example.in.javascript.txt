@@ -1,0 +1,48 @@
+Bard:
+
+ **Here's the JavaScript code to generate a sinusoidal audio of 1s duration at PCM 24 bit/48 kHz:**
+
+```javascript
+const audioContext = new AudioContext();
+
+// Define desired wave parameters
+const sampleRate = 48000; // 48 kHz
+const duration = 1; // 1 second
+const frequency = 440; // Hz (e.g., 440 Hz for A4)
+const amplitude = 0.5; // 0.5 for a comfortable volume
+const bitsPerSample = 24; // 24-bit audio
+
+// Create an audio buffer with appropriate settings
+const audioBuffer = audioContext.createBuffer(2, duration * sampleRate, sampleRate);
+const channelData = audioBuffer.getChannelData(0);
+
+// Generate the sine wave data
+for (let i = 0; i < channelData.length; i++) {
+  const time = i / sampleRate;
+  const value = Math.sin(2 * Math.PI * frequency * time) * amplitude;
+  channelData[i] = value * (2 ** (bitsPerSample - 1) - 1); // Scale for 24-bit audio
+}
+
+// Create an audio source and play it
+const source = audioContext.createBufferSource();
+source.buffer = audioBuffer;
+source.connect(audioContext.destination);
+source.start();
+```
+
+**Explanation:**
+
+1. **Create AudioContext:** Establishes the context for audio manipulation.
+2. **Define Parameters:** Sets the desired sample rate, duration, frequency, amplitude, and bit depth.
+3. **Create Audio Buffer:** Generates a buffer to hold the audio data with specified duration and sample rate.
+4. **Access Channel Data:** Retrieves the data for the first channel (mono).
+5. **Generate Sine Wave Data:** Iterates through each sample, calculating the sine wave value at that time and scaling it for 24-bit audio.
+6. **Create Audio Source:** Creates a source to play the generated audio.
+7. **Connect and Play:** Connects the source to the audio output and starts playback.
+
+**Key Points:**
+
+- Adjust `frequency` to create different pitches.
+- Experiment with `amplitude` to control volume.
+- This code generates a mono audio wave. For stereo, repeat the generation process for the second channel.
+- Consider error handling for potential AudioContext issues.
