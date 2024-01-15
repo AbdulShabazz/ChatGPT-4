@@ -1,0 +1,23 @@
+Bard:
+
+Dolby Atmos's channel setup can be a bit complex, so here's a breakdown:
+
+**In theaters:**
+
+* **Maximum encoded channels:** 128 discrete audio tracks and up to 64 unique speaker feeds.
+* **Typical setup:** 9.1 "bed" channels (7.1 surround + 2 height) for ambience and dialogue, plus up to 118 tracks for object-based audio.
+
+**For home cinema:**
+
+* **Spatial coding:** Uses up to 16 concurrent "elements" or audio location clusters that dynamically adapt to the content.
+* **Film, TV, and Music:** Maximum of 16 concurrent elements encoded.
+* **Games:** ISF (Intermediate Spatial format) supports 32 total active objects (7.1.4 bed + 20 additional dynamic objects).
+
+Therefore, the number of **encoded channels** in Dolby Atmos isn't fixed and depends on the context:
+
+* **In theaters:** Up to 128 tracks, but typically 9.1 or 7.1.2 with object-based audio.
+* **For home cinema:** Up to 16 concurrent elements or 32 objects (with specific setups).
+
+Remember, Dolby Atmos primarily focuses on **object-based audio**, allowing precise positioning of sounds in 3D space, rather than a fixed number of speaker channels.
+
+I hope this clarifies the number of channels involved in Dolby Atmos! Feel free to ask if you have further questions.
