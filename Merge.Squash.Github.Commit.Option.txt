@@ -1,0 +1,35 @@
+Copilot:
+
+Merging commits from a forked repository to an upstream repository is a common task in git. There are different ways to do this, depending on your preferences and the state of your repositories. One option is to use the `git rebase` command, which will rewrite your commit history to make it look like you branched off the latest version of the upstream repository. This will avoid creating merge commits and keep your history clean and linear. However, this also means that you may have to resolve conflicts if your changes overlap with the upstream changes¹².
+
+Another option is to use the `git merge` command, which will create a merge commit that combines the changes from both repositories. This will preserve the history of both branches, but it will also increase the size of your repository and make your history more complex³⁴. If you want to save disk space, you can use the `--squash` option, which will merge all the changes into a single commit without creating a merge commit⁵. This will reduce the size of your repository, but it will also lose the individual commit messages and history of your branch.
+
+To summarize, here are some pros and cons of each option:
+
+- `git rebase`: Keeps your history linear and clean, but may require resolving conflicts and rewriting your commit history.
+- `git merge`: Preserves the history of both branches, but creates merge commits and increases the size of your repository.
+- `git merge --squash`: Merges all the changes into a single commit, but loses the individual commit messages and history of your branch.
+
+You can choose the option that suits your needs and preferences best. For more details and examples, you can check out these resources:
+
+- [What is the correct way to merge upstream without losing changes?](^1^)
+- [Merging a git repo from the origin to the upstream repository](^2^)
+- [How to sync local repo with GitHub (Git merge upstream)](^4^)
+- [How to Keep a Downstream git Repository Current with Upstream ... - Medium](^5^)
+- [Merging a pull request - GitHub Docs](^6^)
+
+I hope this helps you with your git workflow. 
+
+Source: Conversation with Bing, 1/27/2024
+(1) git - What is the correct way to merge upstream without losing changes .... https://stackoverflow.com/questions/14199286/what-is-the-correct-way-to-merge-upstream-without-losing-changes.
+(2) Merging a git repo from the origin to the upstream repository. https://stackoverflow.com/questions/18884381/merging-a-git-repo-from-the-origin-to-the-upstream-repository.
+(3) GitHub - discdiver/merge-from-upstream-repo: ⤵ Merge changes from an .... https://github.com/discdiver/merge-from-upstream-repo.
+(4) How to sync local repo with GitHub (Git merge upstream). https://www.koskila.net/how-to-git-merge-upstream/.
+(5) How to Keep a Downstream git Repository Current with Upstream ... - Medium. https://medium.com/sweetmeat/how-to-keep-a-downstream-git-repository-current-with-upstream-repository-changes-10b76fad6d97.
+(6) git - What is the correct way to merge upstream without losing changes .... https://stackoverflow.com/questions/14199286/what-is-the-correct-way-to-merge-upstream-without-losing-changes.
+(7) Merging a git repo from the origin to the upstream repository. https://stackoverflow.com/questions/18884381/merging-a-git-repo-from-the-origin-to-the-upstream-repository.
+(8) How to sync local repo with GitHub (Git merge upstream). https://www.koskila.net/how-to-git-merge-upstream/.
+(9) How to Keep a Downstream git Repository Current with Upstream ... - Medium. https://medium.com/sweetmeat/how-to-keep-a-downstream-git-repository-current-with-upstream-repository-changes-10b76fad6d97.
+(10) Merging a pull request - GitHub Docs. https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/incorporating-changes-from-a-pull-request/merging-a-pull-request.
+(11) undefined. https://github.com/savonrb/httpi/pull/59/files.
+(12) undefined. https://github.com/coldnebo/httpi/commits/master.
