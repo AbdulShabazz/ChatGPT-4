@@ -1,0 +1,14 @@
+copilot:
+
+A sinusoidal wave is a pure tone that has only one frequency and amplitude. To create a more metallic sound from a sinusoid, you need to add some harmonics and noise to the wave. Harmonics are multiples of the fundamental frequency that add richness and complexity to the sound. Noise is a random signal that adds brightness and roughness to the sound. 
+
+One way to add harmonics and noise to a sinusoid is to use a technique called frequency modulation (FM) synthesis. FM synthesis involves modulating the frequency of a carrier wave (the sinusoid) with another wave called the modulator. The modulator can have a different frequency, amplitude, and shape than the carrier. By changing the parameters of the modulator, you can create different metallic sounds from the same carrier.
+
+For example, if you use a sinusoid as the modulator, you can create a bell-like sound by choosing a high modulation frequency and a low modulation index (the ratio of the modulation amplitude to the modulation frequency). If you use a sawtooth wave as the modulator, you can create a brass-like sound by choosing a low modulation frequency and a high modulation index. If you use a noise wave as the modulator, you can create a cymbal-like sound by choosing a high modulation frequency and a high modulation index.
+
+You can experiment with different types of waves, frequencies, and indices to create your own metallic sounds from a sinusoid. You can also use multiple modulators to create more complex sounds. For more information on how to use FM synthesis, you can check out this [tutorial](^2^) or this [website](^3^). 🎵
+
+Source: Conversation with Bing, 2/2/2024
+(1) How can I re-create an instrument sound by superimposing sine waves .... https://music.stackexchange.com/questions/95047/how-can-i-re-create-an-instrument-sound-by-superimposing-sine-waves.
+(2) Sound Waves – Mathematics of Music - Department of Applied .... https://www.ams.jhu.edu/dan-mathofmusic/sound-waves/.
+(3) Using sinusoids to represent sound waves - Physics Stack Exchange. https://physics.stackexchange.com/questions/134288/using-sinusoids-to-represent-sound-waves.
