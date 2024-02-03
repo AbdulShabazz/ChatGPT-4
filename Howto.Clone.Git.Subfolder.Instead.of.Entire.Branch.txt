@@ -1,0 +1,87 @@
+Cloning a specific subfolder from a Git repository, as opposed to cloning the entire repository, can be beneficial for saving bandwidth and storage. Unfortunately, Git does not provide a native command to clone only a subfolder directly. However, there are alternative methods to achieve this objective. Below are the methods in detail:
+
+### Sparse Checkout
+
+The sparse checkout feature in Git allows users to check out only a subset of files in a repository, effectively enabling the partial cloning of a repository.
+
+#### Steps:
+
+1. **Initialize an Empty Repository**: Initialize an empty Git repository in your desired directory.
+
+    ```
+    git init <repository_name>
+    ```
+
+2. **Add Remote**: Add the original repository as a remote.
+
+    ```
+    git remote add -f origin <repository_url>
+    ```
+
+3. **Enable Sparse Checkout**: Turn on the `sparseCheckout` feature.
+
+    ```
+    git config core.sparseCheckout true
+    ```
+
+4. **Specify Subfolder**: Write the path of the subfolder you want to clone into the sparse-checkout configuration file.
+
+    ```
+    echo '<subfolder_path>/' >> .git/info/sparse-checkout
+    ```
+
+5. **Pull Data**: Fetch and checkout the specified subfolder.
+
+    ```
+    git pull origin <branch_name>
+    ```
+  
+#### Specifications:
+
+- **Git Version**: Git 1.7.0 or later for basic sparse checkout. Enhanced features are available in 2.25.0 or later.
+- **Network Utilization**: Dependent on the size of the subfolder.
+- **Storage Requirement**: Only the specified subfolder and its contents will be stored.
+
+### Subtree Split
+
+The `git subtree` command allows you to split a subfolder into its own branch, which can then be cloned separately.
+
+#### Steps:
+
+1. **Clone the Full Repository**: Clone the original repository to your local machine.
+
+    ```
+    git clone <repository_url>
+    ```
+
+2. **Navigate to Repository**: Change your directory to the newly cloned repository.
+
+    ```
+    cd <repository_name>
+    ```
+
+3. **Create a Subtree Branch**: Use the `subtree split` command to create a new branch containing only the subfolder.
+
+    ```
+    git subtree split --prefix=<subfolder_path> --branch=<new_branch_name>
+    ```
+
+4. **Push Subtree Branch**: Push the new branch to the remote repository.
+
+    ```
+    git push origin <new_branch_name>
+    ```
+
+5. **Clone Subtree Branch**: Now you can clone just this new branch to get only the subfolder.
+
+    ```
+    git clone -b <new_branch_name> <repository_url> <destination_folder>
+    ```
+
+#### Specifications:
+
+- **Git Version**: Git 1.7.11 or later for `git subtree`.
+- **Network Utilization**: Initial clone requires entire repository; subsequent clones only require the subtree branch.
+- **Storage Requirement**: Initial method requires entire repository; final cloned version contains only the subtree.
+
+Each of these methods has its own set of advantages and drawbacks. The sparse checkout method is efficient for immediate use but requires a version of Git that supports sparse checkout. The subtree split method is versatile and creates a more portable solution at the expense of initial bandwidth and storage.
