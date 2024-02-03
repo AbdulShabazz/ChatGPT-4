@@ -1,0 +1,19 @@
+GPT-4
+
+User:
+
+Does WD40 conduct electricity?
+
+ChatGPT:
+
+No, WD-40 is not a conductor of electricity. In fact, it's often used to repel water and prevent corrosion on electrical contacts and components. However, it's important to always power off electrical devices and equipment before applying WD-40 or any other substance, and to let it fully dry or evaporate before powering the device back on.
+
+User:
+
+How can spraying WD40 into lawnmower injectors help to start a lawnmower if WD40 is not electrically conductive. Merely due to its flammability?
+
+ChatGPT:
+
+Yes, the reason WD-40 can help a lawnmower start is due to its flammability, not its electrical conductivity. When sprayed into the carburetor or intake of a lawnmower, the volatile components in WD-40 can act as a starting fluid. When the engine is cranked, the spark from the spark plug ignites the WD-40 vapors, which can help the engine start.
+
+This method is sometimes used as a temporary measure if a lawnmower or other small engine is having difficulty starting due to fuel delivery issues. However, it's not a long-term solution and can be harmful if used excessively. If your lawnmower is having persistent starting issues, it's best to diagnose and address the underlying problem.
