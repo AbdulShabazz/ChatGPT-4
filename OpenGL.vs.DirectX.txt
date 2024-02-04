@@ -1,0 +1,18 @@
+Copilot:
+
+OpenGL and DirectX are two different APIs for rendering 2D and 3D graphics. OpenGL is a cross-platform, open-source API that is compatible with various operating systems and devices. DirectX is a proprietary, Windows-only API that is tailored for gaming and multimedia applications on Windows PCs and Xbox consoles¹².
+
+Some of the main differences between OpenGL and DirectX are:
+
+- OpenGL is more portable and flexible, as it can run on Linux, macOS, iOS, Android, and other platforms. DirectX is more optimized and integrated, as it can leverage the features and hardware of Windows and Xbox devices¹².
+- OpenGL is more low-level and abstract, as it only provides ways to rasterize an image and leaves the windowing system and input handling to other APIs. DirectX is more high-level and comprehensive, as it includes APIs for sound, input, networking, text, and other aspects of multimedia¹².
+- OpenGL is more backward-compatible and stable, as it maintains the same core functionality across versions and extensions. DirectX is more forward-looking and innovative, as it introduces new features and capabilities with each version and edition¹².
+
+Both OpenGL and DirectX have their advantages and disadvantages, depending on the type and purpose of the application. For game development, DirectX is often preferred for its performance, quality, and compatibility with Windows and Xbox. For cross-platform development, OpenGL is often preferred for its portability, flexibility, and openness¹².
+
+Source: Conversation with Bing, 2/4/2024
+(1) OpenGL vs. DirectX: Which Is Better for Gaming? - How-To Geek. https://www.howtogeek.com/886519/opengl-vs-directx-which-is-better-for-gaming/.
+(2) OpenGL vs DirectX | Key Differences between OpenGL vs DirectX - EDUCBA. https://www.educba.com/opengl-vs-directx/.
+(3) OpenGL vs DirectX - Graphics Cards - Linus Tech Tips. https://linustechtips.com/topic/972796-opengl-vs-directx/.
+(4) OpenGL vs. DirectX: Which Should You Use for Game Development? - MUO. https://www.makeuseof.com/opengl-vs-directx-game-development-best/.
+(5) OpenGL vs DirectX: An In-Depth Technical and Historical Comparison. https://www.historytools.org/docs/opengl-vs-directx-key-differences-and-full-comparison.
