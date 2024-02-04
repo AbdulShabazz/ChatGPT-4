@@ -1,0 +1,15 @@
+copilot:
+
+Finding matching braces in VSCode is easy. You can use the keyboard shortcut **Ctrl + Shift + \\** on Windows and Linux, or **Cmd + Shift + \\** on Mac, to jump to the matching bracket or parenthesis of the current cursor position¹². This command works for square brackets, curly braces, and parentheses³.
+
+You can also use the **editor.action.smartSelect.grow** command to select everything between the matching brackets or quotes⁴. The default keyboard shortcut for this command is **Shift + Alt + Right Arrow**. You can customize the keyboard shortcuts by going to **File > Preferences > Keyboard Shortcuts** or by pressing **Ctrl + K, Ctrl + S**².
+
+I hope this helps you with your coding. 😊
+
+Source: Conversation with Bing, 2/4/2024
+(1) Visual studio code goto matching bracket from bottom to top. https://stackoverflow.com/questions/48737254/visual-studio-code-goto-matching-bracket-from-bottom-to-top.
+(2) How do I jump to a closing bracket in Visual Studio Code?. https://stackoverflow.com/questions/30097634/how-do-i-jump-to-a-closing-bracket-in-visual-studio-code.
+(3) Jump to a closing Bracket, Parenthesis or Tag in VS Code. https://bobbyhadz.com/blog/vscode-jump-to-closing-bracket-parenthesis-or-tag.
+(4) VSCode tips - How to select everything between brackets or quotes. https://ihatetomatoes.net/vscode-tips-select-everything-between-brackets-quotes/.
+(5) Go to Matching Brace in Visual Studio? - Stack Overflow. https://stackoverflow.com/questions/1501921/go-to-matching-brace-in-visual-studio.
+(6) undefined. https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf.
