@@ -1,0 +1,48 @@
+ChatGPT-4:
+
+In C++20, `std::variant` is a type-safe union that can hold one of several specified types. 
+Assigning a value to a `std::variant` of a type that's not part of its type list is a compile-time error. 
+However, if you're assigning a different type that is part of the `std::variant` type list, 
+it works fine and the `std::variant` will hold the new value.
+
+If you want to generate a runtime error when trying to assign a new type to a `std::variant`, 
+even if that type is part of the `std::variant` type list, 
+you can manually check the type before assignment and throw an exception if it's not the type you want. 
+Here's an example of how you can do it:
+
+```cpp
+#include <iostream>
+#include <variant>
+#include <typeinfo>
+#include <stdexcept>
+
+int main() {
+    std::variant<int, float, std::string> myVariant = 10;
+
+    try {
+        // Before assignment, check if the current type is the same as the new type
+        if (myVariant.index() != myVariant.index_of_type<float>()) {
+            throw std::runtime_error("Attempting to assign a different type to the variant.");
+        }
+
+        // Assign a new value (of a different type)
+        myVariant = 3.14f;
+        
+        // If we get here, the types are the same, and assignment is okay
+        std::cout << "Assigned new value to the variant." << std::endl;
+    } catch (const std::runtime_error& e) {
+        std::cerr << e.what() << std::endl;
+    }
+    
+    return 0;
+}
+```
+
+In this code, `myVariant.index()` returns the zero-based index of the type that's currently held by the `std::variant`, 
+and `myVariant.index_of_type<T>()` returns the zero-based index of the type `T` in the `std::variant`. By comparing these, 
+you can check if the current type is the same as the new type you want to assign. If it's not, you can throw a `std::runtime_error`.
+
+Remember that using exceptions for control flow like this can be considered bad practice, 
+especially if it's something that can be checked at compile time or can be designed out of the system. 
+It's often better to structure your code in a way that invalid states or operations are impossible or caught at compile time. 
+However, if you do need runtime checks, the above approach will work.
