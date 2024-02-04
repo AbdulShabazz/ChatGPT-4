@@ -1,0 +1,14 @@
+Copilot:
+
+OpenGL and Windows new window API are two different things that serve different purposes. OpenGL is a cross-platform, low-level API for rendering 2D and 3D graphics. Windows new window API is a platform-specific, high-level API for creating and managing windows and other graphical user interface elements. 
+
+To use OpenGL on Windows, you need to create a window using the Windows new window API, and then bind an OpenGL context to it using another API called WGL³. This allows you to draw OpenGL graphics on the window. Alternatively, you can use a toolkit like GLUT or Qt that handles the window creation and OpenGL context creation for you⁴.
+
+On other platforms, such as Linux, you need to use a different interface to connect OpenGL with the windowing system, such as GLX for the X Window system¹². OpenGL itself does not care about the windowing system, it only provides ways to rasterize an image¹.
+
+Source: Conversation with Bing, 2/4/2024
+(1) WGL (API) - Wikipedia. https://en.wikipedia.org/wiki/WGL_%28API%29.
+(2) Related toolkits and APIs - OpenGL Wiki - The Khronos Group. https://www.khronos.org/opengl/wiki/Related_toolkits_and_APIs.
+(3) What is difference between opengl and xwindows system?. https://stackoverflow.com/questions/22276009/what-is-difference-between-opengl-and-xwindows-system.
+(4) Tutorial 01 - Create a window. https://ogldev.org/www/tutorial01/tutorial01.html.
+(5) winapi - Create OpenGL window win32 API - Stack Overflow. https://stackoverflow.com/questions/32029375/create-opengl-window-win32-api.
