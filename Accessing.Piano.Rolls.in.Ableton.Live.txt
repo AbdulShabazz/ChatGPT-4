@@ -1,0 +1,17 @@
+Accessing the piano rolls in Ableton Live for editing MIDI notes and automation is a straightforward process. Here’s how you can do it:
+
+1. **Launch Ableton Live:** Open Ableton Live on your computer.
+
+2. **Create or Open a MIDI Track:** You can access the piano roll in a MIDI track. If you don’t have a MIDI track in your project, you can create one by going to the "Create" menu and selecting "Insert MIDI Track," or use the shortcut `Ctrl+Shift+T` (Windows) or `Cmd+Shift+T` (Mac).
+
+3. **Open the MIDI Clip:** Double-click a MIDI clip in your MIDI track. This can be an existing clip or a new one you create by double-clicking in an empty slot in the Session View or Arrangement View. If you’re creating a new clip, you’ll first need to draw or insert a clip by clicking and dragging or using the context menu.
+
+4. **Access the Piano Roll:** Once you've opened a MIDI clip, Ableton Live will display the Clip View at the bottom of the screen. The Clip View contains the piano roll on the left side, where you can see a vertical keyboard that represents pitches and a grid where you can add, remove, or modify MIDI notes.
+
+5. **Edit MIDI Notes:** In the piano roll, you can click to add new notes, drag existing notes to change their pitch or duration, and select multiple notes to move or delete them. You can also use the drawing tools available at the top right corner of the Clip View to draw notes manually.
+
+6. **Use MIDI Editing Features:** Ableton Live offers various MIDI editing features such as quantization, note length adjustment, velocity editing, and more. These options can be found in the Clip View and are useful for refining your MIDI performances.
+
+7. **Adjust the View:** You can zoom in and out of the piano roll using the magnifying glass icons or by using a trackpad or mouse wheel. This can help you work more precisely with your MIDI notes.
+
+Remember, the piano roll is a powerful tool for creating and editing MIDI music, and exploring its features can greatly enhance your music production in Ableton Live.
