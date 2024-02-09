@@ -1,0 +1,30 @@
+Google Bard-Gemini:
+
+Here's a breakdown of how the Excel app functions on iOS devices with and without a Microsoft 365 subscription:
+
+**Without a Microsoft 365 Subscription:**
+
+* **Basic Functionality:** You can download the Excel app for free and use it to:
+    * View Excel workbooks
+    * Create simple spreadsheets 
+    * Perform basic editing (on devices with a screen size smaller than 10.1 inches).
+
+**With a Microsoft 365 Subscription:**
+
+* **Full Features Unlocked:** A subscription unlocks the full range of Excel capabilities, including:
+    * Advanced editing features (regardless of screen size)
+    * Creating and manipulating charts and graphs
+    * Using complex formulas and functions
+    * Collaborating with others in real-time
+    * Cloud storage on OneDrive
+    * Access to premium templates
+
+**Which Subscription Tier?**
+
+* Any Microsoft 365 subscription plan that includes the Office apps (like Microsoft 365 Personal or Microsoft 365 Family) will give you the full editing capabilities in Excel on your iOS device.
+
+**In Summary:**
+
+You can use Excel on iOS for free for basic viewing and simple editing on smaller devices. However, if you want to leverage the full power of Excel with advanced features and editing on any size screen, you will need a Microsoft 365 subscription. 
+
+**For more details and to compare Microsoft 365 plans, visit the official Microsoft website:** [https://www.microsoft.com/microsoft-365](https://www.microsoft.com/microsoft-365) 
