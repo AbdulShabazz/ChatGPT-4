@@ -1,0 +1,29 @@
+Google Bard Gemini
+
+Unfortunately, it's not possible to perform a true squash commit directly through the GitHub web interface when creating a pull request. Here's why and what your options are:
+
+**Why Not on the GitHub Interface**
+
+* **Rewriting History:** A squash commit fundamentally rewrites the Git history of a branch. The GitHub web interface is primarily designed for code review and collaboration, not for complex history manipulation. Allowing squashing directly in the web interface could result in unintended consequences and make the history for other contributors confusing.
+
+**Your Options**
+
+1. **Squash Locally:** The recommended approach is to squash the commits locally on your computer using Git commands and then push the squashed commit to your branch. Here's how:
+
+   ```bash
+   git rebase -i HEAD~<number_of_commits_to_squash>
+   # In the editor, change 'pick' to 'squash' for the commits you want to combine
+   git push origin <branch_name> --force-with-lease 
+   ```
+
+   Be cautious with `--force-with-lease` as it modifies the existing history of your branch on the remote.
+
+2. **Squash and Merge Option in Pull Request:** GitHub does offer a "Squash and merge" option when merging a pull request. This will combine all commits in the pull request into a single commit in the upstream repository.  However, the original commit history will still be preserved on your feature branch.
+
+**Choosing the Right Approach**
+
+* If you want complete control over the commit message and want to truly eliminate previous commits from the history, squash locally before pushing.
+
+* If you're primarily concerned about a clean final merge into the upstream and it's okay to preserve the commit history on your feature branch, use the "Squash and merge" option within the pull request.
+
+Let me know if you want more detailed instructions on the local squash method! 
