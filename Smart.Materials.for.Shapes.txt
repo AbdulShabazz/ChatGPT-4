@@ -1,0 +1,17 @@
+ChatGPT Teams:
+
+Materials that can change shape in response to an electrical current and then revert to their original form when the current is removed are known as **Electroactive Polymers (EAPs)** or **Shape Memory Alloys (SMAs)**, depending on the specific material type and mechanism of action.
+
+### Electroactive Polymers (EAPs)
+
+Electroactive Polymers are a class of polymers that exhibit a change in size or shape when stimulated by an electric field. The two main types of EAPs are:
+
+- **Dielectric Elastomers (DEs):** These materials act as variable capacitors. When a voltage is applied, they can significantly change their shape (expand or contract) and return to their original shape once the voltage is removed. They are known for their large strains, lightweight, and efficiency. They are often used in applications like actuators, sensors, and artificial muscles.
+
+- **Ionic EAPs:** These materials change shape or size due to the movement of ions inside the polymer matrix when an electrical current is applied. They can bend, stretch, or contract based on the direction and magnitude of the applied current. Upon removal of the current, they return to their original form. They are used in applications that require fine movements, such as microelectromechanical systems (MEMS).
+
+### Shape Memory Alloys (SMAs)
+
+Shape Memory Alloys, most notably **Nitinol (Nickel-Titanium)**, are metals that can return to their pre-deformed shape when heated above a certain temperature. While not directly actuated by an electric current in the same way as EAPs, they can be indirectly actuated by electric currents through resistive heating. When an electric current passes through the SMA, it heats up due to its resistance and changes shape. Once the current is stopped, and the alloy cools down, it returns to its original shape. SMAs are used in various applications, including medical devices, actuators, and robotics.
+
+Both EAPs and SMAs offer unique properties that enable the creation of devices and systems with innovative functionalities, such as silent operation, significant force output relative to their size, and flexibility in form factors.
