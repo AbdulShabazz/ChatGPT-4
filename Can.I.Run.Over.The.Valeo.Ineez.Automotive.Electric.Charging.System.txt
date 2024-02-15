@@ -1,0 +1,15 @@
+Google Bard Gemini Advanced:
+
+Yes, the Valeo Ineez Air Charging system is designed to be durable and withstand being driven over. Here's why:
+
+* **Robust Construction:** The charging pad is built with materials that can handle the weight and pressure of a vehicle. It's likely made of sturdy plastic or a composite material.
+* **Embedded Design:** The pad is intended to be either embedded in concrete/asphalt or surface-mounted with appropriate protection. This provides additional security and impact resistance.
+* **Protection:** The system usually has protective elements to help mitigate potential damage from vehicles that are misaligned during the charging process.
+
+**Important Considerations:**
+
+* **Installation:** Always follow the manufacturer's recommended installation process.  Proper installation is critical for optimal performance and to ensure the system withstands vehicle traffic.
+* **Limits:** Though durable, there will be limits to the weight and impact it can withstand. Consult Valeo's documentation for specific weight limits.
+* **Misalignment:** Repeatedly driving over the pad with significant misalignment might cause damage over time. It's best to park correctly over the pad as directed.
+
+**If you're unsure, always reference Valeo's product documentation or contact their customer support for specific guidance.** 
