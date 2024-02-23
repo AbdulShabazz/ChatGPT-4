@@ -1,0 +1,21 @@
+ChatGPT Teams
+
+To remove or delete a folder from the home screen on Android or iOS devices, you generally follow these steps. Note that the exact steps might vary slightly depending on your device's model and operating system version.
+
+### For Android:
+
+1. **Locate the Folder:** Navigate to the home screen where the folder you want to delete is located.
+2. **Open the Folder:** Tap on the folder to open it.
+3. **Remove Apps (If Deleting):** If you want to delete the folder, you first need to remove all the apps from it. Drag each app out of the folder and onto the home screen or into another folder.
+4. **Delete the Folder:** Once the folder is empty, it should automatically be removed from the home screen. If it doesn't disappear, you might need to tap and hold the empty folder, then drag it to a "Remove" or "Delete" option that appears at the top or bottom of your screen.
+
+### For iOS (iPhone):
+
+1. **Locate the Folder:** Go to the home screen page that has the folder you wish to remove.
+2. **Enter Jiggle Mode:** Tap and hold the folder or any app on the home screen until all the icons start to jiggle. On newer iOS versions, you may see a menu pop up after you tap and hold; select "Edit Home Screen" if that's the case.
+3. **Remove Apps (If Deleting):** To delete a folder, drag all the apps out of it and place them elsewhere on the home screen. Folders in iOS will disappear once they are empty.
+4. **Exit Jiggle Mode:** Press the "Done" button in the top right corner of the screen (on iPhone X and later) or press the Home button (on models with a Home button) to exit jiggle mode.
+
+If you simply want to remove a folder from the home screen without deleting it (applicable to Android), you can often just tap and hold the folder, then drag it to a "Remove" or "Delete" option. This action typically doesn't delete the apps within the folder but removes the folder from the home screen.
+
+Always ensure you're not deleting any apps or data you want to keep before removing or deleting folders.
