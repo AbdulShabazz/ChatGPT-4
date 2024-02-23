@@ -1,0 +1,40 @@
+Google Bard Gemini Advanced:
+
+Here's a breakdown of where to find notifications for replies to your comments on YouTube and how to adjust your notification settings:
+
+**Where to Find Notifications:**
+
+* **YouTube Inbox:**
+    * **Web:** Click on the bell icon in the top right corner of the YouTube website. This will open your notifications inbox.
+    * **Mobile App:** Tap on the 'Inbox' tab at the bottom of your screen, then select the 'Notifications' section.
+* **Email:** If you have email notifications enabled, you'll receive emails when someone replies to your comment.
+
+**How to Manage Notification Settings:**
+
+**Web (Computer):**
+
+1. Go to YouTube.com and sign in to your account.
+2. Click on your profile picture in the top-right corner.
+3. Select "Settings".
+4. Click on "Notifications" in the left-side menu.
+5. Under "Your Preferences", ensure that the box next to "Replies to my comments" is checked to receive notifications.
+
+**Mobile App:**
+
+1. Open the YouTube app.
+2. Tap on your profile picture in the top-right corner.
+3. Tap on "Settings".
+4. Tap on "Notifications". 
+5. Make sure "Replies to my comments" is toggled on.
+
+**Email Notifications:**
+
+1. Follow the steps above to access your YouTube notification settings.
+2. Under "Email Notifications," turn on "Send me emails about my YouTube activity and updates I requested".
+
+**Important Notes:**
+
+* You may not receive notifications for every single reply due to YouTube's filtering of consecutive comments.
+* If you're not seeing notifications even with settings enabled, ensure your device's notification permissions for YouTube are turned on.
+
+Let me know if you'd like more detailed instructions or have any other questions! 
