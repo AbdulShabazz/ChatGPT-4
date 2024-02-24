@@ -1,0 +1,25 @@
+Google Bard Gemini Advanced:
+
+While there might not be a single textbook in the last two years focusing exclusively on digital signal processing (DSP) for artificial speech synthesis, here are a few resources that combine the latest DSP techniques, speech synthesis advancements, and are highly relevant:
+
+**1. Recent Publications and Surveys**
+
+* **"A Review of Differentiable Digital Signal Processing for Music & Speech Synthesis" (arXiv)**  [https://arxiv.org/abs/2308.15422](https://arxiv.org/abs/2308.15422).  This survey delves into the exciting concept of "differentiable DSP", where gradients are backpropagated through digital signal processors. This enables their smooth integration into neural networks and has revolutionizing potential for speech synthesis.
+* **"[2010.15084] Speech Synthesis and Control Using Differentiable DSP" (arXiv)** [https://arxiv.org/abs/2010.15084](https://arxiv.org/abs/2010.15084). This paper explores neural vocoders employing differentiable digital signal processing, allowing for explicit control over factors like pitch, rhythm, and loudness in generated speech.
+
+**2. Textbooks with Relevant  DSP and Speech Synthesis Content**
+
+* **"Fundamentals of Speech Recognition" by Lawrence Rabiner (1993)**.  While not the newest, this is considered a seminal work.  It offers a robust foundation in the core DSP techniques that remain essential for speech synthesis.
+* **"Speech and Language Processing" by Daniel Jurafsky and James H. Martin (3rd Edition, 2021)**. This comprehensive book covers natural language processing and includes substantial sections on speech synthesis, including recent neural network-based approaches. 
+[Image of Speech and Language Processing by Daniel Jurafsky and James H. Martin]
+
+**3. Online Resources and Courses**
+
+* **University courses on Speech Synthesis or related topics** often have excellent, up-to-date reading lists and materials. Search for syllabi on university websites.
+* **Online tutorials and blogs** focused on DSP or machine learning for audio can provide valuable practical insights.
+
+**Why the Focus on Recent Work**
+
+Artificial speech synthesis driven by deep learning is a rapidly evolving field.  Techniques that were bleeding-edge a few years ago might have been superseded by new architectures and methods. Focusing on the last two years helps you stay abreast of the most relevant and effective DSP approaches.
+
+**Let me know if you'd like a deeper dive into any of the resources or want recommendations tailored to a specific aspect of speech synthesis!** 
