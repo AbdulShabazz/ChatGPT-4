@@ -1,0 +1,35 @@
+Google Bard Gemini Advanced:
+
+Absolutely! Here's a comparison of Toontracks EZDrummer/Professional Drummer vs. Get Good Drums, focusing on factors important for music production:
+
+**Toontracks: EZDrummer and Professional Drummer**
+
+* **Ease of Use:** EZDrummer is famous for its beginner-friendliness. It has a streamlined interface, pre-made MIDI grooves, and features like 'Tap-to-Find' to locate grooves that match your ideas. Professional Drummer builds on this usability with more detailed sound control.
+* **Sound Variety:** Both offer a range of kits and styles, from vintage to modern. EZDrummer leans towards traditional drum sounds, while Professional Drummer adds some more experimental options. 
+* **Customization:** Professional Drummer allows significantly deeper customization of drum sounds, such as microphone bleed levels, room ambience, and individual drum tuning.
+* **Price:** EZDrummer is the budget-friendly choice. Professional Drummer offers more features but at a higher cost.
+
+**Get Good Drums (GGD)**
+
+* **Sound Focus:** GGD is known for highly-detailed, modern-sounding drums, especially in the rock and metal genres. Their libraries often have signature sounds from specific drummers.
+* **Mixing Control:** GGD gives you extensive control over individual microphones and drum components. This allows for very precise mixes.
+* **Expansion Packs:** GGD often releases expansion packs focused on a niche genre or specific drummer's sound.
+* **Price:** GGD libraries generally cost more than EZDrummer but fall below Professional Drummer in price.
+
+**Which Should You Choose?**
+
+Here's a quick guide:
+
+* **Beginner wanting a variety of usable drum sounds quickly:** EZDrummer
+* **More experienced producer needing detailed customization:** Professional Drummer
+* **Wanting a cutting-edge rock/metal drum sound:** Get Good Drums
+* **Budget-conscious:** EZDrummer 
+* **Specific drummer/genre sound in mind:** Check out GGD's expansion packs
+
+**Additional Notes**
+
+* **Compatibility:** Make sure whichever you choose works with your DAW (Digital Audio Workstation).
+* **Demos:** Listen to audio samples on the Toontracks and Get Good Drums websites to get a feel for the sounds they offer.
+* **Integration:** Toontracks drum software often integrates with their Superior Drummer 3 if you want a future upgrade path.
+
+**Let me know if you'd like a deeper dive into a specific aspect, or want help deciding which suits your needs best!** 
