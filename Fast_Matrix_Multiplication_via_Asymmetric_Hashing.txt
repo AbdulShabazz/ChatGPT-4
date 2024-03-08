@@ -1,0 +1,25 @@
+Google Bard Gemini Advanced:
+
+## Fast Matrix Multiplication via Asymmetric Hashing
+
+One of the fundamental problems in computer science is fast matrix multiplication. The exponent of the optimal time complexity for this operation is denoted by ω. Ran Duan's October 2022 Arxiv paper, "Faster Matrix Multiplication via Asymmetric Hashing: [https://arxiv.org/pdf/2210.10173](https://arxiv.org/pdf/2210.10173)", proposes a method using asymmetric hashing to improve the efficiency of the laser method for fast matrix multiplication.
+
+### The Challenge: Combination Loss
+
+The key idea revolves around the Coppersmith-Winograd (CW) tensor, a mathematical object used in the laser method. Analyzing higher powers of this tensor suffers from a phenomenon called "combination loss." This loss reduces the efficiency gains achieved by analyzing higher powers.
+
+### Asymmetric Hashing to the Rescue
+
+Duan proposes using an asymmetric hashing technique to partially compensate for this combination loss. Regular hashing takes elements and maps them to a smaller set (bins). Asymmetric hashing, however, uses different functions for mapping elements from different input matrices.
+
+By incorporating this asymmetric hashing into the analysis of the CW tensor (specifically, the eighth power), Duan obtains a new bound of ω < 2.371866. This improves upon previous best bounds and overcomes limitations imposed by prior analysis techniques.
+
+Here's a more detailed breakdown of the concepts involved:
+
+* **CW Tensor:** This tensor is a specific mathematical structure used in the laser method to analyze matrix multiplication algorithms.
+* **Laser Method:** This is a general framework for designing fast matrix multiplication algorithms. It relies on analyzing tensors like the CW tensor to achieve lower complexities.
+* **Combination Loss:** This is a technical term describing how analyzing higher powers of the CW tensor leads to diminishing returns in terms of efficiency gains due to the way elements are combined during analysis.
+
+Duan's work demonstrates that asymmetric hashing can be a powerful tool for mitigating this loss and improving the efficiency of fast matrix multiplication algorithms based on the laser method.
+
+It's important to note that the math involved in this research is quite complex and beyond the scope of this explanation. However, hopefully, this explanation provides a high-level understanding of the key concepts and how asymmetric hashing contributes to faster matrix multiplication.
