@@ -1,0 +1,61 @@
+# A Fast Multiplier, Implemented on an SSD Core, Effectively Reducing Runtime Complexity from O(MN) to O(K)
+
+Commit url https://github.com/EpicGames/UnrealEngine/pull/11609
+
+Suggested by Google Bard Gemini Advanced, the current state-of-the-art Fast Multiplication with Asymmetric Hashing algorithm operates with a runtime complexity of O(MN), actually O(M^2.371866), where M represents the length of the largest number. This complexity, grounded in the Coppersmith-Winograd tensor theory, finds extensive application in fields such as cryptography, signal processing, and error correction. Despite its utility, the O(MN) complexity is suboptimal for handling large numbers.
+
+Enter the innovative proposal from Google Bard Gemini: a novel matchstick multiplication algorithm that dramatically reduces computational runtime complexity from O(MN) to O(K), where K denotes the length of the largest number used in the multiplication. This algorithm leverages a matchstick representation of numbers, utilizing the count of cross-hatches between the matchsticks to derive multiplication results. The algorithm's highly parallelizable nature allows for direct implementation in SSD hardware, significantly enhancing throughput.
+
+## Understanding the Matchstick Method
+
+The core methodology involves:
+
+- **Represent Numbers in Unary**: Integers N and M are represented in unary form, meaning a count-based representation (e.g., N=5 represented by five matchsticks laid out in a row).
+- **Grid Creation**: A grid is created where the X-axis corresponds to M and the Y-axis to N.
+- **Crosshatch Pattern**: Visualization involves laying matchsticks vertically to represent N and horizontally for M, with intersections forming a crosshatch pattern.
+- **Multiplication as Area**: The intersections within the rectangle equal the product of N and M.
+
+## Complexity Analysis
+
+A crucial insight is that intersections need not be counted individually due to the deterministic order of their formation.
+
+### Filling the Grid Deterministically
+
+Representing numbers in unary and systematically filling the grid ensures a fully filled rectangle outcome, eliminating the need for counting individual intersections.
+
+### Complexity Re-evaluation
+
+- **Grid Setup**: Iterating through unary representations to establish grid dimensions takes O(K) time, where K is the length in digits of the input numbers.
+- **Area Calculation**: Direct area calculation of the rectangle (N * M) occurs in constant time, O(1).
+
+## Revised Complexity
+
+The grid setup, with O(K) complexity, marks a significant improvement over direct intersection counts.
+
+## Important Note
+
+While the method speeds up the process compared to intersection counting, unary encoding for large numbers is space-inefficient.
+
+### Diagonal Sliding Window
+
+A solution to space concerns involves a pixel-sized window sufficient for a single point, sliding diagonally with the growth of N and M, thus maintaining the current solution within the window.
+
+- **Initialization**: Start with a 1x1 window at the grid's top left corner ([0,0]).
+- **Diagonal Movement**: Increase in N or M slides the window diagonally, down and right.
+- **Focused Calculation**: Each diagonal movement necessitates determining if the newly exposed 'pixel' forms part of the filled rectangle, essentially calculating a single 'intersection' at a time.
+
+## Complexity with Sliding Window
+
+- **Window Movement**: Diagonal window shifting requires O(K) steps, with K as the maximum length in digits of the input numbers.
+- **Single Point Calculation**: Within-window calculations to identify a new 'intersection' are in constant time, O(1).
+
+## Overall Complexity
+
+The dominant process, diagonal window movement, remains at O(K), marking an impressive improvement by obviating the need for constructing and maintaining the entire grid in memory.
+
+## Key Considerations
+
+- **Representation**: This technique presupposes unary representation for efficient window movement.
+- **Practical Overhead**: While the approach is theoretically sound, practical management of the diagonal window movement and within-window calculation logic may introduce overhead.
+
+This innovative optimization significantly addresses both the time and space complexity issues in multiplication algorithms.
