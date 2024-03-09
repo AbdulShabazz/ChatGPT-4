@@ -1,0 +1,24 @@
+Google Bard Gemini Advanced:
+
+Programs_Before_Turing_Complete_Instruction_Sets_Were_Invented
+
+The way programs handled looping before Turing-complete instruction sets were invented  depended heavily on the nature of the computing device:
+
+**Mechanical Computers**
+
+* **Physical Mechanisms:** Early mechanical computers, like Babbage's Analytical Engine, used physical mechanisms to achieve repetition. Punched cards, representing instructions and data, would cycle through the machine. Specific cards or sets of cards could instruct the machine to jump back to a previous position in the card sequence, creating a loop.
+* **Hardware Interconnections:**  In some cases, hardware was directly wired in a way that created repetitive behavior. For example, a calculator designed purely for multiplication might have its internal wiring configured in a loop-like structure to perform successive additions.
+
+**Limited Instruction Set Computers**
+
+* **Self-modifying Code:**  Very early electronic computers with limited instruction sets sometimes used self-modifying code to achieve loop-like behavior. A program would modify its own instructions within memory to change the target of a jump instruction, effectively creating a loop.
+* **Subroutines:** Programs used subroutines (blocks of code that can be called from multiple places). While not true loops in the modern sense, they allowed for repeated execution of a code segment.
+* **Manual Intervention:** In some of the earliest machines, looping or repetition was handled by the human operator physically reloading part of the program or resetting hardware components.
+
+**Important Concepts**
+
+* **No Universal Loop Construct:** There was no single, standardized way to write a loop like we have in modern languages (`for`, `while`, etc.).  Methods were machine-specific.
+* **Conditional Execution Limitations:**  The ability to perform conditional jumps (the basis for deciding when to continue or exit a loop) was often very limited or even non-existent in early machines.  
+* **Focus on Specific Tasks:** Many early machines were designed with a very specific computational task in mind, so the need for general-purpose looping was less prevalent.
+
+**Let me know if you'd like a deeper dive into any of the specific methods mentioned above!** 
