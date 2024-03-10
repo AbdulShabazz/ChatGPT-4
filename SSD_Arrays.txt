@@ -1,0 +1,31 @@
+Here's a comparative table for size 8x PCIe 4.0 SSD RAID 0 arrays, along with some performance considerations:
+
+| Specification | 8x 8TB Sabrent Rocket Plus RAID 0 | 8x 500GB Sabrent Rocket Plus RAID 0 |
+|---|---|---|
+| Total Capacity | 64 TB | 4 TB |
+| Sequential Read Speed (Theoretical Max) | Up to 56,000 MB/s* | Up to 56,000 MB/s* |
+| Sequential Write Speed (Theoretical Max) | Up to 48,000 MB/s* | Up to 48,000 MB/s* |
+| Random Read/Write IOPS | Dependent on SSD specs | Dependent on SSD specs |
+| Approximate Cost (USD)** | $9,600 - $12,000  | $500 - $650 | 
+| Price per GB | ~$0.15 - $0.19 | ~$0.12 - $0.16 |
+
+**Important Notes:**
+
+* **Theoretical Maximums:**  These speeds are based on individual Sabrent Rocket Plus drive specs and perfect RAID 0 scaling. Real-world speeds will generally be lower.
+* **IOPS:** Random read/write performance (IOPS) is important for workloads with many small file operations. This will vary between SSD configurations.
+* **Cost Fluctuations:** SSD prices change over time. The cost estimate is a rough range at the time of writing.
+* **RAID Controller:** A suitable, high-bandwidth RAID controller is essential to achieve anywhere close to these theoretical speeds.
+
+**Performance Considerations**
+
+* **Sequential vs. Random:** RAID 0 massively boosts sequential read/writes, which are great for large files (video editing, scientific data). Random access performance gains will be less pronounced.
+* **SSD Capacity vs. Overprovisioning:** Larger SSDs generally have more overprovisioned space, which can help sustain write speeds for longer during heavy workloads.
+
+**Which Is Better?**
+
+The "better" array depends on your needs:
+
+* **Massive Capacity and Top Sequential Speeds:**  If you primarily work with enormous files and need the absolute maximum storage space, the 8TB array is the way to go.
+* **Budget-Conscious and More Agile:** If cost-effectiveness and slightly better random access performance are priorities, then the 500GB array might be a better choice.
+
+**Let me know if you'd like to factor in specific workloads or budget constraints – I can refine the analysis further!**
