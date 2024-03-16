@@ -1,0 +1,32 @@
+Bard Gemini Advanced:
+
+ASCII art's origins can be traced back to a few key developments:
+
+**1. Typewriters:**
+
+* Before computers, typists would create rudimentary images using typewriters by manipulating the spacing and layering of characters. They'd use symbols like X, O, and periods to create shading and shapes. This was a form of artistic expression within the constraints of the typewriter.
+
+**2. Teleprinters and Early Computers:**
+
+* Teleprinters, the predecessors to modern printers, were very limited in their graphic capabilities. They could only print text.
+* As a workaround, creative users started using sequences of characters to simulate images in early computer communications. These text-based pictures were a precursor to true ASCII art.
+
+**3. The Rise of the ASCII Standard:**
+
+* The development of  the American Standard Code for Information Interchange (ASCII) in the 1960s gave artists a standardized set of characters (letters, numbers, and symbols) to work with.
+* ASCII became widespread as a way to represent text for computers, making it much easier to share.
+
+**4. Bulletin Board Systems (BBS) and Online Culture:**
+
+* The advent of Bulletin Board Systems (BBS) in the 1970s and 80s was a major push for ASCII art. Text-based BBS interfaces meant images needed to be represented using characters.
+* ASCII art flourished in this environment.  It was used for:
+    * **Signatures:** Adding personality and flair to messages.
+    * **Decoration:** Enhancing text-based posts and discussions
+    * **Expression:** A way to add visual creativity to an otherwise textual space.
+
+**Key Points:**
+
+* ASCII art wasn't deliberately invented as a distinct art form. It evolved as people found creative ways to express themselves visually within the limitations of text-based technology.
+* The need for imagery in early computer communication, combined with the standardization of ASCII, provided the perfect conditions for ASCII art to flourish.
+
+Let me know if you'd like to delve into the techniques of ASCII art or see some famous examples! 
