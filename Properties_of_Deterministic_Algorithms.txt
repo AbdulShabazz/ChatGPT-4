@@ -1,0 +1,38 @@
+Google Bard Gemini Advanced:
+
+Here are the key properties of deterministic algorithms:
+
+**1. Predictability:**
+
+* For a given input, a deterministic algorithm will *always* produce the same output. This means that no matter how many times you run it, the result won't change if the input remains the same.
+
+**2. Defined Sequence of States:**
+
+* The internal logic of a deterministic algorithm follows a precise, step-by-step sequence. There's no ambiguity in the instructions. 
+
+**3. No Randomness:**
+
+* Deterministic algorithms do not rely on any random elements. Decisions and computations are based solely on the input and the algorithm's defined logic.
+
+**4. Reproducibility:**
+
+* Since the output and process are predictable, you can run a deterministic algorithm repeatedly under the same conditions and get identical results every time.
+
+**5. Finite Termination (Usually):** 
+
+* Most practical deterministic algorithms are designed to finish in a finite amount of time.  While there are exceptions (algorithms that run continuously), most terminate, reaching  a  final state and producing an output.
+
+**Examples of Deterministic Algorithms:**
+
+* **Sorting Algorithms:** Bubble sort, merge sort, quicksort, etc.
+* **Searching Algorithms:** Linear search, binary search.
+* **Mathematical Operations:** Addition, subtraction, multiplication, division.
+* **Pathfinding Algorithms:** Dijkstra's algorithm, A*.
+
+**Why Deterministic Algorithms are Important:**
+
+* **Reliability:** Their predictability makes them essential in cases where the output must be consistent.
+* **Testability:** Predictable behavior makes it easier to debug and verify the correctness of the algorithm.
+* **Efficiency:**  In many cases, deterministic algorithms have clearly  defined and well-understood time complexity,  helping assess their performance. 
+
+Let me know if you'd like a deeper explanation of a specific property or an example of how these properties manifest in practice! 
