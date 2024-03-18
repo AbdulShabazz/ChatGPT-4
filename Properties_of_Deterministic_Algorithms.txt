@@ -1,38 +1,58 @@
 Google Bard Gemini Advanced:
 
-Here are the key properties of deterministic algorithms:
+Yes, here are some key properties that can turn a deterministic algorithm into a non-deterministic one:
 
-**1. Predictability:**
+**1. Randomness:**
 
-* For a given input, a deterministic algorithm will *always* produce the same output. This means that no matter how many times you run it, the result won't change if the input remains the same.
+* **Incorporating random number generators:** If your algorithm makes decisions or performs computations based on random numbers, the output will change on different runs, even with the same input.
+* **External random input:** If your algorithm relies on input that is inherently random (like sensor readings that fluctuate based on environmental factors), the outcome becomes non-deterministic.
 
-**2. Defined Sequence of States:**
+**2. Parallelism and Concurrency:**
 
-* The internal logic of a deterministic algorithm follows a precise, step-by-step sequence. There's no ambiguity in the instructions. 
+* **Race Conditions:** In multi-threaded or concurrent environments, if the timing of operations is not strictly controlled, the order in which processes execute could change. This can lead to different results on different runs, making the algorithm non-deterministic.
 
-**3. No Randomness:**
+**3. Guessing or Heuristics:**
 
-* Deterministic algorithms do not rely on any random elements. Decisions and computations are based solely on the input and the algorithm's defined logic.
+* **Non-exhaustive search:** If your algorithm uses heuristics (educated guesses) to find solutions within a large search space, it might not explore all possibilities in the same sequence every time. This can lead to different solutions being found on different runs.
 
-**4. Reproducibility:**
+**4. Reliance on External State:**
 
-* Since the output and process are predictable, you can run a deterministic algorithm repeatedly under the same conditions and get identical results every time.
+* **Interacting with an unpredictable system:** If your algorithm's behavior depends on the state of an external system (like a network or database) that can change over time, the outcome could become non-deterministic.
 
-**5. Finite Termination (Usually):** 
+**Specific Algorithms and Datasets that Can Introduce Non-Determinism:** 
 
-* Most practical deterministic algorithms are designed to finish in a finite amount of time.  While there are exceptions (algorithms that run continuously), most terminate, reaching  a  final state and producing an output.
+* **Randomized Algorithms:** Algorithms like quicksort (when the pivot is chosen randomly), or randomized search algorithms rely on randomness by design.
+* **Genetic Algorithms:**  These algorithms simulate the process of evolution, and randomness is inherent in processes like mutation and crossover.
+* **Machine Learning Algorithms:** Many machine learning models, especially neural networks, can exhibit non-deterministic behavior during training due to things like random weight initialization and the order in which data is fed.
+* **Algorithms working with real-world data:**  Processes dependent on real-world data (weather patterns, stock prices, user behavior) can become non-deterministic due to the  inherent unpredictability of that data.
 
-**Examples of Deterministic Algorithms:**
+**Important Note:** Even if the dataset itself is fixed, the algorithm interacting with it can introduce non-determinism depending on the properties mentioned above.
 
-* **Sorting Algorithms:** Bubble sort, merge sort, quicksort, etc.
-* **Searching Algorithms:** Linear search, binary search.
-* **Mathematical Operations:** Addition, subtraction, multiplication, division.
-* **Pathfinding Algorithms:** Dijkstra's algorithm, A*.
+Let me know if you want a more detailed example of how a specific algorithm can turn from deterministic to non-deterministic! 
 
-**Why Deterministic Algorithms are Important:**
 
-* **Reliability:** Their predictability makes them essential in cases where the output must be consistent.
-* **Testability:** Predictable behavior makes it easier to debug and verify the correctness of the algorithm.
-* **Efficiency:**  In many cases, deterministic algorithms have clearly  defined and well-understood time complexity,  helping assess their performance. 
+Here's why very large deterministic systems can appear non-deterministic to other deterministic sub-systems:
 
-Let me know if you'd like a deeper explanation of a specific property or an example of how these properties manifest in practice! 
+**1. Limited Observability:**
+
+* A sub-system may have only partial visibility into the large system's state. It might observe some outputs or effects but lack complete information about the internal variables and processes driving those outputs. This partial view can make the large system's behavior seem unpredictable, even though it's entirely deterministic at its core.
+
+**2. Complexity and Chaotic Behavior:**
+
+* Extremely large systems composed of many interacting elements can exhibit complex behavior.  Even with deterministic rules, small differences in initial conditions or minute internal variations can lead to vastly different and seemingly unpredictable outcomes over time. This is the essence of chaos theory (think of weather patterns).
+
+**3. Computational Limits:**
+
+* The sub-system might have limited computational power. Fully simulating all the interactions and states of a very large system might be intractable for the sub-system. Its attempts to model the large system could be simplified or incomplete, leading to apparent non-determinism in the observations.
+
+**4. Time Scales:**
+
+* The time frame over which the sub-system observes the large system could be insufficient to capture patterns or long-term trends. The sub-system might get a limited snapshot, making the deterministic behavior of the larger system seem less clear.
+
+**Examples:**
+
+* **Weather to an Insect:** An insect trying to understand and predict local weather patterns would likely perceive it as unpredictable due to the immense complexity and partial observability of the systems involved. Yet, the weather system itself is largely deterministic in the grand scheme.
+* **The Stock Market to a Day Trader:** A day trader focused on short-term price fluctuations might see the stock market as largely unpredictable. However, the market operates according to deterministic rules influenced by a vast network of economic factors and trader decisions.
+* **A Cell to the Human Body:** A single cell in the human body has limited "visibility" into the overall functioning of the body. Processes controlled by other systems may appear unpredictable to the cell, although they are still governed by deterministic biological principles.
+
+**Let me know if you'd like a deeper dive into a specific example or want to explore the philosophical implications of this!** 
