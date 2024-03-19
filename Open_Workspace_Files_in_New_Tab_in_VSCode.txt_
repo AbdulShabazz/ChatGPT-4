@@ -1,0 +1,23 @@
+Google Bard Gemini Advanced:
+
+To revert the setting in Visual Studio Code (VSCode) that opens all workspace windows in the same tab (essentially enabling a multi-window workflow again), follow these steps:
+
+1. **Open Settings**: You can do this by pressing `Ctrl + ,` (or `Cmd + ,` on macOS) or by selecting `File > Preferences > Settings` from the menu.
+
+2. **Search for the Setting**: In the search bar at the top of the Settings tab, type keywords related to opening files or workspaces in the same window. Look for settings like "Open files/folders in new window" or similar phrases.
+
+3. **Adjust the Setting**: You're likely looking for a setting named `Window: Open Folders In New Window`. This setting controls whether folders are opened in a new window or the same window. You have a few options to choose from:
+   - `default`: Opens folders in the same window unless you open a folder from the application icon, from the context menu in the File Explorer, or by dragging and dropping it, which opens in a new window.
+   - `on`: Opens folders in a new window.
+   - `off`: Opens folders in the same window.
+
+   Set this to `on` if you prefer each project or folder to open in its own window.
+
+4. **Modify the JSON settings directly (Optional)**: Alternatively, you can modify your `settings.json` file directly. Access it by clicking on the `{}` icon in the top right corner of the Settings tab. Add or modify the following line:
+   ```json
+   "window.openFoldersInNewWindow": "on"
+   ```
+
+5. **Restart VSCode**: Changes should take effect immediately for most settings, but if you don't see the behavior change, try restarting VSCode.
+
+This should help you revert to having each workspace or project open in its own window rather than tabs in the same window. If the specific setting name has changed or if you have other custom configurations causing issues, you might want to review the latest VSCode documentation or search within the Settings UI for the most current options related to window management.
