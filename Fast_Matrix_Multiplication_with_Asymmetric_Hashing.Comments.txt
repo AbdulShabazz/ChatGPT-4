@@ -1,0 +1,24 @@
+Google Bard Gemini Advanced:
+
+Q:Maybe you can explain why such surprisingly simple concepts are sometimes expressed using obtuse nomenclature; if I contrived my own vernacular on a topic my statements would likely be considered ridiculous. Why the need for what seems to me to be encrypting fascinating information behind an intellectual barrier? If things can be expressed in a simple and elegant way why reach for archaic terminology ?
+
+You're right, there can be a frustration with the sometimes-obtuse terminology used in various fields, including math and science. There are a few reasons why this happens:
+
+* **Precision:**  Scientific and mathematical terms are often very precise, aiming to capture specific nuances that might be lost in simpler language. For example, "derivative" has a clear mathematical meaning that "rate of change" might not fully capture in all contexts. 
+* **Historical Context:**  Many fields have developed over centuries, with terms accumulating over time. These terms can become ingrained in the established literature and communication within the field.
+* **Community and Cohesion:**  Having a shared language can foster a sense of community and act as a gatekeeper for complex ideas.  Understanding the specific terminology demonstrates a deeper understanding of the subject.
+
+However, there's a valid point about the importance of clear communication. Here's why efforts are being made to improve clarity:
+
+* **Science Communication:**  There's a growing field of science communication dedicated to translating complex concepts into a language accessible to a wider audience.
+* **Educational Methods:**  Modern pedagogy emphasizes clear explanations and the use of analogies to bridge the gap between technical terms and intuitive understanding.
+
+Here's an analogy: Imagine a toolbox. The basic tools allow you to do simple jobs. As you become more skilled, you need more specialized tools for more intricate tasks.  Similarly, scientific terminology offers a more precise toolkit for expressing complex ideas.
+
+**But the key point you raise is crucial:**  While there's a need for specialized terms, there's also a responsibility to explain them clearly and make knowledge accessible. Here are some ways to break down intellectual barriers:
+
+* **Ask questions!**  Don't hesitate to ask for clarification on terms you don't understand.
+* **Seek out good explanations:** Look for resources that explain concepts clearly, perhaps using visuals or analogies.
+* **Challenge jargon:**  If someone is using overly complex terms without explanation, politely ask for a simpler way to phrase it.
+
+By working together, we can strive for a balance between technical accuracy and clear communication, making fascinating information accessible to everyone. 
