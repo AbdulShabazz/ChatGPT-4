@@ -1,0 +1,46 @@
+Google Bard Gemini Advanced:
+
+Q:My Windows 11 lock screen is stuck on an image.
+
+Absolutely, here's how to fix that and ways to customize your Windows 11 logon screen background:
+
+**Troubleshooting the Stuck Image**
+
+1. **Check the 'Show lock screen background picture on the sign-in screen' Option:**
+   - Go to **Settings** (Windows key + I)
+   - Navigate to **Personalization** -> **Lock Screen**
+   - Under "Personalize your lock screen," make sure the toggle for  "Show lock screen background picture on the sign-in screen" is set to **On**.
+
+2. **Try Windows Spotlight:**
+    - In the Lock Screen settings, set the "Personalize your lock screen" dropdown to **Windows Spotlight**.
+    - Lock your PC (Windows Key + L) to see if it cycles through new images. 
+
+3. **Restart Windows Explorer:** 
+    - Open Task Manager (Ctrl + Shift + Esc).
+    - Under the "Processes" tab, find "Windows Explorer".
+    - Right-click on "Windows Explorer" and select "Restart".
+
+4. **Reset Lock Screen to Defaults (if necessary):**
+   - You'll need some registry editing skills for this. Be cautious, and create a backup of your registry before proceeding.
+    - Open Registry Editor (Search for "regedit")
+    - Navigate to: `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Personalization`
+    - If you see a key named "NoChangingLockScreen", delete it.
+    - Restart your PC.
+
+**Changing the Logon Screen Background**
+
+1. **Single Image:**
+   - Open **Settings** -> **Personalization** -> **Lock Screen**.
+   - Under "Personalize your lock screen" select **Picture**.
+   - Click "Browse Photos" and choose the desired image.
+
+2. **Slideshow:**
+   - Same steps as above, but select **Slideshow** instead of "Picture".
+   - Choose a folder containing your images.
+
+**Important Things to Remember**
+
+* The logon screen background is separate from your desktop wallpaper.
+* Some organizational settings or restrictions might prevent you from customizing the logon screen background.
+
+**Let me know if you'd like more detailed instructions on any of the steps, or if the image is still stuck!** 
