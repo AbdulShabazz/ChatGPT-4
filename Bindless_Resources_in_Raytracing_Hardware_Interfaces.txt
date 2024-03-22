@@ -1,0 +1,17 @@
+Google Bard Gemini Advanced:
+
+In ray tracing, bindless resources are a technique for managing and accessing textures and buffers on the GPU. Here's how it works:
+
+* **Traditional binding:** Normally, the CPU tells the shader exactly which resources (textures, buffers) it needs to use by binding them to specific slots in the graphics pipeline. This can be limiting, especially for ray tracing.
+
+* **Bindless approach:** With bindless resources, all the relevant textures and buffers are grouped together in memory on the GPU. The shader then gets a single handle (like an index) to this entire collection.
+
+* **Benefits for ray tracing:** Ray tracing shaders can be very data-hungry, needing to access many textures and buffers during a single ray cast. Bindless resources allow the shader to dynamically pick the specific resource it needs from the pre-grouped collection using the index. This is much faster and more flexible than traditional binding through the CPU.
+
+Here's how different ray tracing APIs handle bindless resources:
+
+  * **DirectX 12 (DX12):**  DX12 utilizes descriptor heaps to achieve bindless access. Shaders use a simple 32-bit index to access individual resources within the heap. ([https://link.springer.com/chapter/10.1007/978-1-4842-7185-8_17](https://link.springer.com/chapter/10.1007/978-1-4842-7185-8_17))
+  * **Vulkan:** While not directly supporting bindless textures, Vulkan offers similar functionality through buffer devices and descriptor sets.
+  * **Metal:** Metal specifically implements bindless textures through argument buffers (Tier 2 required). This allows shaders for both ray tracing and rasterization to leverage bindless techniques.
+
+Overall, bindless resources are a powerful tool for ray tracing that improves performance and flexibility by giving shaders more direct access to the resources they need.
