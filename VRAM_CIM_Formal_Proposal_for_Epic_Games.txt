@@ -1,0 +1,45 @@
+Google Bard Gemini Advanced:
+
+## Proposal: Near-Term VRAM Compute-in-Memory Implementation for Ray Tracing Resource Management
+
+### Problem Statement
+
+Traditional ray tracing pipelines often suffer from latency bottlenecks when retrieving texture and buffer resource handles for shaders. Transfers across the PCIe bus and CPU-bound resource lookups add overhead, impacting real-time rendering performance.
+
+### Proposed Solution
+
+Integrate a simplified Compute-in-Memory (CIM) module within VRAM to accelerate the storage and retrieval of resource handles for binned textures and buffers in ray tracing workloads.
+
+### Mechanism  
+
+1. **Handle Generation:** During resource setup (textures, buffers), the CPU generates a compact handle (e.g., index, offset, or pointer) representing the resource's location within the VRAM binned collection.
+
+2. **CIM Storage:** These resource handles are transferred to the designated CIM module within VRAM. The CIM stores handles in optimized data structures (e.g., hash tables, search trees) tailored to ray tracing access patterns.
+
+3. **Shader Resource Queries:** Ray tracing shaders make a request to the CIM module for a specific resource handle based on its needs (e.g., texture name, buffer identifier).
+
+4. **CIM Accelerated Lookup:** The CIM efficiently locates the requested handle within its data structures and returns it to the shader.
+
+5. **Bindless Access:** The shader uses the retrieved handle to directly access the desired texture or buffer within the binned VRAM collection, leveraging bindless techniques.
+
+### Benefits
+
+* **Reduced Latency:** CIM's near-memory computation minimizes handle retrieval time, improving overall ray tracing performance.
+* **Scalability:**  The handle-based approach scales well with increasing numbers of textures and buffers, as the CIM primarily deals with compact handle data, not the entirety of the resources themselves.
+* **Integration Ease:** Enhances existing ray tracing pipelines without requiring a complete restructuring of shader handling.
+* **Energy Efficiency:** CIM's specialized architecture offers low-power lookups.
+
+### Research & Implementation Plan
+
+1. **CIM Design:** Investigate optimal CIM architecture and data structures for handle management, balancing lookup speed, memory footprint, and ray tracing access patterns.
+2. **API Integration:** Develop API extensions (DX12, Vulkan, Metal) to expose the CIM handle management functionality to ray tracing pipelines.
+3. **Benchmarking:**  Thorough evaluation with real-world ray tracing workloads to quantify performance gains and overhead compared to traditional resource handling.
+
+### Potential Challenges
+
+* **VRAM Capacity:** Dedicating a portion of VRAM to the CIM needs to be balanced against available space for other graphics data.
+* **Data Structure Optimization:** Ensuring efficient handle storage and retrieval algorithms within the CIM is critical to maximize gains.
+
+### Conclusion
+
+This proposal outlines a practical application of CIM technology to address a specific bottleneck in ray tracing pipelines. It promises performance improvements, scalability, and a smooth integration path, making it a compelling avenue for research and potential industry adoption. 
