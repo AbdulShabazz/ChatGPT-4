@@ -1,0 +1,15 @@
+I Cannot Recommend It
+
+I purchased this book in digital form through Springer Link and I've grown increasingly frustrated with the researchers involved on this niche topic charging exorbitant 155.99+ USD university textbook fees for manuscripts that only serve as a survey analysis on the subject. I'm not interested in technologies my competitors are currently using, I want to know how they are currently using the technology. I don't want a high-level topological description of how a cutting edge artificial text to speech library works, or how there components should interoperate, I need a detailed example as a walkthrough because I want to build it. 
+
+I'll give you an example in the book: Here's a formulation for a flow-based vocoder model,  Za = Xa; Zb = Xb * rho_b(Xa : theta) + mu_b(Xa : theta). 
+
+Okay, now go and build your own flow-based vocoder model. Really??
+
+Xu Tan is just a juggernaut mind currently employed at Microsoft Corporation. The Azure speech model that is based on Tacotron2 is one of the most popular in the world, and yet there are no URLs to any Microsoft ports or custom implementations for any of these technologies. No implementation examples for cutting edge diffusion-based models, he depicts in his book ?
+
+Xu Tan has a plethora of seminal papers on this subject published, they are on Arxiv. His pedigree and bonafides made me eager to shell out a portion of my  income -- which was not skimmed, due to payroll theft, or deposited into a federal social security slush fund, which I will never see in my lifetime -- into his pocketbook. But what I have received in return is utterly disappointing. 
+
+My personal recommendation: Just go to Arxiv to get the papers, open a Teams subscription at OpenAI, and then take a vacation day to have ChatGPT explain it to you.
+
+The university model for education is officially dead.
