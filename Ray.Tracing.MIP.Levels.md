@@ -1,3 +1,5 @@
+### ChatGPT-4 Teams Enterprise
+
 Q: What is a mip level index as it applies to ray tracing ?
 
 A: A mip level index in ray tracing refers to the specific level of a mipmapped texture that is selected during texture sampling. Mipmaps are a sequence of precomputed, progressively lower resolution versions of an image, stored alongside the original high-resolution texture. Each level in this sequence is half the resolution of the previous level, creating a pyramid-like structure where each new level has a quarter of the pixels of the previous one.
