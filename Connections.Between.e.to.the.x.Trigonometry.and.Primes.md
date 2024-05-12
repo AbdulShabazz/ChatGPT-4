@@ -78,3 +78,43 @@ The Euler identity, e^(i*π) = -1, while a remarkable result connecting exponent
 It's worth noting that the presence of only odd factorials in the sin(x) expansion is related to the alternating signs in the series, similar to the cos(x) expansion. The odd powers of x ensure that the signs alternate, which is crucial for the convergence of the series and the properties of the sine function.
 
 In conclusion, the Taylor series expansion of sin(x) directly showcases the increasing role of prime numbers in its denominators as we move to higher terms in the series. The Euler identity, while a fascinating result, does not explicitly highlight this aspect of the sine function's series expansion.
+
+**Q:** How do the Taylor Series expansions for sin x and sinh x differ ?
+
+**A:** The Taylor series expansions for sin(x) and sinh(x) have some similarities, but they also have important differences. Let's look at each series and then compare them:
+
+1. Taylor series for sin(x):
+   
+   sin(x) = x - x^3/3! + x^5/5! - x^7/7! + ...
+   
+   The general term for this series can be written as:
+   
+   (-1)^n * x^(2n+1) / (2n+1)!
+   
+   where n = 0, 1, 2, 3, ...
+
+2. Taylor series for sinh(x):
+   
+   sinh(x) = x + x^3/3! + x^5/5! + x^7/7! + ...
+   
+   The general term for this series can be written as:
+   
+   x^(2n+1) / (2n+1)!
+   
+   where n = 0, 1, 2, 3, ...
+
+Now, let's compare the two series:
+
+1. Powers of x: Both series have only odd powers of x (x, x^3, x^5, x^7, ...).
+
+2. Denominators: Both series have the same denominators, which are the odd factorials (1!, 3!, 5!, 7!, ...).
+
+3. Coefficients: The main difference between the two series lies in their coefficients. In the sin(x) series, the coefficients alternate between 1 and -1 (1, -1/3!, 1/5!, -1/7!, ...), while in the sinh(x) series, all coefficients are positive (1, 1/3!, 1/5!, 1/7!, ...).
+
+   This difference in coefficients leads to the following:
+   - The sin(x) series alternates between positive and negative terms, which causes the function to oscillate between -1 and 1.
+   - The sinh(x) series has all positive terms, which causes the function to grow exponentially as x increases.
+
+4. Convergence: Both series converge for all real values of x. However, the sinh(x) series grows much faster than the sin(x) series as x increases, due to the absence of alternating signs.
+
+In summary, while the Taylor series expansions for sin(x) and sinh(x) have the same powers of x and denominators, they differ in their coefficients. The sin(x) series has alternating coefficients, which leads to its oscillating behavior, while the sinh(x) series has all positive coefficients, resulting in its exponential growth. This difference in coefficients is the key factor distinguishing the behavior of these two functions.
