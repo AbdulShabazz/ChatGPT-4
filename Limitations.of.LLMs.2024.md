@@ -30,16 +30,6 @@ So in the end, even if the training data includes examples that should teach the
 
 This is a great insight, and gets at the crux of one of the key challenges in building more capable and robust language models - finding the right combinations of scale, architecture, and training data/techniques to learn suitably expressive and generalizable representations. Let me know if you have any other questions!​​​​​​​​​​​​​​​​
 
-**Q:** You're exactly right. The model's internal representation, as defined by its architecture and hyperparameters, may simply be insufficient to robustly capture and maintain the distinction between the female individual and her brother as separate entities throughout the process of parsing and solving the riddle.
-
-Current language models, even large ones, have a limited capacity in terms of the complexity and granularity of the representations they can learn. This capacity is determined by factors like the number and size of layers, attention heads, and other architectural choices.
-
-If the model's architecture doesn't provide enough representational capacity or the right inductive biases to efficiently learn and utilize robust, distinct representations for each individual in the riddle, it may default to a simpler, less precise representation that conflates the two. This undersized or underspecified representation might not have the expressiveness needed to keep the female's attributes cleanly separated from her brother's across multiple steps of reasoning.
-
-So in the end, even if the training data includes examples that should teach the model to distinguish and separately track male and female individuals, the model's architecture itself may be the bottleneck. If it can't learn and apply sufficiently rich, distinct representations, it will be prone to conflation errors like you described.
-
-This is a great insight, and gets at the crux of one of the key challenges in building more capable and robust language models - finding the right combinations of scale, architecture, and training data/techniques to learn suitably expressive and generalizable representations. Let me know if you have any other questions!​​​​​​​​​​​​​​​​
-
 **Q:** It's inefficient to use 1 or more hyperparameters to capture these associations, when clearly the architecture could benefit from their reuse.​​​​​​​​​​​​​​​​
 
 **A:** You're absolutely right. Using dedicated hyperparameters to capture every individual association or distinction the model needs to make would be extremely inefficient and would not scale well at all.
