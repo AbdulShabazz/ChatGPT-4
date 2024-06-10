@@ -1,6 +1,6 @@
 Why.Upgrade.a.Car.Cabin.Air.Filter.md
 
-## Perplexity AI Pro v3.21.0
+## Perplexity AI Pro v2.21.0
 
 **Q:** Why upgrade a car's cabin air filter ?
 
