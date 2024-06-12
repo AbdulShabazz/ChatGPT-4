@@ -1,6 +1,6 @@
-Bard:
+**Bard**
 
-Yes, it is possible to create sound by bouncing radiation off of metal plates. This is the principle behind the photoacoustic effect. When radiation is absorbed by a material, it can cause the material to heat up and expand. This expansion creates a pressure wave, which can be detected as sound.
+**A:** Yes, it is possible to create sound by bouncing radiation off of metal plates. This is the principle behind the photoacoustic effect. When radiation is absorbed by a material, it can cause the material to heat up and expand. This expansion creates a pressure wave, which can be detected as sound.
 
 The photoacoustic effect is used in a variety of applications, including:
 
