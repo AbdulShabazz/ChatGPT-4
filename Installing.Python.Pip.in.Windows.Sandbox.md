@@ -114,3 +114,43 @@ Pip will read the `requirements.txt` file and install all the specified modules.
 Using a requirements file is particularly useful when you have a large number of modules to install or when you want to share the list of required modules with others.
 
 Remember to run these commands in the Command Prompt or terminal within your Python environment or virtual environment where you want to install the modules.​​​​​​​​​​​​​​​​
+
+**Q:** Is it possible to use a try-catch in a python file to have Pip install a missing module when trying to import it fails ?​​​​​​​​​​​​​​​​
+
+**A:** Yes, it is possible to use a try-except block in Python to catch an ImportError when trying to import a module that is not installed. You can then use the subprocess module to run pip and install the missing module. Here's an example of how you can achieve this:
+
+```python
+import subprocess
+import sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package]) # python -m pip install [package]
+
+try:
+    import torch
+except ImportError:
+    install("torch")
+    import torch
+
+# Rest of your code that uses PyTorch
+```
+
+In this example:
+
+1. We define a function called `install()` that takes a package name as an argument. This function uses `subprocess.check_call()` to run pip and install the specified package. The `sys.executable` is used to get the path to the Python interpreter currently in use.
+
+2. We wrap the `import torch` statement inside a try-except block.
+
+3. If the import statement raises an `ImportError`, indicating that the `torch` module is not installed, it will be caught by the except block.
+
+4. Inside the except block, we call the `install()` function and pass `"torch"` as the package name to install PyTorch using pip.
+
+5. After the installation is complete, we import the `torch` module again. This time, it should succeed since PyTorch is now installed.
+
+6. The rest of your code that uses PyTorch can follow after the try-except block.
+
+This approach allows your script to automatically install the missing module when it is not found during the import statement. However, please note that this method requires an active internet connection to download and install the package.
+
+Also, keep in mind that installing packages programmatically like this may require administrative privileges, especially if you are running the script in a system-wide Python environment. If you don't have the necessary permissions, you may encounter an error during the installation process.
+
+It's generally a good practice to have the required dependencies listed in a requirements file or in the project documentation, so that users can manually install them before running the script, rather than relying on automatic installation.​​​​​​​​​​​​​​​​
