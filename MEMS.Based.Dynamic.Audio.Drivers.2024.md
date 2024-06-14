@@ -1,6 +1,6 @@
 MEMS.Based.Dynamic.Audio.Drivers.2024.md
 
-## Perplexity AI Pro v2.21.0
+## Perplexity AI Pro v2.22.0
 
 **Q:** Is it possible to develop MEMS-based dynamic drivers?
 
