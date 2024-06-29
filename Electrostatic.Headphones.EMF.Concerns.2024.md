@@ -124,9 +124,13 @@ Non-ionizing radiation can cause molecules to vibrate and generate heat, but it 
 Understanding the differences between these two types of radiation is crucial for their safe use and for protecting human health from potential hazards[1][3][4].
 
 [1] https://www.who.int/news-room/fact-sheets/detail/ionizing-radiation-and-health-effects
+
 [3] https://www.cdc.gov/radiation-health/about/non-ionizing-radiation.html
+
 [4] https://www.nrc.gov/reading-rm/basic-ref/glossary/ionizing-radiation.html
+
 [5] https://www.arpansa.gov.au/understanding-radiation/what-radiation/what-non-ionising-radiation
+
 [8] https://en.wikipedia.org/wiki/Non-ionizing_radiation
 
 Sources
