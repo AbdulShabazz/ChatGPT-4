@@ -177,7 +177,7 @@ Sources
 
 **Q:** So Electrostatic headphones do genererate electromagnetic (EMF) fields similar to high voltage power lines.
 
-**A:** Let's examine this question further:
+**A:** 
 
 ### Electromagnetic Fields (EMF) in Electrostatic Headphones vs. High Voltage Power Lines
 
