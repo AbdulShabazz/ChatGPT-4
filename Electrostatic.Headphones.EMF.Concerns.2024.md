@@ -44,23 +44,41 @@ While the scientific evidence on the health risks of living near power lines is 
 7. [9] National Institute of Environmental Health Sciences
 
 Sources
+
 [1] Is Living Near Power Lines Linked to Cancer Risk? https://www.cancercenter.com/community/blog/2023/02/power-lines-and-cancer-is-there-a-connection
+
 [2] Any real downside to living near power lines? : r/RealEstate - Reddit https://www.reddit.com/r/RealEstate/comments/161hjt9/any_real_downside_to_living_near_power_lines/
+
 [3] Electric and Magnetic Fields from Power Lines | US EPA https://www.epa.gov/radtown/electric-and-magnetic-fields-power-lines
+
 [4] Health Risks Associated with Living Near High-Voltage Power Lines https://hps.org/hpspublications/articles/powerlines.html
+
 [5] Does living near high voltage power lines pose a health risk? https://www.thenakedscientists.com/forum/index.php?topic=23345.0
+
 [6] Radiation: Electromagnetic fields - World Health Organization (WHO) https://www.who.int/news-room/questions-and-answers/item/radiation-electromagnetic-fields
+
 [7] Is living near power lines bad for our health? https://bcmj.org/bccdc/living-near-power-lines-bad-our-health
+
 [8] Childhood leukaemia and distance from power lines in California https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4931365/
+
 [9] Electric & Magnetic Fields https://www.niehs.nih.gov/health/topics/agents/emf
+
 [10] Introduction - Possible Health Effects of Exposure to Residential ... https://www.ncbi.nlm.nih.gov/books/NBK232733/
+
 [11] Electromagnetic Fields and Cancer - NCI https://www.cancer.gov/about-cancer/causes-prevention/risk/radiation/electromagnetic-fields-fact-sheet
+
 [12] Power Lines, Electrical Devices, and Extremely Low Frequency ... https://www.cancer.org/cancer/risk-prevention/radiation-exposure/extremely-low-frequency-radiation.html
+
 [13] EMF Exposure: Danger Levels, Symptoms, Protection, and More https://www.healthline.com/health/emf
+
 [14] Are Electric Lines Harmful to Human Health? - Exponent https://www.exponent.com/case-studies/are-electric-lines-harmful-human-health
+
 [15] Electromagnetic fields - World Health Organization (WHO) https://www.who.int/health-topics/electromagnetic-fields
+
 [16] Power lines and electrical products: Extremely low ... - Canada.ca https://www.canada.ca/en/health-canada/services/health-risks-safety/radiation/everyday-things-emit-radiation/power-lines-electrical-appliances.html
+
 [17] Electromagnetic fields (EMF) and health issues https://www.betterhealth.vic.gov.au/health/healthyliving/electromagnetic-fields-emf-and-health-issues
+
 [18] Electromagnetic Fields - MedlinePlus https://medlineplus.gov/electromagneticfields.html
 
 **Q:** What determines if radiation is ionizing or non-ionizing ?
@@ -105,37 +123,59 @@ Non-ionizing radiation can cause molecules to vibrate and generate heat, but it 
 
 Understanding the differences between these two types of radiation is crucial for their safe use and for protecting human health from potential hazards[1][3][4].
 
-[1]: https://www.who.int/news-room/fact-sheets/detail/ionizing-radiation-and-health-effects
-[3]: https://www.cdc.gov/radiation-health/about/non-ionizing-radiation.html
-[4]: https://www.nrc.gov/reading-rm/basic-ref/glossary/ionizing-radiation.html
-[5]: https://www.arpansa.gov.au/understanding-radiation/what-radiation/what-non-ionising-radiation
-[8]: https://en.wikipedia.org/wiki/Non-ionizing_radiation
+[1] https://www.who.int/news-room/fact-sheets/detail/ionizing-radiation-and-health-effects
+[3] https://www.cdc.gov/radiation-health/about/non-ionizing-radiation.html
+[4] https://www.nrc.gov/reading-rm/basic-ref/glossary/ionizing-radiation.html
+[5] https://www.arpansa.gov.au/understanding-radiation/what-radiation/what-non-ionising-radiation
+[8] https://en.wikipedia.org/wiki/Non-ionizing_radiation
 
 Sources
+
 [1] Ionizing radiation and health effects https://www.who.int/news-room/fact-sheets/detail/ionizing-radiation-and-health-effects
+
 [2] Non-Ionizing Radiation - Overview | Occupational Safety and Health ... https://www.osha.gov/non-ionizing-radiation
+
 [3] About Non-Ionizing Radiation - CDC https://www.cdc.gov/radiation-health/about/non-ionizing-radiation.html
+
 [4] Ionizing Radiation | NRC.gov https://www.nrc.gov/reading-rm/basic-ref/glossary/ionizing-radiation.html
+
 [5] What is non-ionising radiation? | ARPANSA https://www.arpansa.gov.au/understanding-radiation/what-radiation/what-non-ionising-radiation
+
 [6] Radiation, Ionizing and Non-Ionizing | NC DOL https://www.labor.nc.gov/radiation-ionizing-and-non-ionizing
+
 [7] Definition of ionizing radiation - NCI Dictionary of Cancer Terms https://www.cancer.gov/publications/dictionaries/cancer-terms/def/ionizing-radiation
+
 [8] Non-ionizing radiation - Wikipedia https://en.wikipedia.org/wiki/Non-ionizing_radiation
+
 [9] About radiation: Sources of radiation, ionizing and non ... - Canada.ca https://www.canada.ca/en/health-canada/services/health-risks-safety/radiation/understanding/about.html
+
 [10] What is ionising radiation? | ARPANSA https://www.arpansa.gov.au/understanding-radiation/what-is-radiation/ionising-radiation
+
 [11] Non-Ionizing Radiation Information | PennEHRS https://ehrs.upenn.edu/radiation-safety/topics/radiation-safety-training/non-ionizing-radiation-information
+
 [12] Difference Between Ionizing and Non-Ionizing Radiation https://uewhealth.com/difference-ionizing-non-ionizing-radiation/
+
 [13] Ionizing radiation - Wikipedia https://en.wikipedia.org/wiki/Ionizing_radiation
+
 [14] non-ionising radiation - European Environment Agency https://www.eea.europa.eu/help/glossary/eea-glossary/non-ionising-radiation
+
 [15] Difference Between Ionizing and Non-Ionizing Radiation https://sciencenotes.org/difference-between-ionizing-and-non-ionizing-radiation/
+
 [16] What Is Ionizing Radiation? https://ehss.energy.gov/ohre/roadmap/achre/intro_9_1.html
+
 [17] Radiation Basics | US EPA https://www.epa.gov/radiation/radiation-basics
+
 [18] Ionizing radiation | Definition, Sources, Types, Effects, & Facts https://www.britannica.com/science/ionizing-radiation
+
 [19] Types of Radiation - Ionising And Non-ionising Radiation - BYJU'S https://byjus.com/physics/types-of-radiation/
+
 [20] OVERALL INTRODUCTION - Ionizing Radiation, Part 1: X - NCBI https://www.ncbi.nlm.nih.gov/books/NBK401323/
 
 **Q:** So Electrostatic headphones do genererate electromagnetic (EMF) fields similar to high voltage power lines.
 
-**A:** ### Electromagnetic Fields (EMF) in Electrostatic Headphones vs. High Voltage Power Lines
+**A:** Let's examine this question further:
+
+### Electromagnetic Fields (EMF) in Electrostatic Headphones vs. High Voltage Power Lines
 
 #### Electrostatic Headphones
 Electrostatic headphones generate electromagnetic fields (EMF) primarily through the use of high-voltage electric fields to move a diaphragm between two stators. These fields are localized and do not radiate outward significantly. The electric fields are created by the high voltage applied to the diaphragm and stators, while the magnetic fields are minimal due to the low current involved.
@@ -167,25 +207,45 @@ High voltage power lines generate both electric and magnetic fields due to the h
 While electrostatic headphones do generate electromagnetic fields, these fields are significantly weaker and more localized compared to the EMF generated by high voltage power lines. The health risks associated with the EMF from electrostatic headphones are minimal, whereas the potential health risks from high voltage power lines are still being studied and debated. Therefore, electrostatic headphones do not pose the same level of EMF exposure concern as high voltage power lines.
 
 Sources
+
 [1] Planar Magnetic vs Electrostatic Headphones - Audio46 https://audio46.com/blogs/headphones/planar-magnetic-vs-electrostatic-headphones
+
 [2] health issues associated with prolonged headphones use due to ... https://www.head-fi.org/threads/health-issues-associated-with-prolonged-headphones-use-due-to-emf-pollution.473894/page-11
+
 [3] Electric and Magnetic Fields from Power Lines | US EPA https://www.epa.gov/radtown/electric-and-magnetic-fields-power-lines
+
 [4] Exposure to electric and magnetic fields from high-voltage lines - BfS https://www.bfs.de/EN/topics/emf/expansion-grid/basics/fieldstrain/field-strain.html
+
 [5] Static magnetic fields from earphones: Detailed measurements plus ... https://www.sciencedirect.com/science/article/abs/pii/S0013935122012348
+
 [6] EMF: 7. Extremely low frequency fields like those from power lines ... https://ec.europa.eu/health/scientific_committees/opinions_layman/en/electromagnetic-fields07/l-2/7-power-lines-elf.htm
+
 [7] [PDF] ELECTRIC AND MAGNETIC FIELDS (EMF): THE BASICS https://www.transmission.xcelenergy.com/staticfiles/microsites/Transmission/Files/EMF%20The%20Basics%20Factsheet.pdf
+
 [8] headphones for ppl who cant use magnets - Reddit https://www.reddit.com/r/headphones/comments/u94wj4/headphones_for_ppl_who_cant_use_magnets/
+
 [9] Does Living Near High-Voltage Power Lines Cause Cancer? https://letstalkscience.ca/educational-resources/stem-in-context/does-living-near-high-voltage-power-lines-cause-cancer
+
 [10] [PDF] EMF & YOU https://www.eib.org/attachments/registers/126630877.pdf
+
 [11] Electrostatic & Planar Magnetic Headphones: How They Work ... https://www.kenrockwell.com/audio/stax/electrostatic.htm
+
 [12] [PDF] EMF – Electric & Magnetic Fields - USDA Rural Development https://www.rd.usda.gov/sites/default/files/UWP_WI64-Dairyland_CapXHRLC_FEIS-AppH.pdf
+
 [13] [PDF] POWER LINES AND ELECTRIC AND MAGNETIC FIELDS https://www.transmission.xcelenergy.com/staticfiles/microsites/Transmission/Files/PDF/EMF-Fact-Sheet.pdf
+
 [14] Electrostatic Headphones | High-End by HeadAmp https://www.headamp.com/collections/electrostatic-headphones
+
 [15] Electric and Magnetic Fields from Power Lines | RadTown - US EPA https://19january2021snapshot.epa.gov/radtown/electric-and-magnetic-fields-power-lines_.html
+
 [16] EMF Exposure: Danger Levels, Symptoms, Protection, and More https://www.healthline.com/health/emf
+
 [17] What do we know about the health impacts of EMF exposure from ... https://health-desk.org/articles/what-do-we-know-about-the-health-impacts-of-emf-exposure-from-wireless-headphones
+
 [18] How strong is the electromagnetic field produced by high voltage ... https://www.reddit.com/r/AskEngineers/comments/dawk2p/how_strong_is_the_electromagnetic_field_produced/
+
 [19] Is Living Near Power Lines Linked to Cancer Risk? https://www.cancercenter.com/community/blog/2023/02/power-lines-and-cancer-is-there-a-connection
+
 [20] How Noise-canceling Headphones Work: Electrostatic and Dynamic ... http://english.ioa.cas.cn/resource/201911/t20191111_223012.html
 
 **Q:** Do electrostatic headphones employ any inductive effects similar to power supplies -- because these forms of radiation cam be harmful.
