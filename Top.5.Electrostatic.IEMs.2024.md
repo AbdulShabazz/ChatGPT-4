@@ -34,3 +34,17 @@ Top.5.Electrostatic.IEMs.md
    - **Description**: Known for its U-shaped sound signature, this IEM excels in tonal balance and coherency. The electrostatic drivers provide outstanding high-frequency detail, making it a top choice for audiophiles [oai_citation:5,crinacle's IEM Ranking List – In-Ear Fidelity](https://crinacle.com/rankings/iems/).
 
 These IEMs represent the pinnacle of current electrostatic and hybrid technology, offering unparalleled sound quality and detail retrieval for discerning listeners.
+
+**Q:** Can you provide performance specs for each in table form ?
+
+**A:** Here are the performance specifications for each of the top 5 electrostatic IEMs presented in table form:
+
+| IEM                     | Price (USD) | Drivers                                                            | Frequency Response (Hz) | Impedance (Ohms) | Sensitivity (dB/mW) |
+|-------------------------|-------------|---------------------------------------------------------------------|-------------------------|-------------------|---------------------|
+| Empire Ears Odin        | 3,400       | Dual-Wound Dynamic Subwoofer, Balanced Armature, Dual Electrostatic | 5 - 100,000             | 3                 | 108                 |
+| ThieAudio Monarch MKIII | 999         | Dual Dynamic, Six Balanced Armature, Dual Electrostatic             | 10 - 40,000             | 5                 | 104                 |
+| Unique Melody MEST MKII | 1,499       | Dynamic, Balanced Armature, Dual Electrostatic, Bone Conduction     | 20 - 40,000             | 15                | 106                 |
+| 64 Audio U12t           | 2,000       | Twelve Balanced Armature                                            | 10 - 20,000             | 12                | 110                 |
+| Elysian Annihilator     | 3,700       | Dynamic, Balanced Armature, Dual Electrostatic                      | 10 - 100,000            | 8                 | 103                 |
+
+This table summarizes the price, driver configuration, frequency response, impedance, and sensitivity of each IEM.
