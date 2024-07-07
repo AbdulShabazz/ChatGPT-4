@@ -40,3 +40,41 @@ console.log(text); // Outputs: "Hello"
 This is a basic example. Depending on your specific needs, you might use different methods or libraries for more complex binary parsing tasks.
 
 Would you like me to explain any part of this in more detail?​​​​​​​​​​​​​​​​
+
+**Q:** And also `.toString(2)` can display valid Number object types as binary text strings!​​​​​​​​​​​​​​​​
+
+**A:** You're absolutely correct! Thank you for bringing that up. The `.toString(2)` method is indeed a useful way to represent numbers in binary format as strings. This method is available on Number objects and can be very handy when working with binary representations. Let me elaborate on this:
+
+The `toString()` method of Number objects accepts an optional radix parameter, which specifies the base of the numeral system to be used. When you pass 2 as the argument, it converts the number to its binary representation.
+
+Here's an example:
+
+```javascript
+const num = 42;
+console.log(num.toString(2)); // Outputs: "101010"
+
+const float = 3.14;
+console.log(float.toString(2)); // Outputs: "11.001000111101011100001010001111"
+```
+
+This method works for both integer and floating-point numbers. For floating-point numbers, it will represent the fractional part in binary as well.
+
+It's worth noting some key points:
+
+1. This method returns a string representation, not actual binary data.
+2. It works with positive and negative numbers.
+3. For very large numbers, it can produce long strings.
+
+Here's an example showing how it can be used in conjunction with binary operations:
+
+```javascript
+const a = 5;  // 101 in binary
+const b = 3;  // 011 in binary
+
+const result = a & b;  // Bitwise AND operation
+
+console.log(`${a.toString(2)} & ${b.toString(2)} = ${result.toString(2)}`);
+// Outputs: "101 & 11 = 1"
+```
+
+This method is particularly useful when you need to visualize binary representations or when working with bitwise operations. However, for reading and interpreting binary data from files or network streams, you'd still typically use the ArrayBuffer and TypedArray approach we discussed earlier.​​​​​​​​​​​​​​​​
