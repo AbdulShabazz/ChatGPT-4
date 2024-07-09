@@ -1,0 +1,146 @@
+Map.Operations.in.Javascript.md
+
+## OpenAI ChatGPT-4-Oh
+
+**Q:** What are the get-, set-, etc performance characteristics for Javascript Set, Map, and hash dictionary built in types, displayed in table form ?
+
+**A:** JavaScript's `Map` object is a collection of key-value pairs where the keys can be of any data type. Below are detailed instructions for inserting, deleting, searching, and accessing elements in a `Map`.
+
+### Inserting Elements
+To insert elements into a `Map`, use the `set` method. The `set` method adds or updates an element with a specified key and a value.
+
+**Syntax:**
+```javascript
+map.set(key, value);
+```
+
+**Example:**
+```javascript
+let map = new Map();
+map.set('name', 'John');
+map.set('age', 30);
+map.set(1, 'one');
+```
+
+### Deleting Elements
+To delete elements from a `Map`, use the `delete` method. The `delete` method removes the specified element by key and returns `true` if the element was successfully removed, otherwise it returns `false`.
+
+**Syntax:**
+```javascript
+map.delete(key);
+```
+
+**Example:**
+```javascript
+map.delete('name'); // Removes the element with key 'name'
+```
+
+### Searching Elements
+To check if a `Map` contains a specific key, use the `has` method. The `has` method returns `true` if the key exists in the map, otherwise it returns `false`.
+
+**Syntax:**
+```javascript
+map.has(key);
+```
+
+**Example:**
+```javascript
+let hasAge = map.has('age'); // Returns true if 'age' exists in the map
+```
+
+### Accessing Elements
+To access the value associated with a specific key, use the `get` method. The `get` method returns the value for the specified key or `undefined` if the key does not exist.
+
+**Syntax:**
+```javascript
+map.get(key);
+```
+
+**Example:**
+```javascript
+let age = map.get('age'); // Returns 30
+let name = map.get('name'); // Returns undefined as 'name' was deleted
+```
+
+### Additional Operations
+- **Size of Map:** The `size` property returns the number of key-value pairs in the `Map`.
+
+**Example:**
+```javascript
+let size = map.size; // Returns 2
+```
+
+- **Clearing the Map:** The `clear` method removes all elements from the `Map`.
+
+**Syntax:**
+```javascript
+map.clear();
+```
+
+**Example:**
+```javascript
+map.clear(); // Removes all elements from the map
+```
+
+### Iterating Over a Map
+To iterate over the elements in a `Map`, you can use the `forEach` method, or for-of loops with `keys`, `values`, or `entries` methods.
+
+**Example:**
+```javascript
+// Using forEach
+map.forEach((value, key) => {
+    console.log(key + ': ' + value);
+});
+
+// Using for-of loop with entries()
+for (let [key, value] of map.entries()) {
+    console.log(key + ': ' + value);
+}
+
+// Using for-of loop with keys()
+for (let key of map.keys()) {
+    console.log(key);
+}
+
+// Using for-of loop with values()
+for (let value of map.values()) {
+    console.log(value);
+}
+```
+
+This comprehensive guide covers all the basic operations you can perform on a JavaScript `Map` object.
+
+**Q:** How do i overwrite a key's value ?
+
+**A:** Overwriting a key's value in a JavaScript `Map` is straightforward. You simply use the `set` method with the key that you want to update and provide the new value. The `set` method will update the key with the new value if the key already exists.
+
+### Syntax
+```javascript
+map.set(key, newValue);
+```
+
+### Example
+
+1. **Creating a Map and Adding Elements:**
+    ```javascript
+    let map = new Map();
+    map.set('name', 'John');
+    map.set('age', 30);
+    console.log(map.get('name')); // Output: John
+    console.log(map.get('age'));  // Output: 30
+    ```
+
+2. **Overwriting a Key's Value:**
+    ```javascript
+    map.set('name', 'Jane');
+    console.log(map.get('name')); // Output: Jane
+
+    map.set('age', 31);
+    console.log(map.get('age'));  // Output: 31
+    ```
+
+In the example above:
+- The initial value associated with the key `'name'` is `'John'`. When `map.set('name', 'Jane')` is executed, the value is updated to `'Jane'`.
+- Similarly, the value associated with the key `'age'` is initially `30`. When `map.set('age', 31)` is executed, the value is updated to `31`.
+
+Using the `set` method on an existing key in a `Map` effectively overwrites the existing value with the new value provided.
