@@ -2,7 +2,8 @@ Parallel.Execution.of.JavaScript.Functions.md
 
 ## Anthropic Claude 3.5 (Sonnet, Pro Access)
 
-**Q:** ```javascript
+**Q:** 
+```javascript
 
 function a () {
 
@@ -13,7 +14,9 @@ function b () {
 }
 
 a();
-b();```
+b();
+```
+
 How can I execute these javascript functions in parallel using async await and or Promises ? Are Promises essentially WebWorkers ?
 
 **A:** Here's how you can execute these JavaScript functions in parallel using Promises and async/await:
