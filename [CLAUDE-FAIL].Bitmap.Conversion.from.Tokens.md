@@ -1,6 +1,6 @@
 Bitmap.Conversion.from.Tokens.md
 
-Claude had great difficulty providing correct completions to these prompts. Likely due to the lack of adequate training data required to bolster their stochastic models -- another drawback to models which do not apply meta reasoning or rules-based learning.
+Claude had difficulty providing correct completions to these prompts. Likely due to the lack of adequate training data required to bolster these stochastic models -- another drawback to such models which do not apply meta reasoning or rules-based learning.
 
 ## Anthropic Claude 3.5 (Sonnet, Pro Access)
 
