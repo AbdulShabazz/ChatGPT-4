@@ -144,3 +144,53 @@ In the example above:
 - Similarly, the value associated with the key `'age'` is initially `30`. When `map.set('age', 31)` is executed, the value is updated to `31`.
 
 Using the `set` method on an existing key in a `Map` effectively overwrites the existing value with the new value provided.
+
+**Q:** How do i delete a key ?
+
+**A:** To delete a key from a JavaScript `Map`, you can use the `delete` method. The `delete` method removes the specified element by key and returns `true` if the element was successfully removed, otherwise it returns `false`.
+
+### Syntax
+```javascript
+map.delete(key);
+```
+
+### Example
+
+1. **Creating a Map and Adding Elements:**
+    ```javascript
+    let map = new Map();
+    map.set('name', 'John');
+    map.set('age', 30);
+    console.log(map.get('name')); // Output: John
+    console.log(map.get('age'));  // Output: 30
+    ```
+
+2. **Deleting a Key:**
+    ```javascript
+    let result = map.delete('name');
+    console.log(result); // Output: true
+    console.log(map.get('name')); // Output: undefined
+
+    result = map.delete('nonexistentKey');
+    console.log(result); // Output: false
+    ```
+
+In the example above:
+- The key `'name'` is successfully deleted from the map, and the `delete` method returns `true`.
+- Attempting to delete a key that does not exist (`'nonexistentKey'`) returns `false`.
+
+### Checking if a Key Exists Before Deleting
+
+Although it's not necessary, you can check if a key exists before attempting to delete it using the `has` method.
+
+**Example:**
+```javascript
+if (map.has('age')) {
+    map.delete('age');
+    console.log('Key "age" deleted.');
+} else {
+    console.log('Key "age" does not exist.');
+}
+```
+
+This approach ensures that you only attempt to delete keys that exist in the map, although the `delete` method itself handles non-existent keys gracefully by returning `false`.
