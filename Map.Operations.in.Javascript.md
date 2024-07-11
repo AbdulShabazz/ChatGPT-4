@@ -194,3 +194,84 @@ if (map.has('age')) {
 ```
 
 This approach ensures that you only attempt to delete keys that exist in the map, although the `delete` method itself handles non-existent keys gracefully by returning `false`.
+
+**A:** To iterate over a JavaScript `Map` object, you have several methods at your disposal. Here are the primary methods:
+
+1. **Using the `for...of` loop**:
+   - This loop provides a simple way to iterate through the entries, keys, or values of a `Map`.
+
+   ```javascript
+   const map = new Map([
+       ['key1', 'value1'],
+       ['key2', 'value2'],
+       ['key3', 'value3']
+   ]);
+
+   // Iterating over entries (key-value pairs)
+   for (const [key, value] of map) {
+       console.log(`${key}: ${value}`);
+   }
+
+   // Iterating over keys
+   for (const key of map.keys()) {
+       console.log(key);
+   }
+
+   // Iterating over values
+   for (const value of map.values()) {
+       console.log(value);
+   }
+   ```
+
+2. **Using the `forEach` method**:
+   - The `forEach` method executes a provided function once for each `Map` element in insertion order.
+
+   ```javascript
+   const map = new Map([
+       ['key1', 'value1'],
+       ['key2', 'value2'],
+       ['key3', 'value3']
+   ]);
+
+   map.forEach((value, key) => {
+       console.log(`${key}: ${value}`);
+   });
+   ```
+
+3. **Using the `entries` method**:
+   - This method returns a new iterator object that contains the `[key, value]` pairs for each element in the `Map`.
+
+   ```javascript
+   const map = new Map([
+       ['key1', 'value1'],
+       ['key2', 'value2'],
+       ['key3', 'value3']
+   ]);
+
+   for (const [key, value] of map.entries()) {
+       console.log(`${key}: ${value}`);
+   }
+   ```
+
+4. **Using the `keys` and `values` methods**:
+   - These methods return new iterator objects that contain the keys and values for each element in the `Map`, respectively.
+
+   ```javascript
+   const map = new Map([
+       ['key1', 'value1'],
+       ['key2', 'value2'],
+       ['key3', 'value3']
+   ]);
+
+   // Iterating over keys
+   for (const key of map.keys()) {
+       console.log(key);
+   }
+
+   // Iterating over values
+   for (const value of map.values()) {
+       console.log(value);
+   }
+   ```
+
+Each of these methods provides a flexible way to iterate over a `Map` object in JavaScript, depending on whether you need access to the keys, values, or both.
