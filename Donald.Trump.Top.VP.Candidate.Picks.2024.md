@@ -1,4 +1,4 @@
-Bard:
+**Bard:**
 
 While Donald Trump hasn't officially announced his running mate for the 2024 election, several names have been floated as potential picks. Here are some of the top contenders, along with their potential strengths and weaknesses:
 
