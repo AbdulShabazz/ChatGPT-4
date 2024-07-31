@@ -119,7 +119,9 @@ While linear algebra alone lacks the explicit control flow and looping mechanism
 
 **Q:** Should linear algebra introduce concepts to achieve Turing Completeness as a mathematical language; and if this is achieved, what is the impact on research involving artificial neural networks ??
 
-**A:** ### Introduction of Turing Completeness Concepts in Linear Algebra
+**A:** 
+
+### Introduction of Turing Completeness Concepts in Linear Algebra
 
 To achieve Turing completeness, linear algebra would need to be extended with additional concepts that inherently support control flow (conditional branching and looping) and memory management. This could involve the following:
 
