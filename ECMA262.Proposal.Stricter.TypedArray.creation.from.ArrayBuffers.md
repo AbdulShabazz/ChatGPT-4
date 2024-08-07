@@ -9,10 +9,13 @@ to add an optional 'strict' parameter to TypedArray constructors:
    new Uint32Array(buffer, byteOffset, length, strict = false);
 ```
 When 'strict' is true:
-   - Throw a TypeError if the buffer's byte length (minus byteOffset) is not a multiple of the element size.
-   - Throw a TypeError if the specified length would exceed the buffer's capacity.
- 
-Enhance error messages to clearly indicate the mismatch between buffer size and element size.
+
+- Throw a TypeError if the buffer's byte length (minus byteOffset) is not a multiple of the element size.
+
+- Throw a TypeError if the specified length would exceed the buffer's capacity. 
+  
+
+Enhance the error messages to clearly indicate the mismatch between buffer size and element size.
 
 Consider adding a 'bytesPerElement' static property to each TypedArray class for easier calculations.
 
