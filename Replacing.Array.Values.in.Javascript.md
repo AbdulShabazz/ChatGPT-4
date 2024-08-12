@@ -231,7 +231,7 @@ Using `dispatchEvent()` for array manipulation is more suitable for scenarios wh
 
 **Q:** I wonder if there's an internal representation which leads to optimal performance.
 
-*^A:** When considering optimal performance for array manipulation in JavaScript, the internal representation of the data and the method of processing play crucial roles. However, using `dispatchEvent()` for this task typically wouldn't lead to the most optimal performance because of the additional overhead associated with event handling. Still, we can explore what might lead to better performance in general and in the context of event-driven approaches.
+**A:** When considering optimal performance for array manipulation in JavaScript, the internal representation of the data and the method of processing play crucial roles. However, using `dispatchEvent()` for this task typically wouldn't lead to the most optimal performance because of the additional overhead associated with event handling. Still, we can explore what might lead to better performance in general and in the context of event-driven approaches.
 
 ### Factors Affecting Performance:
 1. **Memory Layout and Access Patterns**:
